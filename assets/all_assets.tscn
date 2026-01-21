@@ -1,0 +1,277 @@
+[gd_scene load_steps=68 format=3 uid="uid://boo5hqnftdoqn"]
+
+[ext_resource type="PackedScene" uid="uid://n4igf5vhci4w" path="res://assets/objects/house_pack/Models/All.fbx" id="1_hnrr2"]
+[ext_resource type="PackedScene" uid="uid://da3nj0ufigj2s" path="res://assets/objects/hospital/hospital.fbx" id="2_giyjh"]
+[ext_resource type="PackedScene" uid="uid://cxj0ji76vdnyf" path="res://assets/characters/Characters_psx/Models/Female/Character_17_Female_Police.fbx" id="3_hbcyp"]
+[ext_resource type="PackedScene" uid="uid://bqhgpqj1xs7pt" path="res://assets/characters/Characters_psx/Models/Female/Character_18_Female_Police.fbx" id="4_k5qap"]
+[ext_resource type="PackedScene" uid="uid://dcmwh6ipqm2mg" path="res://assets/characters/Characters_psx/Models/Female/Character_19_Female_Police.fbx" id="5_a2ea8"]
+[ext_resource type="PackedScene" uid="uid://dje8jgsxty0gg" path="res://assets/characters/Characters_psx/Models/Female/Character_20_Female_Police.fbx" id="6_0twk0"]
+[ext_resource type="PackedScene" uid="uid://3333tul0a77k" path="res://assets/characters/Characters_psx/Models/Female/Character_21_Female_Firefighter.fbx" id="7_h18uw"]
+[ext_resource type="PackedScene" uid="uid://b0yu2ecq4pj4y" path="res://assets/characters/Characters_psx/Models/Female/Character_22_Female_Firefighter.fbx" id="8_7yo3a"]
+[ext_resource type="PackedScene" uid="uid://df4fbm1asdjsf" path="res://assets/characters/Characters_psx/Models/Female/Character_23_Female_Doctor.fbx" id="9_aks3g"]
+[ext_resource type="PackedScene" uid="uid://dyonqbic0ohb7" path="res://assets/characters/Characters_psx/Models/Female/Character_24_Female_Doctor.fbx" id="10_rh7dk"]
+[ext_resource type="PackedScene" uid="uid://be5h0mkk1oj2v" path="res://assets/characters/Characters_psx/Models/Female/Character_25_Female_Police.fbx" id="11_pgcvo"]
+[ext_resource type="PackedScene" uid="uid://dbhw3qqwkie01" path="res://assets/characters/Characters_psx/Models/Female/Character_26_Female_Police.fbx" id="12_puqac"]
+[ext_resource type="PackedScene" uid="uid://dkqgx585t7mv8" path="res://assets/characters/Characters_psx/Models/Female/Character_27_Female_HM.fbx" id="13_5obnj"]
+[ext_resource type="PackedScene" uid="uid://c0w2n0sesrqh4" path="res://assets/characters/Characters_psx/Models/Female/Character_28_Female_HM.fbx" id="14_5se5r"]
+[ext_resource type="PackedScene" uid="uid://cl8ch5ln1qlgw" path="res://assets/characters/Characters_psx/Models/Female/Character_29_Female.fbx" id="15_67rsj"]
+[ext_resource type="PackedScene" uid="uid://db12okl6tk2oj" path="res://assets/characters/Characters_psx/Models/Female/Character_30_Female.fbx" id="16_hsna8"]
+[ext_resource type="PackedScene" uid="uid://d06emtdmrayh" path="res://assets/characters/Characters_psx/Models/Female/Character_31_Female.fbx" id="17_qsn82"]
+[ext_resource type="PackedScene" uid="uid://cu0w88at7uhds" path="res://assets/characters/Characters_psx/Models/Female/Character_32_Female.fbx" id="18_kk55d"]
+[ext_resource type="PackedScene" uid="uid://ni4pdoo1fybu" path="res://assets/characters/Characters_psx/Models/Female/Character_33_Female.fbx" id="19_7j8yb"]
+[ext_resource type="PackedScene" uid="uid://ldst1dspvgts" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_01.fbx" id="20_vl6dt"]
+[ext_resource type="PackedScene" uid="uid://cfmanp6etlohq" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_02.fbx" id="21_egfdt"]
+[ext_resource type="PackedScene" uid="uid://cjrl6n6td7upr" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_03.fbx" id="22_krpdy"]
+[ext_resource type="PackedScene" uid="uid://da35i01n6v20c" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_04.fbx" id="23_akfel"]
+[ext_resource type="PackedScene" uid="uid://d2webp6ywmvkn" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_05.fbx" id="24_bwsqk"]
+[ext_resource type="PackedScene" uid="uid://cv44aphvd2rem" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_06.fbx" id="25_1d7hj"]
+[ext_resource type="PackedScene" uid="uid://b0v5ctm0lptqe" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_07.fbx" id="26_cqvi3"]
+[ext_resource type="PackedScene" uid="uid://c8ti7jebykd47" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_08.fbx" id="27_3ilon"]
+[ext_resource type="PackedScene" uid="uid://c4q2jthtuu24d" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_09.fbx" id="28_85a27"]
+[ext_resource type="PackedScene" uid="uid://b7ny2jptnuty1" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_10.fbx" id="29_u51fj"]
+[ext_resource type="PackedScene" uid="uid://cau0jpkaba5eh" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_11.fbx" id="30_iqiom"]
+[ext_resource type="PackedScene" uid="uid://dto6i1y7o3asg" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_12.fbx" id="31_yugci"]
+[ext_resource type="PackedScene" uid="uid://bakefp5s0lbbb" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_13.fbx" id="32_lot43"]
+[ext_resource type="PackedScene" uid="uid://dvr170ird35p4" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_14.fbx" id="33_jcu7k"]
+[ext_resource type="PackedScene" uid="uid://baiqssxkywmiw" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_15.fbx" id="34_cws8w"]
+[ext_resource type="PackedScene" uid="uid://bilj22akqftyl" path="res://assets/characters/Characters_psx/Models/Female/Character_Female_16.fbx" id="35_qdvkc"]
+[ext_resource type="PackedScene" uid="uid://c8chgrvr06rus" path="res://assets/characters/Characters_psx/Models/Male/Character_01.fbx" id="36_cws8w"]
+[ext_resource type="PackedScene" uid="uid://clk6h7n3i7i1c" path="res://assets/characters/Characters_psx/Models/Male/Character_02.fbx" id="37_qdvkc"]
+[ext_resource type="PackedScene" uid="uid://bdpmub2h8bp0a" path="res://assets/characters/Characters_psx/Models/Male/Character_03.fbx" id="38_plvq4"]
+[ext_resource type="PackedScene" uid="uid://dwtdqprtmywex" path="res://assets/characters/Characters_psx/Models/Male/Character_04.fbx" id="39_c0007"]
+[ext_resource type="PackedScene" uid="uid://c4oriyfiy5vvh" path="res://assets/characters/Characters_psx/Models/Male/Character_05.fbx" id="40_xgttg"]
+[ext_resource type="PackedScene" uid="uid://bcp85tj0w5jvt" path="res://assets/characters/Characters_psx/Models/Male/Character_06.fbx" id="41_tesca"]
+[ext_resource type="PackedScene" uid="uid://ctt6jf863g4cr" path="res://assets/characters/Characters_psx/Models/Male/Character_07.fbx" id="42_xswen"]
+[ext_resource type="PackedScene" uid="uid://bd5p8lo6wp8eu" path="res://assets/characters/Characters_psx/Models/Male/Character_08.fbx" id="43_6byui"]
+[ext_resource type="PackedScene" uid="uid://b4chr6isvqqxn" path="res://assets/characters/Characters_psx/Models/Male/Character_09.fbx" id="44_ry8nk"]
+[ext_resource type="PackedScene" uid="uid://cjaco42ob633o" path="res://assets/characters/Characters_psx/Models/Male/Character_10.fbx" id="45_e3bwp"]
+[ext_resource type="PackedScene" uid="uid://c5yfwhf53dqco" path="res://assets/characters/Characters_psx/Models/Male/Character_11.fbx" id="46_hpne7"]
+[ext_resource type="PackedScene" uid="uid://c8x068omexkdn" path="res://assets/characters/Characters_psx/Models/Male/Character_12.fbx" id="47_31fl7"]
+[ext_resource type="PackedScene" uid="uid://ylp2i2fgr6ed" path="res://assets/characters/Characters_psx/Models/Male/Character_13.fbx" id="48_0yynh"]
+[ext_resource type="PackedScene" uid="uid://d30rwr1j1oc3r" path="res://assets/characters/Characters_psx/Models/Male/Character_14.fbx" id="49_egtml"]
+[ext_resource type="PackedScene" uid="uid://w6lhqsil2mym" path="res://assets/characters/Characters_psx/Models/Male/Character_15.fbx" id="50_hd035"]
+[ext_resource type="PackedScene" uid="uid://bn4f31wbqhqow" path="res://assets/characters/Characters_psx/Models/Male/Character_16.fbx" id="51_6d317"]
+[ext_resource type="PackedScene" uid="uid://byy37oarulwup" path="res://assets/characters/Characters_psx/Models/Male/Character_17_Police.fbx" id="52_4qs4m"]
+[ext_resource type="PackedScene" uid="uid://ds8vlvsc3utxd" path="res://assets/characters/Characters_psx/Models/Male/Character_18_Police.fbx" id="53_jpl0j"]
+[ext_resource type="PackedScene" uid="uid://bxjw6vgjbldtf" path="res://assets/characters/Characters_psx/Models/Male/Character_19_Police.fbx" id="54_xqhvw"]
+[ext_resource type="PackedScene" uid="uid://bkdihesjvxcth" path="res://assets/characters/Characters_psx/Models/Male/Character_20_Police.fbx" id="55_q0pf7"]
+[ext_resource type="PackedScene" uid="uid://dwto2ryqrk0ux" path="res://assets/characters/Characters_psx/Models/Male/Character_21_Police.fbx" id="56_che01"]
+[ext_resource type="PackedScene" uid="uid://cpg8dv5u08uu0" path="res://assets/characters/Characters_psx/Models/Male/Character_22_Police.fbx" id="57_vy3w0"]
+[ext_resource type="PackedScene" uid="uid://dll62tp3xfatk" path="res://assets/characters/Characters_psx/Models/Male/Character_23_Firefighter.fbx" id="58_ag586"]
+[ext_resource type="PackedScene" uid="uid://c76jl02nmv1ls" path="res://assets/characters/Characters_psx/Models/Male/Character_24_Firefighter.fbx" id="59_qqfs8"]
+[ext_resource type="PackedScene" uid="uid://c82dluh4wf0eu" path="res://assets/characters/Characters_psx/Models/Male/Character_25_Doctor.fbx" id="60_7klqd"]
+[ext_resource type="PackedScene" uid="uid://c8xw7jwugrp2o" path="res://assets/characters/Characters_psx/Models/Male/Character_26_Doctor.fbx" id="61_6qgsu"]
+[ext_resource type="PackedScene" uid="uid://4nv2pobo0rf8" path="res://assets/characters/Characters_psx/Models/Male/Character_27_HM.fbx" id="62_mfjb0"]
+[ext_resource type="PackedScene" uid="uid://dtfmuwij8unyt" path="res://assets/characters/Characters_psx/Models/Male/Character_28_HM.fbx" id="63_ygpcy"]
+[ext_resource type="PackedScene" uid="uid://briqjvfe052p6" path="res://assets/characters/Characters_psx/Models/Male/Character_29.fbx" id="64_lu0am"]
+[ext_resource type="PackedScene" uid="uid://h246e22c142x" path="res://assets/characters/Characters_psx/Models/Male/Character_30.fbx" id="65_b6aus"]
+[ext_resource type="PackedScene" uid="uid://crb0opupq6ddr" path="res://assets/characters/Characters_psx/Models/Male/Character_31.fbx" id="66_crk6c"]
+[ext_resource type="PackedScene" uid="uid://d4mof5ei4wjp7" path="res://assets/characters/Characters_psx/Models/Male/Character_32.fbx" id="67_csnd6"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="house_pack" parent="." instance=ExtResource("1_hnrr2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36510146, 0, 0.02337432)
+
+[node name="hospital" parent="." instance=ExtResource("2_giyjh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5050564, 0, -17.501049)
+
+[node name="Female" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.809828)
+
+[node name="Character_17_Female_Police" parent="Female" instance=ExtResource("3_hbcyp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.031094, 0, 20.262358)
+
+[node name="Character_18_Female_Police" parent="Female" instance=ExtResource("4_k5qap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.353698, 0, 20.262358)
+
+[node name="Character_19_Female_Police" parent="Female" instance=ExtResource("5_a2ea8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.690614, 0, 20.262358)
+
+[node name="Character_20_Female_Police" parent="Female" instance=ExtResource("6_0twk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.973969, 0, 20.262358)
+
+[node name="Character_21_Female_Firefighter" parent="Female" instance=ExtResource("7_h18uw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.208892, 0, 20.262358)
+
+[node name="Character_22_Female_Firefighter" parent="Female" instance=ExtResource("8_7yo3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.008816, 0, 18.88007)
+
+[node name="Character_23_Female_Doctor" parent="Female" instance=ExtResource("9_aks3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.408807, 0, 18.610807)
+
+[node name="Character_24_Female_Doctor" parent="Female" instance=ExtResource("10_rh7dk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.660327, 0, 18.873882)
+
+[node name="Character_25_Female_Police" parent="Female" instance=ExtResource("11_pgcvo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.954545, 0, 18.474207)
+
+[node name="Character_26_Female_Police" parent="Female" instance=ExtResource("12_puqac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.272784, 0, 18.576239)
+
+[node name="Character_27_Female_HM" parent="Female" instance=ExtResource("13_5obnj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.025723, 0, 16.752655)
+
+[node name="Character_28_Female_HM" parent="Female" instance=ExtResource("14_5se5r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.298661, 0, 16.968672)
+
+[node name="Character_29_Female" parent="Female" instance=ExtResource("15_67rsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.550855, 0, 16.666529)
+
+[node name="Character_30_Female" parent="Female" instance=ExtResource("16_hsna8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.941718, 0, 16.780064)
+
+[node name="Character_31_Female" parent="Female" instance=ExtResource("17_qsn82")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.180936, 0, 16.943094)
+
+[node name="Character_32_Female" parent="Female" instance=ExtResource("18_kk55d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.072159, 0, 14.633709)
+
+[node name="Character_33_Female" parent="Female" instance=ExtResource("19_7j8yb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.454291, 0, 14.584089)
+
+[node name="Character_Female_01" parent="Female" instance=ExtResource("20_vl6dt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.66203, 0, 14.679329)
+
+[node name="Character_Female_02" parent="Female" instance=ExtResource("21_egfdt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.005542, 0, 14.834469)
+
+[node name="Character_Female_03" parent="Female" instance=ExtResource("22_krpdy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0627766, 0, 15.235113)
+
+[node name="Character_Female_04" parent="Female" instance=ExtResource("23_akfel")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.247307, 0, 12.453215)
+
+[node name="Character_Female_05" parent="Female" instance=ExtResource("24_bwsqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.553884, 0, 11.911196)
+
+[node name="Character_Female_06" parent="Female" instance=ExtResource("25_1d7hj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6787, 0, 11.979744)
+
+[node name="Character_Female_07" parent="Female" instance=ExtResource("26_cqvi3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.1434965, 0, 11.920963)
+
+[node name="Character_Female_08" parent="Female" instance=ExtResource("27_3ilon")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3210917, 0, 12.157722)
+
+[node name="Character_Female_09" parent="Female" instance=ExtResource("28_85a27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.975449, 0, 9.201447)
+
+[node name="Character_Female_10" parent="Female" instance=ExtResource("29_u51fj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.330344, 0, 9.55221)
+
+[node name="Character_Female_11" parent="Female" instance=ExtResource("30_iqiom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.809903, 0, 9.26585)
+
+[node name="Character_Female_12" parent="Female" instance=ExtResource("31_yugci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.101541, 0, 9.235294)
+
+[node name="Character_Female_13" parent="Female" instance=ExtResource("32_lot43")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1607313, 0, 9.298201)
+
+[node name="Character_Female_14" parent="Female" instance=ExtResource("33_jcu7k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.330174, 0, 23.712532)
+
+[node name="Character_Female_15" parent="Female" instance=ExtResource("34_cws8w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.411357, 0, 23.95625)
+
+[node name="Character_Female_16" parent="Female" instance=ExtResource("35_qdvkc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.056346, 0, 23.848547)
+
+[node name="Male" type="Node3D" parent="."]
+
+[node name="Character_01" parent="Male" instance=ExtResource("36_cws8w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.718922, 0, 32.64978)
+
+[node name="Character_02" parent="Male" instance=ExtResource("37_qdvkc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.965453, 0, 32.63227)
+
+[node name="Character_03" parent="Male" instance=ExtResource("38_plvq4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.013603, 0, 32.899227)
+
+[node name="Character_04" parent="Male" instance=ExtResource("39_c0007")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.1925755, 0, 32.886505)
+
+[node name="Character_05" parent="Male" instance=ExtResource("40_xgttg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.718922, 0, 30.969038)
+
+[node name="Character_06" parent="Male" instance=ExtResource("41_tesca")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.979788, 0, 31.14429)
+
+[node name="Character_07" parent="Male" instance=ExtResource("42_xswen")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.2171135, 0, 31.148703)
+
+[node name="Character_08" parent="Male" instance=ExtResource("43_6byui")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4027734, 0, 31.10843)
+
+[node name="Character_09" parent="Male" instance=ExtResource("44_ry8nk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.718922, 0, 29.559233)
+
+[node name="Character_10" parent="Male" instance=ExtResource("45_e3bwp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.911762, 0, 29.607323)
+
+[node name="Character_11" parent="Male" instance=ExtResource("46_hpne7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.130062, 0, 29.472446)
+
+[node name="Character_12" parent="Male" instance=ExtResource("47_31fl7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.4444804, 0, 29.624693)
+
+[node name="Character_13" parent="Male" instance=ExtResource("48_0yynh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.718922, 0, 27.958273)
+
+[node name="Character_14" parent="Male" instance=ExtResource("49_egtml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.063141, 0, 27.845423)
+
+[node name="Character_15" parent="Male" instance=ExtResource("50_hd035")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.312653, 0, 28.03094)
+
+[node name="Character_16" parent="Male" instance=ExtResource("51_6d317")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59956, 0, 28.025946)
+
+[node name="Character_17_Police" parent="Male" instance=ExtResource("52_4qs4m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.718922, 0, 25.908356)
+
+[node name="Character_18_Police" parent="Male" instance=ExtResource("53_jpl0j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.918646, 0, 25.95319)
+
+[node name="Character_19_Police" parent="Male" instance=ExtResource("54_xqhvw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.185265, 0, 26.298374)
+
+[node name="Character_20_Police" parent="Male" instance=ExtResource("55_q0pf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.548116, 0, 26.002798)
+
+[node name="Character_21_Police" parent="Male" instance=ExtResource("56_che01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.718922, 0, 24.159979)
+
+[node name="Character_22_Police" parent="Male" instance=ExtResource("57_vy3w0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.050149, 0, 24.159979)
+
+[node name="Character_23_Firefighter" parent="Male" instance=ExtResource("58_ag586")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.32029, 0, 24.159979)
+
+[node name="Character_24_Firefighter" parent="Male" instance=ExtResource("59_qqfs8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.649555, 0, 24.159979)
+
+[node name="Character_25_Doctor" parent="Male" instance=ExtResource("60_7klqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.718922, 0, 22.044207)
+
+[node name="Character_26_Doctor" parent="Male" instance=ExtResource("61_6qgsu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.030893, 0, 22.082834)
+
+[node name="Character_27_HM" parent="Male" instance=ExtResource("62_mfjb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24037, 0, 22.083765)
+
+[node name="Character_28_HM" parent="Male" instance=ExtResource("63_ygpcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3604746, 0, 22.268196)
+
+[node name="Character_29" parent="Male" instance=ExtResource("64_lu0am")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.718922, 0, 19.712921)
+
+[node name="Character_30" parent="Male" instance=ExtResource("65_b6aus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.169996, 0, 19.65477)
+
+[node name="Character_31" parent="Male" instance=ExtResource("66_crk6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.534342, 0, 19.622362)
+
+[node name="Character_32" parent="Male" instance=ExtResource("67_csnd6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.619958, 0, 19.906357)

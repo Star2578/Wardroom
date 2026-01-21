@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxdf58ik77kyh"]
+
+[ext_resource type="PackedScene" uid="uid://da3nj0ufigj2s" path="res://assets/objects/hospital/hospital.fbx" id="1_olsfp"]
+
+[node name="hospital" instance=ExtResource("1_olsfp")]
+
+[node name="Tile_corner" parent="." index="26"]
+transform = Transform3D(100, 0, 0, 0, 100, -4.371139e-06, 0, 4.371139e-06, 100, 2.7564254, 3.0202123e-08, -3.8249843)

@@ -17,3 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameController="*res://scenes/game_controller.tscn"
+
+[filesystem]
+
+import/blender/enabled=false
