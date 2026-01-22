@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1n5wn5h0qp8t"
-path.s3tc="res://.godot/imported/Character_25_Doctor.png-3d84d4dbe4a29120017b35d8511486ab.s3tc.ctex"
+path.s3tc="res://.godot/imported/Character_25_Doctor.png-993cdc446bffb1eec61acd893029922d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/characters/Characters_psx/textures/Character_25_Doctor.png"
-dest_files=["res://.godot/imported/Character_25_Doctor.png-3d84d4dbe4a29120017b35d8511486ab.s3tc.ctex"]
+source_file="res://assets/characters/Characters_psx/Textures/Character_25_Doctor.png"
+dest_files=["res://.godot/imported/Character_25_Doctor.png-993cdc446bffb1eec61acd893029922d.s3tc.ctex"]
 
 [params]
 
