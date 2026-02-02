@@ -7,7 +7,7 @@ extends Control
 @onready var quit_btn = $Quit
 
 func _on_start_pressed() -> void:
-	animation.play("cs_01")
+	$"../CutscenePlayer".next_shot()
 	start_btn.disabled = true
 	option_btn.disabled = true
 	quit_btn.disabled = true

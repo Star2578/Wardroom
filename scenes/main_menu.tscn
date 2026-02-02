@@ -4,7 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://bocqocoo4uimo" path="res://scenes/text_writer.tscn" id="2_8ln24"]
 [ext_resource type="Texture2D" uid="uid://csx1oy8b7eyp7" path="res://assets/objects/cars/car5.png" id="2_ekxnf"]
 [ext_resource type="ArrayMesh" uid="uid://cal1ct60lbihi" path="res://assets/tree_01.tres" id="3_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://757fvf3fb5fh" path="res://scenes/cutscene_player.tscn" id="3_rtw2f"]
 [ext_resource type="Shader" uid="uid://3pb3fxiskfow" path="res://shaders/night_sky.gdshader" id="3_wu84c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ln24"]
+font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l6cm7"]
 albedo_color = Color(0.011702106, 0.011702109, 0.011702107, 1)
@@ -236,9 +243,15 @@ tracks/6/path = NodePath("TextWriter")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(5.7, 9.7),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(5.7, 9.7, 13.507067, 18.35912),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "values": [{
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
 "args": [],
 "method": &"show_next_dialogue"
 }, {
@@ -246,11 +259,66 @@ tracks/6/keys = {
 "method": &"show_next_dialogue"
 }]
 }
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CutscenePlayer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(20),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"next_shot"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_rtw2f"]
+resource_name = "cs_02"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(9.520662, 1.9862036, 4.725867), Vector3(9.520662, 1.9862037, 65.72728)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.20071289, 1.0559239, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Car:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.0238159, 0, -0.08142042), Vector3(1.0238159, 0, 61.14798)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rtw2f"]
 _data = {
 &"RESET": SubResource("Animation_wu84c"),
-&"cs_01": SubResource("Animation_8ln24")
+&"cs_01": SubResource("Animation_8ln24"),
+&"cs_02": SubResource("Animation_rtw2f")
 }
 
 [node name="Node3D" type="Node3D" unique_id=876267592]
@@ -267,48 +335,76 @@ animation = NodePath("../AnimationPlayer")
 
 [node name="Label" type="Label" parent="MainMenu" unique_id=1778166673]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 50.0
+offset_top = 83.0
+offset_right = 411.0
+offset_bottom = 152.0
 text = "The Wardroom"
+label_settings = SubResource("LabelSettings_8ln24")
 
 [node name="Start" type="Button" parent="MainMenu" unique_id=1940028504]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -65.5
-offset_right = 46.0
-offset_bottom = -34.5
+offset_left = 50.0
+offset_top = -35.0
+offset_right = 150.0
+offset_bottom = -1.0
 grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8ln24")
 text = "Start"
+alignment = 0
 
 [node name="Option" type="Button" parent="MainMenu" unique_id=2132835898]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = -15.5
-offset_right = 62.0
-offset_bottom = 15.5
+offset_left = 50.0
+offset_top = 25.0
+offset_right = 150.0
+offset_bottom = 67.0
 grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8ln24")
 text = "Option"
+alignment = 0
 
 [node name="Quit" type="Button" parent="MainMenu" unique_id=786509285]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = 34.5
-offset_right = 42.0
-offset_bottom = 65.5
+offset_left = 50.0
+offset_top = 91.0
+offset_right = 150.0
+offset_bottom = 133.0
 grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_8ln24")
 text = "Quit"
+alignment = 0
 
 [node name="TextWriter" parent="." unique_id=131344889 instance=ExtResource("2_8ln24")]
 offset_left = -20.0
 offset_top = -40.0
 offset_right = 20.0
 json_path = "res://dialogues/intro/cs_01.json"
+
+[node name="CutscenePlayer" parent="." unique_id=1803056770 node_paths=PackedStringArray("anim") instance=ExtResource("3_rtw2f")]
+shots = Array[String](["cs_01", "cs_02"])
+anim = NodePath("../AnimationPlayer")
 
 [node name="Road" type="MeshInstance3D" parent="." unique_id=1487755025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 86.27325)

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://757fvf3fb5fh"]
+
+[ext_resource type="Script" uid="uid://iuumhtorlnm4" path="res://scripts/cutscene_player.gd" id="1_cwd20"]
+
+[node name="CutscenePlayer" type="Node" unique_id=1803056770]
+script = ExtResource("1_cwd20")
