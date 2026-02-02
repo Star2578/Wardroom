@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://2vnqdovytbap"]
+
+[ext_resource type="PackedScene" uid="uid://b7wjuye736gtm" path="res://assets/tree_pack_1.1/models/tree01.fbx" id="1_825fv"]
+[ext_resource type="ArrayMesh" uid="uid://cal1ct60lbihi" path="res://assets/tree_01.tres" id="2_825fv"]
+
+[node name="tree01" unique_id=148324773 instance=ExtResource("1_825fv")]
+
+[node name="tree01" parent="." index="0" unique_id=4045391]
+mesh = ExtResource("2_825fv")

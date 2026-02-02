@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceei3aqf34r20"]
-
-[ext_resource type="PackedScene" uid="uid://n4igf5vhci4w" path="res://assets/objects/house_pack/Models/All.fbx" id="1_4cu0f"]
-
-[node name="All" instance=ExtResource("1_4cu0f")]
