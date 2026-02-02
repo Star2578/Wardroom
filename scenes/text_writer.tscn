@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bocqocoo4uimo"]
+
+[ext_resource type="Script" uid="uid://dglgxk4wnso4" path="res://scripts/text_writer.gd" id="1_sclj6"]
+
+[node name="TextWriter" type="Control" unique_id=131344889]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -30.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_sclj6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2128423378]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -78.0
+offset_right = 400.0
+offset_bottom = -18.000053
+grow_horizontal = 2
+grow_vertical = 0
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+vertical_alignment = 2

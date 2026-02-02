@@ -236,7 +236,7 @@ tracks/6/path = NodePath("TextWriter")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(5.7, 9.7),
+"times": PackedFloat32Array(3, 4),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
