@@ -3,7 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://dwrosodsd0pgr" path="res://assets/tree_pack_1.1/textures/tree01.png" id="1_fg3ng"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxapi"]
-transparency = 1
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("1_fg3ng")
 
 [resource]
