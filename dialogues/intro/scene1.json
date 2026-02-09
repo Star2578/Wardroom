@@ -1,11 +1,16 @@
 {
 	"cs_01": [
 		"It was a calm night.",
-		"I was driving back from a holiday vacation.",
+		"I was driving back home for holiday vacation.",
 		"Sadly, my GPS guided me through what it called a [i]shortcut[/i]",
 	],
 	"cs_02": [
-		"\"test dialogue in quotes 1\"",
-		"\"test dialogue in quotes 2\"",
+		"\"I shouldn't be driving long distance at night.\"",
+		"\"But well, here I am.\"",
+		"\"[i]Sigh[/i] how far am I from a nearest gas station?\"",
+	],
+	"cs_03": [
+		"\"I've been driving for so long, I start to feel like...\"",
+		"\"Shit!!\""
 	]
 }

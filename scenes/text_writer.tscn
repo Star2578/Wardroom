@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bocqocoo4uimo"]
 
 [ext_resource type="Script" uid="uid://dglgxk4wnso4" path="res://scripts/text_writer.gd" id="1_sclj6"]
+[ext_resource type="AudioStream" uid="uid://bi0bj2kd1im" path="res://sounds/freesound_community-medium-text-blip-14855.mp3" id="2_45uip"]
 
 [node name="TextWriter" type="Control" unique_id=131344889]
 layout_mode = 3
@@ -34,3 +35,7 @@ fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1072535235]
+stream = ExtResource("2_45uip")
+bus = &"Dialogue"

@@ -4,6 +4,7 @@ class_name TextWriter
 @export var json_path: String
 
 @onready var rich_label = $RichTextLabel
+@onready var sfx_player = $AudioStreamPlayer
 
 var dialogue_data: Dictionary = {}
 var current_index = 0
@@ -49,3 +50,6 @@ func show_next_dialogue():
 	tween.tween_property(rich_label, "visible_ratio", 1.0, duration)\
 		.set_trans(Tween.TRANS_LINEAR)\
 		.set_ease(Tween.EASE_IN_OUT)
+	# play sounds and stop when tween is done
+	sfx_player.play()
+	tween.finished.connect(func(): sfx_player.stop())
