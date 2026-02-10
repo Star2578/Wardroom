@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://yvm7yflrckev" path="res://assets/objects/hospital/textures/Walls_1/Walls_1_BaseColor.png" id="9_u56q5"]
 [ext_resource type="Texture2D" uid="uid://bjggnqidjraiy" path="res://assets/objects/hospital/textures/Walls_1/Walls_1_Normal.png" id="10_4mr4y"]
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://scenes/characters/first_person_controller/player.tscn" id="10_u56q5"]
+[ext_resource type="PackedScene" uid="uid://c5bx21iwuxad2" path="res://hospital_bed_test_1.tscn" id="11_4mr4y"]
 
 [sub_resource type="Gradient" id="Gradient_pw728"]
 colors = PackedColorArray(0, 0, 0, 1, 0.91326463, 0.7795315, 0.393286, 1)
@@ -284,3 +285,6 @@ skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Props2/Tile_Wall_half/StaticBody3D" unique_id=1272940034]
 shape = SubResource("ConvexPolygonShape3D_6751p")
+
+[node name="hospital_bed_test1" parent="Props2" unique_id=1281097862 instance=ExtResource("11_4mr4y")]
+transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 13.077712, 0.008270025, -3.0224047)
