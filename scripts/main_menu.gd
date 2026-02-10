@@ -19,3 +19,6 @@ func _on_option_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+func change_to_game() -> void:
+	get_tree().change_scene_to_file("res://scenes/test_map.tscn")

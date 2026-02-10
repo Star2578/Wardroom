@@ -484,6 +484,20 @@ tracks/6/keys = {
 "times": PackedFloat32Array(6.766667, 7.7520084)
 }
 tracks/6/use_blend = true
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainMenu")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(10),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_to_game"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rtw2f"]
 _data = {

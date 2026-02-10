@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dkmnpm76ihboa"]
+
+[ext_resource type="Texture2D" uid="uid://dn6xhha86nuat" path="res://textures/hospital_tile/Tiles107_2K-JPG_Color.jpg" id="1_iqktw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_246cq"]
+albedo_texture = ExtResource("1_iqktw")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_v5lq5"]
+material = SubResource("StandardMaterial3D_246cq")
+size = Vector3(1, 0.25, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_iqktw"]
+points = PackedVector3Array(-0.5, -0.125, -0.5, -0.5, 0.125, -0.5, 0.5, -0.125, -0.5, -0.5, -0.125, 0.5, -0.5, 0.125, 0.5, 0.5, 0.125, -0.5, 0.5, -0.125, 0.5, 0.5, 0.125, 0.5)
+
+[node name="FloorMesh" type="MeshInstance3D" unique_id=2114855457]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_v5lq5")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1651610937]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=807300502]
+shape = SubResource("ConvexPolygonShape3D_iqktw")

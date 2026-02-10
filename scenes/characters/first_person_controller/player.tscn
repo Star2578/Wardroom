@@ -152,10 +152,14 @@ _data = {
 &"crouch": SubResource("Animation_5ec5e")
 }
 
+[sub_resource type="QuadMesh" id="QuadMesh_r1dng"]
+flip_faces = true
+size = Vector2(2, 2)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vfpir"]
 render_priority = 0
 shader = ExtResource("2_vfpir")
-shader_parameter/grain_amount = 0.05
+shader_parameter/grain_amount = 0.050000002375
 shader_parameter/grain_size = 1.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_7dpd1"]
@@ -586,7 +590,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 
 [node name="Camera" type="Camera3D" parent="Head" unique_id=1767738730]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera" unique_id=1650230607]
+[node name="YellowFilter" type="MeshInstance3D" parent="Head/Camera" unique_id=432621447]
+mesh = SubResource("QuadMesh_r1dng")
+skeleton = NodePath("../FilmGrainFilter")
+
+[node name="FilmGrainFilter" type="MeshInstance3D" parent="Head/Camera" unique_id=1650230607]
 mesh = SubResource("QuadMesh_7dpd1")
 
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="Head" unique_id=830978596]
