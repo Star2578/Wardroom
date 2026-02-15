@@ -1,9 +1,119 @@
 [gd_scene format=3 uid="uid://dvigce2jjp64c"]
 
-[node name="Option" type="Control"]
+[ext_resource type="Script" uid="uid://6wpbmwd08nbg" path="res://scripts/option.gd" id="1_qt2fl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3gnim"]
+font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt2fl"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Option" type="Control" unique_id=1931018133]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qt2fl")
+
+[node name="Label" type="Label" parent="." unique_id=914533003]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 83.0
+offset_right = 411.0
+offset_bottom = 152.0
+text = "The Wardroom"
+label_settings = SubResource("LabelSettings_3gnim")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=512249905]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 25.5
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1794626556]
+layout_mode = 2
+
+[node name="VolumeRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=703994083]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VolumeRow" unique_id=291550482]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Volume"
+
+[node name="LabelToCheckSpacer" type="Control" parent="MarginContainer/VBoxContainer/VolumeRow" unique_id=1416039647]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/VolumeRow" unique_id=789462924]
+layout_mode = 2
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer/VolumeRow" unique_id=756531044]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="VolumeRow3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1670564366]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VolumeRow3" unique_id=1993943909]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Brightness"
+
+[node name="LabelToCheckSpacer" type="Control" parent="MarginContainer/VBoxContainer/VolumeRow3" unique_id=814626928]
+custom_minimum_size = Vector2(705, 0)
+layout_mode = 2
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer/VolumeRow3" unique_id=1638275089]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="VolumeRow2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1033998797]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VolumeRow2" unique_id=141952782]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "langage"
+
+[node name="LabelToCheckSpacer" type="Control" parent="MarginContainer/VBoxContainer/VolumeRow2" unique_id=655857042]
+custom_minimum_size = Vector2(850, 0)
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/VolumeRow2" unique_id=2145937507]
+layout_mode = 2
+
+[node name="Back" type="Button" parent="." unique_id=15882442]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 91.0
+offset_right = 150.0
+offset_bottom = 133.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_qt2fl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qt2fl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qt2fl")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_qt2fl")
+text = "Back"
+alignment = 0
+
+[connection signal="toggled" from="MarginContainer/VBoxContainer/VolumeRow/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeRow/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeRow3/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
