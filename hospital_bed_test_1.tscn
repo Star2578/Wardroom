@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://c5bx21iwuxad2"]
 
-[ext_resource type="Texture2D" uid="uid://cpphlh311t650" path="res://assets/hospital_bed_test1_0.png" id="1_62h31"]
-[ext_resource type="Texture2D" uid="uid://chcq3l7mmxngr" path="res://assets/hospital_bed_test1_1.png" id="2_wl13p"]
-[ext_resource type="Texture2D" uid="uid://d1ca7qpccpt7s" path="res://assets/hospital_bed_test1_4.png" id="3_ytngt"]
-[ext_resource type="Texture2D" uid="uid://cgcnqsco58rx2" path="res://assets/hospital_bed_test1_5.png" id="4_j4j4f"]
-[ext_resource type="Texture2D" uid="uid://cdnmh7fwos0f7" path="res://assets/hospital_bed_test1_7.png" id="5_47l37"]
-[ext_resource type="Texture2D" uid="uid://bv6dkyvwgeeel" path="res://assets/hospital_bed_test1_8.png" id="6_5kfe3"]
+[ext_resource type="Texture2D" uid="uid://cpphlh311t650" path="res://assets/homemade/textures/hospital_bed_test1_0.png" id="1_62h31"]
+[ext_resource type="Texture2D" uid="uid://chcq3l7mmxngr" path="res://assets/homemade/textures/hospital_bed_test1_1.png" id="2_wl13p"]
+[ext_resource type="Texture2D" uid="uid://d1ca7qpccpt7s" path="res://assets/homemade/textures/hospital_bed_test1_4.png" id="3_ytngt"]
+[ext_resource type="Texture2D" uid="uid://cgcnqsco58rx2" path="res://assets/homemade/textures/hospital_bed_test1_5.png" id="4_j4j4f"]
+[ext_resource type="Texture2D" uid="uid://cdnmh7fwos0f7" path="res://assets/homemade/textures/hospital_bed_test1_7.png" id="5_47l37"]
+[ext_resource type="Texture2D" uid="uid://bv6dkyvwgeeel" path="res://assets/homemade/textures/hospital_bed_test1_8.png" id="6_5kfe3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rph4s"]
 resource_name = "BedFrame"
@@ -51,6 +51,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_lrpg1")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_62h31"]
+size = Vector3(6.0757995, 2.537767, 3.0000033)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2t20b"]
 resource_name = "Mattress"
@@ -190,6 +193,12 @@ shadow_mesh = SubResource("ArrayMesh_miktj")
 [node name="Bed" type="MeshInstance3D" parent="." unique_id=1207336807]
 mesh = SubResource("ArrayMesh_dsoxw")
 skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bed" unique_id=1534227048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010604382, 1.2749873, 1.66893e-06)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bed/StaticBody3D" unique_id=1650812433]
+shape = SubResource("BoxShape3D_62h31")
 
 [node name="Mattress" type="MeshInstance3D" parent="." unique_id=1770348033]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4841309, 7.2788275e-08)
