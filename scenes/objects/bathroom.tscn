@@ -1,0 +1,76 @@
+[gd_scene format=4 uid="uid://dphm8g2gg3a7h"]
+
+[ext_resource type="PackedScene" uid="uid://cvhfw4n2mvf7m" path="res://assets/homemade/Bathroom.glb" id="1_e85py"]
+[ext_resource type="Texture2D" uid="uid://fjl2g3n2fome" path="res://assets/homemade/Bathroom_Bathroom_Floor_Texture.png" id="2_5wd4h"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_sv6bp"]
+noise_type = 0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tdrii"]
+noise = SubResource("FastNoiseLite_sv6bp")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u2xm6"]
+resource_name = "Bathroom_Floor_Mat"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("2_5wd4h")
+roughness = 0.5
+detail_blend_mode = 1
+detail_albedo = SubResource("NoiseTexture2D_tdrii")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2qvku"]
+_surfaces = [{
+"aabb": AABB(-1, -0.05, -1, 2, 0.1, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "Bathroom_Floor_Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD//wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ysm5y"]
+resource_name = "Bathroom_Cube_001"
+_surfaces = [{
+"aabb": AABB(-1, -0.05, -1, 2, 0.1, 2),
+"attribute_data": PackedByteArray("VFWqqgAA//8AAKqqVFX//1RVVFUAAKmqAABVVVRVqaqpqqqqVVX//1VVqqqpqv7/qapUVVVVqapVVVVVqqqpqlRVVFUAAAAAVFUAAAAAVVWqqlRVVVUAAKmqAABVVVRV"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_u2xm6"),
+"name": "Bathroom_Floor_Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD//1TV//8AAP///78AAP//////v/////////+/AAAAAP///78AAAAAAABU1f//AAD//1TV//8AAAAAVNUAAAAA//9U1f////8AAFTVAAD/////VNUAAP//AABU1f///////1TVVFWpqlRVqapUVamqVFWqqv+//z//v/8//7//P/8//7+qqlVVqqpVVaqqVVWqqlVV/3//f/9//3//f/9//3//f1VVVFVVVVRVVFVUVVVVVFVU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2qvku")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e85py"]
+size = Vector3(2, 0.1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5wd4h"]
+size = Vector3(2, 2.5, 0.15338194)
+
+[node name="Bathroom" unique_id=193283959 instance=ExtResource("1_e85py")]
+
+[node name="Bathroom_Floor" parent="." index="10" unique_id=991615998]
+mesh = SubResource("ArrayMesh_ysm5y")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bathroom_Floor" index="0" unique_id=314350573]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom_Floor/StaticBody3D" index="0" unique_id=817066929]
+shape = SubResource("BoxShape3D_e85py")
+
+[node name="Bathroom_Wall" parent="." index="11" unique_id=1603166680]
+transform = Transform3D(1, 0, 0, 0, 1.35, 0, 0, 0, 1, -11.858447, 0.0076898336, 0.017963504)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bathroom_Wall" index="0" unique_id=1617839678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0031423569, 1.2500154, -0.017963521)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom_Wall/StaticBody3D" index="0" unique_id=1130234332]
+shape = SubResource("BoxShape3D_5wd4h")
