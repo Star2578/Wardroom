@@ -1,0 +1,26 @@
+{
+  "nodes": {
+	"start": {
+	  "name": "Old Man",
+	  "text": "Do you remember what you saw?",
+	  "choices": [
+		{
+		  "text": "Yes... I remember.",
+		  "next": "remember_branch"
+		},
+		{
+		  "text": "No... I forgot.",
+		  "next": "forget_branch"
+		}
+	  ]
+	},
+	"remember_branch": {
+	  "name": "Old Man",
+	  "text": "No you don't, you wouldn't be this calm if you remembered"
+	},
+	"forget_branch": {
+	  "name": "Old Man",
+	  "text": "Lies. You remembered, didn't you."
+	}
+  }
+}
