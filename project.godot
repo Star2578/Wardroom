@@ -23,10 +23,6 @@ config/icon="res://icon.svg"
 
 GameController="*res://scenes/game_controller.tscn"
 
-[display]
-
-window/size/mode=3
-
 [editor_plugins]
 
 enabled=PackedStringArray()
