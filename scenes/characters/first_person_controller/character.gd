@@ -137,7 +137,12 @@ var mouseInput : Vector2 = Vector2(0,0)
 
 #endregion
 
+#region Variable for interact
 
+@onready var interaction_label = $UserInterface/InteractionLabel
+@onready var raycast_3d = $Head/Camera/RayCast3D
+
+#endregion
 
 #region Main Control Flow
 
@@ -165,6 +170,8 @@ func _process(_delta):
 		handle_pausing()
 
 	update_debug_menu_per_frame()
+
+	handle_interaction()
 
 
 func _physics_process(delta): # Most things happen here.
@@ -488,3 +495,21 @@ func handle_pausing():
 				#get_tree().paused = false
 
 #endregion
+
+#region Interactive
+
+func handle_interaction():
+	if raycast_3d.is_colliding():
+		var collider = raycast_3d.get_collider()
+
+		if collider is Interactable:
+			interaction_label.show()
+
+			if Input.is_action_just_pressed("interact"):
+				collider.interact()
+		else:
+			interaction_label.hide()
+			
+	else:
+		interaction_label.hide()
+		
