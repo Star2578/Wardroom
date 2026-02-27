@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://bbfnw24uxlegr"]
 
 [ext_resource type="Script" uid="uid://cm2gcou6vkhdy" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://dvigce2jjp64c" path="res://scenes/option.tscn" id="2_5dd4i"]
 [ext_resource type="PackedScene" uid="uid://bocqocoo4uimo" path="res://scenes/text_writer.tscn" id="2_8ln24"]
 [ext_resource type="Texture2D" uid="uid://csx1oy8b7eyp7" path="res://assets/objects/cars/car5.png" id="2_ekxnf"]
 [ext_resource type="ArrayMesh" uid="uid://cal1ct60lbihi" path="res://assets/tree_01.tres" id="3_bqqt6"]
@@ -581,6 +582,9 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_8ln24")
 text = "Quit"
 alignment = 0
+
+[node name="Option2" parent="." unique_id=1931018133 instance=ExtResource("2_5dd4i")]
+visible = false
 
 [node name="TextWriter" parent="." unique_id=131344889 instance=ExtResource("2_8ln24")]
 offset_left = -20.0
