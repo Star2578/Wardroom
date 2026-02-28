@@ -21,8 +21,7 @@ func apply_audio_settings() -> void:
 	AudioServer.set_bus_mute(0, master_muted)
 
 func apply_brightness_settings() -> void:
-	pass
-	# for node in get_tree().get_nodes_in_group("world_environments"):
-	# 	if node is WorldEnvironment and node.environment != null:
-	# 		node.environment.adjustment_enabled = true
-	# 		node.environment.adjustment_brightness = brightness
+	for node in get_tree().get_nodes_in_group("world_environments"):
+		if node is WorldEnvironment and node.environment != null:
+			node.environment.adjustment_enabled = true
+			node.environment.adjustment_brightness = brightness
