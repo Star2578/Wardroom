@@ -23,6 +23,7 @@ config/icon="res://icon.svg"
 
 GameController="*res://scenes/game_controller.tscn"
 InventoryManager="*uid://cp77ugoiunjc2"
+InspectMenu="*uid://cxsj4n5rko1k5"
 
 [editor_plugins]
 

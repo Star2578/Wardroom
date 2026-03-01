@@ -4,6 +4,7 @@
 [ext_resource type="Shader" uid="uid://bug2eu8hiohh1" path="res://shaders/film_grain.gdshader" id="2_vfpir"]
 [ext_resource type="Texture2D" uid="uid://bg1iy1jb0err8" path="res://assets/characters/Characters_psx/Textures/Character_10.png" id="3_r1dng"]
 [ext_resource type="Script" uid="uid://u5u7xxlvmcxx" path="res://scenes/characters/first_person_controller/debug.gd" id="3_x1wcc"]
+[ext_resource type="Script" uid="uid://bl28hl18kus3i" path="res://scripts/ray_cast_3d.gd" id="3_ycb62"]
 [ext_resource type="Animation" uid="uid://jhlq82tmgi6g" path="res://animations/idle.anim" id="6_r1dng"]
 [ext_resource type="Animation" uid="uid://j4v0wtk6gtpf" path="res://animations/walk.anim" id="7_ycb62"]
 
@@ -477,6 +478,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 visible = false
 
+[node name="RayCast3D" type="RayCast3D" parent="Head/Camera" unique_id=1041544515]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -0.034815133, -0.1025033, 1.5218181e-09)
+script = ExtResource("3_ycb62")
+
 [node name="HeadbobAnimation" type="AnimationPlayer" parent="Head" unique_id=830978596]
 libraries/ = SubResource("AnimationLibrary_o0unb")
 blend_times = [&"RESET", &"RESET", 0.5, &"RESET", &"walk", 0.5, &"walk", &"RESET", 0.5]
@@ -726,6 +731,7 @@ mesh = SubResource("ArrayMesh_7dpd1")
 skin = SubResource("Skin_r1dng")
 
 [node name="UserInterface" type="Control" parent="." unique_id=1783704646]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -761,6 +767,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_use_anchors_ = true
+[node name="InteractionLabel" type="Label" parent="UserInterface" unique_id=1688379907]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.5
+offset_top = -23.0
+offset_right = 77.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "\"Press E to Interact\""
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="CrouchCeilingDetection" type="ShapeCast3D" parent="." unique_id=232857327]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
