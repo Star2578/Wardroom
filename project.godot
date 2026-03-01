@@ -22,7 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameController="*res://scenes/game_controller.tscn"
-InventoryManager="*uid://bwaglb0kgylqb"
+InventoryManager="*uid://cp77ugoiunjc2"
 
 [editor_plugins]
 

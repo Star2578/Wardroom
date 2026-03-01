@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://dvunj40khmhcf"]
+[gd_scene format=3 uid="uid://bedp4a0ul28s"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_s6dok"]
-[ext_resource type="Script" uid="uid://cti1v5otsc2bq" path="res://scripts/focus_player.gd" id="2_1kc1q"]
-[ext_resource type="Script" uid="uid://b44kpoflcqcns" path="res://scripts/InteractionPrompt.gd" id="3_gjmho"]
-[ext_resource type="Script" uid="uid://clygy4jlk6rpt" path="res://scripts/DialogueUI.gd" id="4_t7and"]
-[ext_resource type="Script" uid="uid://vjyo5esggo3m" path="res://scripts/InteractableObject.gd" id="5_ruw3y"]
-[ext_resource type="Script" uid="uid://conw07ypb2txy" path="res://scripts/PickupObject.gd" id="6_t7and"]
+[ext_resource type="Script" path="res://scripts/focus_player.gd" id="2_1kc1q"]
+[ext_resource type="Script" path="res://scripts/InteractionPrompt.gd" id="3_gjmho"]
+[ext_resource type="Script" path="res://scripts/DialogueUI.gd" id="4_t7and"]
+[ext_resource type="Script" path="res://scripts/InteractableObject.gd" id="5_ruw3y"]
+[ext_resource type="Script" path="res://scripts/PickupObject.gd" id="6_t7and"]
 [ext_resource type="Resource" uid="uid://dj1u2yag7b36h" path="res://misc/OldKey.tres" id="7_7182s"]
-[ext_resource type="Script" uid="uid://yrsof6kjwn0f" path="res://scripts/InventoryUI.gd" id="7_ruw3y"]
+[ext_resource type="Script" path="res://scripts/InventoryUI.gd" id="7_ruw3y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1kc1q"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
