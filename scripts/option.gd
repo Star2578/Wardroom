@@ -24,7 +24,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 
@@ -39,7 +39,7 @@ func _on_mute_button_toggled(toggled_on: bool) -> void:
 	GameController.master_muted = toggled_on
 	GameController.apply_audio_settings()
 
-func _on_volume_drag_ended(value_changed: bool) -> void:
+func _on_volume_drag_ended(_value_changed: bool) -> void:
 	if soundcheck_player and soundcheck_player.stream:
 		soundcheck_player.play()
 
@@ -59,7 +59,7 @@ func _on_back_pressed() -> void:
 		parent_node.get_node("MainMenu").visible = true
 		return
 
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	GameController.return_from_option()
 
 
 func _unhandled_input(event: InputEvent) -> void:

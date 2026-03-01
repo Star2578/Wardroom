@@ -101,6 +101,22 @@ layout_mode = 2
 [node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/VolumeRow2" unique_id=2145937507]
 layout_mode = 2
 
+[node name="VolumeRow4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=410223949]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/VolumeRow4" unique_id=890271842]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "langage"
+
+[node name="LabelToCheckSpacer" type="Control" parent="MarginContainer/VBoxContainer/VolumeRow4" unique_id=1900136214]
+custom_minimum_size = Vector2(850, 0)
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/VolumeRow4" unique_id=598644625]
+layout_mode = 2
+
 [node name="Back" type="Button" parent="." unique_id=15882442]
 layout_mode = 1
 anchors_preset = 4
