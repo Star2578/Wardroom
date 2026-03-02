@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bkkpi70hfbrpu"]
 
 [ext_resource type="Script" uid="uid://dc8s4nb5v85ji" path="res://scripts/door.gd" id="1_hpvv5"]
+[ext_resource type="AudioStream" uid="uid://b4d18d0p64f7v" path="res://sounds/sfx/Door_squeeky_2.wav" id="2_uvdjg"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hpvv5"]
 size = Vector3(1.1, 2, 0.1)
@@ -16,4 +17,25 @@ destination = NodePath("../Destination")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=241131087]
 shape = SubResource("BoxShape3D_hpvv5")
 
+[node name="Control" type="Control" parent="." unique_id=1472877047]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="FadeBlack" type="ColorRect" parent="Control" unique_id=421146133]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [node name="DoorSFX" type="AudioStreamPlayer" parent="." unique_id=769612488]
+stream = ExtResource("2_uvdjg")
+bus = &"SFX"

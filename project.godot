@@ -25,6 +25,10 @@ GameController="*res://scenes/game_controller.tscn"
 InventoryManager="*uid://cp77ugoiunjc2"
 InspectMenu="*uid://cxsj4n5rko1k5"
 
+[display]
+
+window/size/mode=3
+
 [editor_plugins]
 
 enabled=PackedStringArray()

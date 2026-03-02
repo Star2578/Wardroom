@@ -136,6 +136,9 @@ var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity") 
 # Stores mouse input for rotating the camera in the physics process
 var mouseInput : Vector2 = Vector2(0,0)
 
+var footstep_timer = 0.0
+const STEP_INTERVAL = 0.5
+
 #endregion
 
 #region Variable for interact
@@ -250,6 +253,14 @@ func handle_movement(delta, input_dir):
 		else:
 			velocity.x = direction.x * speed
 			velocity.z = direction.z * speed
+	
+	if is_on_floor() and velocity.length() > 0.5:
+		footstep_timer -= delta
+		if footstep_timer <= 0:
+			$FootstepSFX.play()
+			footstep_timer = STEP_INTERVAL
+	else:
+		footstep_timer = 0
 
 
 func handle_head_rotation():
@@ -277,7 +288,7 @@ func handle_head_rotation():
 
 	mouseInput = Vector2(0,0)
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
-	%GeneralSkeleton.rotation.y = HEAD.rotation.y + 180
+	%GeneralSkeleton.rotation.y = lerp_angle(%GeneralSkeleton.rotation.y, HEAD.rotation.y + PI, 0.2)
 
 
 func check_controls(): # If you add a control, you might want to add a check for it here.
