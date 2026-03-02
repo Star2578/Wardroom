@@ -56,9 +56,15 @@ size = Vector3(2, 0.1, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_5wd4h"]
 size = Vector3(2, 2.5, 0.15338194)
 
-[node name="Bathroom" unique_id=193283959 instance=ExtResource("1_e85py")]
+[sub_resource type="BoxShape3D" id="BoxShape3D_sv6bp"]
+size = Vector3(1, 2, 0.10000001)
 
-[node name="Bathroom_Floor" parent="." index="10" unique_id=991615998]
+[sub_resource type="BoxShape3D" id="BoxShape3D_tdrii"]
+size = Vector3(1, 2, 0.10000001)
+
+[node name="Bathroom" unique_id=393555320 instance=ExtResource("1_e85py")]
+
+[node name="Bathroom_Floor" parent="." index="10" unique_id=1798633187]
 mesh = SubResource("ArrayMesh_ysm5y")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Bathroom_Floor" index="0" unique_id=314350573]
@@ -66,7 +72,7 @@ mesh = SubResource("ArrayMesh_ysm5y")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom_Floor/StaticBody3D" index="0" unique_id=817066929]
 shape = SubResource("BoxShape3D_e85py")
 
-[node name="Bathroom_Wall" parent="." index="11" unique_id=1603166680]
+[node name="Bathroom_Wall" parent="." index="11" unique_id=215255070]
 transform = Transform3D(1, 0, 0, 0, 1.35, 0, 0, 0, 1, -11.858447, 0.0076898336, 0.017963504)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Bathroom_Wall" index="0" unique_id=1617839678]
@@ -74,3 +80,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0031423569, 1.2500154, -0.
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom_Wall/StaticBody3D" index="0" unique_id=1130234332]
 shape = SubResource("BoxShape3D_5wd4h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bathroom_Door" parent_id_path=PackedInt32Array(909422115) index="0" unique_id=1135928660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3783574e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom_Door/StaticBody3D" index="0" unique_id=2055347379]
+shape = SubResource("BoxShape3D_sv6bp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Bathroom_Door_001" parent_id_path=PackedInt32Array(1248640421) index="0" unique_id=15777804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3783574e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bathroom_Door_001/StaticBody3D" index="0" unique_id=1325013530]
+shape = SubResource("BoxShape3D_tdrii")

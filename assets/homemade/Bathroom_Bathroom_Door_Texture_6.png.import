@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0uehvsj3u7nl"
-path.s3tc="res://.godot/imported/Bathroom_Bathroom_Wall_Texture.png-cdb256226f52b74081cfcfa4fb12be8b.s3tc.ctex"
+uid="uid://doocdcr6qhn0h"
+path.s3tc="res://.godot/imported/Bathroom_Bathroom_Door_Texture_6.png-c2ebbac3606506e836bf04ae04a2995e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "78c09ffbbc93ab51e0f9e820737d2b39"
+"md5": "d06d015f517f75cf7d546469c326fe64"
 }
 
 [deps]
 
-source_file="res://assets/homemade/Bathroom_Bathroom_Wall_Texture.png"
-dest_files=["res://.godot/imported/Bathroom_Bathroom_Wall_Texture.png-cdb256226f52b74081cfcfa4fb12be8b.s3tc.ctex"]
+source_file="res://assets/homemade/Bathroom_Bathroom_Door_Texture_6.png"
+dest_files=["res://.godot/imported/Bathroom_Bathroom_Door_Texture_6.png-c2ebbac3606506e836bf04ae04a2995e.s3tc.ctex"]
 
 [params]
 

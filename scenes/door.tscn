@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bkkpi70hfbrpu"]
+
+[ext_resource type="Script" uid="uid://dc8s4nb5v85ji" path="res://scripts/door.gd" id="1_hpvv5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hpvv5"]
+size = Vector3(1.1, 2, 0.1)
+
+[node name="Door" type="Node3D" unique_id=1332818805]
+
+[node name="Destination" type="Node3D" parent="." unique_id=2055060684]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1758599314 node_paths=PackedStringArray("destination")]
+script = ExtResource("1_hpvv5")
+destination = NodePath("../Destination")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=241131087]
+shape = SubResource("BoxShape3D_hpvv5")
+
+[node name="DoorSFX" type="AudioStreamPlayer" parent="." unique_id=769612488]

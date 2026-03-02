@@ -5,6 +5,7 @@
 
 extends CharacterBody3D
 
+class_name Player
 
 #region Character Export Group
 
@@ -147,6 +148,8 @@ var mouseInput : Vector2 = Vector2(0,0)
 #region Main Control Flow
 
 func _ready():
+	GameController.player = self
+	
 	#It is safe to comment this line if your game doesn't start with the mouse captured
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -274,6 +277,7 @@ func handle_head_rotation():
 
 	mouseInput = Vector2(0,0)
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+	%GeneralSkeleton.rotation.y = HEAD.rotation.y + 180
 
 
 func check_controls(): # If you add a control, you might want to add a check for it here.
@@ -509,7 +513,13 @@ func handle_interaction():
 				collider.interact()
 		else:
 			interaction_label.hide()
+		
+		if collider is Door:
+			interaction_label.show()
 			
+			if Input.is_action_just_pressed("interact"):
+				collider.interact()
+		
 	else:
 		interaction_label.hide()
 		
