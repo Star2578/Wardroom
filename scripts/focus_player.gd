@@ -53,7 +53,7 @@ var freeflying : bool = false
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
 
-@onready var ray = $"Head/InteractRay"
+@onready var ray = $"Head/Camera3D/InteractRay"
 @onready var interaction_ui = $"../UI/InteractionPrompt"
 @onready var dialogue_ui = $"../UI/DialogueUI"
 @onready var inventory_ui = $"../InventoryUI"
