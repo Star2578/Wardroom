@@ -57,6 +57,7 @@ var freeflying : bool = false
 @onready var interaction_ui = $"../UI/InteractionPrompt"
 @onready var dialogue_ui = $"../UI/DialogueUI"
 @onready var inventory_ui = $"../InventoryUI"
+@onready var item_ui = $"../StaticBody3D2/ItemUI"
 
 func _ready() -> void:
 	check_input_mappings()
@@ -133,13 +134,17 @@ func _physics_process(delta: float) -> void:
 func check_interaction():
 	if !ray or !ray.is_colliding():
 		interaction_ui.hide()
+		item_ui.hide()
 		return
 
 	var obj = ray.get_collider()
-
+		
 	if obj and obj.has_method("interact"):
 		interaction_ui.show()
-
+		if obj and obj.has_method("show_item"):
+			item_ui.show()
+		else:
+			item_ui.hide()
 		if Input.is_action_just_pressed("interact"):
 			interaction_ui.hide()
 			obj.interact()

@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://conw07ypb2txy" path="res://scripts/PickupObject.gd" id="6_t7and"]
 [ext_resource type="Resource" uid="uid://dj1u2yag7b36h" path="res://misc/OldKey.tres" id="7_7182s"]
 [ext_resource type="Script" uid="uid://yrsof6kjwn0f" path="res://scripts/InventoryUI.gd" id="7_ruw3y"]
+[ext_resource type="Script" uid="uid://dxoen64pl7t4x" path="res://scripts/ItemUI.gd" id="8_tpwpp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1kc1q"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,6 +23,9 @@ sky = SubResource("Sky_4msxo")
 tonemap_mode = 2
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7182s"]
+albedo_color = Color(0.6862745, 0.2, 0.21176471, 1)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjmho"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_7182s"]
@@ -31,9 +35,11 @@ albedo_color = Color(0.46186197, 1.0588765e-06, 2.6471912e-07, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tpwpp"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_ruw3y"]
+[sub_resource type="SphereMesh" id="SphereMesh_tpwpp"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7182s"]
+margin = 0.0
+radius = 0.5464387
 
 [node name="Scene" type="Node3D" unique_id=1393542715]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0)
@@ -48,6 +54,7 @@ shadow_enabled = true
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=434378121]
 transform = Transform3D(15.999999, 0, 0, 0, 1, 0, 0, 0, 15.999999, 0, 0, 0)
 use_collision = true
+material = SubResource("StandardMaterial3D_7182s")
 
 [node name="ProtoController" parent="." unique_id=2119088977 instance=ExtResource("1_s6dok")]
 transform = Transform3D(0.1999999, 0, 0, 0, 1, 0, 0, 0, 0.1999999, -0.08000048, 1.5999999, 1.7399995)
@@ -66,10 +73,10 @@ script = ExtResource("3_gjmho")
 
 [node name="Label" type="Label" parent="UI/InteractionPrompt" unique_id=719874894]
 offset_left = 512.0
-offset_top = 256.0
+offset_top = 384.0
 offset_right = 640.0
-offset_bottom = 320.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Press E"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -125,30 +132,40 @@ script = ExtResource("5_ruw3y")
 dialogue_file_path = "res://dialogues/day1/test1.json"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=2085734164]
-transform = Transform3D(1, 0, 0, 0, 6.119999, 0, 0, 0, 1, 0, -4.700001, 0)
+transform = Transform3D(0.23851332, 0, 0, 0, 1.428505, 0, 0, 0, 0.2713859, 0, -4.700001, 0)
 mesh = SubResource("BoxMesh_7182s")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_gjmho")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=546954945]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.500001, 0)
+transform = Transform3D(0.2787404, 0, 0, 0, 1.6822368, 0, 0, 0, 0.2787404, 0, -4.756072, 0)
 shape = SubResource("BoxShape3D_tpwpp")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=135655655]
-transform = Transform3D(0.99999976, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999976, -1.54, 7.5, 0.5199999)
-physics_material_override = SubResource("PhysicsMaterial_gjmho")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5399997, 7.5, 0.5199999)
 script = ExtResource("6_t7and")
 item_data = ExtResource("7_7182s")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1836787318]
-transform = Transform3D(0.24, 0, 0, 0, 1.4687998, 0, 0, 0, 0.24, 0, -4.700001, 0)
-mesh = SubResource("SphereMesh_ruw3y")
+transform = Transform3D(0.23095033, 0, 0, 0, 1.4134159, 0, 0, 0, 0.23095033, 0, -4.700001, 0)
+mesh = SubResource("SphereMesh_tpwpp")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_gjmho")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=180674959]
-transform = Transform3D(0.25755706, 0, 0, 0, 1.417479, 0, 0, 0, 0.25484362, 0, -4.6000013, 0)
+transform = Transform3D(0.25755706, 0, 0, 0, 1.417479, 0, 0, 0, 0.25484362, 0, -4.6958895, 0)
 shape = SubResource("SphereShape3D_7182s")
+
+[node name="ItemUI" type="CanvasLayer" parent="StaticBody3D2" unique_id=639561880]
+script = ExtResource("8_tpwpp")
+
+[node name="ItemNameLabel" type="Label" parent="StaticBody3D2/ItemUI" unique_id=241789099]
+offset_left = 512.0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 383.0
+text = "Old Key"
+vertical_alignment = 2
 
 [node name="InventoryUI" type="CanvasLayer" parent="." unique_id=952242024]
 script = ExtResource("7_ruw3y")
@@ -172,4 +189,3 @@ offset_left = 8.0
 offset_top = -32.0
 offset_right = 48.0
 offset_bottom = -9.0
-text = "Inventory"

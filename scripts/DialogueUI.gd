@@ -30,7 +30,7 @@ func go_to_node(node_id):
 		show_choices(node["choices"])
 	else:
 		# ถ้าไม่มี choice แปลว่าจบ
-		await get_tree().create_timer(5).timeout
+		await get_tree().create_timer(2.5).timeout
 		end_dialogue()
 
 func show_choices(choices):
