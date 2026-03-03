@@ -57,7 +57,7 @@ var freeflying : bool = false
 @onready var interaction_ui = $"../UI/InteractionPrompt"
 @onready var dialogue_ui = $"../UI/DialogueUI"
 @onready var inventory_ui = $"../InventoryUI"
-@onready var item_ui = $"../StaticBody3D2/ItemUI"
+@onready var item_ui = $"../ItemUI"
 
 func _ready() -> void:
 	check_input_mappings()
@@ -141,12 +141,14 @@ func check_interaction():
 		
 	if obj and obj.has_method("interact"):
 		interaction_ui.show()
-		if obj and obj.has_method("show_item"):
+		if obj is Pickable:
 			item_ui.show()
 		else:
 			item_ui.hide()
+			
 		if Input.is_action_just_pressed("interact"):
 			interaction_ui.hide()
+			item_ui.hide()
 			obj.interact()
 	else:
 		interaction_ui.hide()

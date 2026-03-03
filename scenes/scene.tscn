@@ -156,17 +156,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_gjmho")
 transform = Transform3D(0.25755706, 0, 0, 0, 1.417479, 0, 0, 0, 0.25484362, 0, -4.6958895, 0)
 shape = SubResource("SphereShape3D_7182s")
 
-[node name="ItemUI" type="CanvasLayer" parent="StaticBody3D2" unique_id=639561880]
-script = ExtResource("8_tpwpp")
-
-[node name="ItemNameLabel" type="Label" parent="StaticBody3D2/ItemUI" unique_id=241789099]
-offset_left = 512.0
-offset_top = 320.0
-offset_right = 640.0
-offset_bottom = 383.0
-text = "Old Key"
-vertical_alignment = 2
-
 [node name="InventoryUI" type="CanvasLayer" parent="." unique_id=952242024]
 script = ExtResource("7_ruw3y")
 
@@ -189,3 +178,14 @@ offset_left = 8.0
 offset_top = -32.0
 offset_right = 48.0
 offset_bottom = -9.0
+
+[node name="ItemUI" type="CanvasLayer" parent="." unique_id=639561880]
+script = ExtResource("8_tpwpp")
+
+[node name="ItemNameLabel" type="Label" parent="ItemUI" unique_id=241789099]
+offset_left = 512.0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 383.0
+text = "Old Key"
+vertical_alignment = 2
