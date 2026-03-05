@@ -5,10 +5,11 @@
 [ext_resource type="Script" uid="uid://b44kpoflcqcns" path="res://scripts/InteractionPrompt.gd" id="3_gjmho"]
 [ext_resource type="Script" uid="uid://clygy4jlk6rpt" path="res://scripts/DialogueUI.gd" id="4_t7and"]
 [ext_resource type="Script" uid="uid://vjyo5esggo3m" path="res://scripts/InteractableObject.gd" id="5_ruw3y"]
-[ext_resource type="Script" uid="uid://conw07ypb2txy" path="res://scripts/PickupObject.gd" id="6_t7and"]
-[ext_resource type="Resource" uid="uid://dj1u2yag7b36h" path="res://misc/OldKey.tres" id="7_7182s"]
+[ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/item_data.gd" id="7_5yiy0"]
 [ext_resource type="Script" uid="uid://yrsof6kjwn0f" path="res://scripts/InventoryUI.gd" id="7_ruw3y"]
-[ext_resource type="Script" uid="uid://dxoen64pl7t4x" path="res://scripts/ItemUI.gd" id="8_tpwpp"]
+[ext_resource type="Script" uid="uid://wjbwgfttbhub" path="res://scripts/interactable.gd" id="8_7ftgl"]
+[ext_resource type="Texture2D" uid="uid://c1tvbpjjwoqa7" path="res://misc/example.png" id="9_5yiy0"]
+[ext_resource type="Script" uid="uid://crdqbiangc58m" path="res://scripts/interactable_ui.gd" id="11_dqloj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1kc1q"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -26,8 +27,6 @@ glow_enabled = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7182s"]
 albedo_color = Color(0.6862745, 0.2, 0.21176471, 1)
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjmho"]
-
 [sub_resource type="BoxMesh" id="BoxMesh_7182s"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjmho"]
@@ -35,11 +34,32 @@ albedo_color = Color(0.46186197, 1.0588765e-06, 2.6471912e-07, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tpwpp"]
 
+[sub_resource type="Resource" id="Resource_5yiy0"]
+script = ExtResource("7_5yiy0")
+item_name = "Example Name"
+description = "Example Description"
+icon = ExtResource("9_5yiy0")
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
 [sub_resource type="SphereMesh" id="SphereMesh_tpwpp"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7182s"]
 margin = 0.0
 radius = 0.5464387
+
+[sub_resource type="Resource" id="Resource_1id6j"]
+script = ExtResource("7_5yiy0")
+item_name = "Example Name 2"
+description = "Example Description 2"
+icon = ExtResource("9_5yiy0")
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="GDScript" id="GDScript_7ftgl"]
+script/source = "extends CanvasLayer
+
+func _ready() -> void:
+	hide()
+"
 
 [node name="Scene" type="Node3D" unique_id=1393542715]
 transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0)
@@ -65,6 +85,7 @@ input_right = "move_right"
 input_forward = "move_forward"
 input_back = "move_backward"
 input_jump = "jump"
+interaction_ui_path = NodePath("../InteractableUI")
 
 [node name="UI" type="Node" parent="." unique_id=1311038057]
 
@@ -127,7 +148,6 @@ layout_mode = 2
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1158022933]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999976, 0, 7.5, 0.5199999)
-physics_material_override = SubResource("PhysicsMaterial_gjmho")
 script = ExtResource("5_ruw3y")
 dialogue_file_path = "res://dialogues/day1/test1.json"
 
@@ -141,18 +161,33 @@ surface_material_override/0 = SubResource("StandardMaterial3D_gjmho")
 transform = Transform3D(0.2787404, 0, 0, 0, 1.6822368, 0, 0, 0, 0.2787404, 0, -4.756072, 0)
 shape = SubResource("BoxShape3D_tpwpp")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=135655655]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5399997, 7.5, 0.5199999)
-script = ExtResource("6_t7and")
-item_data = ExtResource("7_7182s")
+[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=1210350974]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -2.5588052, 7.5, 0.5199999)
+script = ExtResource("8_7ftgl")
+item_data = SubResource("Resource_5yiy0")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1836787318]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3" unique_id=1936024180]
 transform = Transform3D(0.23095033, 0, 0, 0, 1.4134159, 0, 0, 0, 0.23095033, 0, -4.700001, 0)
 mesh = SubResource("SphereMesh_tpwpp")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_gjmho")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=180674959]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1750262304]
+transform = Transform3D(0.25755706, 0, 0, 0, 1.417479, 0, 0, 0, 0.25484362, 0, -4.6958895, 0)
+shape = SubResource("SphereShape3D_7182s")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1438167279]
+transform = Transform3D(0.9999998, 0, 0, 0, 1, 0, 0, 0, 0.9999998, -3.1879857, 7.5, 0.5199999)
+script = ExtResource("8_7ftgl")
+item_data = SubResource("Resource_1id6j")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D4" unique_id=1803870777]
+transform = Transform3D(0.23095033, 0, 0, 0, 1.4134159, 0, 0, 0, 0.23095033, 0, -4.700001, 0)
+mesh = SubResource("SphereMesh_tpwpp")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_gjmho")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=2088959571]
 transform = Transform3D(0.25755706, 0, 0, 0, 1.417479, 0, 0, 0, 0.25484362, 0, -4.6958895, 0)
 shape = SubResource("SphereShape3D_7182s")
 
@@ -166,11 +201,13 @@ offset_right = 584.0
 offset_bottom = 136.0
 
 [node name="ItemGrid" type="GridContainer" parent="InventoryUI/Panel" unique_id=1290281865]
+layout_direction = 2
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 520.0
 offset_bottom = 72.0
+columns = 5
 
 [node name="DescriptionLabel" type="Label" parent="InventoryUI/Panel" unique_id=480474922]
 layout_mode = 0
@@ -180,7 +217,7 @@ offset_right = 48.0
 offset_bottom = -9.0
 
 [node name="ItemUI" type="CanvasLayer" parent="." unique_id=639561880]
-script = ExtResource("8_tpwpp")
+script = SubResource("GDScript_7ftgl")
 
 [node name="ItemNameLabel" type="Label" parent="ItemUI" unique_id=241789099]
 offset_left = 512.0
@@ -189,3 +226,19 @@ offset_right = 640.0
 offset_bottom = 383.0
 text = "Old Key"
 vertical_alignment = 2
+
+[node name="InteractableUI" type="CanvasLayer" parent="." unique_id=247658493]
+script = ExtResource("11_dqloj")
+
+[node name="NameLabel" type="Label" parent="InteractableUI" unique_id=1499558738]
+offset_left = 280.0
+offset_top = 224.0
+offset_right = 520.0
+offset_bottom = 320.0
+
+[node name="PromptLabel" type="Label" parent="InteractableUI" unique_id=872272978]
+offset_left = 768.0
+offset_top = 288.0
+offset_right = 888.0
+offset_bottom = 344.0
+text = "Preesss eee"

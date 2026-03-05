@@ -54,10 +54,13 @@ var freeflying : bool = false
 @onready var collider: CollisionShape3D = $Collider
 
 @onready var ray = $"Head/Camera3D/InteractRay"
-@onready var interaction_ui = $"../UI/InteractionPrompt"
-@onready var dialogue_ui = $"../UI/DialogueUI"
-@onready var inventory_ui = $"../InventoryUI"
-@onready var item_ui = $"../ItemUI"
+@onready var inventory_ui = $"../UI/InventoryUI"
+
+@export var interaction_ui_path: NodePath
+@onready var interaction_ui = get_node(interaction_ui_path)
+
+var current_target: Node = null
+
 
 func _ready() -> void:
 	check_input_mappings()
@@ -129,29 +132,27 @@ func _physics_process(delta: float) -> void:
 	# Use velocity to actually move
 	move_and_slide()
 	
-	check_interaction()
+	_update_target()
 
-func check_interaction():
+func _get_raycast_target():
 	if !ray or !ray.is_colliding():
-		interaction_ui.hide()
-		item_ui.hide()
-		return
-
+		return null
 	var obj = ray.get_collider()
+	if obj and obj.has_method("get_interaction_data"):
+		return obj
+	return null
+	
+func _update_target():
+	var target = _get_raycast_target()
+
+	if target != current_target:
+		current_target = target
+		interaction_ui.set_target(current_target)  # UI handles show/hide + text
+
+	if current_target and Input.is_action_just_pressed("interact"):
+		interaction_ui.set_target(null)
+		current_target.interact()
 		
-	if obj and obj.has_method("interact"):
-		interaction_ui.show()
-		if obj is Pickable:
-			item_ui.show()
-		else:
-			item_ui.hide()
-			
-		if Input.is_action_just_pressed("interact"):
-			interaction_ui.hide()
-			item_ui.hide()
-			obj.interact()
-	else:
-		interaction_ui.hide()
 		
 ## Rotate us to look around.
 ## Base of controller rotates around y (left/right). Head rotates around x (up/down).

@@ -1,14 +1,21 @@
-extends Node3D
+class_name InteractableNPC
+
+extends Interactable
 
 @export_file("*.json") var dialogue_file_path: String
 
 @onready var dialogue_ui = $"../UI/DialogueUI"
 @onready var player = $"../ProtoController"
 
+func get_interaction_data() -> Dictionary:
+	return {
+		"name": object_data.name,
+		"prompt": "Press E to talk"
+	}
+	
 func interact():
 	var dialogue_data = load_dialogue(dialogue_file_path)
 	dialogue_ui.start_dialogue(dialogue_data, player)
-	
 	
 func load_dialogue(path: String):
 	var file = FileAccess.open(path, FileAccess.READ)
