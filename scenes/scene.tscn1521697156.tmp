@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dvunj40khmhcf"]
+[gd_scene format=3 uid="uid://bedp4a0ul28s"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_s6dok"]
 [ext_resource type="Script" uid="uid://cti1v5otsc2bq" path="res://scripts/focus_player.gd" id="2_1kc1q"]
