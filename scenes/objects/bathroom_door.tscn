@@ -1,0 +1,82 @@
+[gd_scene format=4 uid="uid://bkswa2dg2tbdc"]
+
+[ext_resource type="Texture2D" uid="uid://3lu2pieh1w1g" path="res://assets/homemade/Bathroom_Bathroom_Door_Texture.png" id="1_4gnt8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2tjt1"]
+resource_name = "Bathroom_Door_Mat"
+cull_mode = 2
+albedo_texture = ExtResource("1_4gnt8")
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thenu"]
+resource_name = "Bathroom_Door_Handle_Mat"
+cull_mode = 2
+albedo_color = Color(0.43529418, 0.43529418, 0.43529418, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_d3xo4"]
+_surfaces = [{
+"aabb": AABB(-0.5, -1, -0.025000077, 1, 2, 0.050000153),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "Bathroom_Door_Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP///v8AAAAAAAD//wAAAAD//wAAAAD//////v8AAP//AAAAAAAA//8AAP//AAD/////AAAAAA==")
+}, {
+"aabb": AABB(-0.4080339, -0.18711656, -0.049999867, 0.112927556, 0.39999998, 0.10000001),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAACAAEAAwAEAAEABQAAAAIAAwAAAAUABAAGAAIABQACAAYAAwAHAAQAAwAFAAcABwAGAAQABwAFAAYA"),
+"name": "Bathroom_Door_Handle_Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP7/AAAAAP//AAAAAAAA/////wAAAAAAAAAAAAD/////AAAAAP//AAD+/wAA////////AAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_i746n"]
+resource_name = "Bathroom_Cube_005"
+_surfaces = [{
+"aabb": AABB(-0.5, -1, -0.025000077, 1, 2, 0.050000153),
+"attribute_data": PackedByteArray("VFWqqgAA//8AAKqqVFX//1RVVFUAAKmqAABVVVRVqaqpqqqqVVX//1VVqqqpqv7/qapUVVVVqapVVVVVqqqpqlRVVFUAAAAAVFUAAAAAVVWqqlRVVVUAAKmqAABVVVRV"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_2tjt1"),
+"name": "Bathroom_Door_Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAAAA//8AAP///v///wAAAAD/////AAD//wAA//8AAP//AABU1f/////+/1TVAAD///7/VNX/////AABU1f////8AAP+///8AAP///7///////v//v///AAAAAP+///8AAAAAVNUAAAAA//9U1f//AAD//1TVAAAAAAAAVNUAAP//AAD/////AAAAAP///////wAA//8AAAAAAAD////////+//+/AAAAAP///78AAP///v//v///AAD///+//z//f/8//3//P/9//z//f1TVqipU1aoqVNWqKlTVqir/fwAA/38AAP9/AAD/fwAAVVVUVVVVVFVVVVRVVFVUVf+//7//v/+//7//v/+//7//////////////////////")
+}, {
+"aabb": AABB(-0.4080339, -0.18711656, -0.049999867, 0.112927556, 0.39999998, 0.10000001),
+"attribute_data": PackedByteArray("VFWqqgAA//8AAKqqVFX//1RVVFUAAKmqAABVVVRVqaqpqqqqVVX//1VVqqqpqv7/qapUVVVVqapVVVVVqqqpqlRVVFUAAAAAVFUAAAAAVVWqqlRVVVUAAKmqAABVVVRV"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUA"),
+"material": SubResource("StandardMaterial3D_thenu"),
+"name": "Bathroom_Door_Handle_Mat",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP7/VNUAAP//AABU1QAA/////1TVAAAAAAAAVNUAAAAAAAD///////8AAP//AAD//wAA/////wAAAAD/////AAAAAFTV////////VNX/////AABU1f//AAD+/1TV//8AAP7//78AAP//////v/////////+/AAAAAP7//78AAAAAAABU1f//AAD+/1TV//8AAAAAVNUAAAAA/v9U1f////8AAFTVAAD/////VNUAAP//AABU1f///////1TVVFWqqlRVqqpUVaqqVFWqqv8//7//v/8//7//P/8//7+qqlRVqqpUVaqqVFWqqlRV/3//f/9//3//f/9//3//f1VVVFVVVVRVVFVUVVVVVFVU1aoqVNWqKlTVqipU1aoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_d3xo4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sv6bp"]
+size = Vector3(1, 2, 0.10000001)
+
+[node name="Bathroom_Door" type="MeshInstance3D" unique_id=777424490]
+mesh = SubResource("ArrayMesh_i746n")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1196992763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.3783574e-07)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1768736347]
+shape = SubResource("BoxShape3D_sv6bp")

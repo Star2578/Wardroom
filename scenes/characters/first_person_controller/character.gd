@@ -5,6 +5,7 @@
 
 extends CharacterBody3D
 
+class_name Player
 
 #region Character Export Group
 
@@ -135,13 +136,23 @@ var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity") 
 # Stores mouse input for rotating the camera in the physics process
 var mouseInput : Vector2 = Vector2(0,0)
 
+var footstep_timer = 0.0
+const STEP_INTERVAL = 0.5
+
 #endregion
 
+#region Variable for interact
 
+@onready var interaction_label = $UserInterface/InteractionLabel
+@onready var raycast_3d = $Head/Camera/RayCast3D
+
+#endregion
 
 #region Main Control Flow
 
 func _ready():
+	GameController.player = self
+	
 	#It is safe to comment this line if your game doesn't start with the mouse captured
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
@@ -165,6 +176,8 @@ func _process(_delta):
 		handle_pausing()
 
 	update_debug_menu_per_frame()
+
+	handle_interaction()
 
 
 func _physics_process(delta): # Most things happen here.
@@ -240,6 +253,14 @@ func handle_movement(delta, input_dir):
 		else:
 			velocity.x = direction.x * speed
 			velocity.z = direction.z * speed
+	
+	if is_on_floor() and velocity.length() > 0.5:
+		footstep_timer -= delta
+		if footstep_timer <= 0:
+			$FootstepSFX.play()
+			footstep_timer = STEP_INTERVAL
+	else:
+		footstep_timer = 0
 
 
 func handle_head_rotation():
@@ -267,6 +288,7 @@ func handle_head_rotation():
 
 	mouseInput = Vector2(0,0)
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
+	%GeneralSkeleton.rotation.y = lerp_angle(%GeneralSkeleton.rotation.y, HEAD.rotation.y + PI, 0.2)
 
 
 func check_controls(): # If you add a control, you might want to add a check for it here.
@@ -488,3 +510,27 @@ func handle_pausing():
 				#get_tree().paused = false
 
 #endregion
+
+#region Interactive
+
+func handle_interaction():
+	if raycast_3d.is_colliding():
+		var collider = raycast_3d.get_collider()
+
+		if collider is Interactable:
+			interaction_label.show()
+
+			if Input.is_action_just_pressed("interact"):
+				collider.interact()
+		else:
+			interaction_label.hide()
+		
+		if collider is Door:
+			interaction_label.show()
+			
+			if Input.is_action_just_pressed("interact"):
+				collider.interact()
+		
+	else:
+		interaction_label.hide()
+		
