@@ -32,10 +32,10 @@ glow_enabled = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7182s"]
 albedo_color = Color(0.6862745, 0.2, 0.21176471, 1)
 
-[sub_resource type="Resource" id="Resource_tpwpp"]
+[sub_resource type="Resource" id="Resource_e7npm"]
 script = ExtResource("7_mexth")
-name = "NPC 1"
-description = "NPC example"
+name = "NPC1"
+description = "NPC description"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="BoxMesh" id="BoxMesh_7182s"]
@@ -197,7 +197,7 @@ vertical_alignment = 1
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999976, 0, 7.5, 0.5199999)
 script = ExtResource("6_e7npm")
 dialogue_file_path = "res://dialogues/day1/test1.json"
-object_data = SubResource("Resource_tpwpp")
+object_data = SubResource("Resource_e7npm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="ExampleNPC1" unique_id=2085734164]
 transform = Transform3D(0.23851332, 0, 0, 0, 1.428505, 0, 0, 0, 0.2713859, 0, -4.700001, 0)

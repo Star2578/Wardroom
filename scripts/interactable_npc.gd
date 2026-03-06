@@ -1,5 +1,3 @@
-class_name InteractableNPC
-
 extends Interactable
 
 @export_file("*.json") var dialogue_file_path: String

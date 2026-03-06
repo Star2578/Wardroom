@@ -21,8 +21,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameController="*res://scenes/game_controller.tscn"
 InventoryManager="*uid://cp77ugoiunjc2"
+GameController="*res://scenes/game_controller.tscn"
 InspectMenu="*uid://cxsj4n5rko1k5"
 
 [display]
