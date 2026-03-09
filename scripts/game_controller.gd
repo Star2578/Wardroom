@@ -3,7 +3,7 @@ extends Node
 
 var is_started: bool = false
 
-var mouse_sensitivity: float = 0.1
+var mouse_sensitivity: float = 0.01
 
 var player: Player = null
 
