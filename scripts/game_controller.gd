@@ -3,13 +3,14 @@ extends Node
 
 var is_started: bool = false
 
-var mouse_sensitivity: float = 0.1
+var mouse_sensitivity: float = 0.01
 var master_bus_index: int
 var master_volume_db: float = linear_to_db(0.5)
 var master_muted: bool = false
 var brightness: float = 1.0
 var return_scene_path: String = ""
 const OPTION_RETURN_FALLBACK_SCENE := "res://scenes/main_menu.tscn"
+var player: Player = null
 
 func _ready() -> void:
 	print("GameManager Initiated")

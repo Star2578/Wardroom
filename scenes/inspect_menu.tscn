@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cxsj4n5rko1k5"]
+
+[ext_resource type="Script" uid="uid://dwntqi2jnbg1a" path="res://scenes/inspect_menu.gd" id="1_tm0gf"]
+
+[node name="InspectMenu" type="Control" unique_id=1068234371]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -353.0
+offset_top = -171.0
+offset_right = -353.0
+offset_bottom = -171.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tm0gf")
+
+[node name="Background" type="ColorRect" parent="." unique_id=393687598]
+layout_mode = 0
+offset_left = -135.0
+offset_top = -164.0
+offset_right = 2223.0
+offset_bottom = 1304.0
+color = Color(0, 0, 0, 0.48235294)
+
+[node name="SubViewport" type="SubViewport" parent="Background" unique_id=1535217282]
+
+[node name="Camera3D" type="Camera3D" parent="Background/SubViewport" unique_id=1741266118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="ItemHolder" type="Node3D" parent="Background/SubViewport" unique_id=941215735]

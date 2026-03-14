@@ -15,7 +15,6 @@ func _ready():
 	dialogue_data = load_dialogue_from_json(json_path)
 
 func load_dialogue_from_json(file_path: String):
-	var dialogue_data = {}
 	if FileAccess.file_exists(file_path):
 		var file = FileAccess.open(file_path, FileAccess.READ)
 		if file.get_length() > 0:
@@ -32,7 +31,7 @@ func set_dialogue_cs(cs_code: String):
 	current_cs = cs_code
 
 func show_next_dialogue():
-	if current_index >= dialogue_data.size():
+	if current_index >= dialogue_data[current_cs].size():
 		rich_label.text = "" # End of dialogue
 		return
 

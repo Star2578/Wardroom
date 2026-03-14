@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bdkbekecglrl4"]
+
+[ext_resource type="PackedScene" uid="uid://3la77ciplw1t" path="res://misc/key_low.fbx" id="1_2n3l3"]
+
+[node name="key_low" unique_id=1118423542 instance=ExtResource("1_2n3l3")]

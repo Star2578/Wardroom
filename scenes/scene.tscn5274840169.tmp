@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://dvunj40khmhcf"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_s6dok"]
+[ext_resource type="Script" uid="uid://cti1v5otsc2bq" path="res://scripts/focus_player.gd" id="2_1kc1q"]
+[ext_resource type="Script" uid="uid://b44kpoflcqcns" path="res://scripts/InteractionPrompt.gd" id="3_gjmho"]
+[ext_resource type="Script" uid="uid://clygy4jlk6rpt" path="res://scripts/DialogueUI.gd" id="4_t7and"]
+[ext_resource type="Script" uid="uid://vjyo5esggo3m" path="res://scripts/InteractableObject.gd" id="5_ruw3y"]
+[ext_resource type="Script" uid="uid://conw07ypb2txy" path="res://scripts/PickupObject.gd" id="6_t7and"]
+[ext_resource type="Resource" uid="uid://dj1u2yag7b36h" path="res://misc/OldKey.tres" id="7_7182s"]
+[ext_resource type="Script" uid="uid://yrsof6kjwn0f" path="res://scripts/InventoryUI.gd" id="7_ruw3y"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1kc1q"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_4msxo"]
+sky_material = SubResource("ProceduralSkyMaterial_1kc1q")
+
+[sub_resource type="Environment" id="Environment_5fb3c"]
+background_mode = 2
+sky = SubResource("Sky_4msxo")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_gjmho"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7182s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjmho"]
+albedo_color = Color(0.46186197, 1.0588765e-06, 2.6471912e-07, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tpwpp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ruw3y"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7182s"]
+
+[node name="Scene" type="Node3D" unique_id=1393542715]
+transform = Transform3D(5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1987536651]
+environment = SubResource("Environment_5fb3c")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=2123147459]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=434378121]
+transform = Transform3D(15.999999, 0, 0, 0, 1, 0, 0, 0, 15.999999, 0, 0, 0)
+use_collision = true
+
+[node name="ProtoController" parent="." unique_id=2119088977 instance=ExtResource("1_s6dok")]
+transform = Transform3D(0.1999999, 0, 0, 0, 1, 0, 0, 0, 0.1999999, -0.08000048, 1.5999999, 1.7399995)
+script = ExtResource("2_1kc1q")
+can_sprint = true
+input_left = "move_left"
+input_right = "move_right"
+input_forward = "move_forward"
+input_back = "move_backward"
+input_jump = "jump"
+
+[node name="UI" type="Node" parent="." unique_id=1311038057]
+
+[node name="InteractionPrompt" type="CanvasLayer" parent="UI" unique_id=2050528555]
+script = ExtResource("3_gjmho")
+
+[node name="Label" type="Label" parent="UI/InteractionPrompt" unique_id=719874894]
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 640.0
+offset_bottom = 320.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Press E"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DialogueUI" type="CanvasLayer" parent="UI" unique_id=28527836]
+script = ExtResource("4_t7and")
+
+[node name="Panel" type="Panel" parent="UI/DialogueUI" unique_id=298618073]
+offset_left = 256.0
+offset_top = 448.0
+offset_right = 896.0
+offset_bottom = 616.0
+
+[node name="NameLabel" type="Label" parent="UI/DialogueUI/Panel" unique_id=308072698]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 71.0
+offset_bottom = 31.0
+text = "A object"
+
+[node name="TextLabel" type="Label" parent="UI/DialogueUI/Panel" unique_id=619183537]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 150.0
+offset_bottom = 63.0
+text = "A simple object"
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="UI/DialogueUI/Panel" unique_id=1811684319]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 632.0
+offset_bottom = 120.0
+
+[node name="Example" type="Button" parent="UI/DialogueUI/Panel/ChoiceContainer" unique_id=834417969]
+layout_mode = 2
+disabled = true
+text = "Example"
+
+[node name="Choice1" type="Button" parent="UI/DialogueUI/Panel/ChoiceContainer" unique_id=867421073]
+layout_mode = 2
+
+[node name="Choice2" type="Button" parent="UI/DialogueUI/Panel/ChoiceContainer" unique_id=2059170661]
+layout_mode = 2
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1158022933]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999976, 0, 7.5, 0.5199999)
+physics_material_override = SubResource("PhysicsMaterial_gjmho")
+script = ExtResource("5_ruw3y")
+dialogue_file_path = "res://dialogues/day1/test1.json"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=2085734164]
+transform = Transform3D(1, 0, 0, 0, 6.119999, 0, 0, 0, 1, 0, -4.700001, 0)
+mesh = SubResource("BoxMesh_7182s")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_gjmho")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=546954945]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.500001, 0)
+shape = SubResource("BoxShape3D_tpwpp")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=135655655]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999976, -1.54, 7.5, 0.5199999)
+physics_material_override = SubResource("PhysicsMaterial_gjmho")
+script = ExtResource("6_t7and")
+item_data = ExtResource("7_7182s")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2" unique_id=1836787318]
+transform = Transform3D(0.24, 0, 0, 0, 1.4687998, 0, 0, 0, 0.24, 0, -4.700001, 0)
+mesh = SubResource("SphereMesh_ruw3y")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_gjmho")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=180674959]
+transform = Transform3D(0.25755706, 0, 0, 0, 1.417479, 0, 0, 0, 0.25484362, 0, -4.6000013, 0)
+shape = SubResource("SphereShape3D_7182s")
+
+[node name="InventoryUI" type="CanvasLayer" parent="." unique_id=952242024]
+script = ExtResource("7_ruw3y")
+
+[node name="Panel" type="Panel" parent="InventoryUI" unique_id=703956036]
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 584.0
+offset_bottom = 136.0
+
+[node name="ItemGrid" type="GridContainer" parent="InventoryUI/Panel" unique_id=1290281865]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 72.0
+
+[node name="DescriptionLabel" type="Label" parent="InventoryUI/Panel" unique_id=480474922]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -32.0
+offset_right = 48.0
+offset_bottom = -9.0
+text = "Inventory"
