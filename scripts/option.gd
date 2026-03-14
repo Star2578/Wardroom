@@ -55,6 +55,11 @@ func _on_brightness_value_changed(value: float) -> void:
 func _on_back_pressed() -> void:
 	var parent_node := get_parent()
 	if parent_node and parent_node.has_node("MainMenu"):
+		if parent_node.has_node("CutscenePlayer"):
+			var cutscene_player := parent_node.get_node("CutscenePlayer")
+			if cutscene_player and cutscene_player.has_method("resume_cutscene"):
+				cutscene_player.resume_cutscene()
+
 		visible = false
 		parent_node.get_node("MainMenu").visible = true
 		return
