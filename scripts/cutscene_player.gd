@@ -30,6 +30,8 @@ func pause_cutscene() -> void:
 		return
 
 	anim.pause()
+	if text_writer and text_writer.has_method("pause_text"):
+		text_writer.pause_text()
 	cutscene_pause = true
 
 
@@ -38,4 +40,6 @@ func resume_cutscene() -> void:
 		return
 
 	anim.play()
+	if text_writer and text_writer.has_method("resume_text"):
+		text_writer.resume_text()
 	cutscene_pause = false

@@ -10,6 +10,9 @@ font_size = 50
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt2fl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0chu7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Option" type="Control" unique_id=1931018133]
 layout_mode = 3
 anchors_preset = 15
@@ -123,9 +126,9 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 50.0
-offset_top = 91.0
+offset_top = 132.0
 offset_right = 150.0
-offset_bottom = 133.0
+offset_bottom = 174.0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_qt2fl")
@@ -133,6 +136,24 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_qt2fl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_qt2fl")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_qt2fl")
 text = "Back"
+alignment = 0
+
+[node name="Quit" type="Button" parent="." unique_id=757532391]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 91.0
+offset_right = 150.0
+offset_bottom = 133.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_0chu7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0chu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0chu7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0chu7")
+text = "Quit"
 alignment = 0
 
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VolumeRow/Mute" to="." method="_on_mute_button_toggled"]
