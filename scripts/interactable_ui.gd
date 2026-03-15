@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-@onready var name_label = $NameLabel
-@onready var prompt_label = $PromptLabel
+@export var name_label: Label
+@export var prompt_label: Label
 
 func _ready() -> void:
 	hide()

@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://csvdfrxy0wlc5"]
 
-[ext_resource type="Script" uid="uid://bl28hl18kus3i" path="res://scripts/ray_cast_3d.gd" id="1_03g4j"]
 [ext_resource type="Script" uid="uid://6d6eh10uoqts" path="res://scripts/player_static.gd" id="1_j0bo7"]
 [ext_resource type="Texture2D" uid="uid://bg1iy1jb0err8" path="res://assets/characters/Characters_psx/Textures/Character_10.png" id="2_j0bo7"]
+[ext_resource type="PackedScene" uid="uid://c6sgddju7ob4" path="res://scenes/characters/first_person_controller/ui.tscn" id="3_j0bo7"]
 [ext_resource type="Shader" uid="uid://bug2eu8hiohh1" path="res://shaders/film_grain.gdshader" id="3_sypcy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hw2n4"]
@@ -654,6 +654,7 @@ _data = {
 }
 
 [node name="Player_Static" type="Node3D" unique_id=250051322 node_paths=PackedStringArray("horizontal_gimbal", "vertical_gimbal", "camera")]
+process_mode = 3
 script = ExtResource("1_j0bo7")
 horizontal_gimbal = NodePath("Horizontal")
 vertical_gimbal = NodePath("Horizontal/Vertical")
@@ -673,7 +674,6 @@ collide_with_areas = true
 collide_with_bodies = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
-script = ExtResource("1_03g4j")
 
 [node name="GeneralSkeleton" type="Skeleton3D" parent="." unique_id=1152097188]
 unique_name_in_owner = true
@@ -924,6 +924,8 @@ transform = Transform3D(0.42665, 6.442236e-08, -7.1054274e-15, 7.1054274e-15, -1
 mesh = SubResource("CapsuleMesh_sypcy")
 skeleton = NodePath("../Splint")
 
+[node name="UI" parent="." unique_id=172220396 instance=ExtResource("3_j0bo7")]
+
 [node name="UserInterface" type="Control" parent="." unique_id=1439230286]
 layout_mode = 3
 anchors_preset = 15
@@ -951,6 +953,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="InteractionLabel" type="Label" parent="UserInterface" unique_id=2010485280]

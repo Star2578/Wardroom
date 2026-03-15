@@ -2,6 +2,7 @@ extends Node
 
 
 var is_started: bool = false
+var is_paused: bool = false
 
 var mouse_sensitivity: float = 0.01
 var master_bus_index: int
@@ -67,3 +68,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		viewport.set_input_as_handled()
 
 	open_option_scene()
+
+func pause_game():
+	is_paused = !is_paused
+	get_tree().paused = is_paused
