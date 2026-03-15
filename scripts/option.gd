@@ -72,8 +72,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 
 	if event.is_action_pressed("ui_cancel"):
+		var viewport := get_viewport()
+		if viewport:
+			viewport.set_input_as_handled()
+
 		_on_back_pressed()
-		get_viewport().set_input_as_handled()
 
 
 func _on_quit_pressed() -> void:\

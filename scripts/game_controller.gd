@@ -62,5 +62,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if current_scene and current_scene.scene_file_path == "res://scenes/option.tscn":
 		return
 
+	var viewport := get_viewport()
+	if viewport:
+		viewport.set_input_as_handled()
+
 	open_option_scene()
-	get_viewport().set_input_as_handled()
