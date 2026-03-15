@@ -42,6 +42,8 @@ func refresh():
 				if event.button_index == MouseButton.MOUSE_BUTTON_LEFT and event.pressed:
 					print("Clicked on item: ", item.name)
 					ItemInspector.set_mesh(item.mesh)
+					ItemInspector.set_mesh_scale(item.mesh_scale)
+					ItemInspector.set_description(item.description)
 					ItemInspector.show()
 				elif event.button_index == MouseButton.MOUSE_BUTTON_RIGHT and event.pressed:
 					ItemInspector.hide()

@@ -6,11 +6,10 @@
 [ext_resource type="Script" uid="uid://i6qxlpngfd13" path="res://scripts/inspect_item_ui.gd" id="4_0llsi"]
 [ext_resource type="Script" uid="uid://cwb6w3usuuc3v" path="res://scripts/object_viewer.gd" id="4_i7kuw"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_0llsi"]
-
 [node name="UI" type="Node" unique_id=172220396]
 
 [node name="DialogueUI" type="CanvasLayer" parent="." unique_id=2015063799 node_paths=PackedStringArray("name_label", "text_label", "choice_container")]
+visible = false
 script = ExtResource("1_6x3ix")
 name_label = NodePath("Panel/NameLabel")
 text_label = NodePath("Panel/TextLabel")
@@ -59,6 +58,7 @@ layout_mode = 2
 [node name="InventoryUI" type="CanvasLayer" parent="." unique_id=183356988 node_paths=PackedStringArray("grid", "nameLabel", "ItemInspector")]
 process_mode = 3
 layer = 2
+visible = false
 script = ExtResource("2_i7kuw")
 grid = NodePath("Panel/ItemGrid")
 nameLabel = NodePath("Panel/NameLabel")
@@ -87,6 +87,7 @@ offset_right = 48.0
 offset_bottom = -9.0
 
 [node name="InteractableUI" type="CanvasLayer" parent="." unique_id=2033099776 node_paths=PackedStringArray("name_label", "prompt_label")]
+visible = false
 script = ExtResource("3_0llsi")
 name_label = NodePath("NameLabel")
 prompt_label = NodePath("PromptLabel")
@@ -109,9 +110,10 @@ text = "PromptLabel"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="InspectItemUI" type="CanvasLayer" parent="." unique_id=1256984566 node_paths=PackedStringArray("MeshInstance")]
+[node name="InspectItemUI" type="CanvasLayer" parent="." unique_id=1256984566 node_paths=PackedStringArray("MeshInstance", "description")]
 script = ExtResource("4_0llsi")
 MeshInstance = NodePath("SubViewportContainer/SubViewport/Pivot/MeshInstance3D")
+description = NodePath("Description")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="InspectItemUI" unique_id=847861950 node_paths=PackedStringArray("pivot")]
 anchors_preset = 15
@@ -137,8 +139,27 @@ render_target_update_mode = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.505022)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="InspectItemUI/SubViewportContainer/SubViewport" unique_id=1331142380]
+transform = Transform3D(1, 0, 0, 0, 0.29429048, 0.955716, 0, -0.955716, 0.29429048, 0, 1.3744223, 0)
+light_energy = 3.0
+shadow_enabled = true
 
 [node name="Pivot" type="Node3D" parent="InspectItemUI/SubViewportContainer/SubViewport" unique_id=901203126]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="InspectItemUI/SubViewportContainer/SubViewport/Pivot" unique_id=952521042]
-mesh = SubResource("BoxMesh_0llsi")
+
+[node name="Description" type="RichTextLabel" parent="InspectItemUI" unique_id=530397748]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -163.0
+offset_right = 250.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 0
+bbcode_enabled = true
+text = "test"
+scroll_active = false
+horizontal_alignment = 1

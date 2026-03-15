@@ -3,6 +3,9 @@ extends Node
 
 var is_started: bool = false
 var is_paused: bool = false
+var is_using_phone: bool = false
+
+var got_phone: bool = false
 
 var mouse_sensitivity: float = 0.01
 

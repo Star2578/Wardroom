@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://cfcq0750srhww"]
+
+[ext_resource type="ArrayMesh" uid="uid://de3aqj1cwosgg" path="res://scenes/interactable_objects/data/meshes/phone_mesh.tres" id="1_bj6am"]
+[ext_resource type="Script" uid="uid://bcumdsacf6tgv" path="res://scripts/phone_text.gd" id="1_ehafy"]
+[ext_resource type="Texture2D" uid="uid://cmawo2nu0k6cq" path="res://assets/etc/chat_bubble.png" id="2_q5htj"]
+[ext_resource type="PackedScene" uid="uid://cord1eofxxlps" path="res://scenes/chat_bubble.tscn" id="3_7dx2s"]
+[ext_resource type="AudioStream" uid="uid://durk8b323u5ov" path="res://sounds/sfx/dragon-studio-clean-minimal-pop-467466.mp3" id="5_dddd7"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7dx2s"]
+viewport_path = NodePath("Screen/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bj6am"]
+resource_local_to_scene = true
+render_priority = 20
+no_depth_test = true
+albedo_texture = SubResource("ViewportTexture_7dx2s")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bj6am"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_bj6am")
+
+[node name="Phone" type="Node3D" unique_id=684868291 node_paths=PackedStringArray("scroll_container", "wait", "choice1", "choice1_text", "choice2", "choice2_text")]
+script = ExtResource("1_ehafy")
+messages_json_file = "res://dialogues/day1/golf_msg_1.json"
+chat_bubble_scene = ExtResource("3_7dx2s")
+scroll_container = NodePath("Screen/SubViewport/CanvasLayer/WhiteBG/ScrollContainer")
+wait = NodePath("Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer/Wait")
+choice1 = NodePath("Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer/Choice1")
+choice1_text = NodePath("Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer/Choice1/Label")
+choice2 = NodePath("Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer/Choice2")
+choice2_text = NodePath("Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer/Choice2/Label")
+
+[node name="Body" type="MeshInstance3D" parent="." unique_id=1907379262]
+transform = Transform3D(0.1, 0, 0, 0, -4.371139e-09, 0.1, 0, -0.1, -4.371139e-09, 0, 0, 0)
+mesh = ExtResource("1_bj6am")
+skeleton = NodePath("")
+
+[node name="Screen" type="MeshInstance3D" parent="." unique_id=1743690696]
+transform = Transform3D(0.094, 0, 0, 0, 0.134, 0, 0, 0, 0.164, 0, 0.012, -0.027)
+mesh = SubResource("PlaneMesh_bj6am")
+
+[node name="SubViewport" type="SubViewport" parent="Screen" unique_id=710405850]
+size = Vector2i(256, 512)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Screen/SubViewport" unique_id=809172222]
+
+[node name="WhiteBG" type="ColorRect" parent="Screen/SubViewport/CanvasLayer" unique_id=500661326]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Screen/SubViewport/CanvasLayer/WhiteBG" unique_id=367299969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Screen/SubViewport/CanvasLayer/WhiteBG/ScrollContainer" unique_id=1432197034]
+custom_minimum_size = Vector2(246, 0)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 2
+
+[node name="ChatBubble" parent="Screen/SubViewport/CanvasLayer/WhiteBG/ScrollContainer/VBoxContainer" unique_id=1092393956 instance=ExtResource("3_7dx2s")]
+layout_mode = 2
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="Screen/SubViewport/CanvasLayer/WhiteBG" unique_id=1863246726]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="Wait" type="ColorRect" parent="Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer" unique_id=1196078297]
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer/Wait" unique_id=1464600891]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "..."
+horizontal_alignment = 1
+
+[node name="Choice1" type="ColorRect" parent="Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer" unique_id=1499187811]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer/Choice1" unique_id=659891273]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "[1] 11111"
+
+[node name="Choice2" type="ColorRect" parent="Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer" unique_id=1911816375]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Screen/SubViewport/CanvasLayer/WhiteBG/ChoiceContainer/Choice2" unique_id=252758893]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "[2] 22222"
+
+[node name="User" type="NinePatchRect" parent="Screen/SubViewport/CanvasLayer/WhiteBG" unique_id=678737048]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+texture = ExtResource("2_q5htj")
+region_rect = Rect2(38, 0, 180, 64)
+
+[node name="Label" type="Label" parent="Screen/SubViewport/CanvasLayer/WhiteBG/User" unique_id=53618130]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 10.0
+offset_top = -11.5
+offset_right = 120.0
+offset_bottom = 11.5
+grow_vertical = 2
+text = "GolfLnwZa007"
+
+[node name="MessageSFX" type="AudioStreamPlayer" parent="." unique_id=756380767]
+stream = ExtResource("5_dddd7")
+bus = &"SFX"

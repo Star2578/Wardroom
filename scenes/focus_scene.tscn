@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://djof3yclstqkl" path="res://misc/Texture/RustKey_Metallic.png" id="13_mexth"]
 [ext_resource type="Texture2D" uid="uid://cit0dbpn27lww" path="res://misc/Texture/RustKey_Normal_DirectX.png" id="14_62xav"]
 [ext_resource type="Texture2D" uid="uid://02fkxabi27bd" path="res://misc/Texture/RustKey_Roughness.png" id="15_ognc5"]
+[ext_resource type="PackedScene" uid="uid://meg35sn7ce7n" path="res://scenes/interactable_objects/phone.tscn" id="16_mexth"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1kc1q"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -151,10 +152,9 @@ layout_mode = 2
 [node name="Choice2" type="Button" parent="UI/DialogueUI/Panel/ChoiceContainer" unique_id=2059170661]
 layout_mode = 2
 
-[node name="InventoryUI" type="CanvasLayer" parent="UI" unique_id=952242024 node_paths=PackedStringArray("grid", "description")]
+[node name="InventoryUI" type="CanvasLayer" parent="UI" unique_id=952242024 node_paths=PackedStringArray("grid")]
 script = ExtResource("4_04je1")
 grid = NodePath("Panel/ItemGrid")
-description = NodePath("Panel/DescriptionLabel")
 
 [node name="Panel" type="Panel" parent="UI/InventoryUI" unique_id=703956036]
 offset_left = 56.0
@@ -246,5 +246,8 @@ surface_material_override/0 = SubResource("StandardMaterial3D_c5nc0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExamplePickableObj2" unique_id=393611327]
 transform = Transform3D(0.27272293, 0, 0, 0, 1.7307675, 0, 0, 0, 0.03281642, 0, -4.7970514, 0)
 shape = SubResource("BoxShape3D_a27n7")
+
+[node name="Phone" parent="." unique_id=2025075136 instance=ExtResource("16_mexth")]
+transform = Transform3D(0.99999976, 0, 0, 0, 1, 0, 0, 0, 0.99999976, 1.2239978, 1.5242558, 0.8128272)
 
 [editable path="ExamplePickableObj2/key_low"]

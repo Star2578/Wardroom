@@ -1,0 +1,69 @@
+{
+	"start": {
+		"sequence": [
+			{
+				"sender": "g",
+				"text": "Yo bro"
+			},
+			{
+				"sender": "g",
+				"text": "Where are you?"
+			},
+			{
+				"sender": "g",
+				"text": "been waiting for ages!"
+			},
+			{
+				"sender": "s",
+				"text": "got into an accident"
+			},
+			{
+				"sender": "s",
+				"text": "I'm in a hospital"
+			},
+			{
+				"sender": "g",
+				"text": "WHAT!?!?!"
+			},
+			{
+				"sender": "g",
+				"text": "are you alright?!"
+			}
+		],
+		"choices": [
+			{
+				"text": "I'm fine",
+				"next": "branch1"
+			},
+			{
+				"text": "I'M ON MY DEADBED!",
+				"next": "branch2"
+			}
+		]
+	},
+	"branch1": {
+		"sequence": [
+			{
+				"sender": "s",
+				"text": "I'm fine overall, except for my left leg"
+			},
+			{
+				"sender": "s",
+				"text": "need to stay at the hospital for a while"
+			}
+		],
+		"choices": []
+	},
+	"branch2": {
+		"sequence": [
+			{
+				"sender": "s",
+				"text": "I'M ON MY DEADBED!"
+			},
+			{
+				"sender": "s",
+				"text": "I CAN'T BELIEVE THIS HAPPENED TO ME!"
+			}
+		]
+	}
+}

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ObjectData" format=3 uid="uid://c3gexo0wr227j"]
+
+[ext_resource type="Texture2D" uid="uid://c0kkhbipqk74j" path="res://scenes/interactable_objects/data/icons/phone_icon.png" id="1_dipv1"]
+[ext_resource type="ArrayMesh" uid="uid://de3aqj1cwosgg" path="res://scenes/interactable_objects/data/meshes/phone_mesh.tres" id="2_0dowi"]
+[ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="3_6pavf"]
+
+[resource]
+script = ExtResource("3_6pavf")
+name = "Phone"
+description = "[p]My old model phone. It's still working.[/p][p]Press B to use[/p]"
+icon = ExtResource("1_dipv1")
+mesh = ExtResource("2_0dowi")
+mesh_scale = Vector3(0.3, 0.3, 0.3)
+metadata/_custom_type_script = "uid://duu02ylefpfev"
