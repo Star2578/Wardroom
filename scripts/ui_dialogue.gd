@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-@onready var name_label = $Panel/NameLabel
-@onready var text_label = $Panel/TextLabel
-@onready var choice_container = $Panel/ChoiceContainer
+@export var name_label: Label
+@export var text_label: Label
+@export var choice_container: VBoxContainer
 
 var dialogue_data = {}
 var current_node = ""

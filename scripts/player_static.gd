@@ -7,15 +7,19 @@ extends Node3D
 const MAX_YAW = 100.0
 const MAX_PITCH = 45.0
 
+@onready var ray = $"Horizontal/Vertical/Camera/RayCast3D"
+@onready var inventory_ui = $"UI/InventoryUI"
+
+@onready var interaction_ui = $"UI/InteractableUI"
+
+var current_target: Node = null
+
 func _ready():
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	blink()
 
-func _input(event):
-	if event.is_action_pressed("ui_cancel"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+func _input(event):	
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and !GameController.is_paused:
 		# 1. Rotate the whole horizontal base (Yaw)
 		horizontal_gimbal.rotate_y(-event.relative.x * GameController.mouse_sensitivity)
 		
@@ -35,6 +39,32 @@ func _input(event):
 			deg_to_rad(-MAX_YAW), 
 			deg_to_rad(MAX_YAW)
 		)
+
+	if event.is_action_pressed("inventory"):
+		GameController.pause_game()
+		inventory_ui.toggle()
+
+func _process(_delta):
+	_update_target()
+
+func _get_raycast_target():
+	if !ray or !ray.is_colliding():
+		return null
+	var obj = ray.get_collider()
+	if obj and obj.has_method("get_interaction_data"):
+		return obj
+	return null
+
+func _update_target():
+	var target = _get_raycast_target()
+
+	if target != current_target:
+		current_target = target
+		interaction_ui.set_target(current_target)  # UI handles show/hide + text
+
+	if current_target and Input.is_action_just_pressed("interact"):
+		interaction_ui.set_target(null)
+		current_target.interact()
 
 func blink():
 	var tween = create_tween()

@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://bocqocoo4uimo" path="res://scenes/text_writer.tscn" id="27_q8j3a"]
 [ext_resource type="PackedScene" uid="uid://757fvf3fb5fh" path="res://scenes/cutscene_player.tscn" id="28_ms3bu"]
 [ext_resource type="AudioStream" uid="uid://buwe5e08r6sec" path="res://sounds/sfx/Slow Stinger.wav" id="29_7ixpq"]
+[ext_resource type="PackedScene" uid="uid://meg35sn7ce7n" path="res://scenes/interactable_objects/sunny_stuff.tscn" id="33_v2yb1"]
 
 [sub_resource type="Gradient" id="Gradient_gxtfn"]
 colors = PackedColorArray(0, 0, 0, 1, 0.91326463, 0.7795315, 0.393286, 1)
@@ -840,6 +841,10 @@ autoplay = &"cs_01"
 
 [node name="SlowStinger" type="AudioStreamPlayer" parent="." unique_id=1641009201]
 bus = &"SFX"
+
+[node name="SunnyStuff" parent="." unique_id=893070104 instance=ExtResource("33_v2yb1")]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0158396, 1.126728, 8.461815)
 
 [editable path="Wardroom/Props_Wardroom1/Door"]
 [editable path="Wardroom/Props_Wardroom1/Door2"]
