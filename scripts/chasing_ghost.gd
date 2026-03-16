@@ -3,7 +3,7 @@ extends CharacterBody3D
 enum States {attack, idle, chase, die}
 
 var state = States.idle
-var speed = 4
+var speed = 3
 var accel = 10
 var gravity = 9.8
 var target = null
@@ -19,12 +19,10 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= gravity
 		
 	if state == States.idle:
-		print("idle")
 		velocity = Vector3.ZERO
 		animationPlayer.play("mixamo_com")
 	elif state == States.chase:
 		look_at(Vector3(target.global_position.x, global_position.y, target.global_position.z), Vector3.UP, true)
-		print("chasing")
 		navAgent.target_position = target.global_position
 		
 		var direction = navAgent.get_next_path_position() - global_position
@@ -34,8 +32,6 @@ func _physics_process(delta: float) -> void:
 		animationPlayer.play("mixamo_com")
 	elif state == States.attack:
 		look_at(Vector3(target.global_position.x, global_position.y, target.global_position.z), Vector3.UP, true)
-		
-		print("attacking")
 		animationPlayer.play("mixamo_com")
 		velocity = Vector3.ZERO
 	elif state == States.die:

@@ -1,15 +1,4 @@
-extends Node3D
-
-class_name Door
-
-@export var destination: Node3D
-@export var fade_duration: float = 0.5
-@export var temp_bool: bool
-
-@onready var door_sfx: AudioStreamPlayer = $"../DoorSFX"
-@onready var fade_black: ColorRect = $"../Control/FadeBlack"
-
-@onready var ghost = get_node_or_null("../Ghost")
+extends Door
 
 func _ready():
 	fade_black.modulate.a = 0
@@ -32,7 +21,3 @@ func interact():
 	
 	tween.tween_callback(fade_black.hide)
 	
-	if temp_bool == true:
-		if ghost:
-			print("ghost found")
-			ghost.queue_free()
