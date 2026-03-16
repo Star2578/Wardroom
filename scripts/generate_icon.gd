@@ -14,7 +14,6 @@ func generate_icon():
 	var icon_name = "icon.png"
 
 	# Save the image as a PNG file
-	# The path should start with "res://" or "user://"
 	var save_path = "res://scenes/interactable_objects/data/icons/" + icon_name
 	image.save_png(save_path)
 

@@ -36,6 +36,9 @@
 [ext_resource type="PackedScene" uid="uid://blfb54eqfq0tl" path="res://npcs/character_05.tscn" id="29_twgab"]
 [ext_resource type="AudioStream" uid="uid://cfbytppwx61tu" path="res://sounds/sfx/freesound_community-throw_object-97796.mp3" id="33_js0lu"]
 [ext_resource type="PackedScene" uid="uid://meg35sn7ce7n" path="res://scenes/interactable_objects/phone.tscn" id="33_v2yb1"]
+[ext_resource type="AudioStream" uid="uid://dqplpp868hies" path="res://sounds/sfx/Stinger.wav" id="36_02fa5"]
+[ext_resource type="PackedScene" uid="uid://c44wh103vnyq1" path="res://scenes/interactable_objects/card.tscn" id="38_7025r"]
+[ext_resource type="ArrayMesh" uid="uid://de3aqj1cwosgg" path="res://scenes/interactable_objects/data/meshes/phone_mesh.tres" id="38_nepv3"]
 
 [sub_resource type="Gradient" id="Gradient_gxtfn"]
 colors = PackedColorArray(0, 0, 0, 1, 0.91326463, 0.7795315, 0.393286, 1)
@@ -306,6 +309,102 @@ tracks/3/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player_Static/Horizontal:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player_Static/Horizontal/Vertical:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player_Static/Horizontal/Vertical/Camera:fov")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [75.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PhoneTemp:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PhoneTemp:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.0363765, 3.1415925, 2.5521777)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PhoneTemp:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-7.4389076, 1.0243398, 7.8561983)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Wardroom/Props_Wardroom1/curtain4/Plane:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.5707964, 0, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Wardroom/Props_Wardroom1/curtain4/Plane:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_pjm8e"]
 resource_name = "cs_01"
@@ -317,7 +416,7 @@ tracks/0/path = NodePath("TextWriter")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(15.366667, 21.233334, 25.666666, 30.233334, 35.4, 40.366665, 45.433334, 48.199997, 52.666668),
+"times": PackedFloat32Array(15.366667, 21.233334, 26.2, 31.066668, 36.033333, 41.3, 46.166668, 49.666668, 54.333332),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
@@ -381,7 +480,7 @@ tracks/3/path = NodePath("Character_23_Female_Doctor:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 8.633333, 12.266666, 14.772202, 45.633335, 46.533344, 47.76668, 49.00001, 50.533344),
+"times": PackedFloat32Array(0, 8.633333, 12.266666, 14.772202, 46.166656, 47.066666, 48.300003, 49.533333, 51.066666),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-1.0993123, 0.07086816, 2.6157656), Vector3(-1.0993123, 0.07086816, 2.6157656), Vector3(-6.608, 0.071, 4.523), Vector3(-6.608, 0.071, 6.337), Vector3(-6.608, 0.071, 6.337), Vector3(-6.608, 0.071, 6.337), Vector3(-6.608, 0.071, 4.457), Vector3(-6.608, 0.071, 4.457), Vector3(-2.8566308, 0.07086816, 4.457097)]
@@ -393,7 +492,7 @@ tracks/4/path = NodePath("Character_23_Female_Doctor:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 8.633333, 12.2667, 13.233334, 14.772202, 45.633335, 46.533344, 47.76668, 49.00001),
+"times": PackedFloat32Array(0, 8.633333, 12.2667, 13.233334, 14.772202, 46.166656, 47.066666, 48.300003, 49.533333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, -1.5707964, 0), Vector3(0, -1.5707964, 0), Vector3(0, -0.5946686, 0), Vector3(0, -0.015707964, 0), Vector3(0, -0.5946686, 0), Vector3(0, -0.5946686, 0), Vector3(0, 3.1013453, 0), Vector3(0, 3.1013453, 0), Vector3(0, 1.7007532, 0)]
@@ -405,8 +504,8 @@ tracks/5/path = NodePath("Character_23_Female_Doctor")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(8.61694, 14.805432, 46.53335, 47.76669, 49.00001),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(8.61694, 14.805432, 47.066673, 48.30001, 49.533333, 51.366653),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
 "method": &"play_walk"
@@ -422,6 +521,9 @@ tracks/5/keys = {
 }, {
 "args": [],
 "method": &"play_walk"
+}, {
+"args": [],
+"method": &"queue_free"
 }]
 }
 tracks/6/type = "value"
@@ -434,7 +536,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0, 49.866665),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [true, true]
+"values": [true, false]
 }
 tracks/7/type = "method"
 tracks/7/imported = false
@@ -443,7 +545,7 @@ tracks/7/path = NodePath("Player_Static")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0, 48.066666),
+"times": PackedFloat32Array(0, 49.533333),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [false],
@@ -455,7 +557,7 @@ tracks/7/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_v2yb1"]
-length = 12.133333
+length = 80.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -463,9 +565,12 @@ tracks/0/path = NodePath("Player_Static")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1.0333333),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [false],
+"method": &"set_can_look_around"
+}, {
 "args": [],
 "method": &"drop_phone"
 }]
@@ -473,7 +578,7 @@ tracks/0/keys = {
 tracks/1/type = "audio"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("DropSFX")
+tracks/1/path = NodePath("SFX")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -481,8 +586,12 @@ tracks/1/keys = {
 "end_offset": 0.0,
 "start_offset": 0.0,
 "stream": ExtResource("33_js0lu")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("36_02fa5")
 }],
-"times": PackedFloat32Array(-0.6666666)
+"times": PackedFloat32Array(1, 18.033333)
 }
 tracks/1/use_blend = true
 tracks/2/type = "method"
@@ -492,9 +601,48 @@ tracks/2/path = NodePath("TextWriter")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.96666664, 1.9666667, 3.4),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(3.166667, 7.6, 12.1, 15.8, 19.633337, 24.15721, 28.290545, 32.423874, 37.63023, 42.030228, 46.296898, 50.43023, 54.43334, 59.066666, 63.1, 66.86667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
 "args": [],
 "method": &"show_next_dialogue"
 }, {
@@ -512,8 +660,8 @@ tracks/3/path = NodePath("Wardroom/Props_Wardroom1/curtain4/Plane:blend_shapes/O
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(3.4619272, 4.11761),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(17.7, 18.355684),
+"transitions": PackedFloat32Array(0.5, 2),
 "update": 0,
 "values": [0.0, 1.0]
 }
@@ -530,6 +678,102 @@ tracks/4/keys = {
 "args": [],
 "method": &"play_sit"
 }]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player_Static/Horizontal:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1, 17.966667, 36.12818, 38.101166, 47.169373, 48.833332),
+"transitions": PackedFloat32Array(0, 0, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.89914125, 0), Vector3(0, -0.975639, 0), Vector3(0, -0.975639, 0), Vector3(0, -1.3801016, 0), Vector3(0, -1.3801016, 0), Vector3(0, -0.975639, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player_Static/Horizontal/Vertical:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1, 17.966667, 36.12818, 38.101166, 47.169373, 48.833332),
+"transitions": PackedFloat32Array(0, 0, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-0.15729596, -0.015883353, 0.20086472), Vector3(0.0883966, -0.062324192, 0.039725974), Vector3(0.0883966, -0.062324192, 0.039725974), Vector3(0.05982137, -0.052818242, 0.036723524), Vector3(0.05982137, -0.052818242, 0.036723524), Vector3(0.0883966, -0.062324192, 0.039725974)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Player_Static/Horizontal/Vertical/Camera:fov")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 17.873604, 18.933332),
+"transitions": PackedFloat32Array(1, 0.5, 2),
+"update": 0,
+"values": [75.0, 75.0, 20.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PhoneTemp:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 1.0666667, 33.14616),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PhoneTemp:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.0333333, 1.0365213, 1.5547819, 2.0015783, 3.0333333),
+"transitions": PackedFloat32Array(2, 2, 1, 0.17677702, 2),
+"update": 0,
+"values": [Vector3(-1.0363765, 3.1415925, 2.5521777), Vector3(-0.28869033, -1.0747598, 0.6245792), Vector3(-0.67328906, 0.930669, -1.4835001), Vector3(-0.55083513, -1.716321, 1.9841069), Vector3(1.5707964, -1.7782288, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PhoneTemp:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.0333333, 1.0365213, 1.5547819, 2.0015783, 3.0333333),
+"transitions": PackedFloat32Array(2, 2, 1, 0.17677702, 2),
+"update": 0,
+"values": [Vector3(-7.4389076, 1.0243398, 7.8561983), Vector3(-7.609718, 1.1524878, 7.8561983), Vector3(-6.85, 1.422, 7.656), Vector3(-6.491883, 0.19726914, 7.1631813), Vector3(-5.477271, 0.19726914, 7.4943647)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Wardroom/Props_Wardroom1/curtain4/Plane:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Wardroom/Props_Wardroom1/curtain4/Plane:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 19.660645),
+"transitions": PackedFloat32Array(0, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.6, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uxocx"]
@@ -756,6 +1000,12 @@ transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-
 [node name="curtain4" parent="Wardroom/Props_Wardroom1" unique_id=993428503 instance=ExtResource("13_8ool0")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 1.9759774, 0.32358873, 7.0333815)
 
+[node name="Plane" parent="Wardroom/Props_Wardroom1/curtain4" index="0" unique_id=708891343]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 3.2945404, 0)
+
+[node name="Cylinder" parent="Wardroom/Props_Wardroom1/curtain4" index="1" unique_id=1231606238]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 6.536025, -0.18504876)
+
 [node name="curtain5" parent="Wardroom/Props_Wardroom1" unique_id=1915926084 instance=ExtResource("13_8ool0")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 6.908299, 0.32358873, 7.0333815)
 
@@ -776,6 +1026,15 @@ transform = Transform3D(-1.1738902, 0, -0.24896136, 0, 1.2, 0, 0.24896136, 0, -1
 
 [node name="BagHolder2" parent="Wardroom" unique_id=329648310 instance=ExtResource("17_wljb1")]
 transform = Transform3D(-0.90900964, 0, -0.78339106, 0, 1.2000002, 0, 0.78339106, 0, -0.90900964, -4.7721977, 0, 8.555004)
+
+[node name="BagHolder9" parent="Wardroom" unique_id=1352642401 instance=ExtResource("17_wljb1")]
+transform = Transform3D(-0.90900964, 0, -0.78339106, 0, 1.2000002, 0, 0.78339106, 0, -0.90900964, -2.0780263, 2.3841858e-07, 7.747883)
+
+[node name="BagHolder10" parent="Wardroom" unique_id=1982038959 instance=ExtResource("17_wljb1")]
+transform = Transform3D(0.17830339, 0, -1.1866792, 0, 1.2000002, 0, 1.1866792, 0, 0.17830339, -2.2976305, 0, 7.130782)
+
+[node name="BagHolder11" parent="Wardroom" unique_id=1897761976 instance=ExtResource("17_wljb1")]
+transform = Transform3D(-1.0410163, 0, -0.5968957, 0, 1.2, 0, 0.5968957, 0, -1.0410163, -2.41497, 0, 6.2950296)
 
 [node name="BagHolder3" parent="Wardroom" unique_id=119968555 instance=ExtResource("17_wljb1")]
 transform = Transform3D(-1.1994617, 0, 0.03593445, 0, 1.2000002, 0, -0.03593445, 0, -1.1994617, -0.20663357, 0, 8.555004)
@@ -929,8 +1188,19 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.5
 [node name="Player_Static" parent="." unique_id=250051322 instance=ExtResource("25_o8ni1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.237968, 1.063066, 8.358889)
 
+[node name="Horizontal" parent="Player_Static" index="0" unique_id=1522016945]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, 0, 0.29999995, 0.05000019)
+
+[node name="Vertical" parent="Player_Static/Horizontal" index="0" unique_id=1131842217]
+transform = Transform3D(1.0000001, 0, 0, 0, 0.99999976, 0, 0, 0, 1, 0, 0, 0)
+
 [node name="Character_05" parent="." unique_id=42540030 instance=ExtResource("29_twgab")]
-transform = Transform3D(0.72084147, 0, 0.6931, 0, 1, 0, -0.6931, 0, 0.72084147, -5.132391, -0.47404844, 6.3933654)
+transform = Transform3D(0.72084147, 0, 0.6931, 0, 1, 0, -0.6931, 0, 0.72084147, -5.208577, 0, 6.4616976)
+
+[node name="LookAtModifier3D" parent="Character_05/GeneralSkeleton" parent_id_path=PackedInt32Array(42540030, 1121693251) index="1" unique_id=540903489]
+target_node = NodePath("../../../Player_Static")
+bone_name = "Neck"
+bone = 4
 
 [node name="Character_32" parent="." unique_id=1671688174 instance=ExtResource("19_gxtfn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5086055, 1.0623128, 8.459142)
@@ -955,9 +1225,19 @@ bus = &"SFX"
 
 [node name="Phone" parent="." unique_id=893070104 instance=ExtResource("33_v2yb1")]
 process_mode = 3
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.148147, 1.2027464, 8.461815)
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.148147, 1.2027464, 8.461815)
 
-[node name="DropSFX" type="AudioStreamPlayer" parent="." unique_id=1438430850]
+[node name="Card" parent="." unique_id=2025075136 instance=ExtResource("38_7025r")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.8867536, 1.2027464, 8.461815)
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=1438430850]
+bus = &"SFX"
+
+[node name="PhoneTemp" type="MeshInstance3D" parent="." unique_id=339618598]
+transform = Transform3D(0.08312659, 0.055587523, 7.690849e-09, 0.028313031, -0.042339884, 0.08605643, 0.047836605, -0.071535826, -0.05093419, -7.4389076, 1.0243398, 7.8561983)
+visible = false
+mesh = ExtResource("38_nepv3")
+skeleton = NodePath("")
 
 [editable path="Wardroom/Props_Wardroom1/Door"]
 [editable path="Wardroom/Props_Wardroom1/Door2"]
@@ -965,3 +1245,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.148147, 1.2027464, 8.46181
 [editable path="Bathroom/Props_Bathroom/Mirror"]
 [editable path="Bathroom/Props_Bathroom/Door"]
 [editable path="Bathroom/Props_Bathroom/Door2"]
+[editable path="Player_Static"]
+[editable path="Character_05"]

@@ -66,6 +66,7 @@ func next_message():
 		var end_data = phone_data.get("end", {})
 		if end_data.get("trigger") == "cs":
 			print("Triggering cutscene...")
+			GameController.cutscene_player.current_index += 1
 			GameController.cutscene_player.next_shot()
 		else:
 			print("End of conversation.")

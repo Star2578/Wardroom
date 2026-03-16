@@ -305,6 +305,10 @@ bones/28/scale = Vector3(0.99999994, 0.99999994, 1)
 bones/29/position = Vector3(0.030724801, 1.1600645, -0.008241147)
 bones/29/rotation = Quaternion(0, 0.7071068, -0.7071068, 0)
 
+[node name="LookAtModifier3D" type="LookAtModifier3D" parent="GeneralSkeleton" index="1" unique_id=540903489]
+bone_name = "Head"
+bone = 5
+
 [node name="AnimationPlayer" parent="." index="1" unique_id=1772587217]
 libraries/ = SubResource("AnimationLibrary_4ao10")
 libraries/locomotion = SubResource("AnimationLibrary_dp3o6")

@@ -20,7 +20,7 @@ func _ready():
 	blink()
 
 func _input(event):	
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and !GameController.is_paused:
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and !GameController.is_paused and GameController.can_look_around:
 		# 1. Rotate the whole horizontal base (Yaw)
 		horizontal_gimbal.rotate_y(-event.relative.x * GameController.mouse_sensitivity)
 		
@@ -95,4 +95,8 @@ func set_ray_enabled(enabled: bool):
 func drop_phone():
 	phone.hide()
 	GameController.is_using_phone = false
+	InventoryManager.remove_item_by_name("Phone")
 	GameController.got_phone = false
+
+func set_can_look_around(value: bool):
+	GameController.can_look_around = value

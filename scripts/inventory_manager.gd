@@ -9,6 +9,14 @@ func add_item(item: ObjectData):
 func remove_item(item: ObjectData):
 	items.erase(item)
 
+func remove_item_by_name(item_name: String):
+	for i in items:
+		if i.name == item_name:
+			items.erase(i)
+			print("Removed:", item_name)
+			return
+	print("Item not found:", item_name)
+
 func has_item(item_name: String) -> bool:
 	for i in items:
 		if i.name == item_name:

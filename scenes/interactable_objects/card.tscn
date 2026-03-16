@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c44wh103vnyq1"]
+
+[ext_resource type="Script" uid="uid://b7si77vmf6hla" path="res://scripts/interactable_item.gd" id="1_f653q"]
+[ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="2_g6lbk"]
+[ext_resource type="ArrayMesh" uid="uid://cc54rulsqog6u" path="res://scenes/interactable_objects/data/meshes/card_mesh.tres" id="2_ggyv4"]
+[ext_resource type="PackedScene" uid="uid://c68n6ray8e0yl" path="res://assets/objects/card.glb" id="3_ggyv4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g6lbk"]
+load_path = "res://.godot/imported/card_icon.png-10ff8ea5c78cb05e0d177b657ddbf0ce.ctex"
+
+[sub_resource type="Resource" id="Resource_w5iey"]
+script = ExtResource("2_g6lbk")
+name = "Citizen Card"
+description = "My citizen card with my picture on it. Way to go Sunny."
+icon = SubResource("CompressedTexture2D_g6lbk")
+mesh = ExtResource("2_ggyv4")
+mesh_scale = Vector3(0.5, 0.5, 0.5)
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f653q"]
+size = Vector3(0.6496124, 0.38372803, 0.46606445)
+
+[node name="Card" type="Area3D" unique_id=2025075136]
+script = ExtResource("1_f653q")
+object_data = SubResource("Resource_w5iey")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=933013324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15099025, 0.08795969, 0)
+shape = SubResource("BoxShape3D_f653q")
+
+[node name="card" parent="." unique_id=800295544 instance=ExtResource("3_ggyv4")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
