@@ -1,9 +1,12 @@
 extends CanvasLayer
 
-@onready var name_label = $NameLabel
-@onready var prompt_label = $PromptLabel
+class_name InteractableUI
+
+@export var name_label: Label
+@export var prompt_label: Label
 
 func _ready() -> void:
+	GameController.interactable_ui = self
 	hide()
 	
 func set_target(target):

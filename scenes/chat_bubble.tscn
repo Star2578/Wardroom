@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://cord1eofxxlps"]
+
+[ext_resource type="Script" uid="uid://ba8l5x3hft0rr" path="res://scripts/chat_bubble.gd" id="1_f8oay"]
+[ext_resource type="Texture2D" uid="uid://cmawo2nu0k6cq" path="res://assets/etc/chat_bubble.png" id="1_qcqw1"]
+[ext_resource type="Texture2D" uid="uid://dq2np33v6vg5r" path="res://assets/etc/chat_bubble_g.png" id="3_xftsg"]
+
+[node name="ChatBubble" type="MarginContainer" unique_id=1092393956 node_paths=PackedStringArray("text", "color1", "color2")]
+custom_minimum_size = Vector2(200, 40)
+offset_right = 200.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 10
+script = ExtResource("1_f8oay")
+text = NodePath("MarginContainer/Text")
+color1 = NodePath("BlueBubble")
+color2 = NodePath("WhiteBubble")
+
+[node name="BlueBubble" type="NinePatchRect" parent="." unique_id=1406102639]
+layout_mode = 2
+texture = ExtResource("1_qcqw1")
+region_rect = Rect2(0, 0, 256, 64)
+
+[node name="WhiteBubble" type="NinePatchRect" parent="." unique_id=94877162]
+visible = false
+layout_mode = 2
+texture = ExtResource("3_xftsg")
+region_rect = Rect2(0, 0, 256, 64)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1812639941]
+layout_direction = 2
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Text" type="Label" parent="MarginContainer" unique_id=1789426147]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+text = "Hey bro, what sup"
+autowrap_mode = 3

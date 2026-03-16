@@ -1,14 +1,17 @@
 extends CanvasLayer
 
-@onready var name_label = $Panel/NameLabel
-@onready var text_label = $Panel/TextLabel
-@onready var choice_container = $Panel/ChoiceContainer
+class_name DialogueUI
+
+@export var name_label: Label
+@export var text_label: Label
+@export var choice_container: VBoxContainer
 
 var dialogue_data = {}
 var current_node = ""
 var player_ref = null
 
 func _ready():
+	GameController.dialogue_ui = self
 	hide()
 
 func start_dialogue(data, player):

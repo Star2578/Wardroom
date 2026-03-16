@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://dk6en4d6purxg"]
+
+[ext_resource type="ArrayMesh" uid="uid://de3aqj1cwosgg" path="res://scenes/interactable_objects/data/meshes/phone_mesh.tres" id="1_dv3go"]
+[ext_resource type="Script" uid="uid://dfq1ci8kx5wcb" path="res://scripts/generate_icon.gd" id="1_r5uan"]
+
+[node name="GenerateIcon" type="Node3D" unique_id=644509269]
+script = ExtResource("1_r5uan")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1428354599]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1391458113]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(64, 64)
+render_target_update_mode = 4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=107299514]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=712167005]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.30145955)
+
+[node name="Body" type="MeshInstance3D" parent="SubViewportContainer/SubViewport" unique_id=267035559]
+transform = Transform3D(0.08777463, -0.02400912, 0.041462973, 0.02638393, 0.09645666, -1.776357e-16, -0.03999381, 0.0109395655, 0.09099903, 0, 0, 0)
+mesh = ExtResource("1_dv3go")
+skeleton = NodePath("")

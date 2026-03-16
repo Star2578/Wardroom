@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://cwu3pjb0nx6y6"]
 
 [ext_resource type="Script" uid="uid://c8spmjncww0wh" path="res://scripts/game_controller.gd" id="1_vq0e2"]
+[ext_resource type="PackedScene" uid="uid://dvigce2jjp64c" path="res://scenes/option.tscn" id="2_vc4nx"]
 
 [node name="GameController" type="Node" unique_id=1624693136]
+process_mode = 3
 script = ExtResource("1_vq0e2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1823352740]
+layer = 999
+
+[node name="Option" parent="CanvasLayer" unique_id=1931018133 instance=ExtResource("2_vc4nx")]

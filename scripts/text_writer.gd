@@ -10,6 +10,8 @@ var dialogue_data: Dictionary = {}
 var current_index = 0
 var current_cs = ""
 var typing_speed = 0.05 # Seconds per character
+var active_tween: Tween
+var text_paused: bool = false
 
 func _ready():
 	dialogue_data = load_dialogue_from_json(json_path)
@@ -43,12 +45,43 @@ func show_next_dialogue():
 	rich_label.visible_ratio = 0
 	
 	var duration = rich_label.text.length() * typing_speed
-	var tween = create_tween()
+	if active_tween:
+		active_tween.kill()
+		active_tween = null
+
+	active_tween = create_tween()
 	
 	# Interpolate the visible_ratio property from 0 to 1
-	tween.tween_property(rich_label, "visible_ratio", 1.0, duration)\
+	active_tween.tween_property(rich_label, "visible_ratio", 1.0, duration)\
 		.set_trans(Tween.TRANS_LINEAR)\
 		.set_ease(Tween.EASE_IN_OUT)
 	# play sounds and stop when tween is done
 	sfx_player.play()
-	tween.finished.connect(func(): sfx_player.stop())
+	active_tween.finished.connect(_on_text_tween_finished)
+
+
+func pause_text() -> void:
+	if active_tween and active_tween.is_running():
+		active_tween.pause()
+		text_paused = true
+
+	if sfx_player.playing:
+		sfx_player.stop()
+
+
+func resume_text() -> void:
+	if not text_paused:
+		return
+
+	if active_tween:
+		active_tween.play()
+		if sfx_player.stream:
+			sfx_player.play()
+
+	text_paused = false
+
+
+func _on_text_tween_finished() -> void:
+	sfx_player.stop()
+	active_tween = null
+	text_paused = false

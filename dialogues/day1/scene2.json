@@ -1,14 +1,25 @@
 {
 	"cs_01": [
-		"Where am I...?",
+		"[color=#967318]\"Ah.. so you're finally awake.\"[/color]",
+		"[color=#967318]\"Our hospital has been taking care of you.\"[/color]",
+		"[color=#967318]\"You're lucky to suffer only minor injuries and a broken leg.\"[/color]",
+		"[color=#967318]\"Please don't move around too much for now.\"[/color]",
+		"[color=#967318]\"Your personal belongings are on that drawer over there.\"[/color]",
+		"[color=#967318]\"Our staff will bring you something to eat.\"[/color]",
 		"",
-		"\"You've regained consciousness, haven't you?\"",
-		"\"You're lucky the car only skidded off the road, but you'll need to spend some time recovering.\"",
-		"\"With a broken ankle and a cracked rib, you'll need to avoid moving around too much.\"",
-		"\"We’ve already taken care of the initial treatment.\"",
-		"\"Your personal belongings are in that drawer over there.\"",
-		"\"I’ll go inform the doctor that you’re awake and then bring you some breakfast.\"",
-		"",
-		"I better get my stuff and break the news on facebug."
+		"I better get my phone and check if I have any messages."
 	],
+	"cs_02": [
+		"Shit, I dropped my phone!",
+		"It got into the other patient's bed.",
+		"...",
+		"I cannot move...",
+		"[color=#106b3f]\"Hello sir, you seem to have dropped this.\"[/color]",
+		"[color=#106b3f]\"Here you go, sir.\"[/color]",
+		"\"Thank you, Mr...?\"",
+		"[color=#106b3f]\"You can call me Kla.\"[/color]",
+		"I cannot help but notice that old man on the bed next to him...",
+		"he seems to be in a lot of pain.",
+		"\"Is he going to be okay?\""
+	]
 }

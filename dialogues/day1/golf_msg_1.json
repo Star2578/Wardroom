@@ -1,0 +1,99 @@
+{
+	"start": {
+		"sequence": [
+			{
+				"sender": "g",
+				"text": "Yo bro"
+			},
+			{
+				"sender": "g",
+				"text": "Where are you?"
+			},
+			{
+				"sender": "g",
+				"text": "been waiting for ages!"
+			},
+			{
+				"sender": "s",
+				"text": "got into an accident"
+			},
+			{
+				"sender": "s",
+				"text": "I'm in a hospital"
+			},
+			{
+				"sender": "g",
+				"text": "WHAT!?!?!"
+			},
+			{
+				"sender": "g",
+				"text": "ARE YOU ALRIGHT?!"
+			}
+		],
+		"choices": [
+			{
+				"text": "I'm fine",
+				"next": "branch1"
+			},
+			{
+				"text": "I'M ON MY DEADBED!",
+				"next": "branch2"
+			}
+		]
+	},
+	"branch1": {
+		"sequence": [
+			{
+				"sender": "s",
+				"text": "I'm fine overall, except for my left leg"
+			},
+			{
+				"sender": "s",
+				"text": "need to stay at the hospital for a while"
+			},
+			{
+				"sender": "g",
+				"text": "damn that's rough"
+			},
+			{
+				"sender": "g",
+				"text": "at least you're okay"
+			}
+		]
+	},
+	"branch2": {
+		"sequence": [
+			{
+				"sender": "s",
+				"text": "I'M ON MY DEADBED!"
+			},
+			{
+				"sender": "s",
+				"text": "I CAN'T BELIEVE THIS HAPPENED TO ME!"
+			},
+			{
+				"sender": "g",
+				"text": "YOO! CALM DOWN MY MAN!"
+			},
+			{
+				"sender": "g",
+				"text": "SEND ME YOUR LOCATION!"
+			},
+			{
+				"sender": "g",
+				"text": "I'LL VISIT YOU ASAP!"
+			}
+		]
+	},
+	"continuation": {
+		"sequence": [
+			{
+				"sender": "s",
+				"text": "📍 Shared Location"
+			}
+		]
+	},
+	"end": {
+		"trigger": "cs"
+	}
+}

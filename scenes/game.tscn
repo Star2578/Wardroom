@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://2yd5n4vdcbuw" path="res://scenes/objects/bag_holder.tscn" id="17_wljb1"]
 [ext_resource type="PackedScene" uid="uid://bgtb5gtpou7nx" path="res://scenes/objects/mirror.tscn" id="18_458eo"]
 [ext_resource type="PackedScene" uid="uid://bfqj8h3fcva1h" path="res://scenes/objects/chair.tscn" id="18_v2yb1"]
+[ext_resource type="PackedScene" uid="uid://djd0vmf0cbv13" path="res://npcs/character_32.tscn" id="19_gxtfn"]
 [ext_resource type="PackedScene" uid="uid://dkwggf4nbqsjr" path="res://scenes/objects/stall.tscn" id="19_h3rex"]
 [ext_resource type="PackedScene" uid="uid://baogudtk3c72q" path="res://scenes/objects/urinal.tscn" id="20_fedci"]
 [ext_resource type="PackedScene" uid="uid://t3hyh2fkebb2" path="res://scenes/objects/sink.tscn" id="21_8qswn"]
@@ -32,6 +33,9 @@
 [ext_resource type="PackedScene" uid="uid://bocqocoo4uimo" path="res://scenes/text_writer.tscn" id="27_q8j3a"]
 [ext_resource type="PackedScene" uid="uid://757fvf3fb5fh" path="res://scenes/cutscene_player.tscn" id="28_ms3bu"]
 [ext_resource type="AudioStream" uid="uid://buwe5e08r6sec" path="res://sounds/sfx/Slow Stinger.wav" id="29_7ixpq"]
+[ext_resource type="PackedScene" uid="uid://blfb54eqfq0tl" path="res://npcs/character_05.tscn" id="29_twgab"]
+[ext_resource type="AudioStream" uid="uid://cfbytppwx61tu" path="res://sounds/sfx/freesound_community-throw_object-97796.mp3" id="33_js0lu"]
+[ext_resource type="PackedScene" uid="uid://meg35sn7ce7n" path="res://scenes/interactable_objects/phone.tscn" id="33_v2yb1"]
 
 [sub_resource type="Gradient" id="Gradient_gxtfn"]
 colors = PackedColorArray(0, 0, 0, 1, 0.91326463, 0.7795315, 0.393286, 1)
@@ -290,6 +294,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Wardroom/Props_Wardroom1/curtain4/Plane:blend_shapes/Open")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_pjm8e"]
 resource_name = "cs_01"
@@ -301,15 +317,9 @@ tracks/0/path = NodePath("TextWriter")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(5, 8.033334, 17.812351, 24.966667, 34.033333, 44.366665, 53.633335, 62.833332, 74.23333, 85.666664, 97.06426),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(15.366667, 21.233334, 25.666666, 30.233334, 35.4, 40.366665, 45.433334, 48.199997, 52.666668),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
-"args": [],
-"method": &"show_next_dialogue"
-}, {
-"args": [],
-"method": &"show_next_dialogue"
-}, {
 "args": [],
 "method": &"show_next_dialogue"
 }, {
@@ -371,7 +381,7 @@ tracks/3/path = NodePath("Character_23_Female_Doctor:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 8.633333, 12.266666, 14.772202, 78.19999, 79.899994, 82.06666, 83.7, 86.73333),
+"times": PackedFloat32Array(0, 8.633333, 12.266666, 14.772202, 45.633335, 46.533344, 47.76668, 49.00001, 50.533344),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(-1.0993123, 0.07086816, 2.6157656), Vector3(-1.0993123, 0.07086816, 2.6157656), Vector3(-6.608, 0.071, 4.523), Vector3(-6.608, 0.071, 6.337), Vector3(-6.608, 0.071, 6.337), Vector3(-6.608, 0.071, 6.337), Vector3(-6.608, 0.071, 4.457), Vector3(-6.608, 0.071, 4.457), Vector3(-2.8566308, 0.07086816, 4.457097)]
@@ -383,7 +393,7 @@ tracks/4/path = NodePath("Character_23_Female_Doctor:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 8.633333, 12.2667, 13.233334, 14.772202, 78.19999, 79.899994, 82.06666, 83.7),
+"times": PackedFloat32Array(0, 8.633333, 12.2667, 13.233334, 14.772202, 45.633335, 46.533344, 47.76668, 49.00001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector3(0, -1.5707964, 0), Vector3(0, -1.5707964, 0), Vector3(0, -0.5946686, 0), Vector3(0, -0.015707964, 0), Vector3(0, -0.5946686, 0), Vector3(0, -0.5946686, 0), Vector3(0, 3.1013453, 0), Vector3(0, 3.1013453, 0), Vector3(0, 1.7007532, 0)]
@@ -395,7 +405,7 @@ tracks/5/path = NodePath("Character_23_Female_Doctor")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(8.61694, 14.805432, 79.71948, 82.19999, 84.066666),
+"times": PackedFloat32Array(8.61694, 14.805432, 46.53335, 47.76669, 49.00001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "values": [{
 "args": [],
@@ -421,16 +431,112 @@ tracks/6/path = NodePath("Character_23_Female_Doctor:visible")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 86.86667),
+"times": PackedFloat32Array(0, 49.866665),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, true]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Player_Static")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 48.066666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false],
+"method": &"set_ray_enabled"
+}, {
+"args": [true],
+"method": &"set_ray_enabled"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_v2yb1"]
+length = 12.133333
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Static")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"drop_phone"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DropSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("33_js0lu")
+}],
+"times": PackedFloat32Array(-0.6666666)
+}
+tracks/1/use_blend = true
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TextWriter")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.96666664, 1.9666667, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}, {
+"args": [],
+"method": &"show_next_dialogue"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Wardroom/Props_Wardroom1/curtain4/Plane:blend_shapes/Open")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.4619272, 4.11761),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Character_05")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_sit"
+}]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uxocx"]
 _data = {
 &"RESET": SubResource("Animation_udium"),
-&"cs_01": SubResource("Animation_pjm8e")
+&"cs_01": SubResource("Animation_pjm8e"),
+&"cs_02": SubResource("Animation_v2yb1")
 }
 
 [node name="Game" type="Node3D" unique_id=886800177]
@@ -821,7 +927,13 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.5
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.51234, 0.049999952, -9.283209)
 
 [node name="Player_Static" parent="." unique_id=250051322 instance=ExtResource("25_o8ni1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.237968, 1.063066, 8.191956)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.237968, 1.063066, 8.358889)
+
+[node name="Character_05" parent="." unique_id=42540030 instance=ExtResource("29_twgab")]
+transform = Transform3D(0.72084147, 0, 0.6931, 0, 1, 0, -0.6931, 0, 0.72084147, -5.132391, -0.47404844, 6.3933654)
+
+[node name="Character_32" parent="." unique_id=1671688174 instance=ExtResource("19_gxtfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5086055, 1.0623128, 8.459142)
 
 [node name="Character_23_Female_Doctor" parent="." unique_id=1212263624 instance=ExtResource("26_3hbvx")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0993123, 0.07086816, 2.6157656)
@@ -830,7 +942,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0
 json_path = "res://dialogues/day1/scene2.json"
 
 [node name="CutscenePlayer" parent="." unique_id=1803056770 node_paths=PackedStringArray("anim", "text_writer") instance=ExtResource("28_ms3bu")]
-shots = Array[String](["cs_01"])
+shots = Array[String](["cs_01", "cs_02"])
 anim = NodePath("../AnimationPlayer")
 text_writer = NodePath("../TextWriter")
 
@@ -841,8 +953,15 @@ autoplay = &"cs_01"
 [node name="SlowStinger" type="AudioStreamPlayer" parent="." unique_id=1641009201]
 bus = &"SFX"
 
+[node name="Phone" parent="." unique_id=893070104 instance=ExtResource("33_v2yb1")]
+process_mode = 3
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.148147, 1.2027464, 8.461815)
+
+[node name="DropSFX" type="AudioStreamPlayer" parent="." unique_id=1438430850]
+
 [editable path="Wardroom/Props_Wardroom1/Door"]
 [editable path="Wardroom/Props_Wardroom1/Door2"]
+[editable path="Wardroom/Props_Wardroom1/curtain4"]
 [editable path="Bathroom/Props_Bathroom/Mirror"]
 [editable path="Bathroom/Props_Bathroom/Door"]
 [editable path="Bathroom/Props_Bathroom/Door2"]

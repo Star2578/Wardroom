@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://c6sgddju7ob4"]
+
+[ext_resource type="Script" uid="uid://clygy4jlk6rpt" path="res://scripts/ui_dialogue.gd" id="1_6x3ix"]
+[ext_resource type="Script" uid="uid://yrsof6kjwn0f" path="res://scripts/ui_inventory.gd" id="2_i7kuw"]
+[ext_resource type="Script" uid="uid://crdqbiangc58m" path="res://scripts/interactable_ui.gd" id="3_0llsi"]
+[ext_resource type="Script" uid="uid://i6qxlpngfd13" path="res://scripts/inspect_item_ui.gd" id="4_0llsi"]
+[ext_resource type="Script" uid="uid://cwb6w3usuuc3v" path="res://scripts/object_viewer.gd" id="4_i7kuw"]
+
+[node name="UI" type="Node" unique_id=172220396]
+
+[node name="DialogueUI" type="CanvasLayer" parent="." unique_id=2015063799 node_paths=PackedStringArray("name_label", "text_label", "choice_container")]
+visible = false
+script = ExtResource("1_6x3ix")
+name_label = NodePath("Panel/NameLabel")
+text_label = NodePath("Panel/TextLabel")
+choice_container = NodePath("Panel/ChoiceContainer")
+
+[node name="Panel" type="Panel" parent="DialogueUI" unique_id=2078366235]
+offset_left = 256.0
+offset_top = 448.0
+offset_right = 896.0
+offset_bottom = 616.0
+
+[node name="NameLabel" type="Label" parent="DialogueUI/Panel" unique_id=11695732]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 71.0
+offset_bottom = 31.0
+text = "A object"
+
+[node name="TextLabel" type="Label" parent="DialogueUI/Panel" unique_id=798472579]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 150.0
+offset_bottom = 63.0
+text = "A simple object"
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="DialogueUI/Panel" unique_id=65565049]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 80.0
+offset_right = 632.0
+offset_bottom = 120.0
+
+[node name="Example" type="Button" parent="DialogueUI/Panel/ChoiceContainer" unique_id=198070420]
+layout_mode = 2
+disabled = true
+text = "Example"
+
+[node name="Choice1" type="Button" parent="DialogueUI/Panel/ChoiceContainer" unique_id=381735007]
+layout_mode = 2
+
+[node name="Choice2" type="Button" parent="DialogueUI/Panel/ChoiceContainer" unique_id=1876875493]
+layout_mode = 2
+
+[node name="InventoryUI" type="CanvasLayer" parent="." unique_id=183356988 node_paths=PackedStringArray("grid", "nameLabel", "ItemInspector")]
+process_mode = 3
+layer = 2
+visible = false
+script = ExtResource("2_i7kuw")
+grid = NodePath("Panel/ItemGrid")
+nameLabel = NodePath("Panel/NameLabel")
+ItemInspector = NodePath("../InspectItemUI")
+
+[node name="Panel" type="Panel" parent="InventoryUI" unique_id=1547765667]
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 584.0
+offset_bottom = 136.0
+
+[node name="ItemGrid" type="GridContainer" parent="InventoryUI/Panel" unique_id=249454756]
+layout_direction = 2
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 520.0
+offset_bottom = 72.0
+columns = 5
+
+[node name="NameLabel" type="Label" parent="InventoryUI/Panel" unique_id=590868156]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -32.0
+offset_right = 48.0
+offset_bottom = -9.0
+
+[node name="InteractableUI" type="CanvasLayer" parent="." unique_id=2033099776 node_paths=PackedStringArray("name_label", "prompt_label")]
+visible = false
+script = ExtResource("3_0llsi")
+name_label = NodePath("NameLabel")
+prompt_label = NodePath("PromptLabel")
+
+[node name="NameLabel" type="Label" parent="InteractableUI" unique_id=723585875]
+offset_left = 512.0
+offset_top = 320.0
+offset_right = 640.0
+offset_bottom = 384.0
+text = "NameLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PromptLabel" type="Label" parent="InteractableUI" unique_id=667049656]
+offset_left = 512.0
+offset_top = 384.0
+offset_right = 640.0
+offset_bottom = 448.0
+text = "PromptLabel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InspectItemUI" type="CanvasLayer" parent="." unique_id=1256984566 node_paths=PackedStringArray("MeshInstance", "description")]
+visible = false
+script = ExtResource("4_0llsi")
+MeshInstance = NodePath("SubViewportContainer/SubViewport/Pivot/MeshInstance3D")
+description = NodePath("Description")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="InspectItemUI" unique_id=847861950 node_paths=PackedStringArray("pivot")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+stretch = true
+script = ExtResource("4_i7kuw")
+pivot = NodePath("SubViewport/Pivot")
+
+[node name="SubViewport" type="SubViewport" parent="InspectItemUI/SubViewportContainer" unique_id=1620101665]
+process_mode = 3
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 0
+
+[node name="Camera3D" type="Camera3D" parent="InspectItemUI/SubViewportContainer/SubViewport" unique_id=1444560780]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.505022)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="InspectItemUI/SubViewportContainer/SubViewport" unique_id=1331142380]
+transform = Transform3D(1, 0, 0, 0, 0.29429048, 0.955716, 0, -0.955716, 0.29429048, 0, 1.3744223, 0)
+light_energy = 3.0
+shadow_enabled = true
+
+[node name="Pivot" type="Node3D" parent="InspectItemUI/SubViewportContainer/SubViewport" unique_id=901203126]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InspectItemUI/SubViewportContainer/SubViewport/Pivot" unique_id=952521042]
+
+[node name="Description" type="RichTextLabel" parent="InspectItemUI" unique_id=530397748]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -163.0
+offset_right = 250.0
+offset_bottom = -63.0
+grow_horizontal = 2
+grow_vertical = 0
+bbcode_enabled = true
+text = "test"
+scroll_active = false
+horizontal_alignment = 1
