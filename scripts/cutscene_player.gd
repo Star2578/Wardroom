@@ -1,5 +1,6 @@
 extends Node
 
+class_name CutscenePlayer
 
 @export var shots : Array[String]
 @export var anim : AnimationPlayer
@@ -10,6 +11,7 @@ var current_shot : String
 var cutscene_pause: bool = false
 
 func _ready() -> void:
+	GameController.cutscene_player = self
 	text_writer.set_dialogue_cs(shots[0])
 
 func next_shot():
@@ -18,6 +20,8 @@ func next_shot():
 		return
 	
 	current_shot = shots[current_index]
+
+	print("Playing shot: " + current_shot)
 	
 	anim.play(current_shot)
 	current_index += 1

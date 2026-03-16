@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+class_name DialogueUI
+
 @export var name_label: Label
 @export var text_label: Label
 @export var choice_container: VBoxContainer
@@ -9,6 +11,7 @@ var current_node = ""
 var player_ref = null
 
 func _ready():
+	GameController.dialogue_ui = self
 	hide()
 
 func start_dialogue(data, player):

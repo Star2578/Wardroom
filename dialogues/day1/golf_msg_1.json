@@ -27,7 +27,7 @@
 			},
 			{
 				"sender": "g",
-				"text": "are you alright?!"
+				"text": "ARE YOU ALRIGHT?!"
 			}
 		],
 		"choices": [
@@ -50,9 +50,16 @@
 			{
 				"sender": "s",
 				"text": "need to stay at the hospital for a while"
+			},
+			{
+				"sender": "g",
+				"text": "damn that's rough"
+			},
+			{
+				"sender": "g",
+				"text": "at least you're okay"
 			}
-		],
-		"choices": []
+		]
 	},
 	"branch2": {
 		"sequence": [
@@ -63,7 +70,30 @@
 			{
 				"sender": "s",
 				"text": "I CAN'T BELIEVE THIS HAPPENED TO ME!"
+			},
+			{
+				"sender": "g",
+				"text": "YOO! CALM DOWN MY MAN!"
+			},
+			{
+				"sender": "g",
+				"text": "SEND ME YOUR LOCATION!"
+			},
+			{
+				"sender": "g",
+				"text": "I'LL VISIT YOU ASAP!"
 			}
 		]
+	},
+	"continuation": {
+		"sequence": [
+			{
+				"sender": "s",
+				"text": "📍 Shared Location"
+			}
+		]
+	},
+	"end": {
+		"trigger": "cs"
 	}
 }

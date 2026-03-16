@@ -41,10 +41,6 @@ func _input(event):
 			deg_to_rad(MAX_YAW)
 		)
 
-	if event.is_action_pressed("inventory"):
-		GameController.pause_game()
-		inventory_ui.toggle()
-
 	if GameController.is_using_phone:
 		if event.is_action_pressed("choice1"):
 			phone.select_choice("choice1")
@@ -95,3 +91,8 @@ func blink():
 
 func set_ray_enabled(enabled: bool):
 	ray.enabled = enabled
+
+func drop_phone():
+	phone.hide()
+	GameController.is_using_phone = false
+	GameController.got_phone = false

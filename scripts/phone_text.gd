@@ -34,27 +34,39 @@ func next_message():
 	var branch_data = phone_data.get(current_branch, {})
 	var sequence = branch_data.get("sequence", [])
 
-	print("Current branch: " + current_branch + ", Current index: " + str(current_index), " Sequence size: " + str(sequence.size()))
+	print("Current branch: " + current_branch + ", Current index: " + str(current_index))
 
-	# Check if we still have messages in the current sequence
 	if current_index < sequence.size():
 		wait.show()
 		var msg_data = sequence[current_index]
 		_spawn_chat_bubble(msg_data["text"], msg_data["sender"])
 		current_index += 1
 
-		var timer = Timer.new()
-		timer.wait_time = 1.5
-		timer.one_shot = true
-		add_child(timer)
-		timer.start()
+		# Timer logic
+		var timer = get_tree().create_timer(1.5, false)
 		timer.timeout.connect(next_message)
+		return
 
+	var choices = branch_data.get("choices", [])
+	
+	if choices.size() > 0:
+		_show_choice_buttons(choices)
+	
+	elif branch_data.has("continuation"):
+		current_branch = branch_data.get("continuation")
+		current_index = 0
+		next_message()
+		
+	elif phone_data.has("continuation") and current_branch != "continuation" and current_branch != "end":
+		current_branch = "continuation"
+		current_index = 0
+		next_message()
+		
 	else:
-		# Check if there are choices to display
-		var choices = branch_data.get("choices", [])
-		if choices.size() > 0:
-			_show_choice_buttons(choices)
+		var end_data = phone_data.get("end", {})
+		if end_data.get("trigger") == "cs":
+			print("Triggering cutscene...")
+			GameController.cutscene_player.next_shot()
 		else:
 			print("End of conversation.")
 

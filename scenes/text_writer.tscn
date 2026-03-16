@@ -15,6 +15,7 @@ offset_top = -30.0
 offset_right = 150.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 script = ExtResource("1_sclj6")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=2128423378]

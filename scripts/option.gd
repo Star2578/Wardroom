@@ -1,5 +1,7 @@
 extends Control
 
+class_name Option
+
 # soundcheck.mp3
 const SOUNDCHECK_PATH := "uid://yfrcsc1kgiqr"
 
@@ -10,8 +12,8 @@ const SOUNDCHECK_PATH := "uid://yfrcsc1kgiqr"
 
 var soundcheck_player: AudioStreamPlayer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	hide()
 	if language_option.item_count == 0:
 		language_option.add_item("English")
 		language_option.add_item("Thai")
@@ -53,31 +55,7 @@ func _on_brightness_value_changed(value: float) -> void:
 	GameController.apply_brightness_settings()
 
 func _on_back_pressed() -> void:
-	var parent_node := get_parent()
-	if parent_node and parent_node.has_node("MainMenu"):
-		if parent_node.has_node("CutscenePlayer"):
-			var cutscene_player := parent_node.get_node("CutscenePlayer")
-			if cutscene_player and cutscene_player.has_method("resume_cutscene"):
-				cutscene_player.resume_cutscene()
+	GameController.toggle_options_menu()
 
-		visible = false
-		parent_node.get_node("MainMenu").visible = true
-		return
-
-	GameController.return_from_option()
-
-
-func _unhandled_input(event: InputEvent) -> void:
-	if not visible:
-		return
-
-	if event.is_action_pressed("ui_cancel"):
-		var viewport := get_viewport()
-		if viewport:
-			viewport.set_input_as_handled()
-
-		_on_back_pressed()
-
-
-func _on_quit_pressed() -> void:\
+func _on_quit_pressed() -> void:
 	get_tree().quit()

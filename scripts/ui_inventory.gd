@@ -1,10 +1,13 @@
 extends CanvasLayer
 
+class_name InventoryUI
+
 @export var grid : GridContainer
 @export var nameLabel : Label
 @export var ItemInspector : CanvasLayer
 
 func _ready():
+	GameController.inventory_ui = self
 	hide()
 
 func toggle():

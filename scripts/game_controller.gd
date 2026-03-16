@@ -1,6 +1,8 @@
 extends Node
 
 
+@onready var options_menu: Option = $"CanvasLayer/Option"
+
 var is_started: bool = false
 var is_paused: bool = false
 var is_using_phone: bool = false
@@ -12,9 +14,14 @@ var master_bus_index: int
 var master_volume_db: float = linear_to_db(0.5)
 var master_muted: bool = false
 var brightness: float = 1.0
-var return_scene_path: String = ""
-const OPTION_RETURN_FALLBACK_SCENE := "res://scenes/main_menu.tscn"
+
+var main_menu: Control = null
 var player: Player = null
+var cutscene_player: CutscenePlayer = null
+var dialogue_ui: DialogueUI = null
+var interactable_ui: InteractableUI = null
+var inventory_ui: InventoryUI = null
+var inspect_item_ui: InspectItemUI = null
 
 func _ready() -> void:
 	print("GameManager Initiated")
@@ -35,43 +42,41 @@ func apply_brightness_settings() -> void:
 			node.environment.adjustment_brightness = brightness
 
 
-func open_option_scene() -> void:
-	var current_scene := get_tree().current_scene
-	if current_scene:
-		var current_scene_path := current_scene.scene_file_path
-		if current_scene_path != "" and current_scene_path != "res://scenes/option.tscn":
-			return_scene_path = current_scene_path
+func toggle_options_menu() -> void:
+	if !is_started:
+		if main_menu:
+			main_menu.visible = not main_menu.visible
+	
+	if options_menu:
+		options_menu.visible = not options_menu.visible
+		options_menu.mouse_filter = Control.MOUSE_FILTER_STOP if options_menu.visible else Control.MOUSE_FILTER_IGNORE
+		
+		if options_menu.visible:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			toggle_pause_game()
+		else:
+			print("some ui is open:", some_ui_is_open())
+			if is_started and not some_ui_is_open():
+				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			toggle_pause_game()
 
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	get_tree().change_scene_to_file("res://scenes/option.tscn")
-
-
-func return_from_option() -> void:
-	var target_scene_path := return_scene_path
-	if target_scene_path == "":
-		target_scene_path = OPTION_RETURN_FALLBACK_SCENE
-
-	return_scene_path = ""
-	get_tree().change_scene_to_file(target_scene_path)
-
+func some_ui_is_open() -> bool:
+	if dialogue_ui != null and interactable_ui != null and inventory_ui != null and inspect_item_ui != null:
+		return dialogue_ui.visible or interactable_ui.visible or inventory_ui.visible or inspect_item_ui.visible
+	return false
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not event.is_action_pressed("ui_cancel"):
-		return
+	if event.is_action_pressed("inventory"):
+		GameController.toggle_pause_game()
+		inventory_ui.toggle()
+	
+	if event.is_action_pressed("ui_cancel"):
+		var viewport := get_viewport()
+		if viewport:
+			viewport.set_input_as_handled()
 
-	var current_scene := get_tree().current_scene
+		toggle_options_menu()
 
-	if current_scene and current_scene.scene_file_path == "res://scenes/main_menu.tscn":
-		return
-	if current_scene and current_scene.scene_file_path == "res://scenes/option.tscn":
-		return
-
-	var viewport := get_viewport()
-	if viewport:
-		viewport.set_input_as_handled()
-
-	open_option_scene()
-
-func pause_game():
+func toggle_pause_game():
 	is_paused = !is_paused
 	get_tree().paused = is_paused
