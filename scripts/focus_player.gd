@@ -61,6 +61,8 @@ var freeflying : bool = false
 
 var current_target: Node = null
 
+func player():
+	pass
 
 func _ready() -> void:
 	check_input_mappings()
