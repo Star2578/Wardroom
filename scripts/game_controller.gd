@@ -28,10 +28,13 @@ func apply_audio_settings() -> void:
 	AudioServer.set_bus_mute(master_bus_index, master_muted)
 
 func apply_brightness_settings() -> void:
+	# print("found env count: ", get_tree().get_nodes_in_group("world_environments").size())
 	for node in get_tree().get_nodes_in_group("world_environments"):
 		if node is WorldEnvironment and node.environment != null:
 			node.environment.adjustment_enabled = true
 			node.environment.adjustment_brightness = brightness
+			print("Applied brightness: ", brightness, " to ", node.name)
+
 
 
 func _ensure_option_menu() -> void:
