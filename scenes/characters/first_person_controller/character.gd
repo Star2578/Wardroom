@@ -150,6 +150,9 @@ const STEP_INTERVAL = 0.5
 
 #region Main Control Flow
 
+func player():
+	pass
+
 func _ready():
 	GameController.player = self
 	
