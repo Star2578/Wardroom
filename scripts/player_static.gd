@@ -100,3 +100,5 @@ func drop_phone():
 
 func set_can_look_around(value: bool):
 	GameController.can_look_around = value
+	print("pause: ", GameController.is_paused)
+	print("can look: ", GameController.can_look_around)
