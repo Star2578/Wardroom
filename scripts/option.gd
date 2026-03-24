@@ -16,9 +16,11 @@ func _ready() -> void:
 		language_option.add_item("English")
 		language_option.add_item("Thai")
 	language_option.select(0)
+	
 	_setup_soundcheck_player()
 
 	volume_slider.value = db_to_linear(GameController.master_volume_db)
+	brightness_slider.set_value_no_signal(GameController.brightness)
 	mute_checkbox.button_pressed = GameController.master_muted
 	GameController.apply_audio_settings()
 
