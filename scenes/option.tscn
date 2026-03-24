@@ -147,15 +147,33 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_qt2fl")
 text = "Back"
 alignment = 0
 
+[node name="Menu" type="Button" parent="." unique_id=1332141172]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 173.0
+offset_right = 228.0
+offset_bottom = 215.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_0chu7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0chu7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0chu7")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_0chu7")
+text = "return to menu"
+alignment = 0
+
 [node name="Quit" type="Button" parent="." unique_id=757532391]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = 50.0
-offset_top = 91.0
-offset_right = 150.0
-offset_bottom = 133.0
+offset_top = 214.0
+offset_right = 215.0
+offset_bottom = 256.0
 grow_vertical = 2
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_0chu7")
@@ -171,4 +189,5 @@ alignment = 0
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VolumeRow3/reset" to="." method="_on_reset_pressed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/VolumeRow3/Brightness" to="." method="_on_brightness_value_changed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
