@@ -54,6 +54,11 @@ func _on_brightness_value_changed(value: float) -> void:
 	GameController.brightness = value
 	GameController.apply_brightness_settings()
 
+func _on_reset_pressed() -> void:
+	GameController.brightness = 1.0
+	GameController.apply_brightness_settings()
+	brightness_slider.set_value_no_signal(GameController.brightness)
+
 func _on_back_pressed() -> void:
 	var parent_node := get_parent()
 	if parent_node and parent_node.has_node("MainMenu"):
