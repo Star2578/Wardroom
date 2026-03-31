@@ -8,6 +8,10 @@ extends Control
 @onready var option_panel = $"../Option2"
 @onready var cutscene_player = $"../CutscenePlayer"
 
+func _ready() -> void:
+	# Main menu must always show cursor for UI interaction.
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
 func _on_start_pressed() -> void:
 	$"../CutscenePlayer".next_shot()
 	start_btn.disabled = true

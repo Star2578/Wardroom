@@ -98,4 +98,4 @@ func _on_menu_pressed() -> void:
 		return
 	
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-	_on_back_pressed()
+	GameController.return_from_option()
