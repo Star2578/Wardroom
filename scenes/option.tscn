@@ -8,6 +8,12 @@
 [sub_resource type="LabelSettings" id="LabelSettings_3gnim"]
 font_size = 50
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_glgj2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uyxjx"]
+bg_color = Color(0.6, 0.6, 0.6, 0.011764706)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt2fl"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
@@ -22,6 +28,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qt2fl")
+
+[node name="Panel" type="Panel" parent="." unique_id=1441286612]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="." unique_id=914533003]
 layout_mode = 0
@@ -61,6 +75,7 @@ layout_mode = 2
 
 [node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer/VolumeRow" unique_id=789462924]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_glgj2")
 theme_override_icons/checked = ExtResource("3_3kt1x")
 theme_override_icons/unchecked = ExtResource("2_8j2p1")
 
@@ -81,12 +96,13 @@ theme_override_font_sizes/font_size = 24
 text = "Brightness"
 
 [node name="LabelToCheckSpacer" type="Control" parent="MarginContainer/VBoxContainer/VolumeRow3" unique_id=814626928]
-custom_minimum_size = Vector2(664, 0)
+custom_minimum_size = Vector2(665, 0)
 layout_mode = 2
 
 [node name="reset" type="Button" parent="MarginContainer/VBoxContainer/VolumeRow3" unique_id=1759231490]
 layout_mode = 2
 theme_override_icons/icon = ExtResource("4_glgj2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uyxjx")
 
 [node name="Brightness" type="HSlider" parent="MarginContainer/VBoxContainer/VolumeRow3" unique_id=1638275089]
 layout_mode = 2
@@ -162,7 +178,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_0chu7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0chu7")
 theme_override_styles/hover = SubResource("StyleBoxFlat_0chu7")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_0chu7")
-text = "return to menu"
+text = "Return to menu"
 alignment = 0
 
 [node name="Quit" type="Button" parent="." unique_id=757532391]
