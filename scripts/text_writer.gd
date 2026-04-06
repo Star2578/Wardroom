@@ -65,11 +65,12 @@ func _on_text_tween_finished():
 	sfx_player.stop()
 	active_tween = null
 
-	fade_out_tween = create_tween()
-	fade_out_tween.tween_interval(2.0)
-	fade_out_tween.tween_property(rich_label, "modulate", Color(1, 1, 1, 0), 1)\
-		.set_trans(Tween.TRANS_LINEAR)\
-		.set_ease(Tween.EASE_IN_OUT)
+	if fade_out:
+		fade_out_tween = create_tween()
+		fade_out_tween.tween_interval(2.0)
+		fade_out_tween.tween_property(rich_label, "modulate", Color(1, 1, 1, 0), 1)\
+			.set_trans(Tween.TRANS_LINEAR)\
+			.set_ease(Tween.EASE_IN_OUT)
 	
 
 func play_text(text: String):
