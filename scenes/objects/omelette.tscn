@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://d3vaeivyv0jym"]
 
 [ext_resource type="PackedScene" uid="uid://by0ync2uebeck" path="res://assets/objects/omelette.glb" id="1_n1f0h"]
-[ext_resource type="Script" uid="uid://cq3bkdtyr2dkl" path="res://scripts/interactable_item_change_scene.gd" id="2_xlf5y"]
+[ext_resource type="Script" uid="uid://cq3bkdtyr2dkl" path="res://scripts/omelette.gd" id="2_xlf5y"]
 [ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="3_leo1i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1f0h"]

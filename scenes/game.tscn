@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://c44wh103vnyq1" path="res://scenes/interactable_objects/card.tscn" id="38_7025r"]
 [ext_resource type="ArrayMesh" uid="uid://de3aqj1cwosgg" path="res://scenes/interactable_objects/data/meshes/phone_mesh.tres" id="38_nepv3"]
 [ext_resource type="PackedScene" uid="uid://d3vaeivyv0jym" path="res://scenes/objects/omelette.tscn" id="40_m4url"]
+[ext_resource type="AudioStream" uid="uid://c2jxrgc6bn0n0" path="res://sounds/sfx/Fluorescent light bulb buzz_2.wav" id="41_8ool0"]
 
 [sub_resource type="Gradient" id="Gradient_gxtfn"]
 colors = PackedColorArray(0, 0, 0, 1, 0.91326463, 0.7795315, 0.393286, 1)
@@ -926,11 +927,44 @@ tracks/19/keys = {
 "values": [true, false]
 }
 
+[sub_resource type="Animation" id="Animation_m4url"]
+resource_name = "cs_03"
+length = 20.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player_Static")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"blink"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("omelette/Area3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(19.633333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"change_to"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uxocx"]
 _data = {
 &"RESET": SubResource("Animation_udium"),
 &"cs_01": SubResource("Animation_pjm8e"),
-&"cs_02": SubResource("Animation_v2yb1")
+&"cs_02": SubResource("Animation_v2yb1"),
+&"cs_03": SubResource("Animation_m4url")
 }
 
 [node name="Game" type="Node3D" unique_id=886800177]
@@ -1362,7 +1396,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.0
 json_path = "res://dialogues/day1/scene2.json"
 
 [node name="CutscenePlayer" parent="." unique_id=1803056770 node_paths=PackedStringArray("anim", "text_writer") instance=ExtResource("28_ms3bu")]
-shots = Array[String](["cs_01", "cs_02"])
+shots = Array[String](["cs_01", "cs_02", "cs_03"])
 anim = NodePath("../AnimationPlayer")
 text_writer = NodePath("../TextWriter")
 
@@ -1384,7 +1418,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.8
 bus = &"SFX"
 
 [node name="PhoneTemp" type="MeshInstance3D" parent="." unique_id=339618598]
-transform = Transform3D(0.08312659, 0.055587545, 7.690849e-09, 0.028313031, -0.0423399, 0.08605643, 0.047836605, -0.07153585, -0.050934196, -7.4389076, 1.0243398, 7.8561983)
+transform = Transform3D(0.08312659, 0.055587556, 7.690849e-09, 0.028313031, -0.04233991, 0.08605643, 0.047836605, -0.07153586, -0.050934196, -7.4389076, 1.0243398, 7.8561983)
 visible = false
 mesh = ExtResource("38_nepv3")
 skeleton = NodePath("")
@@ -1399,6 +1433,12 @@ monitorable = false
 
 [node name="CollisionShape3D" parent="omelette/Area3D" index="0" unique_id=366614747]
 disabled = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1156337133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.503, 3.4387069, 4.6915274)
+stream = ExtResource("41_8ool0")
+volume_db = -10.0
+autoplay = true
 
 [editable path="Wardroom/Props_Wardroom1/Door"]
 [editable path="Wardroom/Props_Wardroom1/Door2"]

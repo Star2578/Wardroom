@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bcumdsacf6tgv" path="res://scripts/phone_text.gd" id="1_ehafy"]
 [ext_resource type="Texture2D" uid="uid://cmawo2nu0k6cq" path="res://assets/etc/chat_bubble.png" id="2_q5htj"]
 [ext_resource type="PackedScene" uid="uid://cord1eofxxlps" path="res://scenes/chat_bubble.tscn" id="3_7dx2s"]
-[ext_resource type="AudioStream" uid="uid://durk8b323u5ov" path="res://sounds/sfx/dragon-studio-clean-minimal-pop-467466.mp3" id="5_dddd7"]
+[ext_resource type="AudioStream" uid="uid://8sud3cer725u" path="res://sounds/sfx/Bubble_artificial.wav" id="5_dddd7"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_7dx2s"]
 viewport_path = NodePath("Screen/SubViewport")

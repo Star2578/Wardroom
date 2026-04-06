@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c550exlwy3fpb" path="res://assets/objects/hospital/textures/Door_1/Door_1_BaseColor.png" id="6_agdkb"]
 [ext_resource type="Texture2D" uid="uid://d1ctva8qvt3bf" path="res://assets/objects/hospital/textures/Door_1/Door_1_Normal.png" id="7_pnd0n"]
 [ext_resource type="PackedScene" uid="uid://bkkpi70hfbrpu" path="res://scenes/door.tscn" id="8_40kn8"]
+[ext_resource type="PackedScene" uid="uid://k0qgdbcbpbdw" path="res://scenes/ghost.tscn" id="9_hilkp"]
 [ext_resource type="Texture2D" uid="uid://yvm7yflrckev" path="res://assets/objects/hospital/textures/Walls_1/Walls_1_BaseColor.png" id="9_k55ro"]
 [ext_resource type="Texture2D" uid="uid://bjggnqidjraiy" path="res://assets/objects/hospital/textures/Walls_1/Walls_1_Normal.png" id="10_qie4n"]
 [ext_resource type="PackedScene" uid="uid://c5bx21iwuxad2" path="res://scenes/hospital_bed_test_1.tscn" id="11_7efej"]
@@ -38,6 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://clburf1vs7rpm" path="res://scenes/objects/bench.tscn" id="27_vtruy"]
 [ext_resource type="Texture2D" uid="uid://bjgplralkmk6y" path="res://assets/objects/hospital/textures/Decals/Blood/—Pngtree—red blood handprint_6784817.png" id="28_lleqh"]
 [ext_resource type="PackedScene" uid="uid://b30kf1awcjmgo" path="res://scenes/objects/poo.tscn" id="34_l2cry"]
+[ext_resource type="AudioStream" uid="uid://c2jxrgc6bn0n0" path="res://sounds/sfx/Fluorescent light bulb buzz_2.wav" id="38_4iosw"]
 [ext_resource type="PackedScene" uid="uid://bi0y82miiqfyq" path="res://scenes/objects/tile_wall_half.tscn" id="39_k55ro"]
 [ext_resource type="PackedScene" uid="uid://b0i22kl70eafl" path="res://scenes/objects/tile_corner.tscn" id="40_qie4n"]
 [ext_resource type="PackedScene" uid="uid://do0ai27oryw7a" path="res://scenes/objects/ceiling_light.tscn" id="41_7efej"]
@@ -590,11 +592,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.7
 [node name="Destination" parent="Wardroom/Props_Wardroom1/Door" index="0" unique_id=2055060684]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5762787e-07, -1.1081979, 8.618584)
 
-[node name="Area3D" parent="Wardroom/Props_Wardroom1/Door" index="1" unique_id=1758599314]
-is_locked = true
-key = "Ward Key"
-
-[node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door/Area3D" index="0" unique_id=241131087]
+[node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door/Area3D" parent_id_path=PackedInt32Array(1332818805, 1758599314) index="0" unique_id=241131087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2626667, 0)
 shape = SubResource("BoxShape3D_pr1ej")
 
@@ -604,7 +602,11 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.8
 [node name="Destination" parent="Wardroom/Props_Wardroom1/Door2" index="0" unique_id=2055060684]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5762787e-07, -1.1081979, -9.236557)
 
-[node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door2/Area3D" parent_id_path=PackedInt32Array(539876163, 1758599314) index="0" unique_id=241131087]
+[node name="Area3D" parent="Wardroom/Props_Wardroom1/Door2" index="1" unique_id=1758599314]
+is_locked = true
+key = "Ward Key"
+
+[node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door2/Area3D" index="0" unique_id=241131087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2626667, 0)
 shape = SubResource("BoxShape3D_pr1ej")
 
@@ -1103,6 +1105,12 @@ key = "Pink Key"
 [node name="Bathroom_Door_001" parent="Bathroom/Props_Bathroom/Door3" unique_id=930171232 instance=ExtResource("26_bkbm0")]
 transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1.0000001, 0, 8.7422784e-08, 0, -1.0000001, 0, 0, 0)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Bathroom" unique_id=665169414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.811874, 3.4734964, 37.52866)
+stream = ExtResource("38_4iosw")
+volume_db = -10.0
+bus = &"SFX"
+
 [node name="Hallway" type="Node3D" parent="." unique_id=1079655953]
 
 [node name="Bench" parent="Hallway" unique_id=118096769 instance=ExtResource("27_vtruy")]
@@ -1385,9 +1393,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.90249, 3.5727468, -54.8724
 
 [node name="Player" parent="." unique_id=565899461 instance=ExtResource("41_qie4n")]
 transform = Transform3D(1.3113417e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113417e-07, 43.158855, -1.3113022e-06, 26.063908)
+immobile = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1714140543]
 libraries/ = SubResource("AnimationLibrary_13goe")
+autoplay = &"cs_01"
 
 [node name="TextWriter" parent="." unique_id=131344889 instance=ExtResource("42_13goe")]
 json_path = "res://dialogues/night1/dream_start.json"
@@ -1396,6 +1406,9 @@ json_path = "res://dialogues/night1/dream_start.json"
 shots = Array[String](["cs_01"])
 anim = NodePath("../AnimationPlayer")
 text_writer = NodePath("../TextWriter")
+
+[node name="Ghost" parent="." unique_id=1439193727 instance=ExtResource("9_hilkp")]
+transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 19.582333, 0.41124392, -25.553679)
 
 [editable path="Wardroom/Props_Wardroom1/Door"]
 [editable path="Wardroom/Props_Wardroom1/Door2"]

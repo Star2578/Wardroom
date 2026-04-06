@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b8hy6gbmarqxi"
-path="res://.godot/imported/Character_Monster.fbx-2077777c3e5ca342390ce3bbe6099534.scn"
+uid="uid://bmys7lgl6qrs3"
+path="res://.godot/imported/Running Crawl.fbx-74413f6b1b2552610a4a8c2d7c88acef.scn"
 
 [deps]
 
-source_file="res://assets/characters/Characters_psx/Models/Killers/Character_Monster.fbx"
-dest_files=["res://.godot/imported/Character_Monster.fbx-2077777c3e5ca342390ce3bbe6099534.scn"]
+source_file="res://animations/Running Crawl.fbx"
+dest_files=["res://.godot/imported/Running Crawl.fbx-74413f6b1b2552610a4a8c2d7c88acef.scn"]
 
 [params]
 

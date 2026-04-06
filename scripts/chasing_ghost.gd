@@ -20,7 +20,7 @@ func _physics_process(delta: float) -> void:
 		
 	if state == States.idle:
 		velocity = Vector3.ZERO
-		animationPlayer.play("mixamo_com")
+		animationPlayer.play("crouch")
 	elif state == States.chase:
 		look_at(Vector3(target.global_position.x, global_position.y, target.global_position.z), Vector3.UP, true)
 		navAgent.target_position = target.global_position
@@ -29,13 +29,13 @@ func _physics_process(delta: float) -> void:
 		direction = direction.normalized()
 		
 		velocity = velocity.lerp(direction * speed, accel * delta)
-		animationPlayer.play("mixamo_com")
+		animationPlayer.play("crawl")
 	elif state == States.attack:
 		look_at(Vector3(target.global_position.x, global_position.y, target.global_position.z), Vector3.UP, true)
-		animationPlayer.play("mixamo_com")
+		animationPlayer.play("crawl")
 		velocity = Vector3.ZERO
 	elif state == States.die:
-		animationPlayer.play("mixamo_com")
+		animationPlayer.play("crawl")
 		velocity = Vector3.ZERO
 		
 	move_and_slide()

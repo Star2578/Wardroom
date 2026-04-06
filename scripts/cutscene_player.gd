@@ -10,7 +10,7 @@ var current_index = 0
 var current_shot : String
 var cutscene_pause: bool = false
 
-func _ready() -> void:
+func _ready():
 	GameController.cutscene_player = self
 	text_writer.set_dialogue_cs(shots[0])
 

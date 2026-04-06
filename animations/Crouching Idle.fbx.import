@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b8hy6gbmarqxi"
-path="res://.godot/imported/Character_Monster.fbx-2077777c3e5ca342390ce3bbe6099534.scn"
+uid="uid://cbf02kqnyswd3"
+path="res://.godot/imported/Crouching Idle.fbx-c59b9eb1163b3169c7665d17c9c323de.scn"
 
 [deps]
 
-source_file="res://assets/characters/Characters_psx/Models/Killers/Character_Monster.fbx"
-dest_files=["res://.godot/imported/Character_Monster.fbx-2077777c3e5ca342390ce3bbe6099534.scn"]
+source_file="res://animations/Crouching Idle.fbx"
+dest_files=["res://.godot/imported/Crouching Idle.fbx-c59b9eb1163b3169c7665d17c9c323de.scn"]
 
 [params]
 
