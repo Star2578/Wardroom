@@ -137,7 +137,7 @@ var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity") 
 var mouseInput : Vector2 = Vector2(0,0)
 
 var footstep_timer = 0.0
-const STEP_INTERVAL = 0.5
+const STEP_INTERVAL = 1.0
 
 #endregion
 
@@ -258,12 +258,10 @@ func handle_movement(delta, input_dir):
 			velocity.z = direction.z * speed
 	
 	if is_on_floor() and velocity.length() > 0.5:
-		footstep_timer -= delta
-		if footstep_timer <= 0:
+		if not $FootstepSFX.playing:
 			$FootstepSFX.play()
-			footstep_timer = STEP_INTERVAL
 	else:
-		footstep_timer = 0
+		$FootstepSFX.stop()
 
 
 func handle_head_rotation():

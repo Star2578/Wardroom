@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bi0y82miiqfyq"]
+
+[ext_resource type="ArrayMesh" uid="uid://cd2jpm2xmviay" path="res://assets/tile_wall_half.tres" id="1_evj02"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0sl42"]
+points = PackedVector3Array(0.5, 0.088458136, 0, 0.5, -0.08845815, 0, 0.5, 0.088458136, -0.19112182, -0.5, 0.088458136, 0, -0.5, -0.08845815, 0, 0.5, -0.08845815, -0.19112182, -0.5, 0.088458136, -0.19112182, 0.5, 0.07119252, -2.5, -0.5, -0.08845815, -0.19112182, 0.5, -0.07120985, -2.5, -0.5, 0.07119252, -2.5, -0.5, -0.07120985, -2.5)
+
+[node name="Tile_Wall_half" type="MeshInstance3D" unique_id=2098659515]
+transform = Transform3D(-5.1579438e-08, -1, 6.403719e-08, 0, -4.371139e-08, -1.465, 1.18, -4.371139e-08, 2.7991542e-15, 0, 0, 0)
+mesh = ExtResource("1_evj02")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=793018530]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=95682110]
+shape = SubResource("ConvexPolygonShape3D_0sl42")

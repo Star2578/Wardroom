@@ -1,5 +1,9 @@
 [gd_scene format=4 uid="uid://dkwggf4nbqsjr"]
 
+[ext_resource type="Script" uid="uid://ct2704q0fwtly" path="res://scripts/stall.gd" id="1_05v2r"]
+[ext_resource type="Script" uid="uid://xp5vjeo4rdkx" path="res://scripts/toilet.gd" id="2_7jhdm"]
+[ext_resource type="AudioStream" uid="uid://0ep4ffcx330b" path="res://sounds/sfx/vibehorn-toilet-flush-fx-5-424984.mp3" id="3_frce2"]
+
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_415wl"]
 noise_type = 5
 seed = 27
@@ -90,6 +94,9 @@ shadow_mesh = SubResource("ArrayMesh_ymrdf")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7jhdm"]
 size = Vector3(0.90850013, 2.002417, 0.04167208)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_frce2"]
+size = Vector3(0.34765625, 2.118164, 1.1687317)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_7jhdm"]
 noise_type = 4
@@ -445,6 +452,97 @@ points = PackedVector3Array(0.17507555, 0.0051655606, 0.021926183, 0.05307019, 0
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7jhdm"]
 points = PackedVector3Array(-0.22757876, 0.5333342, 0.17215683, 0.2801848, 0.57717013, 0.06393811, -0.19137579, 0.5452, -0.29943132, 0.047092985, 0.2773467, -0.17525646, -0.07851787, 0.28115362, 0.14996351, 0.1688399, 0.5809026, -0.28960562, 0.06916113, 0.57818276, 0.33518824, 0.1921221, 0.3325941, 0.07996065, 0.19760856, 0.42339, -0.30492616, -0.19463709, 0.42339, -0.30492616, -0.27630493, 0.57666886, 0.06381287, -0.20822117, 0.3504382, -0.047389865, -0.00791015, 0.42339, 0.30762044, 0.17668016, 0.40495768, 0.20996854, -0.13338217, 0.27954122, -0.08232183, 0.08159956, 0.28095764, 0.15013498, -0.12298887, 0.5766277, 0.31287178, -0.1731996, 0.40501124, 0.20943253, -0.26157844, 0.5792884, -0.14984891, 0.13658975, 0.27928936, -0.08251062, 0.25374624, 0.42339, -0.030463018, 0.25767663, 0.5752151, -0.16423596, 0.19998094, 0.57464635, 0.252463, -0.21065941, 0.36805445, 0.09931912, -0.249879, 0.42339, -0.030264251, -0.0078041484, 0.33042383, -0.25335565, 0.10278949, 0.42339, 0.28346652, -0.16563791, 0.5806856, -0.28917158, 0.23265186, 0.44184354, 0.13647571, -0.007597976, 0.33248705, 0.24373454, -0.04410144, 0.27741098, -0.17516808, -0.09961559, 0.42339, 0.28295106)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dblv7"]
+size = Vector3(0.5777588, 1.1012115, 0.9873047)
+
+[sub_resource type="Animation" id="Animation_415wl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stall_Door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stall_Door/StaticBody3D/CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_05v2r"]
+resource_name = "close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stall_Door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0), Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stall_Door/StaticBody3D/CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_7jhdm"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Stall_Door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5707964, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Stall_Door/StaticBody3D/CollisionShape3D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_frce2"]
+_data = {
+&"RESET": SubResource("Animation_415wl"),
+&"close": SubResource("Animation_05v2r"),
+&"open": SubResource("Animation_7jhdm")
+}
+
 [node name="Stall" type="Node3D" unique_id=1037160373]
 
 [node name="Stall_Door" type="MeshInstance3D" parent="." unique_id=1054585816]
@@ -467,6 +565,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45488316, 0.0060747266, -0.
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Stall_Door/StaticBody3D" unique_id=1833946257]
 shape = SubResource("BoxShape3D_7jhdm")
+
+[node name="Area3D" type="Area3D" parent="Stall_Door" unique_id=1717863672]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_05v2r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Stall_Door/Area3D" unique_id=405164672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.44639587)
+shape = SubResource("BoxShape3D_frce2")
 
 [node name="Stall_Front" type="MeshInstance3D" parent="." unique_id=1524634708]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13183928, 0.4806224, 0.9924269)
@@ -523,3 +629,18 @@ shape = SubResource("ConvexPolygonShape3D_05v2r")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Toilet/StaticBody3D" unique_id=1831177370]
 shape = SubResource("ConvexPolygonShape3D_7jhdm")
+
+[node name="Area3D" type="Area3D" parent="Toilet" unique_id=2015234757]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0.7278737, -0.59413874)
+script = ExtResource("2_7jhdm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Toilet/Area3D" unique_id=1538559967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11505127, 0.2525711, -0.021266937)
+shape = SubResource("BoxShape3D_dblv7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1993806668]
+libraries/ = SubResource("AnimationLibrary_frce2")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=781104316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2910506, -0.22470707)
+stream = ExtResource("3_frce2")

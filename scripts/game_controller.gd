@@ -2,6 +2,7 @@ extends Node
 
 
 @onready var options_menu: Option = $"CanvasLayer/Option"
+@onready var text_writer: TextWriter = $"TextWriter"
 
 var is_started: bool = false
 var is_paused: bool = false
@@ -25,7 +26,7 @@ var interactable_ui: InteractableUI = null
 var inventory_ui: InventoryUI = null
 var inspect_item_ui: InspectItemUI = null
 
-func _ready() -> void:
+func _ready():
 	print("GameManager Initiated")
 	master_bus_index = AudioServer.get_bus_index("Master")
 	master_muted = AudioServer.is_bus_mute(master_bus_index)
@@ -33,18 +34,18 @@ func _ready() -> void:
 	apply_brightness_settings()
 
 
-func apply_audio_settings() -> void:
+func apply_audio_settings():
 	AudioServer.set_bus_volume_db(master_bus_index, master_volume_db)
 	AudioServer.set_bus_mute(master_bus_index, master_muted)
 
-func apply_brightness_settings() -> void:
+func apply_brightness_settings():
 	for node in get_tree().get_nodes_in_group("world_environments"):
 		if node is WorldEnvironment and node.environment != null:
 			node.environment.adjustment_enabled = true
 			node.environment.adjustment_brightness = brightness
 
 
-func toggle_options_menu() -> void:
+func toggle_options_menu():
 	if !is_started:
 		if main_menu:
 			main_menu.visible = not main_menu.visible
@@ -67,7 +68,7 @@ func some_ui_is_open() -> bool:
 		return dialogue_ui.visible or interactable_ui.visible or inventory_ui.visible or inspect_item_ui.visible
 	return false
 
-func _unhandled_input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent):
 	if event.is_action_pressed("inventory"):
 		GameController.toggle_pause_game()
 		inventory_ui.toggle()

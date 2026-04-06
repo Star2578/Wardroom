@@ -22,3 +22,8 @@ func has_item(item_name: String) -> bool:
 		if i.name == item_name:
 			return true
 	return false
+
+func check_key_for_door(door: Door) -> bool:
+	if door.is_locked and has_item(door.key):
+		return true
+	return false

@@ -11,11 +11,22 @@ class_name Door
 
 @onready var ghost = get_node_or_null("../Ghost")
 
+@export var is_locked: bool = false
+@export var key: String = ""
+@export var warn: String = "This door is locked"
+
 func _ready():
 	fade_black.modulate.a = 0
 	fade_black.hide()
 
 func interact():
+	var has_key = InventoryManager.check_key_for_door(self)
+	
+	if is_locked and not has_key:
+		print("door is locked")
+		GameController.text_writer.play_text(warn)
+		return
+	
 	print("interact door")
 	fade_black.show()
 	

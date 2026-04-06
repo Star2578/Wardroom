@@ -77,7 +77,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_kddbv"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_udium"]
 resource_name = "Plane_010"
 _surfaces = [{
 "aabb": AABB(-1.5, -0.09340003, -2.5, 3, 0.18680006, 2.5),
@@ -96,7 +96,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hmnbr")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pw728"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vo55k"]
 points = PackedVector3Array(-1.5, -0.070342585, -2.5, -1.0486492, -0.09340003, -2.0485024, -1.5, -0.08758539, -0.19112182, -1.5, 0.072061375, -2.5, 1.5, -0.070342585, -2.5, -1.074491, -0.09340003, 0, 1.0483556, -0.09340003, -2.0485024, -1.5, -0.08758539, 0, -1.5, 0.08932246, -0.19112182, -1.0486492, 0.09340003, -2.0485024, 1.5, 0.072061375, -2.5, 1.5, -0.08758539, -0.19112182, 1.0741973, -0.09340003, 0, -1.5, 0.08932246, 0, -1.074491, 0.09340003, 0, 1.0483556, 0.09340003, -2.0485024, 1.5, 0.08932246, -0.19112182, 1.5, -0.08758539, 0, 1.0741973, 0.09340003, 0, 1.5, 0.08932246, 0)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p51f0"]
@@ -128,7 +128,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_u56q5"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_q4233"]
 resource_name = "Plane_009"
 _surfaces = [{
 "aabb": AABB(-0.0016943626, -0.028259546, -2.0010195, 0.9995382, 0.056519117, 2.0014715),
@@ -147,13 +147,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pmkf2")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_pw728"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_7qive"]
 size = Vector3(1, 0.2, 2)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6gsqv"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxr60"]
 size = Vector3(1, 0.2, 2)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_hmnbr"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ooflh"]
 size = Vector3(3.31, 2.875, 0.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mncrv"]
@@ -185,7 +185,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_36mki"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_2w63r"]
 resource_name = "Plane_013"
 _surfaces = [{
 "aabb": AABB(-0.5, -0.08845815, -2.5, 1, 0.17691629, 2.5),
@@ -204,7 +204,7 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_pjm8e")
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6751p"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cea3d"]
 points = PackedVector3Array(0.5, 0.088458136, 0, 0.5, -0.08845815, 0, 0.5, 0.088458136, -0.19112182, -0.5, 0.088458136, 0, -0.5, -0.08845815, 0, 0.5, -0.08845815, -0.19112182, -0.5, 0.088458136, -0.19112182, 0.5, 0.07119252, -2.5, -0.5, -0.08845815, -0.19112182, 0.5, -0.07120985, -2.5, -0.5, 0.07119252, -2.5, -0.5, -0.07120985, -2.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u70ee"]
@@ -252,9 +252,9 @@ shadow_mesh = SubResource("ArrayMesh_uv76m")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1197401329]
 environment = SubResource("Environment_o5gif")
 
-[node name="Wardroom" type="Node3D" parent="." unique_id=1788200029]
+[node name="Wardroom" type="Node3D" parent="." unique_id=1996817381]
 
-[node name="Wardroom_Floor" type="GridMap" parent="Wardroom" unique_id=343724635]
+[node name="Wardroom_Floor" type="GridMap" parent="Wardroom" unique_id=3497263]
 mesh_library = ExtResource("7_kddbv")
 cell_size = Vector3(2, 1.8, 2)
 cell_center_y = false
@@ -263,7 +263,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 
-[node name="Wardroom_Corner" type="GridMap" parent="Wardroom" unique_id=711662210]
+[node name="Wardroom_Corner" type="GridMap" parent="Wardroom" unique_id=1662395792]
 mesh_library = ExtResource("7_kddbv")
 cell_center_x = false
 cell_center_y = false
@@ -272,7 +272,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="Wardroom_Wall" type="GridMap" parent="Wardroom" unique_id=1276418957]
+[node name="Wardroom_Wall" type="GridMap" parent="Wardroom" unique_id=942286628]
 mesh_library = ExtResource("7_kddbv")
 cell_center_y = false
 data = {
@@ -280,99 +280,99 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="Props_Wardroom" type="GridMap" parent="Wardroom" unique_id=1238684896]
+[node name="Props_Wardroom" type="GridMap" parent="Wardroom" unique_id=587326864]
 mesh_library = ExtResource("7_kddbv")
 cell_center_y = false
 data = {
 "cells": PackedInt32Array(65194, 185, 29)
 }
 
-[node name="Props_Wardroom1" type="Node3D" parent="Wardroom" unique_id=881780053]
+[node name="Props_Wardroom1" type="Node3D" parent="Wardroom" unique_id=1908447550]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.744001, 0, 0)
 
 [node name="Ceiling_Light" parent="Wardroom/Props_Wardroom1" unique_id=856312708 instance=ExtResource("8_u56q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.201823, 3.5727468, -0.6739547)
 
-[node name="Ceiling_Light2" parent="Wardroom/Props_Wardroom1" unique_id=1094267085 instance=ExtResource("8_u56q5")]
+[node name="Ceiling_Light2" parent="Wardroom/Props_Wardroom1" unique_id=1719933698 instance=ExtResource("8_u56q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.201823, 3.5727468, 4.8593416)
 
-[node name="Ceiling_Light3" parent="Wardroom/Props_Wardroom1" unique_id=923823061 instance=ExtResource("8_u56q5")]
+[node name="Ceiling_Light3" parent="Wardroom/Props_Wardroom1" unique_id=1540117026 instance=ExtResource("8_u56q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5994987, 3.5727468, -0.6739547)
 
-[node name="Ceiling_Light4" parent="Wardroom/Props_Wardroom1" unique_id=2045180321 instance=ExtResource("8_u56q5")]
+[node name="Ceiling_Light4" parent="Wardroom/Props_Wardroom1" unique_id=1708892371 instance=ExtResource("8_u56q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5994987, 3.5727468, 4.8593416)
 
-[node name="Ceiling_Light5" parent="Wardroom/Props_Wardroom1" unique_id=72978419 instance=ExtResource("8_u56q5")]
+[node name="Ceiling_Light5" parent="Wardroom/Props_Wardroom1" unique_id=2006325790 instance=ExtResource("8_u56q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2266703, 3.5727468, -0.6739547)
 
-[node name="Ceiling_Light6" parent="Wardroom/Props_Wardroom1" unique_id=680709096 instance=ExtResource("8_u56q5")]
+[node name="Ceiling_Light6" parent="Wardroom/Props_Wardroom1" unique_id=266626659 instance=ExtResource("8_u56q5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2266703, 3.5727468, 4.8593416)
 
-[node name="Tile_Wall_Doorway_2" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=278687497]
+[node name="Tile_Wall_Doorway_2" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=468492960]
 transform = Transform3D(-5.966604e-08, 1, -6.403719e-08, 0, -4.371139e-08, -1.465, -1.365, -4.371139e-08, 2.7991542e-15, 16.742577, 0, 2)
-mesh = SubResource("ArrayMesh_kddbv")
+mesh = SubResource("ArrayMesh_udium")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_Doorway_2" unique_id=869561130]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_Doorway_2" unique_id=1506480886]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_Doorway_2/StaticBody3D" unique_id=1594796609]
-shape = SubResource("ConvexPolygonShape3D_pw728")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_Doorway_2/StaticBody3D" unique_id=723161461]
+shape = SubResource("ConvexPolygonShape3D_vo55k")
 
-[node name="Door_swing" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=771352325]
+[node name="Door_swing" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=2098114446]
 transform = Transform3D(-6.02647e-08, 0.99999994, -6.367746e-08, 0, -4.3711385e-08, -1.4567704, -1.3786956, -4.3711385e-08, 2.7834303e-15, 16.73892, -3.983222e-07, 3.3413684)
-mesh = SubResource("ArrayMesh_u56q5")
+mesh = SubResource("ArrayMesh_q4233")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Door_swing" unique_id=49541232]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Door_swing" unique_id=1820409588]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49807474, 1.3038516e-08, -1.0002837)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door_swing/StaticBody3D" unique_id=726997765]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door_swing/StaticBody3D" unique_id=1475311256]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, -0.013076782, 0)
-shape = SubResource("BoxShape3D_pw728")
+shape = SubResource("BoxShape3D_7qive")
 
-[node name="Door_swing2" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=1895744072]
+[node name="Door_swing2" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=711471512]
 transform = Transform3D(-6.026469e-08, -0.99999994, -6.367746e-08, 3.6321433e-14, 4.3711374e-08, -1.4567704, 1.3786956, -4.3711392e-08, 2.7834303e-15, 16.73892, -3.9832221e-07, 0.6058471)
-mesh = SubResource("ArrayMesh_u56q5")
+mesh = SubResource("ArrayMesh_q4233")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Door_swing2" unique_id=139936765]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Door_swing2" unique_id=1734887397]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49807474, 1.3038516e-08, -1.0002837)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door_swing2/StaticBody3D" unique_id=597210242]
-shape = SubResource("BoxShape3D_6gsqv")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door_swing2/StaticBody3D" unique_id=1580226073]
+shape = SubResource("BoxShape3D_dxr60")
 
-[node name="Tile_Wall_Doorway_3" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=834353905]
+[node name="Tile_Wall_Doorway_3" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=1421693001]
 transform = Transform3D(-5.966604e-08, 1, -6.403719e-08, 0, -4.371139e-08, -1.465, -1.365, -4.371139e-08, 2.7991542e-15, 24.743778, 0, 2)
-mesh = SubResource("ArrayMesh_kddbv")
+mesh = SubResource("ArrayMesh_udium")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_Doorway_3" unique_id=1480849671]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_Doorway_3" unique_id=209435429]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_Doorway_3/StaticBody3D" unique_id=1314582334]
-shape = SubResource("ConvexPolygonShape3D_pw728")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_Doorway_3/StaticBody3D" unique_id=331108952]
+shape = SubResource("ConvexPolygonShape3D_vo55k")
 
-[node name="Door_swing3" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=1820128032]
+[node name="Door_swing3" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=1791328687]
 transform = Transform3D(-6.02647e-08, 0.99999994, -6.367746e-08, 0, -4.3711385e-08, -1.4567704, -1.3786956, -4.3711385e-08, 2.7834303e-15, 24.740122, -3.983222e-07, 3.3413684)
-mesh = SubResource("ArrayMesh_u56q5")
+mesh = SubResource("ArrayMesh_q4233")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Door_swing3" unique_id=909840330]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Door_swing3" unique_id=1214990575]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49807474, 1.3038516e-08, -1.0002837)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door_swing3/StaticBody3D" unique_id=1362877420]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door_swing3/StaticBody3D" unique_id=165094700]
 transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1.0000001, 0, -0.013076782, 0)
-shape = SubResource("BoxShape3D_pw728")
+shape = SubResource("BoxShape3D_7qive")
 
-[node name="Door_swing4" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=272428310]
+[node name="Door_swing4" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=520136146]
 transform = Transform3D(-6.026469e-08, -0.99999994, -6.367746e-08, 3.6321433e-14, 4.3711374e-08, -1.4567704, 1.3786956, -4.3711392e-08, 2.7834303e-15, 24.740122, -3.9832221e-07, 0.6058471)
-mesh = SubResource("ArrayMesh_u56q5")
+mesh = SubResource("ArrayMesh_q4233")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Door_swing4" unique_id=1142260363]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Door_swing4" unique_id=1961730110]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49807474, 1.3038516e-08, -1.0002837)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door_swing4/StaticBody3D" unique_id=1444393436]
-shape = SubResource("BoxShape3D_6gsqv")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door_swing4/StaticBody3D" unique_id=1133147518]
+shape = SubResource("BoxShape3D_dxr60")
 
 [node name="Door" parent="Wardroom/Props_Wardroom1" unique_id=1332818805 instance=ExtResource("23_hmnbr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 16.756704, 1.2239896, 1.9659)
@@ -382,98 +382,104 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5762787e-07, -1.1081979, 8
 
 [node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door/Area3D" parent_id_path=PackedInt32Array(1332818805, 1758599314) index="0" unique_id=241131087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2626667, 0)
-shape = SubResource("BoxShape3D_hmnbr")
+shape = SubResource("BoxShape3D_ooflh")
 
-[node name="Door2" parent="Wardroom/Props_Wardroom1" unique_id=173510710 instance=ExtResource("23_hmnbr")]
+[node name="Door2" parent="Wardroom/Props_Wardroom1" unique_id=1226877476 instance=ExtResource("23_hmnbr")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 24.800943, 1.2239896, 1.9659)
 
 [node name="Destination" parent="Wardroom/Props_Wardroom1/Door2" index="0" unique_id=2055060684]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5762787e-07, -1.1081979, -9.236557)
 
-[node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door2/Area3D" parent_id_path=PackedInt32Array(173510710, 1758599314) index="0" unique_id=241131087]
+[node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door2/Area3D" parent_id_path=PackedInt32Array(1226877476, 1758599314) index="0" unique_id=241131087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2626667, 0)
-shape = SubResource("BoxShape3D_hmnbr")
+shape = SubResource("BoxShape3D_ooflh")
 
-[node name="Tile_Wall_half" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=2042998697]
+[node name="Tile_Wall_half" type="MeshInstance3D" parent="Wardroom/Props_Wardroom1" unique_id=1780145012]
 transform = Transform3D(-5.1579438e-08, -1, 6.403719e-08, 0, -4.371139e-08, -1.465, 1.18, -4.371139e-08, 2.7991542e-15, 30.74246, 2.939251e-10, 22.46442)
-mesh = SubResource("ArrayMesh_36mki")
+mesh = SubResource("ArrayMesh_2w63r")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_half" unique_id=362660979]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_half" unique_id=1058579764]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_half/StaticBody3D" unique_id=1272940034]
-shape = SubResource("ConvexPolygonShape3D_6751p")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_half/StaticBody3D" unique_id=612936876]
+shape = SubResource("ConvexPolygonShape3D_cea3d")
 
 [node name="hospital_bed_test1" parent="Wardroom/Props_Wardroom1" unique_id=1281097862 instance=ExtResource("11_4mr4y")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 13.347664, 0.02974391, -3.3415313)
 
-[node name="hospital_bed_test2" parent="Wardroom/Props_Wardroom1" unique_id=2107919289 instance=ExtResource("11_4mr4y")]
+[node name="hospital_bed_test2" parent="Wardroom/Props_Wardroom1" unique_id=822772379 instance=ExtResource("11_4mr4y")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 8.817596, 0.02974391, -3.3415313)
 
-[node name="hospital_bed_test3" parent="Wardroom/Props_Wardroom1" unique_id=1116600731 instance=ExtResource("11_4mr4y")]
+[node name="hospital_bed_test3" parent="Wardroom/Props_Wardroom1" unique_id=619149880 instance=ExtResource("11_4mr4y")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 4.1814713, 0.02974391, -3.3415315)
 
-[node name="hospital_bed_test4" parent="Wardroom/Props_Wardroom1" unique_id=838660841 instance=ExtResource("11_4mr4y")]
+[node name="hospital_bed_test4" parent="Wardroom/Props_Wardroom1" unique_id=540192186 instance=ExtResource("11_4mr4y")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, -0.51548624, 0.02974391, -3.3415318)
 
-[node name="hospital_bed_test5" parent="Wardroom/Props_Wardroom1" unique_id=1109237812 instance=ExtResource("11_4mr4y")]
+[node name="hospital_bed_test5" parent="Wardroom/Props_Wardroom1" unique_id=12626571 instance=ExtResource("11_4mr4y")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 13.347664, 0.02974391, 7.391901)
 
-[node name="hospital_bed_test6" parent="Wardroom/Props_Wardroom1" unique_id=77311239 instance=ExtResource("11_4mr4y")]
+[node name="hospital_bed_test6" parent="Wardroom/Props_Wardroom1" unique_id=324701658 instance=ExtResource("11_4mr4y")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 8.817595, 0.02974391, 7.391901)
 
-[node name="hospital_bed_test7" parent="Wardroom/Props_Wardroom1" unique_id=1944280197 instance=ExtResource("11_4mr4y")]
+[node name="hospital_bed_test7" parent="Wardroom/Props_Wardroom1" unique_id=913292227 instance=ExtResource("11_4mr4y")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 4.181471, 0.02974391, 7.391901)
 
-[node name="hospital_bed_test8" parent="Wardroom/Props_Wardroom1" unique_id=1999584903 instance=ExtResource("11_4mr4y")]
+[node name="hospital_bed_test8" parent="Wardroom/Props_Wardroom1" unique_id=1306811864 instance=ExtResource("11_4mr4y")]
 transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, -0.5154872, 0.02974391, 7.3919005)
 
 [node name="Cabinet_1" parent="Wardroom/Props_Wardroom1" unique_id=1108286674 instance=ExtResource("13_6751p")]
 transform = Transform3D(1.1, 0, 0, 0, 1.44, 0, 0, 0, 1, 14.929785, 0.7792186, -4.3892694)
 
-[node name="Cabinet_2" parent="Wardroom/Props_Wardroom1" unique_id=1507583053 instance=ExtResource("13_6751p")]
+[node name="Cabinet_2" parent="Wardroom/Props_Wardroom1" unique_id=1141100598 instance=ExtResource("13_6751p")]
 transform = Transform3D(1.1, 0, 0, 0, 1.44, 0, 0, 0, 1, 10.313038, 0.7792186, -4.3892694)
 
-[node name="Cabinet_3" parent="Wardroom/Props_Wardroom1" unique_id=425357368 instance=ExtResource("13_6751p")]
+[node name="Cabinet_3" parent="Wardroom/Props_Wardroom1" unique_id=273497256 instance=ExtResource("13_6751p")]
 transform = Transform3D(1.1, 0, 0, 0, 1.44, 0, 0, 0, 1, 5.5826025, 0.7792186, -4.3892694)
 
-[node name="Cabinet_4" parent="Wardroom/Props_Wardroom1" unique_id=1122060633 instance=ExtResource("13_6751p")]
+[node name="Cabinet_4" parent="Wardroom/Props_Wardroom1" unique_id=1632543936 instance=ExtResource("13_6751p")]
 transform = Transform3D(1.1, 0, 0, 0, 1.44, 0, 0, 0, 1, 0.8243747, 0.7792186, -4.3892694)
 
-[node name="Cabinet_5" parent="Wardroom/Props_Wardroom1" unique_id=194143134 instance=ExtResource("13_6751p")]
+[node name="Cabinet_5" parent="Wardroom/Props_Wardroom1" unique_id=906927700 instance=ExtResource("13_6751p")]
 transform = Transform3D(-1.1, 0, -8.742278e-08, 0, 1.44, 0, 9.616505e-08, 0, -1, 14.929785, 0.7792186, 8.316192)
 
-[node name="Cabinet_6" parent="Wardroom/Props_Wardroom1" unique_id=1554456048 instance=ExtResource("13_6751p")]
+[node name="Cabinet_6" parent="Wardroom/Props_Wardroom1" unique_id=294303158 instance=ExtResource("13_6751p")]
 transform = Transform3D(-1.1, 0, -8.742278e-08, 0, 1.44, 0, 9.616505e-08, 0, -1, 10.313038, 0.7792186, 8.316192)
 
-[node name="Cabinet_7" parent="Wardroom/Props_Wardroom1" unique_id=1969967030 instance=ExtResource("13_6751p")]
+[node name="Cabinet_7" parent="Wardroom/Props_Wardroom1" unique_id=1489069314 instance=ExtResource("13_6751p")]
 transform = Transform3D(-1.1, 0, -8.742278e-08, 0, 1.44, 0, 9.616505e-08, 0, -1, 5.5826025, 0.7792186, 8.316192)
 
-[node name="Cabinet_8" parent="Wardroom/Props_Wardroom1" unique_id=723064530 instance=ExtResource("13_6751p")]
+[node name="Cabinet_8" parent="Wardroom/Props_Wardroom1" unique_id=1055610455 instance=ExtResource("13_6751p")]
 transform = Transform3D(-1.1, 0, -8.742278e-08, 0, 1.44, 0, 9.616505e-08, 0, -1, 0.8243747, 0.7792186, 8.316192)
 
 [node name="curtain" parent="Wardroom/Props_Wardroom1" unique_id=2113115043 instance=ExtResource("16_34ald")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 1.975977, 0.32358873, -2.9950883)
 
-[node name="curtain2" parent="Wardroom/Props_Wardroom1" unique_id=44778559 instance=ExtResource("16_34ald")]
+[node name="curtain2" parent="Wardroom/Props_Wardroom1" unique_id=1997198398 instance=ExtResource("16_34ald")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 6.908299, 0.32358873, -2.9950886)
 
-[node name="curtain3" parent="Wardroom/Props_Wardroom1" unique_id=1134740264 instance=ExtResource("16_34ald")]
+[node name="curtain3" parent="Wardroom/Props_Wardroom1" unique_id=1281704390 instance=ExtResource("16_34ald")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 11.682659, 0.32358873, -2.9950888)
 
-[node name="curtain4" parent="Wardroom/Props_Wardroom1" unique_id=1635917364 instance=ExtResource("16_34ald")]
+[node name="curtain4" parent="Wardroom/Props_Wardroom1" unique_id=1251329617 instance=ExtResource("16_34ald")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 1.9759774, 0.32358873, 7.0333815)
 
-[node name="curtain5" parent="Wardroom/Props_Wardroom1" unique_id=1925687080 instance=ExtResource("16_34ald")]
+[node name="Plane" parent="Wardroom/Props_Wardroom1/curtain4" index="0" unique_id=708891343]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 3.2945404, 0)
+
+[node name="Cylinder" parent="Wardroom/Props_Wardroom1/curtain4" index="1" unique_id=1231606238]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 6.536025, -0.18504876)
+
+[node name="curtain5" parent="Wardroom/Props_Wardroom1" unique_id=2017581920 instance=ExtResource("16_34ald")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 6.908299, 0.32358873, 7.0333815)
 
-[node name="curtain6" parent="Wardroom/Props_Wardroom1" unique_id=1614211201 instance=ExtResource("16_34ald")]
+[node name="curtain6" parent="Wardroom/Props_Wardroom1" unique_id=443898557 instance=ExtResource("16_34ald")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 11.682659, 0.32358873, 7.0333815)
 
-[node name="Character_32_Female" parent="Wardroom/Props_Wardroom1" unique_id=1092218246 instance=ExtResource("14_o5gif")]
+[node name="Character_32_Female" parent="Wardroom/Props_Wardroom1" unique_id=874785925 instance=ExtResource("14_o5gif")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.856281, -0.09337896, -3.650849)
 
-[node name="Character_Female_02" parent="Wardroom/Props_Wardroom1" unique_id=2031193369 instance=ExtResource("15_uutrq")]
+[node name="Character_Female_02" parent="Wardroom/Props_Wardroom1" unique_id=903969684 instance=ExtResource("15_uutrq")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 13.312839, -0.21086174, 7.590101)
 
 [node name="Character_02" parent="Wardroom/Props_Wardroom1" unique_id=1853862720 instance=ExtResource("3_bdpbv")]
@@ -482,25 +488,34 @@ transform = Transform3D(0.45, 0, 0, 0, 0.45, 0, 0, 0, 0.45, 5.144313, 0.15561914
 [node name="BagHolder" parent="Wardroom" unique_id=288796700 instance=ExtResource("17_hmnbr")]
 transform = Transform3D(-1.1738902, 0, -0.24896136, 0, 1.2, 0, 0.24896136, 0, -1.1738902, -9.526972, 0, 8.555004)
 
-[node name="BagHolder2" parent="Wardroom" unique_id=1800210792 instance=ExtResource("17_hmnbr")]
+[node name="BagHolder2" parent="Wardroom" unique_id=1320486167 instance=ExtResource("17_hmnbr")]
 transform = Transform3D(-0.90900964, 0, -0.78339106, 0, 1.2000002, 0, 0.78339106, 0, -0.90900964, -4.7721977, 0, 8.555004)
 
-[node name="BagHolder3" parent="Wardroom" unique_id=1205692460 instance=ExtResource("17_hmnbr")]
+[node name="BagHolder9" parent="Wardroom" unique_id=1786346066 instance=ExtResource("17_hmnbr")]
+transform = Transform3D(-0.90900964, 0, -0.78339106, 0, 1.2000002, 0, 0.78339106, 0, -0.90900964, -2.0780263, 2.3841858e-07, 7.747883)
+
+[node name="BagHolder10" parent="Wardroom" unique_id=936722406 instance=ExtResource("17_hmnbr")]
+transform = Transform3D(0.17830339, 0, -1.1866792, 0, 1.2000002, 0, 1.1866792, 0, 0.17830339, -2.2976305, 0, 7.130782)
+
+[node name="BagHolder11" parent="Wardroom" unique_id=240106014 instance=ExtResource("17_hmnbr")]
+transform = Transform3D(-1.0410163, 0, -0.5968957, 0, 1.2, 0, 0.5968957, 0, -1.0410163, -2.41497, 0, 6.2950296)
+
+[node name="BagHolder3" parent="Wardroom" unique_id=279267074 instance=ExtResource("17_hmnbr")]
 transform = Transform3D(-1.1994617, 0, 0.03593445, 0, 1.2000002, 0, -0.03593445, 0, -1.1994617, -0.20663357, 0, 8.555004)
 
-[node name="BagHolder4" parent="Wardroom" unique_id=630201404 instance=ExtResource("17_hmnbr")]
+[node name="BagHolder4" parent="Wardroom" unique_id=2021402298 instance=ExtResource("17_hmnbr")]
 transform = Transform3D(-1.1994617, 0, 0.03593445, 0, 1.2000002, 0, -0.03593445, 0, -1.1994617, 4.377633, 0, 8.555004)
 
-[node name="BagHolder5" parent="Wardroom" unique_id=438744187 instance=ExtResource("17_hmnbr")]
+[node name="BagHolder5" parent="Wardroom" unique_id=63769009 instance=ExtResource("17_hmnbr")]
 transform = Transform3D(0.8063594, 0, 0.8886983, 0, 1.2000002, 0, -0.8886983, 0, 0.8063594, 4.319729, 0, -4.3951616)
 
-[node name="BagHolder6" parent="Wardroom" unique_id=1357298358 instance=ExtResource("17_hmnbr")]
+[node name="BagHolder6" parent="Wardroom" unique_id=432431136 instance=ExtResource("17_hmnbr")]
 transform = Transform3D(0.6076197, 0, 1.0347937, 0, 1.2000002, 0, -1.0347937, 0, 0.6076197, -0.17749333, 0, -4.1677065)
 
-[node name="BagHolder7" parent="Wardroom" unique_id=1946529550 instance=ExtResource("17_hmnbr")]
+[node name="BagHolder7" parent="Wardroom" unique_id=1058990115 instance=ExtResource("17_hmnbr")]
 transform = Transform3D(1.0516587, 0, 0.57793933, 0, 1.2000003, 0, -0.57793933, 0, 1.0516587, -4.6525173, 0, -4.1677065)
 
-[node name="BagHolder8" parent="Wardroom" unique_id=1811688504 instance=ExtResource("17_hmnbr")]
+[node name="BagHolder8" parent="Wardroom" unique_id=1386082941 instance=ExtResource("17_hmnbr")]
 transform = Transform3D(0.7707352, 0, 0.91976476, 0, 1.2000003, 0, -0.91976476, 0, 0.7707352, -9.646653, 0, -4.167706)
 
 [node name="Chair" parent="Wardroom" unique_id=1808196275 instance=ExtResource("18_pmkf2")]
@@ -636,6 +651,7 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.5
 
 [editable path="Wardroom/Props_Wardroom1/Door"]
 [editable path="Wardroom/Props_Wardroom1/Door2"]
+[editable path="Wardroom/Props_Wardroom1/curtain4"]
 [editable path="Bathroom/Props_Bathroom/Mirror"]
 [editable path="Bathroom/Props_Bathroom/Door"]
 [editable path="Bathroom/Props_Bathroom/Door2"]

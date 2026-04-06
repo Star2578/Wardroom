@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b30kf1awcjmgo"]
+
+[ext_resource type="Script" uid="uid://3p2a2nmrg63k" path="res://scripts/poo.gd" id="1_cn6oa"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4xone"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cn6oa"]
+noise = SubResource("FastNoiseLite_4xone")
+seamless = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_agfse"]
+albedo_color = Color(0.34904945, 0.14383951, 0.016110638, 1)
+detail_enabled = true
+detail_blend_mode = 3
+detail_albedo = SubResource("NoiseTexture2D_cn6oa")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_colw3"]
+material = SubResource("StandardMaterial3D_agfse")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w58jx"]
+size = Vector3(0.75, 0.69866943, 0.5)
+
+[node name="Poo" type="Area3D" unique_id=1388081543]
+script = ExtResource("1_cn6oa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1789876062]
+transform = Transform3D(0.06793517, -0.07338129, 3.207598e-09, 0, -4.371139e-09, -0.1, 0.07338129, 0.06793517, -2.9695406e-09, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_colw3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1150935469]
+transform = Transform3D(-0.041250847, -0.088796735, -0.020334926, -0.032628223, 0.035243914, -0.08771127, 0.08505156, -0.02954671, -0.0435112, 0, 0, 0.0818004)
+mesh = SubResource("CapsuleMesh_colw3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=710074091]
+transform = Transform3D(0.066249505, 0.050236087, 0.05556385, 0.0026463289, 0.072561525, -0.06875917, -0.0748599, 0.04702301, 0.046742216, -0.07005951, 0.019241065, 0.010038197)
+mesh = SubResource("CapsuleMesh_colw3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1048400615]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23947144, 0)
+shape = SubResource("BoxShape3D_w58jx")

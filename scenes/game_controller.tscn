@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c8spmjncww0wh" path="res://scripts/game_controller.gd" id="1_vq0e2"]
 [ext_resource type="PackedScene" uid="uid://dvigce2jjp64c" path="res://scenes/option.tscn" id="2_vc4nx"]
+[ext_resource type="PackedScene" uid="uid://bocqocoo4uimo" path="res://scenes/text_writer.tscn" id="3_ts4rt"]
 
 [node name="GameController" type="Node" unique_id=1624693136]
 process_mode = 3
@@ -11,3 +12,6 @@ script = ExtResource("1_vq0e2")
 layer = 999
 
 [node name="Option" parent="CanvasLayer" unique_id=1931018133 instance=ExtResource("2_vc4nx")]
+
+[node name="TextWriter" parent="." unique_id=131344889 instance=ExtResource("3_ts4rt")]
+fade_out = true
