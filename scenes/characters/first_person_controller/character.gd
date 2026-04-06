@@ -136,15 +136,25 @@ var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity") 
 # Stores mouse input for rotating the camera in the physics process
 var mouseInput : Vector2 = Vector2(0,0)
 
-var footstep_timer = 0.0
-const STEP_INTERVAL = 1.0
-
 #endregion
 
 #region Variable for interact
 
 @onready var interaction_label = $UserInterface/InteractionLabel
 @onready var raycast_3d = $Head/Camera/RayCast3D
+@onready var footstep_sfx = $FootstepSFX
+@onready var run_sfx = $RunSFX
+
+@onready var stamina_bg = $UserInterface/StaminaBG
+@onready var stamina_ui = $UserInterface/StaminaBG/Stamina
+var fade_in_tween: Tween
+var fade_out_tween: Tween
+var max_stamina: float = 100
+var stamina: float = 100
+var s_drain_persecond: float = 20
+var s_regen_persecond: float = 10
+var s_regen_delay: float = 2
+var s_regen_timer: float = 0
 
 #endregion
 
@@ -258,10 +268,25 @@ func handle_movement(delta, input_dir):
 			velocity.z = direction.z * speed
 	
 	if is_on_floor() and velocity.length() > 0.5:
-		if not $FootstepSFX.playing:
-			$FootstepSFX.play()
+		if state == "normal" and not footstep_sfx.playing:
+			run_sfx.stop()
+			footstep_sfx.play()
+		if state == "sprinting" and not run_sfx.playing:
+			footstep_sfx.stop()
+			run_sfx.play()
 	else:
-		$FootstepSFX.stop()
+		run_sfx.stop()
+		footstep_sfx.stop()
+
+	if stamina > 0 and state == "sprinting":
+		stamina -= s_drain_persecond * delta
+		s_regen_timer = 0
+	else:
+		s_regen_timer += delta
+		if s_regen_timer >= s_regen_delay and stamina < max_stamina:
+			stamina += s_regen_persecond * delta
+
+	stamina_ui.scale.y = stamina / max_stamina
 
 
 func handle_head_rotation():
@@ -326,7 +351,7 @@ func check_controls(): # If you add a control, you might want to add a check for
 func handle_state(moving):
 	if sprint_enabled:
 		if sprint_mode == 0:
-			if Input.is_action_pressed(controls.SPRINT) and state != "crouching":
+			if Input.is_action_pressed(controls.SPRINT) and state != "crouching" and stamina > 0:
 				if moving:
 					if state != "sprinting":
 						enter_sprint_state()
@@ -338,9 +363,9 @@ func handle_state(moving):
 		elif sprint_mode == 1:
 			if moving:
 				# If the player is holding sprint before moving, handle that scenario
-				if Input.is_action_pressed(controls.SPRINT) and state == "normal":
+				if Input.is_action_pressed(controls.SPRINT) and state == "normal" and stamina > 0:
 					enter_sprint_state()
-				if Input.is_action_just_pressed(controls.SPRINT):
+				if Input.is_action_just_pressed(controls.SPRINT) and stamina > 0:
 					match state:
 						"normal":
 							enter_sprint_state()
@@ -375,6 +400,8 @@ func enter_normal_state():
 	state = "normal"
 	speed = base_speed
 
+	fade_out()
+
 func enter_crouch_state():
 	#print("entering crouch state")
 	state = "crouching"
@@ -389,6 +416,28 @@ func enter_sprint_state():
 	state = "sprinting"
 	speed = sprint_speed
 
+	if fade_in_tween:
+		fade_in_tween.kill()
+		fade_in_tween = null
+	
+	if fade_out_tween:
+		fade_out_tween.kill()
+		fade_out_tween = null
+
+	fade_in_tween = create_tween()
+	fade_in_tween.tween_property(stamina_bg, "modulate", Color(1, 1, 1, 1), 0.5)\
+		.set_trans(Tween.TRANS_LINEAR)\
+		.set_ease(Tween.EASE_IN_OUT)
+
+func fade_out():
+	if fade_out_tween:
+		fade_out_tween.kill()
+		fade_out_tween = null
+	
+	fade_out_tween = create_tween()
+	fade_out_tween.tween_property(stamina_bg, "modulate", Color(1, 1, 1, 0.2), 1)\
+		.set_trans(Tween.TRANS_LINEAR)\
+		.set_ease(Tween.EASE_IN_OUT)
 #endregion
 
 #region Animation Handling

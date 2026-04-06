@@ -9,6 +9,7 @@
 [ext_resource type="Animation" uid="uid://b6y0jhl5xaj01" path="res://animations/Idle.res" id="6_r1dng"]
 [ext_resource type="Animation" uid="uid://xl761lc4j6yp" path="res://animations/Walking.res" id="7_ycb62"]
 [ext_resource type="AudioStream" uid="uid://datbsb1did6l6" path="res://sounds/sfx/freesound_community-concrete-footsteps-1-6265.mp3" id="9_gowy6"]
+[ext_resource type="AudioStream" uid="uid://dsfufnhwu8dup" path="res://sounds/sfx/runnn.wav" id="10_swj6y"]
 
 [sub_resource type="Animation" id="Animation_j8cx7"]
 resource_name = "RESET"
@@ -821,6 +822,37 @@ text = "Press E to Interact"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="StaminaBG" type="ColorRect" parent="UserInterface" unique_id=1438515248]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -32.0
+offset_right = 10.0
+offset_bottom = 168.0
+grow_horizontal = 0
+grow_vertical = 0
+rotation = 3.1415927
+color = Color(0, 0, 0, 1)
+
+[node name="Stamina" type="ColorRect" parent="UserInterface/StaminaBG" unique_id=1091803014]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -200.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.7322096, 0.36051354, 0.00096300006, 1)
+
 [node name="UI" parent="." unique_id=172220396 instance=ExtResource("6_gowy6")]
 
 [node name="CrouchCeilingDetection" type="ShapeCast3D" parent="." unique_id=232857327]
@@ -842,3 +874,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 
 stream = ExtResource("9_gowy6")
 bus = &"SFX"
 parameters/looping = true
+
+[node name="RunSFX" type="AudioStreamPlayer3D" parent="." unique_id=1208317271]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+stream = ExtResource("10_swj6y")
+bus = &"SFX"
