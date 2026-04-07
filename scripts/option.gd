@@ -18,9 +18,11 @@ func _ready() -> void:
 		language_option.add_item("English")
 		language_option.add_item("Thai")
 	language_option.select(0)
+	
 	_setup_soundcheck_player()
 
 	volume_slider.value = db_to_linear(GameController.master_volume_db)
+	brightness_slider.set_value_no_signal(GameController.brightness)
 	mute_checkbox.button_pressed = GameController.master_muted
 	GameController.apply_audio_settings()
 
@@ -54,8 +56,24 @@ func _on_brightness_value_changed(value: float) -> void:
 	GameController.brightness = value
 	GameController.apply_brightness_settings()
 
+func _on_reset_pressed() -> void:
+	GameController.brightness = 1.0
+	GameController.apply_brightness_settings()
+	brightness_slider.set_value_no_signal(GameController.brightness)
+
 func _on_back_pressed() -> void:
 	GameController.toggle_options_menu()
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_menu_pressed() -> void:
+	var current_scene := get_tree().current_scene
+
+	if current_scene and current_scene.scene_file_path == "res://scenes/main_menu.tscn":
+		_on_back_pressed()
+		return
+	
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	GameController.return_from_option()

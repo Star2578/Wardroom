@@ -929,7 +929,7 @@ tracks/19/keys = {
 
 [sub_resource type="Animation" id="Animation_m4url"]
 resource_name = "cs_03"
-length = 20.0
+length = 5.0
 tracks/0/type = "method"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -951,7 +951,7 @@ tracks/1/path = NodePath("omelette/Area3D")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(19.633333),
+"times": PackedFloat32Array(5),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -969,7 +969,7 @@ _data = {
 
 [node name="Game" type="Node3D" unique_id=886800177]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1637463888]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1637463888 groups=["world_environments"]]
 environment = SubResource("Environment_twgab")
 
 [node name="Wardroom" type="Node3D" parent="." unique_id=582258802]
@@ -1418,7 +1418,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.8
 bus = &"SFX"
 
 [node name="PhoneTemp" type="MeshInstance3D" parent="." unique_id=339618598]
-transform = Transform3D(0.08312659, 0.055587556, 7.690849e-09, 0.028313031, -0.04233991, 0.08605643, 0.047836605, -0.07153586, -0.050934196, -7.4389076, 1.0243398, 7.8561983)
+transform = Transform3D(0.08312659, 0.05558756, 7.690849e-09, 0.028313031, -0.042339914, 0.08605643, 0.047836605, -0.07153587, -0.050934196, -7.4389076, 1.0243398, 7.8561983)
 visible = false
 mesh = ExtResource("38_nepv3")
 skeleton = NodePath("")
