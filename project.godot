@@ -38,6 +38,10 @@ enabled=PackedStringArray()
 
 import/blender/enabled=false
 
+[global_group]
+
+world_environments="for brightness setting"
+
 [input]
 
 crouch={
