@@ -14,6 +14,15 @@ func _ready():
 	GameController.cutscene_player = self
 	text_writer.set_dialogue_cs(shots[0])
 
+func _process(_delta):
+	if Input.is_action_just_pressed("jump") and anim.is_playing():
+		# Set speed to something ridiculous to "teleport" through the shot
+		anim.speed_scale = 100.0 
+	
+	# You'll need a way to reset the speed for the next shot
+	if not anim.is_playing():
+		anim.speed_scale = 1.0
+
 func next_shot():
 	if current_index > shots.size():
 		print("Cutscene Finished")
