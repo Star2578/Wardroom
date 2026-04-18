@@ -95,6 +95,7 @@ fog_depth_end = 50.0
 volumetric_fog_enabled = true
 volumetric_fog_albedo = Color(0.18932778, 0.1893278, 0.18932769, 1)
 volumetric_fog_sky_affect = 0.75
+adjustment_enabled = true
 
 [sub_resource type="MultiMesh" id="MultiMesh_oa1go"]
 transform_format = 1
@@ -644,7 +645,7 @@ omni_range = 0.7
 [node name="Camera3D" type="Camera3D" parent="." unique_id=452667127]
 transform = Transform3D(-1, 1.10928625e-07, -8.0907625e-08, 1.2775111e-07, 0.535827, -0.8443278, -5.0307634e-08, -0.8443278, -0.535827, 0, 9.251621, -10.613197)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1274500393]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1274500393 groups=["world_environments"]]
 environment = SubResource("Environment_ekxnf")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1029037382]

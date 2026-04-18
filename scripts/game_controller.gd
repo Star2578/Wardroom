@@ -30,6 +30,7 @@ func _ready():
 	print("GameManager Initiated")
 	master_bus_index = AudioServer.get_bus_index("Master")
 	master_muted = AudioServer.is_bus_mute(master_bus_index)
+	_connect_scene_change_hooks()
 	apply_audio_settings()
 	apply_brightness_settings()
 
@@ -43,6 +44,31 @@ func apply_brightness_settings():
 		if node is WorldEnvironment and node.environment != null:
 			node.environment.adjustment_enabled = true
 			node.environment.adjustment_brightness = brightness
+			print("Applied brightness: ", brightness, " to ", node.name)
+
+
+func _connect_scene_change_hooks() -> void:
+	var tree := get_tree()
+	var scene_changed_callable := Callable(self, "_on_current_scene_changed")
+	if tree.has_signal("current_scene_changed"):
+		if not tree.is_connected("current_scene_changed", scene_changed_callable):
+			tree.connect("current_scene_changed", scene_changed_callable)
+		return
+
+	var node_added_callable := Callable(self, "_on_tree_node_added")
+	if not tree.is_connected("node_added", node_added_callable):
+		tree.connect("node_added", node_added_callable)
+
+
+func _on_current_scene_changed(_new_scene: Node) -> void:
+	# Run deferred so the new scene has finished entering the tree.
+	call_deferred("apply_brightness_settings")
+
+
+func _on_tree_node_added(node: Node) -> void:
+	if node == get_tree().current_scene:
+		# Fallback for engine versions without current_scene_changed.
+		call_deferred("apply_brightness_settings")
 
 
 func toggle_options_menu():

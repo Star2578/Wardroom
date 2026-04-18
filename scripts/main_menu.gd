@@ -9,6 +9,8 @@ extends Control
 
 func _ready() -> void:
 	GameController.main_menu = self
+	# Main menu must always show cursor for UI interaction.
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
 func _on_start_pressed() -> void:
 	GameController.is_started = true
