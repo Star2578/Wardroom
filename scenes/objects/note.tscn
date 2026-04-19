@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bqm7jrtdrr40w"]
+
+[ext_resource type="Script" uid="uid://cme5eghj1ii5b" path="res://scripts/note.gd" id="1_4tyip"]
+[ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="2_il1cl"]
+[ext_resource type="AudioStream" uid="uid://dkmc2vo3xxty5" path="res://sounds/sfx/creatorshome-turn-a-page-336933.mp3" id="3_ndos4"]
+
+[sub_resource type="Resource" id="Resource_ndos4"]
+script = ExtResource("2_il1cl")
+name = "Note"
+description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c2d0w"]
+size = Vector3(0.40600586, 0.6123047, 0.16015625)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndos4"]
+grow_amount = -0.623
+
+[sub_resource type="QuadMesh" id="QuadMesh_c2d0w"]
+material = SubResource("StandardMaterial3D_ndos4")
+size = Vector2(0.4, 0.6)
+
+[node name="Note" type="Area3D" unique_id=699161635]
+script = ExtResource("1_4tyip")
+object_data = SubResource("Resource_ndos4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=732120401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.059570313)
+shape = SubResource("BoxShape3D_c2d0w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=358012078]
+mesh = SubResource("QuadMesh_c2d0w")
+skeleton = NodePath("")
+
+[node name="Content" type="CanvasLayer" parent="." unique_id=1904468067]
+unique_name_in_owner = true
+
+[node name="Paper" type="ColorRect" parent="Content" unique_id=27432098]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_right = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Content/Paper" unique_id=1402086000]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -220.0
+offset_top = 37.0
+offset_right = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Test Text"
+metadata/_edit_use_anchors_ = true
+
+[node name="Close" type="Button" parent="Content" unique_id=2090281343]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 209.0
+offset_right = 249.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.8218134, 0, 0.01671629, 1)
+text = "X"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=594136282]
+unique_name_in_owner = true
+stream = ExtResource("3_ndos4")
+bus = &"SFX"
+
+[connection signal="pressed" from="Content/Close" to="." method="close"]
