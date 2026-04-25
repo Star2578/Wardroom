@@ -6,6 +6,7 @@
 [ext_resource type="Animation" uid="uid://cng138hqgvg7j" path="res://animations/crawl.res" id="3_sv5gc"]
 [ext_resource type="Script" uid="uid://bhpsybac8mn2v" path="res://scripts/game_over_ui.gd" id="4_veat2"]
 [ext_resource type="Animation" uid="uid://gwac3ebeva88" path="res://animations/crouch.res" id="4_wj1r3"]
+[ext_resource type="AudioStream" uid="uid://cbmsmqsg2yp8r" path="res://sounds/sfx/alesiadavina-creepy-halloween-ghost-voices-468558.mp3" id="6_sv5gc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6nvh"]
 resource_name = "Character_Monster"
@@ -1040,9 +1041,19 @@ avoidance_enabled = true
 [node name="chasingAudio" type="AudioStreamPlayer" parent="." unique_id=1828680178]
 stream = SubResource("AudioStreamMP3_l5lq6")
 volume_db = -20.0
+bus = &"SFX"
 
 [node name="attackingAudio" type="AudioStreamPlayer" parent="." unique_id=846786281]
 stream = ExtResource("3_bbnym")
+bus = &"SFX"
+
+[node name="AmbientAudio" type="AudioStreamPlayer3D" parent="." unique_id=1010813542]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+stream = ExtResource("6_sv5gc")
+volume_db = 10.0
+autoplay = true
+max_distance = 15.0
+bus = &"SFX"
 
 [node name="gameOverUI" type="CanvasLayer" parent="." unique_id=1536817645]
 script = ExtResource("4_veat2")

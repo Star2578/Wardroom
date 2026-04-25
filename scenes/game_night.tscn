@@ -3,6 +3,7 @@
 [ext_resource type="MeshLibrary" uid="uid://dbrxoateamjtr" path="res://mesh_libs/hospital.tres" id="1_jtss3"]
 [ext_resource type="MeshLibrary" uid="uid://uawcxlt5q1v7" path="res://mesh_libs/hospital_night.tres" id="2_ajm7t"]
 [ext_resource type="PackedScene" uid="uid://bqm7jrtdrr40w" path="res://scenes/objects/note.tscn" id="2_gs0vb"]
+[ext_resource type="PackedScene" uid="uid://duxmo7fp0a7ub" path="res://scenes/objects/table.tscn" id="2_ojx7f"]
 [ext_resource type="Texture2D" uid="uid://bpy8s7hpmh043" path="res://assets/objects/hospital/textures/Doorway_1/Doorway_1_BaseColor.png" id="3_ajm7t"]
 [ext_resource type="Texture2D" uid="uid://doxop5f4kopbw" path="res://assets/objects/hospital/textures/Ceiling_light/Ceiling_light_BaseColor.png" id="3_k55ro"]
 [ext_resource type="Texture2D" uid="uid://cl6p3nxbx1jau" path="res://materials/detail_wall_old.tres" id="4_80eas"]
@@ -11,12 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://c550exlwy3fpb" path="res://assets/objects/hospital/textures/Door_1/Door_1_BaseColor.png" id="6_agdkb"]
 [ext_resource type="Texture2D" uid="uid://d1ctva8qvt3bf" path="res://assets/objects/hospital/textures/Door_1/Door_1_Normal.png" id="7_pnd0n"]
 [ext_resource type="PackedScene" uid="uid://bkkpi70hfbrpu" path="res://scenes/door.tscn" id="8_40kn8"]
+[ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="8_ova88"]
 [ext_resource type="PackedScene" uid="uid://k0qgdbcbpbdw" path="res://scenes/ghost.tscn" id="9_hilkp"]
 [ext_resource type="Texture2D" uid="uid://yvm7yflrckev" path="res://assets/objects/hospital/textures/Walls_1/Walls_1_BaseColor.png" id="9_k55ro"]
 [ext_resource type="Texture2D" uid="uid://bjggnqidjraiy" path="res://assets/objects/hospital/textures/Walls_1/Walls_1_Normal.png" id="10_qie4n"]
 [ext_resource type="PackedScene" uid="uid://c5bx21iwuxad2" path="res://scenes/hospital_bed_test_1.tscn" id="11_7efej"]
 [ext_resource type="PackedScene" uid="uid://dtfq617lrp46l" path="res://scenes/objects/cabinet_3.tscn" id="12_13goe"]
 [ext_resource type="PackedScene" uid="uid://3ftc52532xib" path="res://scenes/objects/curtain.tscn" id="13_l2cry"]
+[ext_resource type="PackedScene" uid="uid://ca0jk2ys3uuyc" path="res://scenes/objects/exit_sign.tscn" id="15_m36ql"]
 [ext_resource type="PackedScene" uid="uid://2yd5n4vdcbuw" path="res://scenes/objects/bag_holder.tscn" id="17_ojx7f"]
 [ext_resource type="Texture2D" uid="uid://clm5qobxxv6m0" path="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44463.png" id="18_7efej"]
 [ext_resource type="PackedScene" uid="uid://bfqj8h3fcva1h" path="res://scenes/objects/chair.tscn" id="18_ova88"]
@@ -67,6 +70,67 @@ adjustment_enabled = true
 adjustment_brightness = 0.85
 adjustment_saturation = 0.8
 adjustment_color_correction = SubResource("GradientTexture1D_diphd")
+
+[sub_resource type="Resource" id="Resource_bam3w"]
+script = ExtResource("8_ova88")
+name = "Note"
+description = "Patient's Record #5
+Date: 24/12/2025
+
+Patient's Name: Tawan Sukhumvitayaporn
+Gender: Male
+Age: 25
+Blood Type: A
+
+Description:
+Suffered minor injuries and broken left ankle from car accident. Luckily, there is a good citizen brought him to the hospital.
+Name of that person is Kmsodfmsamlfd,sadfie----
+
+Assigned to Bed #0340"
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="Resource" id="Resource_corsv"]
+script = ExtResource("8_ova88")
+name = "Note"
+description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="Resource" id="Resource_m36ql"]
+script = ExtResource("8_ova88")
+name = "Note"
+description = "Notice:
+- Please refrain from running in hallway.
+- No smoking within the facility.
+
+Allowed Visit Time:
+8.00 AM - 17.00 PM
+
+Thank you for your cooperation
+"
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="Resource" id="Resource_ova88"]
+script = ExtResource("8_ova88")
+name = "Note"
+description = "[color=red]DEAD END[/color]"
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="Resource" id="Resource_lleqh"]
+script = ExtResource("8_ova88")
+name = "Note"
+description = "Patient's Record #2
+Date: 06/06/2024
+
+Patient's Name: Joe Nititrakhan
+Gender: Male
+Age: 61
+Blood Type: O
+
+Description:
+Stage 4 Prostate Cancer. Very severe case, chance of survival is very slim but they're willing to pay heavy sum to try.
+
+Assigned to Bed #1441"
+metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_7efej"]
 vertices = PackedVector3Array(-9.75, 0.45, -42, -8.25, 0.45, -42, -8.25, 0.45, -44.25, -6, 0.45, -46.25, -6, 0.45, -47.75, -8.25, 0.45, -49.5, -9.75, 0.45, -55.75, -8.25, 0.45, -55.75, 7.75, 0.45, -52.25, 8.5, 0.45, -53, 7.75, 0.45, -53.5, 6.25, 0.45, -52.25, -2.25, 0.45, -50.25, -2.25, 0.45, -51.75, -4.25, 0.45, -51.75, -5.75, 0.45, -50.25, -5.75, 0.45, -55.75, -5, 0.45, -53.5, -4.25, 0.45, -54.25, -5, 0.45, -52.5, 6.25, 0.45, -49.75, 7.75, 0.45, -49.75, 4.5, 0.45, -54.25, 7.75, 0.45, -55.75, 18, 0.45, -50.25, 18.5, 0.45, -50.75, 17.75, 0.45, -51.5, 16.5, 0.45, -51.75, 10.25, 0.45, -51.75, 11.75, 0.45, -50.25, 16.5, 0.45, -54.25, 17.25, 0.45, -53.5, 17.75, 0.45, -55.75, 17.75, 0.45, -46.25, 17.75, 0.45, -47.75, 11.75, 0.45, -47.75, 10.25, 0.45, -46.25, 10.25, 0.45, -55.75, 10.25, 0.45, -54.25, 11, 0.45, -48.5, 11, 0.45, -49.5, 17.25, 0.45, -52.5, 26.75, 0.45, -53.75, 27.5, 0.45, -53.75, 27.75, 0.45, -54.25, 23.5, 0.45, -55, 24.25, 0.45, -54.25, 14.5, 0.45, -42.25, 15, 0.45, -41.5, 15.75, 0.45, -42.25, 20.25, 0.45, -51.5, 19.5, 0.45, -51, 20.25, 0.45, -50.25, 10, 0.45, -43.75, 10, 0.45, -42.25, 18.5, 0.45, -43.75, 20.25, 0.45, -55.75, 21.75, 0.45, -54.25, 22.5, 0.45, -55, 21.75, 0.45, -42.25, 20.25, 0.45, -45.5, 24.25, 0.45, -46.25, 25.75, 0.45, -46.25, 25.75, 0.45, -52.25, 37.75, 0.45, -54.25, 37.75, 0.45, -55.75, 6.25, 0.45, -38.75, 7.75, 0.45, -38.75, 7.75, 0.45, -40.25, 6.25, 0.45, -44.25, 6.25, 0.45, -47.5, 7.75, 0.45, -45.5, 2.5, 0.45, -47.75, 4.5, 0.45, -46.25, 4.5, 0.45, -46.75, 3.75, 0.45, -47.5, 5.5, 0.45, -46.75, 0.25, 0.45, -51.75, 0.25, 0.45, -50.25, 2.5, 0.45, -50.25, 3.75, 0.45, -51.75, 3.25, 0.45, -49.5, 3.25, 0.45, -48.5, 2.5, 0.45, -40.25, 3.25, 0.45, -39, 3.75, 0.45, -39, 3.75, 0.45, -43.75, -2.25, 0.45, -41.5, -2.25, 0.45, -43.75, -5.75, 0.45, -43.75, -5.75, 0.45, -40.25, 0.25, 0.45, -43.75, 0.25, 0.45, -41.5, -1.5, 0.45, -40.75, -0.5, 0.45, -40.75, 15.75, 0.45, -39.75, 15, 0.45, -40.5, 14.5, 0.45, -39.75, 28, 0.45, -38.25, 28, 0.45, -39.75, 26.75, 0.45, -40, 25.75, 0.45, -43.75, 24.25, 0.45, -43.75, 24.25, 0.45, -41.5, 26, 0.45, -40.75, 22.5, 0.45, -39.75, 10.25, 0.45, -38.25, 10.25, 0.45, -39.75, 0.5, 0.45, -36.25, 1, 0.45, -35.5, 1.75, 0.45, -36.25, 2.5, 0.45, -37.75, 3.75, 0.45, -36.25, -6.25, 0.45, -37.75, -8.25, 0.45, -39.5, -7.5, 0.45, -36.25, -5.75, 0.45, -34, -4.25, 0.45, -34, -2.25, 0.45, -36.25, -9.75, 0.45, -36.25, 33.25, 0.45, -37, 33.75, 0.45, -37, 33.75, 0.45, -38.25, 32.5, 0.45, -38.25, 35.5, 0.45, -39, 36.25, 0.45, -38.25, 37.75, 0.45, -39.75, 34.5, 0.45, -39, 34.25, 0.45, -31.75, 34.25, 0.45, -30.25, 37.75, 0.45, -30.25, 36.25, 0.45, -33.5, 16.25, 0.45, -30.25, 16.5, 0.45, -30.75, 15.75, 0.45, -31.5, 9, 0.45, -30.25, 7.75, 0.45, -37.5, 9.75, 0.45, -35.75, 6.25, 0.45, -31.75, 15.75, 0.45, -35.75, 32.5, 0.45, -35.75, 33.75, 0.45, -34.25, 23.75, 0.45, -34.25, 18.25, 0.45, -35.75, 18.25, 0.45, -32, 21.75, 0.45, -32, 1.75, 0.45, -33.75, 1, 0.45, -34.5, 0.5, 0.45, -33.75, -0.25, 0.45, -32.25, 3.75, 0.45, -32.25, 3.75, 0.45, -33.75, -0.25, 0.45, -29.75, -1.75, 0.45, -28.25, 4.5, 0.45, -28.25, 4.5, 0.45, -29.75, 6.25, 0.45, -26.25, 7.75, 0.45, -28.25, 8, 0.45, -29.5, -1.75, 0.45, -33.75, -1, 0.45, -31.5, -1, 0.45, -30.5, 6.25, 0.45, -24, 7.75, 0.45, -24, -5.75, 0.45, -29.5, -6.5, 0.45, -29, -5.75, 0.45, -28.25, -4.25, 0.45, -27.5, 3.75, 0.45, -22.25, 3.75, 0.45, -25.75, -2.25, 0.45, -25.75, -5.75, 0.45, -22.25, -8.25, 0.45, -28.25, -7.5, 0.45, -29, -8.25, 0.45, -29.5, -8.25, 0.45, -33.75, -9.75, 0.45, -33.75, 2.5, 0.45, -18.25, 2.5, 0.45, -19.75, -6.25, 0.45, -19.75, -9.75, 0.45, -18.25, -8.25, 0.45, -21.5, 17.5, 0.45, -30.75, 18, 0.45, -29.25, 18.25, 0.45, -24, 21.75, 0.45, -24, 32.5, 0.45, -24.25, 32.5, 0.45, -27.75, 29.75, 0.45, -27.75, 28.25, 0.45, -24.25, 24.25, 0.45, -31.75, 26.5, 0.45, -31, 27.5, 0.45, -31, 29, 0.45, -28.5, 28.25, 0.45, -30.25, 29, 0.45, -29.5, 25.75, 0.45, -30.25, 29.75, 0.45, -30.25, 24.25, 0.45, -24.25, 25.75, 0.45, -24.25, 36.25, 0.45, -19.5, 35, 0.45, -18.75, 35, 0.45, -18.25, 37.75, 0.45, -18.25, 37.75, 0.45, -27.75, 34.5, 0.45, -24.25, 36.25, 0.45, -22.25, 4.5, 0.45, -19.75, 6.25, 0.45, -21.5, 7.75, 0.45, -20.75, 14.5, 0.45, -18.25, 14.5, 0.45, -19.75, 8.5, 0.45, -20, 16.5, 0.45, -19.75, 18.5, 0.45, -18.25, 19.25, 0.45, -17, 21.75, 0.45, -18, 18, 0.45, -20.75, 21, 0.45, -17, 33.75, 0.45, -19.5, 24.25, 0.45, -18.25, 33.75, 0.45, -21.75, 24.25, 0.45, -21.75)
@@ -388,11 +452,131 @@ random_points = NodePath("../Maze/Random_Points")
 
 [node name="Maze" type="Node3D" parent="." unique_id=545061923]
 
-[node name="Node3D" type="Node3D" parent="Maze" unique_id=2055975574]
+[node name="Props" type="Node3D" parent="Maze" unique_id=1396580266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.783308, 0, -37.73684)
+
+[node name="Table" parent="Maze/Props" unique_id=1409039461 instance=ExtResource("2_ojx7f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -1.032197, 1.3702943, 10.352776)
+
+[node name="Table2" parent="Maze/Props" unique_id=688603741 instance=ExtResource("2_ojx7f")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.6955414, 1.3702943, 15.959841)
+
+[node name="Table7" parent="Maze/Props" unique_id=1446980619 instance=ExtResource("2_ojx7f")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.6955414, 1.3702943, 1.4910812)
+
+[node name="hospital_bed_test1" parent="Maze/Props" unique_id=1281097862 instance=ExtResource("11_7efej")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.19656754, 0.029744148, 15.782896)
+
+[node name="BagHolder" parent="Maze/Props" unique_id=288796700 instance=ExtResource("17_ojx7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.289278, 0.14495659, -4.1428337)
+
+[node name="BagHolder2" parent="Maze/Props" unique_id=1186561302 instance=ExtResource("17_ojx7f")]
+transform = Transform3D(-0.36564043, 0, -0.9307562, 0, 1, 0, 0.9307562, 0, -0.36564043, 27.426329, 0.14495659, -5.2065163)
+
+[node name="BagHolder3" parent="Maze/Props" unique_id=638892523 instance=ExtResource("17_ojx7f")]
+transform = Transform3D(0.5796084, 0, -0.81489515, 0, 1, 0, 0.81489515, 0, 0.5796084, 26.256853, 0.14495659, -4.2061844)
+
+[node name="Cabinet_3" parent="Maze/Props" unique_id=567738807 instance=ExtResource("12_13goe")]
+transform = Transform3D(1.1, 0, 0, 0, 1.44, 0, 0, 0, 1, 27.62475, 0.7792186, -14.611347)
+
+[node name="Mirror" parent="Maze/Props" unique_id=974041172 instance=ExtResource("20_bam3w")]
+transform = Transform3D(-2.5151625, 0, -2.1988248e-07, 0, 2.5151625, 0, 2.1988248e-07, 0, -2.5151625, 14.180485, 1.9634695, -7.359329)
+
+[node name="ReflectionProbe" parent="Maze/Props/Mirror/MeshInstance3D" parent_id_path=PackedInt32Array(974041172, 2122202397) index="0" unique_id=1515787260]
+transform = Transform3D(0.39758864, 0, 0, 0, 0.39758864, 0, 0, 0, 0.39758864, 0, 0, -0.015993118)
+blend_distance = 10.0
+size = Vector3(15, 10, 25)
+
+[node name="Bench" parent="Maze/Props" unique_id=118096769 instance=ExtResource("27_vtruy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.73226, 0.049999952, -18.746273)
+
+[node name="Bench2" parent="Maze/Props" unique_id=1022937881 instance=ExtResource("27_vtruy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.446903, 0.049999952, -18.746273)
+
+[node name="Bench3" parent="Maze/Props" unique_id=260178833 instance=ExtResource("27_vtruy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.255754, 0.049999952, -18.746273)
+
+[node name="Bench4" parent="Maze/Props" unique_id=957454729 instance=ExtResource("27_vtruy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.13278, 0.049999952, -18.746273)
+
+[node name="Table3" parent="Maze/Props" unique_id=544206168 instance=ExtResource("2_ojx7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.8228, 1.55, -14.419102)
+
+[node name="Table4" parent="Maze/Props" unique_id=1458114420 instance=ExtResource("2_ojx7f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.34276, 1.55, -9.192966)
+
+[node name="Table5" parent="Maze/Props" unique_id=872037913 instance=ExtResource("2_ojx7f")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -14.648367, 1.55, -6.4458656)
+
+[node name="Table6" parent="Maze/Props" unique_id=7524994 instance=ExtResource("2_ojx7f")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.5806675, 1.55, 13.76824)
+
+[node name="hospital_bed_test2" parent="Maze/Props" unique_id=1036136293 instance=ExtResource("11_7efej")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 17.021877, 0.05000019, -4.9406357)
+
+[node name="hospital_bed_test3" parent="Maze/Props" unique_id=1639372638 instance=ExtResource("11_7efej")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 20.265638, 0.05000019, -4.9406357)
+
+[node name="hospital_bed_test4" parent="Maze/Props" unique_id=605501103 instance=ExtResource("11_7efej")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 23.393145, 0.05000019, -4.9406357)
+
+[node name="hospital_bed_test5" parent="Maze/Props" unique_id=1677989092 instance=ExtResource("11_7efej")]
+transform = Transform3D(6.556708e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, 6.556708e-08, 25.888727, 0.05000019, -13.7104225)
+
+[node name="Chair" parent="Maze/Props" unique_id=1808196275 instance=ExtResource("18_ova88")]
+transform = Transform3D(-0.50000006, 0, 0.8660254, 0, 1, 0, -0.8660254, 0, -0.50000006, 24.094725, 0.86693496, -12.8743515)
+
+[node name="Exit_Sign" parent="Maze/Props" unique_id=481823107 instance=ExtResource("15_m36ql")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2281551, 3.3401375, 18.714231)
+
+[node name="Exit_Sign2" parent="Maze/Props" unique_id=1347186126 instance=ExtResource("15_m36ql")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -19.628298, 3.3401375, 13.182621)
+
+[node name="Exit_Sign3" parent="Maze/Props" unique_id=942102169 instance=ExtResource("15_m36ql")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8210201, 3.3401375, 13.182621)
+
+[node name="Exit_Sign4" parent="Maze/Props" unique_id=14018759 instance=ExtResource("15_m36ql")]
+transform = Transform3D(-7.54979e-08, 6.600236e-15, 1, 8.742278e-08, 1, 0, 1, -8.742278e-08, 7.54979e-08, 19.695383, 3.3401375, -1.5157471)
+
+[node name="Exit_Sign5" parent="Maze/Props" unique_id=1133609738 instance=ExtResource("15_m36ql")]
+transform = Transform3D(-7.54979e-08, 6.600236e-15, 1, 8.742278e-08, 1, 0, 1, -8.742278e-08, 7.54979e-08, 7.038973, 3.3401365, -5.482235)
+
+[node name="Exit_Sign6" parent="Maze/Props" unique_id=963949778 instance=ExtResource("15_m36ql")]
+transform = Transform3D(-7.54979e-08, 6.600236e-15, 1, 8.742278e-08, 1, 0, 1, -8.742278e-08, 7.54979e-08, -11.867104, 3.3401365, -9.312382)
+
+[node name="Exit_Sign7" parent="Maze/Props" unique_id=1801327767 instance=ExtResource("15_m36ql")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -19.791626, 3.3401365, -4.5066223)
+
+[node name="Exit_Sign8" parent="Maze/Props" unique_id=1834603717 instance=ExtResource("15_m36ql")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8210201, 3.3401375, -12.342316)
+
+[node name="Notes" type="Node3D" parent="Maze" unique_id=2055975574]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.302803, 0, -38.56856)
 
-[node name="Note" parent="Maze/Node3D" unique_id=1065094142 instance=ExtResource("2_gs0vb")]
-transform = Transform3D(0.96709925, -0.2543994, 0, 0.2543994, 0.96709925, 0, 0, 0, 1, 0, 2.1569486, 9.621977)
+[node name="Note" parent="Maze/Notes" unique_id=1065094142 instance=ExtResource("2_gs0vb")]
+transform = Transform3D(-0.96709925, 0.2543994, 8.742278e-08, 0.2543994, 0.96709925, 0, -8.45465e-08, 2.22403e-08, -1, -0.7865944, 1.96384, 17.444788)
+object_data = SubResource("Resource_bam3w")
+
+[node name="Note2" parent="Maze/Notes" unique_id=699161635 instance=ExtResource("2_gs0vb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.10759, 1.6599739, -14.347424)
+object_data = SubResource("Resource_corsv")
+
+[node name="Note3" parent="Maze/Notes" unique_id=693090780 instance=ExtResource("2_gs0vb")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 3.7942905, 1.8686601, 23.663145)
+object_data = SubResource("Resource_m36ql")
+
+[node name="Deadend_Note" parent="Maze/Notes" unique_id=415308503 instance=ExtResource("2_gs0vb")]
+transform = Transform3D(-5.3877624e-08, 0, -1.2325764, 0.33765498, 1.1854255, -1.4759368e-08, 1.1854255, -0.33765498, -5.1816595e-08, 32.625538, 2.1084704, 64.34906)
+object_data = SubResource("Resource_ova88")
+
+[node name="RichTextLabel" parent="Maze/Notes/Deadend_Note/Content/Paper" parent_id_path=PackedInt32Array(415308503, 27432098) index="0" unique_id=1402086000]
+theme_override_font_sizes/normal_font_size = 50
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Note4" parent="Maze/Notes" unique_id=1003243720 instance=ExtResource("2_gs0vb")]
+transform = Transform3D(-0.0015742647, 0.011950115, 1.3285844, -0.34366935, 1.2833667, -0.0119506195, -1.2834214, -0.34366935, 0.0015704272, -20.162836, 2.0709367, -2.5834084)
+object_data = SubResource("Resource_lleqh")
 
 [node name="Random_Points" type="Node3D" parent="Maze" unique_id=2021010516]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.744232, 1.4555721, -37.06058)
@@ -944,6 +1128,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5762787e-07, -1.1081979, -9
 [node name="Area3D" parent="Wardroom/Props_Wardroom1/Door2" index="1" unique_id=1758599314]
 is_locked = true
 key = "Ward Key"
+warn = "Need a key to open this"
 
 [node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door2/Area3D" index="0" unique_id=241131087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2626667, 0)
@@ -959,7 +1144,7 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Tile_Wall_half/StaticBody3D" unique_id=869867780]
 shape = SubResource("ConvexPolygonShape3D_0sl42")
 
-[node name="hospital_bed_test1" parent="Wardroom/Props_Wardroom1" unique_id=1281097862 instance=ExtResource("11_7efej")]
+[node name="hospital_bed_test1" parent="Wardroom/Props_Wardroom1" unique_id=1712997560 instance=ExtResource("11_7efej")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 13.347664, 0.02974391, -3.3415313)
 
 [node name="hospital_bed_test2" parent="Wardroom/Props_Wardroom1" unique_id=632961391 instance=ExtResource("11_7efej")]
@@ -1025,7 +1210,7 @@ transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-
 [node name="curtain6" parent="Wardroom/Props_Wardroom1" unique_id=1989117737 instance=ExtResource("13_l2cry")]
 transform = Transform3D(-1.7484556e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.7484556e-08, 11.682659, 0.32358873, 7.0333815)
 
-[node name="BagHolder" parent="Wardroom" unique_id=288796700 instance=ExtResource("17_ojx7f")]
+[node name="BagHolder" parent="Wardroom" unique_id=846336960 instance=ExtResource("17_ojx7f")]
 transform = Transform3D(-1.1738902, 0, -0.24896136, 0, 1.2, 0, 0.24896136, 0, -1.1738902, -9.526972, 0, 8.555004)
 
 [node name="BagHolder2" parent="Wardroom" unique_id=329648310 instance=ExtResource("17_ojx7f")]
@@ -1049,7 +1234,7 @@ transform = Transform3D(1.0516587, 0, 0.57793933, 0, 1.2000003, 0, -0.57793933, 
 [node name="BagHolder8" parent="Wardroom" unique_id=128591885 instance=ExtResource("17_ojx7f")]
 transform = Transform3D(0.7707352, 0, 0.91976476, 0, 1.2000003, 0, -0.91976476, 0, 0.7707352, -9.646653, 0, -4.167706)
 
-[node name="Chair" parent="Wardroom" unique_id=1808196275 instance=ExtResource("18_ova88")]
+[node name="Chair" parent="Wardroom" unique_id=160375715 instance=ExtResource("18_ova88")]
 transform = Transform3D(0.7159121, 0, 0.69819045, 0, 1, 0, -0.69819045, 0, 0.7159121, -5.1779623, 0.8272811, 6.5277185)
 
 [node name="Decals" type="Node3D" parent="Wardroom" unique_id=513849805]
@@ -1440,6 +1625,7 @@ transform = Transform3D(1, 0, -4.973799e-14, 0, 1, 0, 4.973799e-14, 0, 1, -0.757
 temp_bool = true
 is_locked = true
 key = "Pink Key"
+warn = "Why would I go into women's restroom..."
 
 [node name="Bathroom_Door_001" parent="Bathroom/Props_Bathroom/Door3" unique_id=930171232 instance=ExtResource("26_bkbm0")]
 transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1.0000001, 0, 8.7422784e-08, 0, -1.0000001, 0, 0, 0)
@@ -1452,7 +1638,7 @@ bus = &"SFX"
 
 [node name="Hallway" type="Node3D" parent="." unique_id=1079655953]
 
-[node name="Bench" parent="Hallway" unique_id=118096769 instance=ExtResource("27_vtruy")]
+[node name="Bench" parent="Hallway" unique_id=476360985 instance=ExtResource("27_vtruy")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.51234, 0.049999952, -3.7716463)
 
 [node name="Bench2" parent="Hallway" unique_id=1533659063 instance=ExtResource("27_vtruy")]
@@ -1497,6 +1683,8 @@ shots = Array[String](["cs_01"])
 anim = NodePath("../AnimationPlayer")
 text_writer = NodePath("../TextWriter")
 
+[editable path="Maze/Props/Mirror"]
+[editable path="Maze/Notes/Deadend_Note"]
 [editable path="Wardroom/Props_Wardroom1/Door"]
 [editable path="Wardroom/Props_Wardroom1/Door2"]
 [editable path="Bathroom/Props_Bathroom/Mirror"]
