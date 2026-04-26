@@ -50,6 +50,7 @@
 [ext_resource type="PackedScene" uid="uid://cc1m2a1obsyn4" path="res://scenes/characters/first_person_controller/player.tscn" id="41_qie4n"]
 [ext_resource type="PackedScene" uid="uid://bocqocoo4uimo" path="res://scenes/text_writer.tscn" id="42_13goe"]
 [ext_resource type="PackedScene" uid="uid://757fvf3fb5fh" path="res://scenes/cutscene_player.tscn" id="43_13goe"]
+[ext_resource type="PackedScene" uid="uid://cb1ffmv3o4wx3" path="res://scenes/interactable_objects/safe.tscn" id="51_bam3w"]
 
 [sub_resource type="Gradient" id="Gradient_gxtfn"]
 colors = PackedColorArray(0, 0, 0, 1, 0.91326463, 0.7795315, 0.393286, 1)
@@ -1682,6 +1683,9 @@ json_path = "res://dialogues/night1/dream_start.json"
 shots = Array[String](["cs_01"])
 anim = NodePath("../AnimationPlayer")
 text_writer = NodePath("../TextWriter")
+
+[node name="Safe" parent="." unique_id=488995211 instance=ExtResource("51_bam3w")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 34.19167, 1.05, 25.16195)
 
 [editable path="Maze/Props/Mirror"]
 [editable path="Maze/Notes/Deadend_Note"]
