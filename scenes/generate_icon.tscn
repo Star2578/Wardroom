@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dk6en4d6purxg"]
 
 [ext_resource type="Script" uid="uid://dfq1ci8kx5wcb" path="res://scripts/generate_icon.gd" id="1_r5uan"]
-[ext_resource type="PackedScene" uid="uid://dgyrus02tyj5i" path="res://scenes/interactable_objects/janitor_key.tscn" id="2_r5uan"]
+[ext_resource type="PackedScene" uid="uid://ciqtainlfksrb" path="res://scenes/interactable_objects/wardroom_key.tscn" id="2_r5uan"]
 
 [node name="GenerateIcon" type="Node3D" unique_id=644509269]
 script = ExtResource("1_r5uan")
@@ -31,5 +31,5 @@ render_target_update_mode = 4
 [node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=712167005]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.22806)
 
-[node name="JanitorKey" parent="SubViewportContainer/SubViewport" unique_id=27734796 instance=ExtResource("2_r5uan")]
-transform = Transform3D(0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0, 1, 0, 0, 0.11195099)
+[node name="WardroomKey" parent="SubViewportContainer/SubViewport" unique_id=27734796 instance=ExtResource("2_r5uan")]
+transform = Transform3D(0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 0, 0, 1, 0, 0, 0.123947084)
