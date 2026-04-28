@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://sfpn65yl2ca3"]
+
+[ext_resource type="Script" uid="uid://b7si77vmf6hla" path="res://scripts/interactable_item.gd" id="1_a5cdq"]
+[ext_resource type="Resource" uid="uid://cpx7mel5gpeq1" path="res://scenes/interactable_objects/data/scissors_data.tres" id="2_bvehx"]
+[ext_resource type="ArrayMesh" uid="uid://db68tj0j7a4ps" path="res://scenes/interactable_objects/data/meshes/scisstors_mesh.tres" id="3_a5cdq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8qs34"]
+size = Vector3(421.0078, 272.24707, 1015.375)
+
+[node name="Scissors" type="Area3D" unique_id=413716114]
+script = ExtResource("1_a5cdq")
+object_data = ExtResource("2_bvehx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2116572260]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0.4593628, 11.64802, -7.710965)
+shape = SubResource("BoxShape3D_8qs34")
+
+[node name="ObjScissor" type="MeshInstance3D" parent="." unique_id=774014544]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+mesh = ExtResource("3_a5cdq")
+skeleton = NodePath("")

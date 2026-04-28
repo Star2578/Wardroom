@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dgyrus02tyj5i"]
+
+[ext_resource type="Script" uid="uid://b7si77vmf6hla" path="res://scripts/interactable_item.gd" id="1_xnaj5"]
+[ext_resource type="Texture2D" uid="uid://cwkyfdstjbphq" path="res://scenes/interactable_objects/data/icons/janitor_key_icon.png" id="2_fn48n"]
+[ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="2_ynaid"]
+[ext_resource type="ArrayMesh" uid="uid://c2pamgwsa6165" path="res://scenes/interactable_objects/data/meshes/janitor_key_mesh.tres" id="3_b4l7c"]
+
+[sub_resource type="Resource" id="Resource_fn48n"]
+script = ExtResource("2_ynaid")
+name = "Janitor Key"
+description = "The key that the janitor lost. Now I can get into the equipment room."
+icon = ExtResource("2_fn48n")
+mesh = ExtResource("3_b4l7c")
+mesh_scale = Vector3(4, 4, 4)
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qk7q6"]
+size = Vector3(0.21777344, 0.15136719, 0.13476563)
+
+[node name="JanitorKey" type="Area3D" unique_id=27734796]
+script = ExtResource("1_xnaj5")
+object_data = SubResource("Resource_fn48n")
+
+[node name="key1_low" type="MeshInstance3D" parent="." unique_id=1993234521]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0013221407, 0.0021927345, 0)
+mesh = ExtResource("3_b4l7c")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1210722828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0013221407, 0.002216854, 0)
+shape = SubResource("BoxShape3D_qk7q6")

@@ -29,6 +29,7 @@ func button_pressed(input: String):
 				is_unlocked = true
 				close()
 				%AnimationPlayer.play("open")
+				%CollisionShape3D.disabled = true
 				set_script(null)
 			else:
 				print("Password Wrong")

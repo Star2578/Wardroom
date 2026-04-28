@@ -549,6 +549,9 @@ loop = true
 [node name="Ghost" type="CharacterBody3D" unique_id=1439193727 node_paths=PackedStringArray("navAgent", "animationPlayer")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 script = ExtResource("1_l5lq6")
+lose_sight_delay = null
+vision_angle = null
+vision_range = null
 navAgent = NodePath("NavigationAgent3D")
 animationPlayer = NodePath("Character_Monster/AnimationPlayer")
 
@@ -1015,6 +1018,11 @@ bones/64/scale = Vector3(1, 1, 1)
 mesh = SubResource("ArrayMesh_lv6vd")
 skin = SubResource("Skin_sv5gc")
 
+[node name="LookAtPlayer" type="LookAtModifier3D" parent="Character_Monster/Skeleton3D" unique_id=1957609019]
+unique_name_in_owner = true
+bone_name = "mixamorig_Head"
+bone = 5
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Character_Monster" unique_id=284009846]
 libraries/ = SubResource("AnimationLibrary_seks5")
 
@@ -1056,11 +1064,13 @@ max_distance = 15.0
 bus = &"SFX"
 
 [node name="gameOverUI" type="CanvasLayer" parent="." unique_id=1536817645]
+visible = false
 script = ExtResource("4_veat2")
 
 [node name="ColorRect" type="ColorRect" parent="gameOverUI" unique_id=2097051871]
 offset_right = 1152.0
 offset_bottom = 648.0
+mouse_filter = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="gameOverUI" unique_id=215686458]

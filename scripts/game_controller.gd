@@ -11,6 +11,8 @@ var is_using_phone: bool = false
 var can_look_around: bool = true
 
 var got_phone: bool = false
+var got_plunger: bool = false
+var got_scissors: bool = false
 
 var mouse_sensitivity: float = 0.01
 var master_bus_index: int

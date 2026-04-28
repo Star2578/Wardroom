@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ObjectData" format=3 uid="uid://cpx7mel5gpeq1"]
+
+[ext_resource type="Texture2D" uid="uid://w58eq2v7u71w" path="res://scenes/interactable_objects/data/icons/scissors_icon.png" id="1_sb8dp"]
+[ext_resource type="ArrayMesh" uid="uid://db68tj0j7a4ps" path="res://scenes/interactable_objects/data/meshes/scisstors_mesh.tres" id="2_sb8dp"]
+[ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="3_qob8r"]
+
+[resource]
+script = ExtResource("3_qob8r")
+name = "Scissors"
+description = "A cheap scissors that can be found at any convenient store."
+icon = ExtResource("1_sb8dp")
+mesh = ExtResource("2_sb8dp")
+mesh_scale = Vector3(0.002, 0.002, 0.002)
+metadata/_custom_type_script = "uid://duu02ylefpfev"

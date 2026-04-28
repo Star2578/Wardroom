@@ -236,6 +236,7 @@ mesh = SubResource("ArrayMesh_83w74")
 skeleton = NodePath("")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1891848998]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.10797119)
 shape = SubResource("BoxShape3D_5eaxk")
 
@@ -251,6 +252,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.3553136, 0.35531354, 0.35531357, 1)
 
 [node name="Close" type="Button" parent="SafeUI/BG" unique_id=143141452]

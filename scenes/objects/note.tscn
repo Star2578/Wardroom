@@ -11,7 +11,7 @@ description = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c2d0w"]
-size = Vector3(0.40600586, 0.6123047, 0.16015625)
+size = Vector3(0.58618164, 0.7229004, 0.6175766)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ndos4"]
 grow_amount = -0.623
@@ -25,7 +25,7 @@ script = ExtResource("1_4tyip")
 object_data = SubResource("Resource_ndos4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=732120401]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.059570313)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2882805)
 shape = SubResource("BoxShape3D_c2d0w")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=358012078]
@@ -44,6 +44,7 @@ offset_left = -250.0
 offset_right = 250.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Content/Paper" unique_id=1402086000]
