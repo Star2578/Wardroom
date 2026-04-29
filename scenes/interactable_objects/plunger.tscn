@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://l4wt1cnbvl8"]
+
+[ext_resource type="ArrayMesh" uid="uid://d1n4wlbd1uvnm" path="res://scenes/interactable_objects/data/meshes/plunger.tres" id="1_3oo25"]
+[ext_resource type="Script" uid="uid://b7si77vmf6hla" path="res://scripts/interactable_item.gd" id="2_x1t5c"]
+[ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="3_3oo25"]
+[ext_resource type="Texture2D" uid="uid://dolb0k322etrw" path="res://scenes/interactable_objects/data/icons/plunger_icon.png" id="3_y3dlb"]
+
+[sub_resource type="Resource" id="Resource_y3dlb"]
+script = ExtResource("3_3oo25")
+name = "Plunger"
+description = "I don't think I ever used this thing before."
+icon = ExtResource("3_y3dlb")
+mesh = ExtResource("1_3oo25")
+mesh_scale = Vector3(0.3, 0.3, 0.3)
+metadata/_custom_type_script = "uid://duu02ylefpfev"
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_x1t5c"]
+points = PackedVector3Array(1.0495064, -0.065191984, 0.38441125, -1.055392, -0.065191984, -0.27985975, -0.9445428, -0.065191984, -0.6122013, 0.16291891, 7.024992, 0.16291891, -0.3905029, -0.065191984, 1.0495064, 0.6061096, 0.15689659, -0.9445428, -0.16901055, 7.024992, -0.16901055, 0.6061096, 0.26724696, 0.9386572, -0.9445428, 0.15689659, 0.6061096, -0.27985975, -0.065191984, -1.055392, 1.0495064, 0.15689659, -0.3905029, 0.16291891, 7.024992, -0.16901055, -0.16901055, 7.024992, 0.16291891, 0.16291891, 0.37829137, 1.0495064, 0.16291891, 0.37829137, -1.055392, -1.055392, 0.37829137, 0.16291891, -0.6122013, 0.15689659, -0.9445428, 0.9386572, -0.065191984, -0.6122013, 0.9386572, 0.26724696, 0.6061096, -0.7228444, 0.37829137, 0.82760197, 1.0495064, 0.37829137, 0.16291891, -0.27985975, 0.26724696, -1.055392, -1.055392, 0.26724696, -0.27985975, 0.38441125, -0.065191984, 1.0495064, 0.82760197, 0.37829137, -0.7228444, -0.3905029, 0.15689659, 1.0495064, -1.055392, -0.065191984, 0.38441125, -0.9445428, 0.15689659, -0.6122013, 0.38441125, 0.045852184, -1.055392, 0.38441125, 0.15689659, 1.0495064, 1.0495064, 0.15689659, 0.38441125, 1.0495064, 0.37829137, -0.16901055)
+
+[node name="Plunger" type="Area3D" unique_id=2107216896]
+script = ExtResource("2_x1t5c")
+object_data = SubResource("Resource_y3dlb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1123615048]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0, 0.99999994, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_x1t5c")
+
+[node name="Sphere" type="MeshInstance3D" parent="." unique_id=904892017]
+mesh = ExtResource("1_3oo25")
+skeleton = NodePath("")

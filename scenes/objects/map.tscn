@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://duqu6wi8ytaf0"]
+
+[ext_resource type="Texture2D" uid="uid://b347mi7opav2n" path="res://assets/etc/map.png" id="1_emieo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cdfxm"]
+albedo_texture = ExtResource("1_emieo")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wyag4"]
+material = SubResource("StandardMaterial3D_cdfxm")
+size = Vector2(1.5, 1)
+
+[node name="Map" type="Node3D" unique_id=313766123]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=568043910]
+mesh = SubResource("QuadMesh_wyag4")

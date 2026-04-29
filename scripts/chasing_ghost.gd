@@ -20,6 +20,7 @@ var lose_sight_timer = 0.0
 @export var random_points: Node3D
 @export var animationPlayer: AnimationPlayer
 @onready var chasingAudio = $chasingAudio
+@onready var look_at_player: LookAtModifier3D = %LookAtPlayer
 @onready var attackingAudio = $attackingAudio
 @onready var game_over_ui = $gameOverUI
 
@@ -35,6 +36,7 @@ func _physics_process(delta: float):
 		States.idle:
 			velocity = velocity.lerp(Vector3.ZERO, accel * delta)
 			animationPlayer.play("crouch")
+			look_at_player.active = false
 			
 			roam_timer += delta
 			if roam_timer >= roam_wait:
@@ -42,6 +44,7 @@ func _physics_process(delta: float):
 
 		States.roam:
 			animationPlayer.play("crawl")
+			look_at_player.active = false
 			
 			if navAgent.is_navigation_finished():
 				_start_idle() # Switch to idle to wait
@@ -58,6 +61,7 @@ func _physics_process(delta: float):
 			print("CHASE")
 			var can_see = can_see_player(target)
 			var on_nav = is_player_on_navmesh(target)
+			look_at_player.active = true
 
 			if not on_nav:
 				# immediate stop — player escaped to safe room or outside

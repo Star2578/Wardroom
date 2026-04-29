@@ -26,6 +26,11 @@ func interact():
 		print("door is locked")
 		GameController.text_writer.play_text(warn)
 		return
+	else:
+		InventoryManager.remove_item_by_name(key)
+
+		if key == "Wardroom Key":
+			get_tree().change_scene_to_file("res://scenes/end.tscn")
 	
 	print("interact door")
 	fade_black.show()

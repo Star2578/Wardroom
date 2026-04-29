@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dfm7i8l58qqde"]
+
+[ext_resource type="Script" uid="uid://0jgtuthlbmn4" path="res://scripts/blockade.gd" id="1_4liy3"]
+[ext_resource type="Texture2D" uid="uid://cjbjgt4ju64fa" path="res://assets/homemade/textures/2836.png" id="1_8bnyi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4liy3"]
+transparency = 1
+albedo_texture = ExtResource("1_8bnyi")
+
+[sub_resource type="QuadMesh" id="QuadMesh_04sla"]
+material = SubResource("StandardMaterial3D_4liy3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ewlkj"]
+size = Vector3(1, 1, 0.001)
+
+[node name="Blockade" type="Area3D" unique_id=1662336139]
+script = ExtResource("1_4liy3")
+is_locked = true
+key = "Scissors"
+warn = "I need to find something to cut this"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1810197133]
+mesh = SubResource("QuadMesh_04sla")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1602410230]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=598011399]
+shape = SubResource("BoxShape3D_ewlkj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=55731011]
+shape = SubResource("BoxShape3D_ewlkj")
