@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clm5qobxxv6m0"
-path="res://.godot/imported/blood-splatter-png-44463.png-77ced21b143363bbdff222bb4abfed50.ctex"
+uid="uid://bncvx4vks5euo"
+path="res://.godot/imported/The Wardroom Text.png-943d1cbe3691ef3f1b3cb4ed8d57fa9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44463.png"
-dest_files=["res://.godot/imported/blood-splatter-png-44463.png-77ced21b143363bbdff222bb4abfed50.ctex"]
+source_file="res://assets/The Wardroom Text.png"
+dest_files=["res://.godot/imported/The Wardroom Text.png-943d1cbe3691ef3f1b3cb4ed8d57fa9b.ctex"]
 
 [params]
 

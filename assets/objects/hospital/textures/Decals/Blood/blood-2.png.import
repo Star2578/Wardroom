@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdh7p5eijp2d1"
-path="res://.godot/imported/blood-splatter-png-44476.png-860781255a03655738dc50a0d94c41e4.ctex"
+uid="uid://cxf0xnxcox6ck"
+path="res://.godot/imported/blood-2.png-3388ba8029ddc874468d8adcbdad280b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44476.png"
-dest_files=["res://.godot/imported/blood-splatter-png-44476.png-860781255a03655738dc50a0d94c41e4.ctex"]
+source_file="res://assets/objects/hospital/textures/Decals/Blood/blood-2.png"
+dest_files=["res://.godot/imported/blood-2.png-3388ba8029ddc874468d8adcbdad280b.ctex"]
 
 [params]
 

@@ -18,27 +18,17 @@
 [ext_resource type="PackedScene" uid="uid://dtfq617lrp46l" path="res://scenes/objects/cabinet_3.tscn" id="12_13goe"]
 [ext_resource type="PackedScene" uid="uid://3ftc52532xib" path="res://scenes/objects/curtain.tscn" id="13_l2cry"]
 [ext_resource type="PackedScene" uid="uid://2yd5n4vdcbuw" path="res://scenes/objects/bag_holder.tscn" id="17_ojx7f"]
-[ext_resource type="Texture2D" uid="uid://clm5qobxxv6m0" path="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44463.png" id="18_7efej"]
 [ext_resource type="PackedScene" uid="uid://bfqj8h3fcva1h" path="res://scenes/objects/chair.tscn" id="18_ova88"]
-[ext_resource type="Texture2D" uid="uid://bjuwbkih1h5pf" path="res://assets/objects/hospital/textures/Decals/Blood/—Pngtree—red blood handprint vector png_5448929.png" id="19_13goe"]
 [ext_resource type="MeshLibrary" uid="uid://827dqp76v5lf" path="res://mesh_libs/bathroom.tres" id="19_m36ql"]
 [ext_resource type="PackedScene" uid="uid://bgtb5gtpou7nx" path="res://scenes/objects/mirror.tscn" id="20_bam3w"]
-[ext_resource type="Texture2D" uid="uid://gn7ewcqr5jss" path="res://assets/objects/hospital/textures/Decals/Blood/blood-png-7140.png" id="20_l2cry"]
-[ext_resource type="Texture2D" uid="uid://cxf0xnxcox6ck" path="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44456.png" id="21_4iosw"]
 [ext_resource type="PackedScene" uid="uid://dkwggf4nbqsjr" path="res://scenes/objects/stall.tscn" id="21_lleqh"]
+[ext_resource type="Texture2D" uid="uid://gn7ewcqr5jss" path="res://assets/objects/hospital/textures/Decals/Blood/blood-1.png" id="22_agdkb"]
 [ext_resource type="PackedScene" uid="uid://baogudtk3c72q" path="res://scenes/objects/urinal.tscn" id="22_corsv"]
-[ext_resource type="Texture2D" uid="uid://dla22suv81tck" path="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44460.png" id="22_hilkp"]
-[ext_resource type="Texture2D" uid="uid://cdh7p5eijp2d1" path="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44476.png" id="23_gs0vb"]
 [ext_resource type="PackedScene" uid="uid://t3hyh2fkebb2" path="res://scenes/objects/sink.tscn" id="23_oownl"]
 [ext_resource type="Texture2D" uid="uid://pdf7crgl066h" path="res://assets/homemade/Bathroom_Soap_Texture.png" id="24_gkmjm"]
-[ext_resource type="Texture2D" uid="uid://cp6fys5uop0cb" path="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44479.png" id="24_ojx7f"]
 [ext_resource type="PackedScene" uid="uid://bkswa2dg2tbdc" path="res://scenes/objects/bathroom_door.tscn" id="25_ckc4g"]
-[ext_resource type="Texture2D" uid="uid://bsns73ktsvy3h" path="res://assets/objects/hospital/textures/Decals/Blood/—Pngtree—blood powder spray_6861037.png" id="25_ova88"]
 [ext_resource type="PackedScene" uid="uid://4xre680g5yp" path="res://scenes/objects/bathroom_door_001.tscn" id="26_bkbm0"]
-[ext_resource type="Texture2D" uid="uid://cfb2m1nuxowam" path="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44478.png" id="26_m36ql"]
-[ext_resource type="Texture2D" uid="uid://c1h2p3804ont8" path="res://assets/objects/hospital/textures/Decals/Blood/blood-splatter-png-44480.png" id="27_bam3w"]
 [ext_resource type="PackedScene" uid="uid://clburf1vs7rpm" path="res://scenes/objects/bench.tscn" id="27_vtruy"]
-[ext_resource type="Texture2D" uid="uid://bjgplralkmk6y" path="res://assets/objects/hospital/textures/Decals/Blood/—Pngtree—red blood handprint_6784817.png" id="28_lleqh"]
 [ext_resource type="PackedScene" uid="uid://b30kf1awcjmgo" path="res://scenes/objects/poo.tscn" id="34_l2cry"]
 [ext_resource type="AudioStream" uid="uid://c2jxrgc6bn0n0" path="res://sounds/sfx/Fluorescent light bulb buzz_2.wav" id="38_4iosw"]
 [ext_resource type="PackedScene" uid="uid://bi0y82miiqfyq" path="res://scenes/objects/tile_wall_half.tscn" id="39_k55ro"]
@@ -377,6 +367,7 @@ _data = {
 }
 
 [node name="Game" type="Node3D" unique_id=886800177]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19532847, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1637463888]
 environment = SubResource("Environment_twgab")
@@ -1053,214 +1044,9 @@ transform = Transform3D(0.7707352, 0, 0.91976476, 0, 1.2000003, 0, -0.91976476, 
 transform = Transform3D(0.7159121, 0, 0.69819045, 0, 1, 0, -0.69819045, 0, 0.7159121, -5.1779623, 0.8272811, 6.5277185)
 
 [node name="Decals" type="Node3D" parent="Wardroom" unique_id=513849805]
-visible = false
 
-[node name="Decal" type="Decal" parent="Wardroom/Decals" unique_id=477032982]
-transform = Transform3D(1.3817624, 0, 0, 0, 0.04999996, 0, 0, 0, 1.3369644, -4.550955, 0.04822743, -1.1477865)
-texture_albedo = ExtResource("18_7efej")
-
-[node name="Decal11" type="Decal" parent="Wardroom/Decals" unique_id=2118751646]
-transform = Transform3D(0.10198219, 0, 0.328226, 0, 0.049999963, 0, -0.28019384, 0, 0.11946447, -3.2804003, 3.5982232, 0.98882234)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal12" type="Decal" parent="Wardroom/Decals" unique_id=896794205]
-transform = Transform3D(0.051777683, 2.8097118e-09, 0.34398428, 2.2575012e-08, -0.04999996, 1.526799e-08, 0.29364607, 3.3484837e-09, -0.060653716, -3.7883062, 3.5982232, 1.7045768)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal13" type="Decal" parent="Wardroom/Decals" unique_id=1481297544]
-transform = Transform3D(0.024898835, 0, 0.3480709, 0, 0.04999996, 0, -0.2971346, 0, 0.029167138, -4.536792, 3.5982232, 1.024161)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal14" type="Decal" parent="Wardroom/Decals" unique_id=2047299429]
-transform = Transform3D(-0.06839782, 1.2589418e-09, 0.33997703, 2.2575009e-08, -0.049999956, 1.5267988e-08, 0.29022524, 4.1859156e-09, 0.08012284, -5.1472125, 3.5982232, 2.104025)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal2" type="Decal" parent="Wardroom/Decals" unique_id=349746641]
-transform = Transform3D(2.196139, 0, 0, 0, 0.05, 0, 0, 0, 2.196139, 6.163136, 0.04822743, -0.67574584)
-texture_albedo = ExtResource("20_l2cry")
-
-[node name="Decal5" type="Decal" parent="Wardroom/Decals" unique_id=1605214968]
-transform = Transform3D(2.196139, 0, 0, 0, 0.05, 0, 0, 0, 2.196139, -8.523041, 0.04822743, 0.701365)
-texture_albedo = ExtResource("20_l2cry")
-
-[node name="Decal3" type="Decal" parent="Wardroom/Decals" unique_id=1660271267]
-transform = Transform3D(2.125, 0, 0, 0, 0.05, 0, 0, 0, 2.375, 2.9129531, 0.04822743, 4.294502)
-texture_albedo = ExtResource("21_4iosw")
-
-[node name="Decal10" type="Decal" parent="Wardroom/Decals" unique_id=2029637572]
-transform = Transform3D(-1.3659239, 0, -1.8193554, 0, 0.05, 0, 1.6278445, 0, -1.5266206, -3.1816397, 0.04822719, 6.0210347)
-texture_albedo = ExtResource("21_4iosw")
-
-[node name="Decal4" type="Decal" parent="Wardroom/Decals" unique_id=309441925]
-transform = Transform3D(-1.5707904, 0, -1.3732286e-07, 0, 0.05, 0, 1.3732286e-07, 0, -1.5707904, 8.079823, 0.04822707, 2.4294846)
-texture_albedo = ExtResource("22_hilkp")
-
-[node name="Decal6" type="Decal" parent="Wardroom/Decals" unique_id=313340507]
-transform = Transform3D(4.8086475e-15, 2.1855693e-09, -0.82233196, 0.88015676, -2.1855693e-09, 0, -3.8472873e-08, -0.049999997, -3.5945273e-08, 6.6117363, 2.387371, 8.965479)
-texture_albedo = ExtResource("23_gs0vb")
-
-[node name="Decal16" type="Decal" parent="Wardroom/Decals" unique_id=1692659351]
-transform = Transform3D(4.808647e-15, 2.1855693e-09, -0.8223319, 3.5527137e-15, 0.049999993, 3.5945273e-08, 0.88015676, 2.220446e-16, 4.492728e-15, 18.835999, 0.058892727, 1.7243288)
-texture_albedo = ExtResource("23_gs0vb")
-
-[node name="Decal17" type="Decal" parent="Wardroom/Decals" unique_id=1443545893]
-transform = Transform3D(4.808647e-15, 2.1855693e-09, -0.8223319, 3.5527137e-15, 0.049999993, 3.5945273e-08, 0.88015676, 2.220446e-16, 4.492728e-15, 21.396063, 0.058892727, 4.7911425)
-texture_albedo = ExtResource("23_gs0vb")
-
-[node name="Decal24" type="Decal" parent="Wardroom/Decals" unique_id=1183366274]
-transform = Transform3D(1.1772657e-14, 2.185569e-09, -1.5739135, 8.697848e-15, 0.04999999, 6.879795e-08, 2.154823, 2.2204459e-16, 8.598918e-15, 19.520449, 0.058892727, 7.845064)
-texture_albedo = ExtResource("21_4iosw")
-
-[node name="Decal25" type="Decal" parent="Wardroom/Decals" unique_id=1083816071]
-transform = Transform3D(1.1772657e-14, 2.185569e-09, -1.5739135, 8.697848e-15, 0.04999999, 6.879795e-08, 2.154823, 2.2204459e-16, 8.598918e-15, 19.58912, 0.058892727, 22.21147)
-texture_albedo = ExtResource("20_l2cry")
-
-[node name="Decal26" type="Decal" parent="Wardroom/Decals" unique_id=1016560073]
-transform = Transform3D(1.1772657e-14, 2.185569e-09, -1.5739135, 8.697848e-15, 0.04999999, 6.879795e-08, 2.154823, 2.2204459e-16, 8.598918e-15, 38.407516, 0.058892727, 26.633385)
-texture_albedo = ExtResource("20_l2cry")
-
-[node name="Decal27" type="Decal" parent="Wardroom/Decals" unique_id=422200988]
-transform = Transform3D(-2.1548228, -3.1757883e-16, 6.879793e-08, 8.697848e-15, 0.04999999, 6.879795e-08, -9.4190284e-08, 2.1855688e-09, -1.5739133, 35.90725, 0.058892727, 25.916859)
-texture_albedo = ExtResource("21_4iosw")
-
-[node name="Decal18" type="Decal" parent="Wardroom/Decals" unique_id=668275805]
-transform = Transform3D(4.808647e-15, 2.1855693e-09, -0.8223319, 3.5527137e-15, 0.049999993, 3.5945273e-08, 0.88015676, 2.220446e-16, 4.492728e-15, 19.300041, 0.058892727, 12.615728)
-texture_albedo = ExtResource("23_gs0vb")
-
-[node name="Decal23" type="Decal" parent="Wardroom/Decals" unique_id=510613006]
-transform = Transform3D(4.808647e-15, 2.1855693e-09, -0.8223319, 3.5527137e-15, 0.049999993, 3.5945273e-08, 0.88015676, 2.220446e-16, 4.492728e-15, 19.52133, 0.058892727, 11.788124)
-texture_albedo = ExtResource("24_ojx7f")
-
-[node name="Decal19" type="Decal" parent="Wardroom/Decals" unique_id=418807213]
-transform = Transform3D(4.808647e-15, 2.1855693e-09, -0.8223319, 3.5527137e-15, 0.049999993, 3.5945273e-08, 0.88015676, 2.220446e-16, 4.492728e-15, 21.92809, 0.058892727, 24.257362)
-texture_albedo = ExtResource("23_gs0vb")
-
-[node name="Decal20" type="Decal" parent="Wardroom/Decals" unique_id=1067608755]
-transform = Transform3D(4.808647e-15, 2.1855693e-09, -0.8223319, 3.5527137e-15, 0.049999993, 3.5945273e-08, 0.88015676, 2.220446e-16, 4.492728e-15, 28.301523, 0.058892727, 27.100683)
-texture_albedo = ExtResource("23_gs0vb")
-
-[node name="Decal22" type="Decal" parent="Wardroom/Decals" unique_id=794566250]
-transform = Transform3D(-0.88015676, 2.1855688e-09, 3.5945277e-08, -3.8472866e-08, 2.1855695e-09, -0.82233185, -3.8472884e-08, -0.05, -3.5945284e-08, 37.045166, 2.1183517, 28.893248)
-texture_albedo = ExtResource("25_ova88")
-
-[node name="Decal21" type="Decal" parent="Wardroom/Decals" unique_id=1370414627]
-transform = Transform3D(-7.197688e-15, -3.7252903e-09, 1.2308843, -5.3177796e-15, -0.04999999, -4.4608772e-08, 1.317438, 2.220446e-16, 6.7248135e-15, 36.796776, 0.058893442, 27.886887)
-texture_albedo = ExtResource("24_ojx7f")
-
-[node name="Decal29" type="Decal" parent="Wardroom/Decals" unique_id=1545721141]
-transform = Transform3D(-0.27152652, 9.854212e-10, 0.109123334, -0.08410861, 4.205167e-09, -0.3522812, -1.2425182e-08, -0.04999998, -1.3365592e-08, 41.466, 2.4098845, 33.072857)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal44" type="Decal" parent="Wardroom/Decals" unique_id=1540052631]
-transform = Transform3D(-7.450581e-09, -0.049999967, -7.450581e-09, -0.0841086, 4.555229e-09, -0.35228118, 0.27152646, 0, -0.1091233, 42.94053, 2.3075614, 33.76922)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal45" type="Decal" parent="Wardroom/Decals" unique_id=1691645903]
-transform = Transform3D(2.2351742e-08, 0.04999996, 3.7252903e-08, 0.092877336, 3.6720347e-09, -0.34855366, -0.26865345, 1.8626451e-09, -0.12050003, 42.94053, 2.9655085, 34.4081)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal46" type="Decal" parent="Wardroom/Decals" unique_id=1736250107]
-transform = Transform3D(-7.450581e-09, -0.049999963, -7.450581e-09, 0.033785, -4.4806088e-09, 0.36618108, -0.28224003, 8.21133e-10, 0.04383295, 42.926388, 3.0177026, 40.029446)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal47" type="Decal" parent="Wardroom/Decals" unique_id=515874773]
-transform = Transform3D(2.2351738e-08, 0.049999956, 3.7252903e-08, -0.042927984, -3.9476467e-09, 0.36456546, 0.28099477, -1.170205e-09, 0.055695243, 42.926388, 2.2553678, 39.51963)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal48" type="Decal" parent="Wardroom/Decals" unique_id=1870341532]
-transform = Transform3D(1.0404158e-08, 0.04999996, 3.9463146e-08, -0.033785, 8.851744e-09, -0.36618105, -0.28224, 8.2113294e-10, 0.043832947, 42.926388, 2.7753599, 40.824966)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal49" type="Decal" parent="Wardroom/Decals" unique_id=1541052380]
-transform = Transform3D(-2.6104626e-08, -0.049999956, -5.38158e-09, 0.042927988, -4.2348883e-10, -0.36456543, 0.28099474, -1.170205e-09, 0.05569524, 42.926388, 1.9914901, 40.274715)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal50" type="Decal" parent="Wardroom/Decals" unique_id=1686112115]
-transform = Transform3D(0.04682689, 0.04931613, 0.001951962, -0.091117114, 0.0024230639, 0.34887728, 0.26515228, -0.007876748, 0.11954373, 42.926388, 2.9512892, 41.680138)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal51" type="Decal" parent="Wardroom/Decals" unique_id=285288573]
-transform = Transform3D(-0.012156526, 0.049796443, -0.029260691, 0.28350738, 0.002360454, 0.020280667, 0.016632717, -0.0038390395, -0.36707273, 42.926388, 2.0686164, 41.60308)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal32" type="Decal" parent="Wardroom/Decals" unique_id=255769256]
-transform = Transform3D(-0.27152652, 9.854212e-10, 0.109123334, -0.08410861, 4.205167e-09, -0.3522812, -1.2425182e-08, -0.04999998, -1.3365592e-08, 39.399406, 2.1264663, 33.072857)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal33" type="Decal" parent="Wardroom/Decals" unique_id=1959092536]
-transform = Transform3D(-0.086616695, -2.8821523e-09, 0.3512567, -0.27073684, 3.2167804e-09, -0.112377375, -1.2425178e-08, -0.049999963, -1.336559e-08, 40.651386, 3.0632591, 33.072857)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal30" type="Decal" parent="Wardroom/Decals" unique_id=1185082120]
-transform = Transform3D(-0.23664938, 3.883303e-09, -0.20430794, 0.1574737, 1.890618e-09, -0.30703124, -1.242518e-08, -0.04999997, -1.3365592e-08, 42.20107, 3.0005064, 33.072857)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal31" type="Decal" parent="Wardroom/Decals" unique_id=1601874337]
-transform = Transform3D(0.2803492, 1.8626451e-09, 0.060925923, 0.046959676, 2.9904206e-09, -0.36372784, -2.9802322e-08, 0.049999975, -1.8626451e-09, 39.60501, 3.0005064, 33.072857)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal34" type="Decal" parent="Wardroom/Decals" unique_id=1194784745]
-transform = Transform3D(0.2715265, 3.3857155e-09, -0.1091233, -0.0841086, 4.2051664e-09, -0.35228118, -1.131242e-08, 0.04999997, 2.2905454e-08, 39.898575, 2.4098845, 42.93504)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal35" type="Decal" parent="Wardroom/Decals" unique_id=1786150918]
-transform = Transform3D(0.2715265, 3.3857155e-09, -0.1091233, -0.0841086, 4.2051664e-09, -0.35228118, -1.131242e-08, 0.04999997, 2.2905454e-08, 38.565216, 2.4581134, 42.93504)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal42" type="Decal" parent="Wardroom/Decals" unique_id=1361572448]
-transform = Transform3D(-3.7252903e-09, -0.04999997, -1.8626451e-09, -0.0005457178, 4.5669712e-09, -0.36879462, 0.28425443, 5.4373483e-10, -0.0007079765, 37.073105, 2.846304, 42.188263)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal43" type="Decal" parent="Wardroom/Decals" unique_id=836996135]
-transform = Transform3D(1.7064938e-08, 0.049999967, 5.1073084e-08, 0.06270046, 6.0916516e-09, -0.35971153, -0.2772535, 4.4551114e-09, -0.08134821, 37.073105, 2.3497283, 41.53134)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal36" type="Decal" parent="Wardroom/Decals" unique_id=21317598]
-transform = Transform3D(0.2824863, -1.7570377e-09, -0.041077197, 0.031660922, -3.9455417e-09, 0.36650053, -1.2425179e-08, -0.04999997, -1.3365591e-08, 39.08396, 3.0632591, 42.93504)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal37" type="Decal" parent="Wardroom/Decals" unique_id=449680955]
-transform = Transform3D(0.26705498, -0.008682404, -0.10890567, -0.085235745, 5.22699e-09, -0.3518248, 0.04708898, 0.04924035, -0.019202963, 40.633644, 3.0005064, 42.93504)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal39" type="Decal" parent="Wardroom/Decals" unique_id=666737792]
-transform = Transform3D(0.2820741, -3.7252903e-09, 0.045596417, 0.0351442, 3.378872e-09, -0.36596575, 2.9802322e-08, 0.049999967, 1.6763806e-08, 42.417305, 2.755875, 42.93504)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal40" type="Decal" parent="Wardroom/Decals" unique_id=763153648]
-transform = Transform3D(-0.26473683, 6.788908e-10, 0.1343011, -0.10351475, 4.2653934e-09, -0.3434722, -1.2425179e-08, -0.049999963, -1.33655895e-08, 41.227787, 2.3813412, 42.93504)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal41" type="Decal" parent="Wardroom/Decals" unique_id=729138814]
-transform = Transform3D(-0.28083864, 1.583474e-09, 0.057005577, -0.043937963, 4.0183434e-09, -0.3643629, -1.2425179e-08, -0.049999963, -1.33655895e-08, 41.63202, 3.0216005, 42.93504)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal38" type="Decal" parent="Wardroom/Decals" unique_id=2142383003]
-transform = Transform3D(-0.28034922, 2.7709648e-09, -0.060925916, 0.04695967, 3.3130398e-09, -0.36372784, -1.2425181e-08, -0.04999997, -1.3365591e-08, 38.037586, 3.0005064, 42.93504)
-texture_albedo = ExtResource("19_13goe")
-
-[node name="Decal7" type="Decal" parent="Wardroom/Decals" unique_id=1274912384]
-transform = Transform3D(-4.371139e-08, 0.05000001, -3.4969112e-08, 0, -2.1855697e-09, -0.8, -1, -2.1855697e-09, 4.3707192e-15, -10.95815, 2.6509643, 2.9925485)
-texture_albedo = ExtResource("26_m36ql")
-
-[node name="Decal8" type="Decal" parent="Wardroom/Decals" unique_id=326196198]
-transform = Transform3D(-5.0353897e-08, 0, -1.0216026, 0, 0.05, 0, 1.1519629, 0, -4.465567e-08, -8.212279, 0.04822743, 5.155113)
-texture_albedo = ExtResource("24_ojx7f")
-
-[node name="Decal9" type="Decal" parent="Wardroom/Decals" unique_id=1859337811]
-transform = Transform3D(-4.7229744e-08, -0.04999999, 2.5313932e-08, 0, -1.8626449e-09, -0.84939456, 1.0804906, -2.1855688e-09, 1.1065071e-15, 8.966558, 2.429692, 2.2088716)
-size = Vector3(2.029419, 2, 2)
-texture_albedo = ExtResource("27_bam3w")
-
-[node name="Decal15" type="Decal" parent="Wardroom/Decals" unique_id=2097289324]
-transform = Transform3D(-1.0634506e-08, -0.04999999, 1.6786858e-08, 0, -1.8626449e-09, -0.56327343, 0.24328913, -2.1855688e-09, 7.337768e-16, 8.951143, 2.429692, 4.855196)
-size = Vector3(2.029419, 2, 2)
-texture_albedo = ExtResource("28_lleqh")
-
-[node name="Decal28" type="Decal" parent="Wardroom/Decals" unique_id=942502506]
-transform = Transform3D(-1.0634506e-08, -0.04999999, 1.6786858e-08, 0, -1.8626449e-09, -0.56327343, 0.24328913, -2.1855688e-09, 7.337768e-16, 17.044258, 2.429692, 4.8931637)
-size = Vector3(2.029419, 2, 2)
-texture_albedo = ExtResource("28_lleqh")
+[node name="BloodDC-1" type="Decal" parent="Wardroom/Decals" unique_id=209598645]
+texture_albedo = ExtResource("22_agdkb")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="Wardroom" unique_id=877941046]
 navigation_mesh = SubResource("NavigationMesh_40kn8")
@@ -1482,7 +1268,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.221083, 3.5727468, 25.5926
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.149124, 3.5727468, 25.59262)
 
 [node name="Player" parent="." unique_id=565899461 instance=ExtResource("41_qie4n")]
-transform = Transform3D(1.3113417e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113417e-07, 43.158855, -1.3113022e-06, 26.063908)
+transform = Transform3D(1.3113417e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113417e-07, 0.28609848, -1.3113022e-06, 0.4955349)
 immobile = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1714140543]

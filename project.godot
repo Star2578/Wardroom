@@ -42,6 +42,10 @@ import/blender/enabled=false
 
 world_environments="for brightness setting"
 
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
+
 [input]
 
 crouch={
