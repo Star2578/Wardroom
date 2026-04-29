@@ -15,6 +15,8 @@ var got_plunger: bool = false
 var got_scissors: bool = false
 
 var mouse_sensitivity: float = 0.01
+var invert_camera_x_axis: bool = false
+var invert_camera_y_axis: bool = false
 var master_bus_index: int
 var master_volume_db: float = linear_to_db(0.5)
 var master_muted: bool = false

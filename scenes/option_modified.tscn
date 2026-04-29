@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://d353rh4qt4rt" path="res://scripts/ui_data.gd" id="4_8cluo"]
 [ext_resource type="Script" uid="uid://c7axafbin1mpr" path="res://scripts/setting_audio.gd" id="5_3v7ln"]
 [ext_resource type="Script" uid="uid://d2uuffdim366d" path="res://scripts/setting_gameplay.gd" id="6_ipxes"]
+[ext_resource type="Script" uid="uid://6f6p2qruy3y4" path="res://scripts/setting_controls.gd" id="7_qmy5y"]
+[ext_resource type="PackedScene" uid="uid://b842uo5grrmrc" path="res://scenes/input_mapping.tscn" id="8_cwi08"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0j1x"]
 bg_color = Color(0.4, 0.4, 0.4, 1)
@@ -304,6 +306,7 @@ step = 0.01
 value = 1.0
 
 [node name="GameplayContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=322427590]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.5
@@ -460,7 +463,7 @@ layout_mode = 2
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer" unique_id=494217215]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer/MarginContainer" unique_id=207239974]
+[node name="InvertYOffBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer/MarginContainer" unique_id=207239974]
 layout_mode = 2
 text = "OFF"
 
@@ -471,7 +474,7 @@ layout_mode = 2
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer2" unique_id=1444039838]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer2/MarginContainer" unique_id=1142283868]
+[node name="InvertYOnBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer2/MarginContainer" unique_id=1142283868]
 layout_mode = 2
 text = "ON"
 
@@ -496,11 +499,33 @@ theme_override_constants/margin_bottom = 5
 layout_mode = 2
 text = "Invert X-Axis"
 
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer" unique_id=1766328781]
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/PanelContainer" unique_id=1502891791]
+layout_mode = 2
+
+[node name="InvertXOffBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/PanelContainer/MarginContainer" unique_id=1229494945]
+layout_mode = 2
+text = "OFF"
+
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer" unique_id=1421858577]
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/PanelContainer2" unique_id=1200140413]
+layout_mode = 2
+
+[node name="InvertXOnBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/PanelContainer2/MarginContainer" unique_id=864308400]
+layout_mode = 2
+text = "ON"
+
 [node name="ControlsContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1696195222]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.5
+script = ExtResource("7_qmy5y")
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer" unique_id=2018342375]
 layout_mode = 2
@@ -513,116 +538,36 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer" unique_id=1136362228]
+[node name="ActionList" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer" unique_id=1136362228]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=539558913]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8cluo")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=187038839]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer" unique_id=64140025]
+[node name="InputMapping" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList" unique_id=395996038 instance=ExtResource("8_cwi08")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=835509411]
-layout_mode = 2
-text = "Forward"
-
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1598121908]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8cluo")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer2" unique_id=1921242647]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer2/MarginContainer" unique_id=1832470087]
+[node name="InputMapping2" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList" unique_id=679962239 instance=ExtResource("8_cwi08")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer2/MarginContainer/HBoxContainer" unique_id=889586892]
-layout_mode = 2
-text = "Backward"
-
-[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=455350467]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8cluo")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer3" unique_id=1964872814]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer3/MarginContainer" unique_id=43317009]
+[node name="InputMapping3" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList" unique_id=479124427 instance=ExtResource("8_cwi08")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer3/MarginContainer/HBoxContainer" unique_id=318632239]
-layout_mode = 2
-text = "Left"
-
-[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1441571391]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8cluo")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer4" unique_id=1854646035]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer4/MarginContainer" unique_id=2109348612]
+[node name="InputMapping4" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList" unique_id=1969121370 instance=ExtResource("8_cwi08")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer4/MarginContainer/HBoxContainer" unique_id=1392029421]
-layout_mode = 2
-text = "Right"
-
-[node name="PanelContainer5" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2049644406]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8cluo")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer5" unique_id=1707388515]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer5/MarginContainer" unique_id=657473890]
+[node name="InputMapping5" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList" unique_id=125770533 instance=ExtResource("8_cwi08")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer5/MarginContainer/HBoxContainer" unique_id=1834384694]
-layout_mode = 2
-text = "Jump"
-
-[node name="PanelContainer6" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1908097096]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8cluo")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer6" unique_id=1408733186]
-layout_mode = 2
-theme_override_constants/margin_left = 15
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer6/MarginContainer" unique_id=974730442]
+[node name="InputMapping6" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList" unique_id=96811638 instance=ExtResource("8_cwi08")]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/VBoxContainer/PanelContainer6/MarginContainer/HBoxContainer" unique_id=741928147]
+[node name="ResetPanel" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList" unique_id=1262981995]
 layout_mode = 2
-text = "Interact"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList/ResetPanel" unique_id=1503182476]
+layout_mode = 2
+
+[node name="ResetBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList/ResetPanel/MarginContainer" unique_id=1325871632]
+layout_mode = 2
+text = "RESET TO DEFAULT"
 
 [node name="AudioContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=625036600]
 visible = false
@@ -731,4 +676,9 @@ text = "Window Mode Description"
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/Language/HBoxContainer/HBoxContainer/LeftLanguageBtn" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer" method="_on_left_language_btn_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/Language/HBoxContainer/HBoxContainer/RightLanguageBtn" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer" method="_on_right_language_btn_pressed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/MouseCameraSensitivity/HBoxContainer/PanelContainer2/MCSensitivitySlider" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer" method="_on_mc_sensitivity_slider_value_changed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer/MarginContainer/InvertYOffBtn" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer" method="_on_invert_y_off_btn_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer2/MarginContainer/InvertYOnBtn" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer" method="_on_invert_y_on_btn_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/PanelContainer/MarginContainer/InvertXOffBtn" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer" method="_on_invert_x_off_btn_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/PanelContainer2/MarginContainer/InvertXOnBtn" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer" method="_on_invert_x_on_btn_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList/ResetPanel/MarginContainer/ResetBtn" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer" method="_on_reset_btn_pressed"]
 [connection signal="value_changed" from="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/MasterVolume/HBoxContainer/PanelContainer2/VolumeSlider" to="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer" method="_on_volume_slider_value_changed"]
