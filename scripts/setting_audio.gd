@@ -14,5 +14,5 @@ func _on_volume_slider_value_changed(value: float) -> void:
 	if value <= 0.0:
 		GameController.master_volume_db = 0.0
 	else:
-		GameController.master_volume_db = linear_to_db(value)
+		GameController.master_volume_db = linear_to_db(value / 100)
 	GameController.apply_audio_settings()

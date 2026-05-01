@@ -12,7 +12,9 @@ var input_actions = {
 	"move_backward": "Move backward",
 	"move_left": "Move left",
 	"move_right": "Move right",
+	"crouch": "Crouch",
 	"interact": "Interact",
+	"inventory": "Inventory"
 }
 func _ready():
 	_create_action_list()
@@ -55,23 +57,62 @@ func _on_input_button_pressed(button, action):
 		
 	
 func _input(event):
-	if is_remapping:
-		if (
-			event is InputEventKey ||
-			(event is InputEventMouseButton && event.pressed)
-		):
-			if event is InputEventMouseButton && event.double_click:
-				event.double_click = false
-			InputMap.action_erase_event(action_to_remap, event)
-			InputMap.action_add_event(action_to_remap, event)
-			_update_action_list(remapping_button, event)
+	if not is_remapping:
+		return
+
+	# --- 1. Cancel with ESC ---
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_ESCAPE:
+			_cancel_remap()
+			return
+
+	# --- 2. Only accept valid inputs ---
+	if not (
+		event is InputEventKey or
+		(event is InputEventMouseButton and event.pressed)
+	):
+		return
+
+	# Prevent double click weirdness
+	if event is InputEventMouseButton and event.double_click:
+		event.double_click = false
+
+	# --- 3. Check if key already used somewhere else ---
+	for action in InputMap.get_actions():
+		if action == action_to_remap:
+			continue  # skip itself
+
+		for e in InputMap.action_get_events(action):
+			if e.as_text() == event.as_text():
+				# ❌ Key already used → do NOTHING
+				return
+
+	# --- 4. Apply binding (clean replace) ---
+	for e in InputMap.action_get_events(action_to_remap):
+		InputMap.action_erase_event(action_to_remap, e)
+
+	InputMap.action_add_event(action_to_remap, event)
+	_update_action_list(remapping_button, event)
+
+	# --- 5. Exit remap mode ---
+	is_remapping = false
+	action_to_remap = null
+	remapping_button = null
+
+	accept_event()
 			
-			is_remapping = false
-			action_to_remap = null
-			remapping_button = null
-			
-			accept_event()
-			
+func _cancel_remap():
+	# restore original text
+	var events = InputMap.action_get_events(action_to_remap)
+	if events.size() > 0:
+		remapping_button.find_child("LabelInput").text = events[0].as_text().trim_suffix(" - Physical")
+	else:
+		remapping_button.find_child("LabelInput").text = ""
+
+	is_remapping = false
+	action_to_remap = null
+	remapping_button = null
+	
 func _update_action_list(button, event):
 	button.find_child("LabelInput").text = event.as_text().trim_suffix(" - Physical")
 

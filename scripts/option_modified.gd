@@ -1,16 +1,33 @@
 extends Control
 
+class_name OptionModified
+
+@onready var video_btn = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VideoBtn
+@onready var gameplay_btn = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/GameplayBtn
+@onready var controls_btn = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/ControlsBtn
+@onready var audio_btn = $PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/AudioBtn
+
 @onready var description_name = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Description/MarginContainer/VBoxContainer/NameLabel
 @onready var description_label = $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Description/MarginContainer/VBoxContainer/DescriptionLabel
 
 var tabs = {}
+var tab_buttons = {}
 
 func _ready() -> void:
+	hide()
+	
 	tabs = {
 		"video": $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer,
 		"gameplay": $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer,
 		"controls": $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer,
 		"audio": $PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer
+	}
+	
+	tab_buttons = {
+		"video": video_btn,
+		"gameplay": gameplay_btn,
+		"controls": controls_btn,
+		"audio": audio_btn
 	}
 	
 	show_tab("video")  # default
@@ -23,6 +40,16 @@ func show_tab(tab_name):
 		t.visible = false
 		
 	tabs[tab_name].visible = true
+	
+	for name in tab_buttons:
+		var btn = tab_buttons[name]
+		
+		if name == tab_name:
+			# Active tab
+			btn.modulate = Color(1.0, 1.0, 1.0)
+		else:
+			# Inactive tabs
+			btn.modulate = Color(0.5, 0.5, 0.5)
 	
 func _on_video_btn_pressed():
 	show_tab("video")

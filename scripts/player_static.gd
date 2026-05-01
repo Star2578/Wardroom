@@ -22,10 +22,12 @@ func _ready():
 func _input(event):	
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED and !GameController.is_paused and GameController.can_look_around:
 		# 1. Rotate the whole horizontal base (Yaw)
-		horizontal_gimbal.rotate_y(-event.relative.x * GameController.mouse_sensitivity)
+		var invert_x = -1 if GameController.invert_camera_x_axis else 1
+		horizontal_gimbal.rotate_y(-event.relative.x * GameController.mouse_sensitivity * invert_x)
 		
 		# 2. Rotate the vertical gimbal (Pitch)
-		vertical_gimbal.rotate_x(-event.relative.y * GameController.mouse_sensitivity)
+		var invert_y = -1 if GameController.invert_camera_y_axis else 1
+		vertical_gimbal.rotate_x(-event.relative.y * GameController.mouse_sensitivity * invert_y)
 		
 		# 3. Clamp the Pitch (Vertical)
 		vertical_gimbal.rotation.x = clamp(

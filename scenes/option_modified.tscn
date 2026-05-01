@@ -3,26 +3,22 @@
 [ext_resource type="Script" uid="uid://d0fjutxlp6n58" path="res://scripts/option_modified.gd" id="1_8cluo"]
 [ext_resource type="StyleBox" uid="uid://ds7xapqdynry6" path="res://option_button_style_box_flat.tres" id="2_d0j1x"]
 [ext_resource type="Script" uid="uid://cts0yci3q2gts" path="res://scripts/setting_video.gd" id="3_exh7f"]
+[ext_resource type="StyleBox" uid="uid://cxe3buevuxriv" path="res://Pressed_style_box_flat.tres" id="3_pjpf5"]
 [ext_resource type="Script" uid="uid://2esla372hvb7" path="res://scripts/setting_item.gd" id="3_v5le4"]
 [ext_resource type="Script" uid="uid://d353rh4qt4rt" path="res://scripts/ui_data.gd" id="4_8cluo"]
+[ext_resource type="StyleBox" uid="uid://hnwf2bjj2nv0" path="res://Hover_style_box_flat.tres" id="4_73u71"]
 [ext_resource type="Script" uid="uid://c7axafbin1mpr" path="res://scripts/setting_audio.gd" id="5_3v7ln"]
 [ext_resource type="Script" uid="uid://d2uuffdim366d" path="res://scripts/setting_gameplay.gd" id="6_ipxes"]
 [ext_resource type="Script" uid="uid://6f6p2qruy3y4" path="res://scripts/setting_controls.gd" id="7_qmy5y"]
+[ext_resource type="StyleBox" uid="uid://ddfrq0phc1ese" path="res://LR_style_box_flat.tres" id="8_0l6ot"]
 [ext_resource type="PackedScene" uid="uid://b842uo5grrmrc" path="res://scenes/input_mapping.tscn" id="8_cwi08"]
+[ext_resource type="StyleBox" uid="uid://b8v701nkh12vl" path="res://Slider_Number_style_box_flat.tres" id="9_qfnje"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0j1x"]
-bg_color = Color(0.4, 0.4, 0.4, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-expand_margin_left = 30.0
-expand_margin_right = 30.0
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v5le4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwi08"]
+bg_color = Color(0.18039216, 0.18039216, 0.18039216, 0.13725491)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v5le4"]
-bg_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+bg_color = Color(0.18, 0.18, 0.18, 0.8235294)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -41,7 +37,7 @@ border_blend = true
 [sub_resource type="Resource" id="Resource_3v7ln"]
 script = ExtResource("4_8cluo")
 name = "WINDOW MODE"
-description = "Description of window mode"
+description = "Choose how the game is displayed on your screen (Windowed, or Fullscreen)"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipxes"]
@@ -51,7 +47,7 @@ metadata/_custom_type_script = "uid://d353rh4qt4rt"
 [sub_resource type="Resource" id="Resource_8cluo"]
 script = ExtResource("4_8cluo")
 name = "GAMMA"
-description = "Brightness of the game"
+description = "Adjust the overall brightness of the game. Increase if the screen appears too dark"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cluo"]
@@ -61,35 +57,35 @@ content_margin_right = 15.0
 [sub_resource type="Resource" id="Resource_exh7f"]
 script = ExtResource("4_8cluo")
 name = "LANGUAGE"
-description = "Language of the game"
+description = "Select the language used for menus and in-game text"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_ipxes"]
 script = ExtResource("4_8cluo")
 name = "MOUSE CAMERA SENSITIVITY"
-description = "The sensitivity of the mouse and camera"
+description = "Control how fast the camera moves when you move the mouse"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_qmy5y"]
 script = ExtResource("4_8cluo")
 name = "INVERT Y-AXIS"
-description = "Invert mouse Y-Axis movement"
+description = "Invert vertical camera movement. Moving the mouse up will look down"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_cwi08"]
 script = ExtResource("4_8cluo")
 name = "INVERT X-AXIS"
-description = "Invert mouse X-Axis movement"
+description = "Invert horizontal camera movement. Moving the mouse left will look right"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_fk28c"]
 script = ExtResource("4_8cluo")
 name = "MASTER VOLUME"
-description = "Overall volume of the game"
+description = "Adjust the overall volume of all sounds in the game"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3v7ln"]
-bg_color = Color(0.1764706, 0.1764706, 0.1764706, 1)
+bg_color = Color(0.18, 0.18, 0.18, 0.8235294)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -112,6 +108,7 @@ metadata/_edit_vertical_guides_ = [-550.0]
 layout_mode = 1
 offset_right = 1152.0
 offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_cwi08")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=173597560]
 layout_mode = 2
@@ -131,37 +128,29 @@ size_flags_horizontal = 4
 [node name="VideoBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=339349158]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("2_d0j1x")
-theme_override_styles/hover = SubResource("StyleBoxFlat_d0j1x")
+theme_override_styles/pressed = ExtResource("3_pjpf5")
+theme_override_styles/hover = ExtResource("4_73u71")
 text = "VIDEO"
-
-[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1411400137]
-layout_mode = 2
-theme_override_constants/separation = 60
-theme_override_styles/separator = SubResource("StyleBoxEmpty_v5le4")
 
 [node name="GameplayBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=964253993]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("2_d0j1x")
+theme_override_styles/pressed = ExtResource("3_pjpf5")
+theme_override_styles/hover = ExtResource("4_73u71")
 text = "GAMEPLAY"
-
-[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=110184372]
-layout_mode = 2
-theme_override_constants/separation = 60
-theme_override_styles/separator = SubResource("StyleBoxEmpty_v5le4")
 
 [node name="ControlsBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=611606978]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("2_d0j1x")
+theme_override_styles/pressed = ExtResource("3_pjpf5")
+theme_override_styles/hover = ExtResource("4_73u71")
 text = "CONTROLS"
-
-[node name="VSeparator3" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=66508042]
-layout_mode = 2
-theme_override_constants/separation = 60
-theme_override_styles/separator = SubResource("StyleBoxEmpty_v5le4")
 
 [node name="AudioBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1631838414]
 layout_mode = 2
 theme_override_styles/normal = ExtResource("2_d0j1x")
+theme_override_styles/pressed = ExtResource("3_pjpf5")
+theme_override_styles/hover = ExtResource("4_73u71")
 text = "AUDIO"
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1989119437]
@@ -229,6 +218,7 @@ size_flags_horizontal = 8
 [node name="LeftModeBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/WindowMode/HBoxContainer/HBoxContainer" unique_id=1943222916]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_styles/normal = ExtResource("8_0l6ot")
 text = " < "
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/WindowMode/HBoxContainer/HBoxContainer" unique_id=2117318102]
@@ -246,6 +236,7 @@ text = "FULL SCREEN"
 [node name="RightModeBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/WindowMode/HBoxContainer/HBoxContainer" unique_id=133882229]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_styles/normal = ExtResource("8_0l6ot")
 text = " > "
 
 [node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/WindowMode/HBoxContainer/HBoxContainer" unique_id=1205475612]
@@ -283,6 +274,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_styles/panel = ExtResource("9_qfnje")
 
 [node name="GammaNumberLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/Gamma/HBoxContainer/PanelContainer" unique_id=421490998]
 layout_mode = 2
@@ -359,6 +351,7 @@ size_flags_horizontal = 8
 [node name="LeftLanguageBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/Language/HBoxContainer/HBoxContainer" unique_id=433916309]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_styles/normal = ExtResource("8_0l6ot")
 text = " < "
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/Language/HBoxContainer/HBoxContainer" unique_id=538471671]
@@ -376,6 +369,7 @@ text = "ENGLISH"
 [node name="RightLanguageBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/Language/HBoxContainer/HBoxContainer" unique_id=33374093]
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_styles/normal = ExtResource("8_0l6ot")
 text = " > "
 
 [node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/Language/HBoxContainer/HBoxContainer" unique_id=1591589565]
@@ -413,6 +407,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
 size_flags_horizontal = 8
+theme_override_styles/panel = ExtResource("9_qfnje")
 
 [node name="MCSensitivityNumberLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/MouseCameraSensitivity/HBoxContainer/PanelContainer" unique_id=179043437]
 layout_mode = 2
@@ -465,6 +460,7 @@ layout_mode = 2
 
 [node name="InvertYOffBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer/MarginContainer" unique_id=207239974]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("9_qfnje")
 text = "OFF"
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer" unique_id=1202255658]
@@ -476,6 +472,7 @@ layout_mode = 2
 
 [node name="InvertYOnBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/PanelContainer2/MarginContainer" unique_id=1142283868]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("9_qfnje")
 text = "ON"
 
 [node name="InvertXAxis" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=964344334 groups=["setting_items"]]
@@ -508,6 +505,7 @@ layout_mode = 2
 
 [node name="InvertXOffBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/PanelContainer/MarginContainer" unique_id=1229494945]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("9_qfnje")
 text = "OFF"
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer" unique_id=1421858577]
@@ -519,6 +517,7 @@ layout_mode = 2
 
 [node name="InvertXOnBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/PanelContainer2/MarginContainer" unique_id=864308400]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("9_qfnje")
 text = "ON"
 
 [node name="ControlsContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1696195222]
@@ -619,11 +618,12 @@ theme_override_constants/separation = 0
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/MasterVolume/HBoxContainer" unique_id=166721870]
 custom_minimum_size = Vector2(60, 0)
 layout_mode = 2
+theme_override_styles/panel = ExtResource("9_qfnje")
 
 [node name="VolumeNumberLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/MasterVolume/HBoxContainer/PanelContainer" unique_id=1978438777]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "75"
+text = "50"
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/MasterVolume/HBoxContainer" unique_id=1140336767]
 layout_mode = 2
@@ -635,7 +635,7 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 size_flags_stretch_ratio = 5.08
-value = 75.0
+value = 50.0
 
 [node name="Description" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=2086092625]
 layout_mode = 2
@@ -662,8 +662,10 @@ text = "WINDOW MODE"
 layout_mode = 2
 
 [node name="DescriptionLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/Description/MarginContainer/VBoxContainer" unique_id=369406240]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 text = "Window Mode Description"
+autowrap_mode = 3
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VideoBtn" to="." method="_on_video_btn_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/GameplayBtn" to="." method="_on_gameplay_btn_pressed"]
