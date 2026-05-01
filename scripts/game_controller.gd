@@ -2,6 +2,7 @@ extends Node
 
 
 @onready var options_menu: Option = $"CanvasLayer/Option"
+@onready var option: OptionModified = $"CanvasLayer/OptionModified"
 @onready var text_writer: TextWriter = $"TextWriter"
 
 var is_started: bool = false
@@ -15,6 +16,8 @@ var got_plunger: bool = false
 var got_scissors: bool = false
 
 var mouse_sensitivity: float = 0.01
+var invert_camera_x_axis: bool = false
+var invert_camera_y_axis: bool = false
 var master_bus_index: int
 var master_volume_db: float = linear_to_db(0.5)
 var master_muted: bool = false
@@ -75,21 +78,21 @@ func _on_tree_node_added(node: Node) -> void:
 
 func toggle_options_menu():
 	if !is_started:
-		if main_menu:
-			main_menu.visible = not main_menu.visible
-	
-	if options_menu:
-		options_menu.visible = not options_menu.visible
-		options_menu.mouse_filter = Control.MOUSE_FILTER_STOP if options_menu.visible else Control.MOUSE_FILTER_IGNORE
+		return
+			
+	if option.visible:
+		option.visible = false
+		options_menu.visible = true
+		return
 		
-		if options_menu.visible:
-			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-			toggle_pause_game()
-		else:
-			print("some ui is open:", some_ui_is_open())
-			if is_started and not some_ui_is_open():
-				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-			toggle_pause_game()
+	options_menu.visible = not options_menu.visible
+	
+	if options_menu.visible:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().paused = true
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		get_tree().paused = false
 
 func some_ui_is_open() -> bool:
 	if dialogue_ui != null and interactable_ui != null and inventory_ui != null and inspect_item_ui != null:

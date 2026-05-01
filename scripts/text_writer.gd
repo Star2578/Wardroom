@@ -98,4 +98,3 @@ func play_text(text: String):
 	# play sounds and stop when tween is done
 	sfx_player.play()
 	active_tween.finished.connect(_on_text_tween_finished)
-

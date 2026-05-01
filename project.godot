@@ -27,6 +27,7 @@ InspectMenu="*uid://cxsj4n5rko1k5"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
@@ -40,6 +41,10 @@ import/blender/enabled=false
 [global_group]
 
 world_environments="for brightness setting"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [input]
 

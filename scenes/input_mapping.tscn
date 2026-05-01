@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://b842uo5grrmrc"]
+
+[ext_resource type="StyleBox" uid="uid://b8v701nkh12vl" path="res://Slider_Number_style_box_flat.tres" id="1_6buon"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cluo"]
+bg_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cwi08"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fk28c"]
+
+[node name="InputMapping" type="PanelContainer" unique_id=395996038]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 34.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8cluo")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=16215858]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=565168229]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="LabelAction" type="Label" parent="HBoxContainer/MarginContainer" unique_id=1092498769]
+layout_mode = 2
+text = "Forward"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer" unique_id=789148300]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+theme_override_styles/separator = SubResource("StyleBoxEmpty_cwi08")
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer" unique_id=1597657677]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.75
+theme_override_styles/panel = ExtResource("1_6buon")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/PanelContainer" unique_id=1878720421]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer/PanelContainer/MarginContainer" unique_id=1133400461]
+layout_mode = 2
+
+[node name="LabelInput" type="Label" parent="HBoxContainer/PanelContainer/MarginContainer/Button" unique_id=888754621]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "W"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer" unique_id=1563577016]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_fk28c")
