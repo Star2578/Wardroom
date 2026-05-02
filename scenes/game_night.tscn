@@ -933,6 +933,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.141754, 0, -1.869587)
 gizmo_extents = 1.0
 
 [node name="Maze_Ceiling" type="GridMap" parent="Maze" unique_id=347363914]
+visible = false
 mesh_library = ExtResource("1_jtss3")
 cell_size = Vector3(2, 1.8, 2)
 cell_center_y = false

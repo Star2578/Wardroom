@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://by0ync2uebeck" path="res://assets/objects/omelette.glb" id="1_n1f0h"]
 [ext_resource type="Script" uid="uid://cq3bkdtyr2dkl" path="res://scripts/omelette.gd" id="2_xlf5y"]
 [ext_resource type="Script" uid="uid://duu02ylefpfev" path="res://scripts/object_data.gd" id="3_leo1i"]
+[ext_resource type="AudioStream" uid="uid://rfi74xbwh06n" path="res://sounds/sfx/freesound_community-game-eat-sound-83240.mp3" id="4_leo1i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1f0h"]
 resource_name = "glass_mat"
@@ -106,3 +107,8 @@ object_data = SubResource("Resource_xlf5y")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=366614747]
 shape = SubResource("BoxShape3D_n1f0h")
+
+[node name="EatSFX" type="AudioStreamPlayer3D" parent="." index="8" unique_id=316872906]
+unique_name_in_owner = true
+stream = ExtResource("4_leo1i")
+bus = &"SFX"

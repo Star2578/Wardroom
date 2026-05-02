@@ -13,3 +13,5 @@ func toggle_door():
 	else:
 		anim_player.play("open", -1, -1.0, true)
 		is_open = false
+
+	%DoorSFX.play()
