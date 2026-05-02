@@ -185,8 +185,6 @@ func _ready():
 
 
 func _process(_delta):
-	if pausing_enabled:
-		handle_pausing()
 
 	update_debug_menu_per_frame()
 
@@ -547,17 +545,6 @@ func update_camera_fov():
 		CAMERA.fov = lerp(CAMERA.fov, 85.0, 0.3)
 	else:
 		CAMERA.fov = lerp(CAMERA.fov, 75.0, 0.3)
-
-func handle_pausing():
-	if Input.is_action_just_pressed(controls.PAUSE):
-		# You may want another node to handle pausing, because this player may get paused too.
-		match Input.mouse_mode:
-			Input.MOUSE_MODE_CAPTURED:
-				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-				#get_tree().paused = false
-			Input.MOUSE_MODE_VISIBLE:
-				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-				#get_tree().paused = false
 
 #endregion
 

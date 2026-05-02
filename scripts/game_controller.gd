@@ -89,9 +89,13 @@ func toggle_options_menu():
 	
 	if options_menu.visible:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if player:
+			player.immobile = true
 		get_tree().paused = true
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		if player:
+			player.immobile = false
 		get_tree().paused = false
 
 func some_ui_is_open() -> bool:

@@ -12,11 +12,11 @@ extends VBoxContainer
 
 var options = ["ENGLISH", "ไทย"]
 var index := 0
-var player
+var game_controller
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player = GameController
+	game_controller = GameController
 	update_label()
 	update_invert_y_buttons()
 	update_invert_x_buttons()
@@ -43,18 +43,18 @@ func _on_right_language_btn_pressed() -> void:
 
 func _on_mc_sensitivity_slider_value_changed(value: float) -> void:
 	mc_sensitivity_number_label.text = str(value)
-	player.mouse_sensitivity = value / 100
+	game_controller.mouse_sensitivity = value / 100
 
 func _on_invert_y_off_btn_pressed() -> void:
-	player.invert_camera_y_axis = false
+	game_controller.invert_camera_y_axis = false
 	update_invert_y_buttons()
 
 func _on_invert_y_on_btn_pressed() -> void:
-	player.invert_camera_y_axis = true
+	game_controller.invert_camera_y_axis = true
 	update_invert_y_buttons()
 	
 func update_invert_y_buttons():
-	if player.invert_camera_y_axis:
+	if game_controller.invert_camera_y_axis:
 		invert_y_on_btn.modulate = Color(1.0, 1.0, 1.0)  
 		invert_y_off_btn.modulate = Color(0.5, 0.5, 0.5)
 	else:
@@ -62,15 +62,15 @@ func update_invert_y_buttons():
 		invert_y_on_btn.modulate = Color(0.5, 0.5, 0.5)
 
 func _on_invert_x_off_btn_pressed() -> void:
-	player.invert_camera_x_axis = false
+	game_controller.invert_camera_x_axis = false
 	update_invert_x_buttons()
 
 func _on_invert_x_on_btn_pressed() -> void:
-	player.invert_camera_x_axis = true
+	game_controller.invert_camera_x_axis = true
 	update_invert_x_buttons()
 
 func update_invert_x_buttons():
-	if player.invert_camera_x_axis:
+	if game_controller.invert_camera_x_axis:
 		invert_x_on_btn.modulate = Color(1.0, 1.0, 1.0)  
 		invert_x_off_btn.modulate = Color(0.5, 0.5, 0.5)
 	else:

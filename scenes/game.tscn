@@ -1381,7 +1381,7 @@ transform = Transform3D(1.0000001, 0, 0, 0, 0.9999997, 0, 0, 0, 1.0000001, 0, 0,
 [node name="Character_05" parent="." unique_id=42540030 instance=ExtResource("29_twgab")]
 transform = Transform3D(0.72084147, 0, 0.6931, 0, 1, 0, -0.6931, 0, 0.72084147, -5.208577, 0, 6.4616976)
 
-[node name="LookAtModifier3D" parent="Character_05/GeneralSkeleton" parent_id_path=PackedInt32Array(42540030, 1121693251) index="1" unique_id=540903489]
+[node name="LookAtModifier3D" parent="Character_05/GeneralSkeleton" parent_id_path=PackedInt32Array(42540030, 742793368) index="1" unique_id=540903489]
 target_node = NodePath("../../../Player_Static")
 bone_name = "Neck"
 bone = 4
@@ -1418,7 +1418,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.8
 bus = &"SFX"
 
 [node name="PhoneTemp" type="MeshInstance3D" parent="." unique_id=339618598]
-transform = Transform3D(0.08312659, 0.05558756, 7.690849e-09, 0.028313031, -0.042339914, 0.08605643, 0.047836605, -0.07153587, -0.050934196, -7.4389076, 1.0243398, 7.8561983)
+transform = Transform3D(0.08312659, 0.055587567, 7.690849e-09, 0.028313031, -0.042339917, 0.08605643, 0.047836605, -0.07153588, -0.050934196, -7.4389076, 1.0243398, 7.8561983)
 visible = false
 mesh = ExtResource("38_nepv3")
 skeleton = NodePath("")

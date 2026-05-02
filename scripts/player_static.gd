@@ -8,6 +8,7 @@ extends Node3D
 const MAX_YAW = 100.0
 const MAX_PITCH = 45.0
 
+@onready var immobile: bool = false
 @onready var ray = $"Horizontal/Vertical/Camera/RayCast3D"
 @onready var inventory_ui = $"UI/InventoryUI"
 
