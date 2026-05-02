@@ -104,7 +104,7 @@ func some_ui_is_open() -> bool:
 	return false
 
 func _unhandled_input(event: InputEvent):
-	if event.is_action_pressed("inventory"):
+	if event.is_action_pressed("inventory") and interactable_ui:
 		GameController.toggle_pause_game()
 		inventory_ui.toggle()
 	

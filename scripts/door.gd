@@ -28,6 +28,7 @@ func interact():
 		return
 	else:
 		InventoryManager.remove_item_by_name(key)
+		is_locked = false
 
 		if key == "Wardroom Key":
 			get_tree().change_scene_to_file("res://scenes/end.tscn")

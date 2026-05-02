@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ct2704q0fwtly" path="res://scripts/stall.gd" id="1_05v2r"]
 [ext_resource type="Script" uid="uid://xp5vjeo4rdkx" path="res://scripts/toilet.gd" id="2_7jhdm"]
 [ext_resource type="AudioStream" uid="uid://0ep4ffcx330b" path="res://sounds/sfx/vibehorn-toilet-flush-fx-5-424984.mp3" id="3_frce2"]
+[ext_resource type="AudioStream" uid="uid://b014pghxc8je2" path="res://sounds/sfx/freesound_community-bathroom-open-door-90033.mp3" id="4_dblv7"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_415wl"]
 noise_type = 5
@@ -644,3 +645,11 @@ libraries/ = SubResource("AnimationLibrary_frce2")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=781104316]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2910506, -0.22470707)
 stream = ExtResource("3_frce2")
+bus = &"SFX"
+
+[node name="DoorSFX" type="AudioStreamPlayer3D" parent="." unique_id=2119733301]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2910506, -0.22470707)
+stream = ExtResource("4_dblv7")
+volume_db = -10.0
+bus = &"SFX"
