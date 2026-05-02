@@ -78,8 +78,8 @@ adjustment_brightness = 0.85
 adjustment_saturation = 0.8
 adjustment_color_correction = SubResource("GradientTexture1D_diphd")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gkmjm"]
-albedo_color = Color(0.8969603, 0, 0.08231319, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkbm0"]
+albedo_color = Color(0.6901937, 0, 0.089548014, 1)
 
 [sub_resource type="Resource" id="Resource_lleqh"]
 script = ExtResource("8_ova88")
@@ -794,7 +794,7 @@ transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0,
 
 [node name="Bathroom_Door3" parent="Maze" unique_id=1629209983 instance=ExtResource("25_ckc4g")]
 transform = Transform3D(1.1999999, 0, -3.5527137e-15, 0, 1.1999999, 0, 3.5527137e-15, 0, 1.1999999, 11.882283, 1.2998244, -49.099403)
-surface_material_override/0 = SubResource("StandardMaterial3D_gkmjm")
+surface_material_override/0 = SubResource("StandardMaterial3D_bkbm0")
 
 [node name="Door" parent="Maze/Bathroom_Door3" unique_id=330589880 instance=ExtResource("8_40kn8")]
 
@@ -807,7 +807,7 @@ key = "Red Key"
 
 [node name="Bathroom_Door4" parent="Maze" unique_id=1691550504 instance=ExtResource("25_ckc4g")]
 transform = Transform3D(-1.1999999, 0, -3.8143817e-08, 0, 1.1999999, 0, 3.8143817e-08, 0, -1.1999999, 11.882283, 1.3001775, -48.916298)
-surface_material_override/0 = SubResource("StandardMaterial3D_gkmjm")
+surface_material_override/0 = SubResource("StandardMaterial3D_bkbm0")
 
 [node name="Door" parent="Maze/Bathroom_Door4" unique_id=1367854433 instance=ExtResource("8_40kn8")]
 
@@ -933,7 +933,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.141754, 0, -1.869587)
 gizmo_extents = 1.0
 
 [node name="Maze_Ceiling" type="GridMap" parent="Maze" unique_id=347363914]
-visible = false
 mesh_library = ExtResource("1_jtss3")
 cell_size = Vector3(2, 1.8, 2)
 cell_center_y = false
@@ -1470,7 +1469,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5762787e-07, -1.1081979, -9
 
 [node name="Area3D" parent="Wardroom/Props_Wardroom1/Door2" index="1" unique_id=1758599314]
 is_locked = true
-key = "Ward Key"
+key = "Wardroom Key"
 warn = "Need a key to open this"
 
 [node name="CollisionShape3D" parent="Wardroom/Props_Wardroom1/Door2/Area3D" index="0" unique_id=241131087]
