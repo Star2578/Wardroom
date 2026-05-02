@@ -31,7 +31,7 @@ func _on_menu_pressed() -> void:
 		return
 	
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
-	GameController.return_from_option()
+	GameController.toggle_options_menu()
 
 
 func _on_option_pressed() -> void:

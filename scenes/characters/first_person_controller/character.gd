@@ -23,7 +23,7 @@ class_name Player
 ## How high the player jumps.
 @export var jump_velocity : float = 4.5
 ## How far the player turns when the mouse is moved.
-@export var mouse_sensitivity : float = 0.1
+@export var mouse_sensitivity : float = 0.01
 ## Invert the X axis input for the camera.
 @export var invert_camera_x_axis : bool = false
 ## Invert the Y axis input for the camera.
@@ -185,8 +185,6 @@ func _ready():
 
 
 func _process(_delta):
-	if pausing_enabled:
-		handle_pausing()
 
 	update_debug_menu_per_frame()
 
@@ -208,8 +206,6 @@ func _physics_process(delta): # Most things happen here.
 		input_dir = Input.get_vector(controls.LEFT, controls.RIGHT, controls.FORWARD, controls.BACKWARD)
 
 	handle_movement(delta, input_dir)
-
-	handle_head_rotation()
 
 	# The player is not able to stand up if the ceiling is too low
 	low_ceiling = $CrouchCeilingDetection.is_colliding()
@@ -289,30 +285,32 @@ func handle_movement(delta, input_dir):
 	stamina_ui.scale.y = stamina / max_stamina
 
 
-func handle_head_rotation():
-	if invert_camera_x_axis:
-		HEAD.rotation_degrees.y -= mouseInput.x * mouse_sensitivity * -1
-	else:
-		HEAD.rotation_degrees.y -= mouseInput.x * mouse_sensitivity
+func _input(event):
+	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+		var sensitivity_deg = rad_to_deg(GameController.mouse_sensitivity)
 
-	if invert_camera_y_axis:
-		HEAD.rotation_degrees.x -= mouseInput.y * mouse_sensitivity * -1
-	else:
-		HEAD.rotation_degrees.x -= mouseInput.y * mouse_sensitivity
+		if GameController.invert_camera_x_axis:
+			HEAD.rotation_degrees.y -= event.relative.x * sensitivity_deg * -1
+		else:
+			HEAD.rotation_degrees.y -= event.relative.x * sensitivity_deg
+
+		if GameController.invert_camera_y_axis:
+			HEAD.rotation_degrees.x -= event.relative.y * sensitivity_deg * -1
+		else:
+			HEAD.rotation_degrees.x -= event.relative.y * sensitivity_deg
 
 	if controller_support:
 		var controller_view_rotation = Input.get_vector(controller_controls.LOOK_DOWN, controller_controls.LOOK_UP, controller_controls.LOOK_RIGHT, controller_controls.LOOK_LEFT) * look_sensitivity # These are inverted because of the nature of 3D rotation.
-		if invert_camera_y_axis:
+		if GameController.invert_camera_y_axis:
 			HEAD.rotation.x += controller_view_rotation.x * -1
 		else:
 			HEAD.rotation.x += controller_view_rotation.x
 
-		if invert_camera_x_axis:
+		if GameController.invert_camera_x_axis:
 			HEAD.rotation.y += controller_view_rotation.y * -1
 		else:
 			HEAD.rotation.y += controller_view_rotation.y
 
-	mouseInput = Vector2(0,0)
 	HEAD.rotation.x = clamp(HEAD.rotation.x, deg_to_rad(-90), deg_to_rad(90))
 	%GeneralSkeleton.rotation.y = lerp_angle(%GeneralSkeleton.rotation.y, HEAD.rotation.y + PI, 0.2)
 
@@ -518,12 +516,10 @@ func update_debug_menu_per_tick():
 	var readable_velocity : String = "X: " + str(vd[0]) + " Y: " + str(vd[1]) + " Z: " + str(vd[2])
 	$UserInterface/DebugPanel.add_property("Velocity", readable_velocity, 3)
 
-
-func _unhandled_input(event : InputEvent):
-	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-		mouseInput = event.relative
+	
+func _unhandled_input(event: InputEvent) -> void:
 	# Toggle debug menu
-	elif event is InputEventKey:
+	if event is InputEventKey:
 		if event.is_released():
 			# Where we're going, we don't need InputMap
 			if event.keycode == 4194338: # F7
@@ -547,17 +543,6 @@ func update_camera_fov():
 		CAMERA.fov = lerp(CAMERA.fov, 85.0, 0.3)
 	else:
 		CAMERA.fov = lerp(CAMERA.fov, 75.0, 0.3)
-
-func handle_pausing():
-	if Input.is_action_just_pressed(controls.PAUSE):
-		# You may want another node to handle pausing, because this player may get paused too.
-		match Input.mouse_mode:
-			Input.MOUSE_MODE_CAPTURED:
-				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-				#get_tree().paused = false
-			Input.MOUSE_MODE_VISIBLE:
-				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-				#get_tree().paused = false
 
 #endregion
 

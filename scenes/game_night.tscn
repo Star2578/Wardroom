@@ -569,7 +569,7 @@ _data = {
 
 [node name="Game" type="Node3D" unique_id=886800177]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1637463888]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1637463888 groups=["world_environments"]]
 environment = SubResource("Environment_twgab")
 
 [node name="Player" parent="." unique_id=565899461 groups=["player"] instance=ExtResource("41_qie4n")]

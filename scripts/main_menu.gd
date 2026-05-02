@@ -23,6 +23,7 @@ func _on_start_pressed() -> void:
 	start_btn.disabled = true
 	option_btn.disabled = true
 	quit_btn.disabled = true
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	
 func _input(event):
 	if not input_enabled or started:
