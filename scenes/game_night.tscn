@@ -78,6 +78,21 @@ adjustment_brightness = 0.85
 adjustment_saturation = 0.8
 adjustment_color_correction = SubResource("GradientTexture1D_diphd")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vtruy"]
+albedo_color = Color(0.7018581, 0, 0.12925306, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_bau3d"]
+material = SubResource("StandardMaterial3D_vtruy")
+size = Vector2(10, 5)
+
+[sub_resource type="QuadMesh" id="QuadMesh_bkbm0"]
+material = SubResource("StandardMaterial3D_vtruy")
+size = Vector2(10, 4)
+
+[sub_resource type="QuadMesh" id="QuadMesh_vtruy"]
+material = SubResource("StandardMaterial3D_vtruy")
+size = Vector2(4, 4)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkbm0"]
 albedo_color = Color(0.6901937, 0, 0.089548014, 1)
 
@@ -85,7 +100,7 @@ albedo_color = Color(0.6901937, 0, 0.089548014, 1)
 script = ExtResource("8_ova88")
 name = "Note"
 description = "[b]Patient's Record #5[/b]
-Date: 24/12/2025
+[color=red]Date: 24/12/2025[/color]
 
 Patient's Name: Tawan Sukhumvitayaporn
 Gender: Male
@@ -107,14 +122,14 @@ description = "[b]Map Locations[/b]
 - [color=#eb0cd4]Pink[/color]: Mini-Ward
 - [color=#ebba34]Yellow[/color]: Maintenance
 - [color=blue]Blue[/color]: Janitor Storage
-- [color=red]Red: Red Room[/color]
+- [color=red]Red: This room has been closed for 8 years now.[/color]
 "
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_corsv"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "Pain has an element of blank;
+description = "[color=red]Pain has an element of blank;
 It cannot recollect
 When it began, or if there were
 A day when it was not.
@@ -122,7 +137,7 @@ A day when it was not.
 It has no future but itself,
 Its infinite realms contain
 Its past, enlightened to perceive
-New periods of pain.
+New periods of pain.[/color]
 "
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
@@ -150,7 +165,7 @@ metadata/_custom_type_script = "uid://duu02ylefpfev"
 script = ExtResource("8_ova88")
 name = "Note"
 description = "[b]Patient's Record #2[/b]
-Date: 01/08/2023
+[color=red]Date: 01/08/2023[/color]
 
 Patient's Name: Joe Tanasin
 Gender: Male
@@ -166,11 +181,13 @@ metadata/_custom_type_script = "uid://duu02ylefpfev"
 [sub_resource type="Resource" id="Resource_bkbm0"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "I think I found him.
+description = "I think I found [b]him.[/b]
 
 A perfect vessel.
 
 Someone without any attachment.
+
+Lucky.
 
 I shall proceed with the plan and get him here.
 
@@ -182,13 +199,15 @@ metadata/_custom_type_script = "uid://duu02ylefpfev"
 [sub_resource type="Resource" id="Resource_vtruy"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "\"Don't worry Mr. Joe, I will not left you alone like the others.\"
+description = "[color=red]The door that always closed, now open.[/color]
 
-\"You have taught me many things.\"
+\"Father, you will soon be in a new body\"
 
-\"I will find a way to help you no matter what.\"
+[color=red]Unexplanable discomfort[/color]
 
-\"Even if I have to do  [b]that...[/b]\""
+[color=red]\"Mr. Joe wouldn't be able to live for long. We're so sorry.\"[/color]
+
+[color=red]This is the only chance before it's too late[/color]"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_k16l5"]
@@ -211,7 +230,7 @@ To access the safe, authorized personnel must enter a 4-digit security code. If 
 
 [b]The Code of Four[/b]
 
-[i]I am the number of legs on a lonely chair,
+[i][color=red]I am the number of legs on a lonely chair,[/color]
 Add the wheels on a unicycle found at the fair.
 Next, find the sides of a triangle's face,
 And end with the legs of a spider’s embrace.[/i]"
@@ -233,9 +252,13 @@ metadata/_custom_type_script = "uid://duu02ylefpfev"
 [sub_resource type="Resource" id="Resource_bau3d"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "Janitor has lost his key to the janitor room and the spare key is nowhere to be found. If you find them, please give it to the janitor.
+description = "\"Don't worry Mr. Joe, I will not left you alone like the others.\"
 
-Thank you"
+\"You have taught me many things.\"
+
+\"I will find a way to help you no matter what.\"
+
+\"Even if I have to do  [b]that ritual...[/b]\""
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_7efej"]
@@ -761,7 +784,7 @@ transform = Transform3D(1.433014e-17, 3.278354e-10, 0.0075, 0.0075, -3.278354e-1
 
 [node name="Safe3" parent="Maze/Props" unique_id=76779343 instance=ExtResource("51_bam3w")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 7.450672, 1.780227, -9.214039)
-password = "1431"
+password = "8821"
 
 [node name="WardroomKey" parent="Maze/Props" unique_id=1269720141 instance=ExtResource("14_ckc4g")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 7.179165, 1.780227, -9.214039)
@@ -771,6 +794,30 @@ transform = Transform3D(0.29999998, 0, 0, 0, -0.027674694, -0.29872078, 0, 0.298
 
 [node name="Blockade" parent="Maze/Props" unique_id=1662336139 instance=ExtResource("13_corsv")]
 transform = Transform3D(-1.273621e-07, 0, 2.9137053, 0, 2.9137053, 0, -2.9137053, 0, -1.273621e-07, -11.790813, 1.4970801, -2.8147736)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Maze/Props" unique_id=1268388068]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2655745, 1.1512095, -11.163403)
+mesh = SubResource("QuadMesh_bau3d")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Maze/Props" unique_id=1387335514]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.2655745, 0.05300045, -9.334503)
+mesh = SubResource("QuadMesh_bkbm0")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Maze/Props" unique_id=251028261]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 3.2655745, 3.595131, -9.394833)
+mesh = SubResource("QuadMesh_bkbm0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Maze/Props" unique_id=1597763825]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.2655745, 1.1592747, -7.352825)
+mesh = SubResource("QuadMesh_bau3d")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Maze/Props" unique_id=19379332]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, -1.6824856, 1.5960644, -9.20668)
+mesh = SubResource("QuadMesh_vtruy")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Maze/Props" unique_id=1051268129]
+transform = Transform3D(-4.371138e-08, 0, -1, 0, 1, 0, 1, 0, -4.371138e-08, 8.094566, 1.6261944, -9.20668)
+mesh = SubResource("QuadMesh_vtruy")
 
 [node name="Bathroom_Door" parent="Maze" unique_id=777424490 instance=ExtResource("25_ckc4g")]
 transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-08, -3.0852268, 1.2998244, -24.230654)
@@ -854,7 +901,7 @@ transform = Transform3D(1.2667867, -0.40063328, 0.005104535, 0.40066266, 1.26674
 object_data = SubResource("Resource_bkbm0")
 
 [node name="Note6" parent="Maze/Notes" unique_id=139745004 instance=ExtResource("2_gs0vb")]
-transform = Transform3D(-1.3284376, -0.023102313, -0.0013663475, -0.023089163, 1.3283842, -0.011975723, 0.0015743315, -0.011950203, -1.3285844, 2.6745481, 2.3628933, -6.5093536)
+transform = Transform3D(-1.3284376, -0.023102313, -0.0013663475, -0.023089163, 1.3283842, -0.011975723, 0.0015743315, -0.011950203, -1.3285844, 2.8709106, 1.8307219, -6.5269775)
 object_data = SubResource("Resource_vtruy")
 
 [node name="Note7" parent="Maze/Notes" unique_id=725858910 instance=ExtResource("2_gs0vb")]
@@ -871,6 +918,10 @@ object_data = SubResource("Resource_4wqlp")
 
 [node name="Note8" parent="Maze/Notes" unique_id=155127105 instance=ExtResource("2_gs0vb")]
 transform = Transform3D(-3.779839e-08, 0, -0.86472636, -0.21468325, 0.8376531, 9.3841015e-09, 0.8376531, 0.21468325, -3.661498e-08, -16.368374, 1.9558289, 15.730673)
+object_data = SubResource("Resource_bau3d")
+
+[node name="Note12" parent="Maze/Notes" unique_id=521886489 instance=ExtResource("2_gs0vb")]
+transform = Transform3D(0.83765304, 0.21468322, 1.1834018e-09, -0.21468323, 0.8376531, 9.3841015e-09, 1.1834089e-09, -9.384105e-09, 0.86472636, -22.297634, 2.0559328, -18.354736)
 object_data = SubResource("Resource_bau3d")
 
 [node name="Random_Points" type="Node3D" parent="Maze" unique_id=2021010516]
@@ -1221,7 +1272,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.075315, 3.5727468, -39.264
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.021664, 3.5727468, -43.242996)
 
 [node name="Ceiling_Light5" parent="Maze/Lights" unique_id=1232263164 instance=ExtResource("41_7efej")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.707825, 3.5727458, -47.32098)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.8465, 3.5727458, -47.32098)
 
 [node name="Ceiling_Light22" parent="Maze/Lights" unique_id=1199567114 instance=ExtResource("41_7efej")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.929562, 3.5727458, -54.34205)
