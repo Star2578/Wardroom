@@ -154,4 +154,6 @@ func _on_attack_area_body_entered(body: Node3D):
 func game_over():
 	game_over_ui.show()
 	await get_tree().create_timer(2).timeout
-	get_tree().reload_current_scene()
+	# get_tree().reload_current_scene()
+	game_over_ui.hide()
+	GameController.player.position = Vector3(43.159, 0, 26.064)

@@ -47,7 +47,7 @@ shadow_mesh = SubResource("ArrayMesh_7731h")
 [sub_resource type="Resource" id="Resource_hokdt"]
 script = ExtResource("4_7smgh")
 name = "Red Key"
-description = "A red key..."
+description = "A stinky red key..."
 icon = ExtResource("2_do8sa")
 mesh = SubResource("ArrayMesh_do8sa")
 mesh_scale = Vector3(4, 4, 4)

@@ -100,7 +100,7 @@ albedo_color = Color(0.6901937, 0, 0.089548014, 1)
 script = ExtResource("8_ova88")
 name = "Note"
 description = "[b]Patient's Record #5[/b]
-[color=red]Date: 24/12/2025[/color]
+Date: 24/12/[color=red]2025[/color]
 
 Patient's Name: Tawan Sukhumvitayaporn
 Gender: Male
@@ -121,7 +121,7 @@ description = "[b]Map Locations[/b]
 - [color=green]Green[/color]: Examination Room
 - [color=#eb0cd4]Pink[/color]: Mini-Ward
 - [color=#ebba34]Yellow[/color]: Maintenance
-- [color=blue]Blue[/color]: Janitor Storage
+- [color=blue]Blue[/color]: Equipment Room
 - [color=red]Red: This room has been closed for 8 years now.[/color]
 "
 metadata/_custom_type_script = "uid://duu02ylefpfev"
@@ -129,7 +129,7 @@ metadata/_custom_type_script = "uid://duu02ylefpfev"
 [sub_resource type="Resource" id="Resource_corsv"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "[color=red]Pain has an element of blank;
+description = "Pain has an element of blank;
 It cannot recollect
 When it began, or if there were
 A day when it was not.
@@ -137,7 +137,7 @@ A day when it was not.
 It has no future but itself,
 Its infinite realms contain
 Its past, enlightened to perceive
-New periods of pain.[/color]
+New periods of pain.
 "
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
@@ -165,7 +165,7 @@ metadata/_custom_type_script = "uid://duu02ylefpfev"
 script = ExtResource("8_ova88")
 name = "Note"
 description = "[b]Patient's Record #2[/b]
-[color=red]Date: 01/08/2023[/color]
+Date: 01/08/[color=red]2023[/color]
 
 Patient's Name: Joe Tanasin
 Gender: Male
@@ -199,15 +199,13 @@ metadata/_custom_type_script = "uid://duu02ylefpfev"
 [sub_resource type="Resource" id="Resource_vtruy"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "[color=red]The door that always closed, now open.[/color]
+description = "[color=red]The heavy seal is broken; the silence of eight winters has ended.[/color]
 
-\"Father, you will soon be in a new body\"
+[color=red]A lonely chair stands steady, though its owner is gone.[/color]
 
-[color=red]Unexplanable discomfort[/color]
+[color=red]The interval of agony: from the first breath of the end to the crash of the present.[/color]
 
-[color=red]\"Mr. Joe wouldn't be able to live for long. We're so sorry.\"[/color]
-
-[color=red]This is the only chance before it's too late[/color]"
+[color=red]The singular path remains before the darkness is absolute.[/color]"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_k16l5"]
@@ -596,11 +594,15 @@ _data = {
 environment = SubResource("Environment_twgab")
 
 [node name="Player" parent="." unique_id=565899461 groups=["player"] instance=ExtResource("41_qie4n")]
+process_mode = 1
 transform = Transform3D(1.3113417e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113417e-07, 43.158855, -1.3113022e-06, 26.063908)
 immobile = true
 
 [node name="Ghost" parent="." unique_id=1439193727 node_paths=PackedStringArray("navRegion", "random_points") instance=ExtResource("9_hilkp")]
 transform = Transform3D(0.55, 0, 0, 0, 0.55, 0, 0, 0, 0.55, 19.582333, 0.41124392, -25.553679)
+lose_sight_delay = 3.0
+vision_angle = 45.0
+vision_range = 10.0
 navRegion = NodePath("../Maze/NavigationRegion3D")
 random_points = NodePath("../Maze/Random_Points")
 
@@ -784,7 +786,7 @@ transform = Transform3D(1.433014e-17, 3.278354e-10, 0.0075, 0.0075, -3.278354e-1
 
 [node name="Safe3" parent="Maze/Props" unique_id=76779343 instance=ExtResource("51_bam3w")]
 transform = Transform3D(-2.1855694e-08, 0, -0.5, 0, 0.5, 0, 0.5, 0, -2.1855694e-08, 7.450672, 1.780227, -9.214039)
-password = "8821"
+password = "8421"
 
 [node name="WardroomKey" parent="Maze/Props" unique_id=1269720141 instance=ExtResource("14_ckc4g")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 7.179165, 1.780227, -9.214039)
