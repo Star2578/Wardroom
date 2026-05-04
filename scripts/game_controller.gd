@@ -31,6 +31,12 @@ var interactable_ui: InteractableUI = null
 var inventory_ui: InventoryUI = null
 var inspect_item_ui: InspectItemUI = null
 
+signal language_changed
+
+func set_language(lang: String):
+	TranslationServer.set_locale(lang)
+	emit_signal("language_changed")
+	
 func _ready():
 	print("GameManager Initiated")
 	master_bus_index = AudioServer.get_bus_index("Master")
@@ -77,8 +83,6 @@ func _on_tree_node_added(node: Node) -> void:
 
 
 func toggle_options_menu():
-	if !is_started:
-		return
 			
 	if option.visible:
 		option.visible = false

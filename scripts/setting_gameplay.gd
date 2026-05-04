@@ -20,9 +20,13 @@ func _ready() -> void:
 	update_label()
 	update_invert_y_buttons()
 	update_invert_x_buttons()
+	apply_language()
 	
 func apply_language():
-	pass
+	if index == 0:
+		GameController.set_language("english")
+	else:
+		GameController.set_language("thai")
 
 func update_label():
 	language_label.text = options[index]

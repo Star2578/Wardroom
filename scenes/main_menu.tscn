@@ -579,7 +579,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_8ln24")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8ln24")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_8ln24")
-text = "P R E S S   A N Y   K E Y"
+text = "PRESS_ANY_KEY"
 script = ExtResource("3_lgwnu")
 
 [node name="Option" type="Button" parent="MainMenu" unique_id=2132835898]

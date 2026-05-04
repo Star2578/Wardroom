@@ -36,8 +36,8 @@ border_blend = true
 
 [sub_resource type="Resource" id="Resource_3v7ln"]
 script = ExtResource("4_8cluo")
-name = "WINDOW MODE"
-description = "Choose how the game is displayed on your screen (Windowed, or Fullscreen)"
+name = "WINDOW_MODE"
+description = "DESC_WINDOW_MODE"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipxes"]
@@ -47,7 +47,7 @@ metadata/_custom_type_script = "uid://d353rh4qt4rt"
 [sub_resource type="Resource" id="Resource_8cluo"]
 script = ExtResource("4_8cluo")
 name = "GAMMA"
-description = "Adjust the overall brightness of the game. Increase if the screen appears too dark"
+description = "DESC_GAMMA"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8cluo"]
@@ -57,49 +57,49 @@ content_margin_right = 15.0
 [sub_resource type="Resource" id="Resource_exh7f"]
 script = ExtResource("4_8cluo")
 name = "LANGUAGE"
-description = "Select the language used for menus and in-game text"
+description = "DESC_LANGUAGE"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_ipxes"]
 script = ExtResource("4_8cluo")
-name = "MOUSE CAMERA SENSITIVITY"
-description = "Control how fast the camera moves when you move the mouse"
+name = "CAMERA_SENSITIVITY"
+description = "DESC_CAMERA_SENSITIVITY"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_qmy5y"]
 script = ExtResource("4_8cluo")
-name = "INVERT Y-AXIS"
-description = "Invert vertical camera movement. Moving the mouse up will look down"
+name = "INVERT_Y_AXIS"
+description = "DESC_INVERT_Y_AXIS"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_cwi08"]
 script = ExtResource("4_8cluo")
-name = "INVERT X-AXIS"
-description = "Invert horizontal camera movement. Moving the mouse left will look right"
+name = "INVERT_X_AXIS"
+description = "DESC_INVERT_X_AXIS"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_0l6ot"]
 script = ExtResource("4_8cluo")
-name = "MASTER VOLUME"
-description = "Adjust the overall volume of all sounds in the game"
+name = "MASTER_VOLUME"
+description = "DESC_MASTER_VOLUME"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_qfnje"]
 script = ExtResource("4_8cluo")
 name = "MUSIC"
-description = "Affects ambient tracks, themes, and audio during gameplay"
+description = "DESC_MUSIC"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_gv6e0"]
 script = ExtResource("4_8cluo")
 name = "SFX"
-description = "Includes footsteps, doors, interactions, UI clicks, and environmental sounds"
+description = "DESC_SFX"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="Resource" id="Resource_fk28c"]
 script = ExtResource("4_8cluo")
 name = "DIALOGUE"
-description = "Affects the text blip audio (“tud-tud”) when dialogue appears"
+description = "DESC_DIALOGUE"
 metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3v7ln"]
@@ -183,7 +183,6 @@ layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="VideoContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=2124108777]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.5
@@ -222,7 +221,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/WindowMode/HBoxContainer/MarginContainer" unique_id=29137758]
 layout_mode = 2
-text = "Window Mode"
+text = "WINDOW_MODE"
 
 [node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/WindowMode/HBoxContainer" unique_id=71900404]
 layout_mode = 2
@@ -281,7 +280,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/Gamma/HBoxContainer/MarginContainer" unique_id=635760271]
 layout_mode = 2
-text = "Gamma"
+text = "GAMMA"
 
 [node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/VideoContainer/PanelContainer/MarginContainer/VBoxContainer/Gamma/HBoxContainer" unique_id=781550174]
 layout_mode = 2
@@ -316,7 +315,6 @@ step = 0.01
 value = 1.0
 
 [node name="GameplayContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=322427590]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.5
@@ -355,7 +353,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/Language/HBoxContainer/MarginContainer" unique_id=1515200438]
 layout_mode = 2
-text = "Language"
+text = "LANGUAGE"
 
 [node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/Language/HBoxContainer" unique_id=1993341924]
 layout_mode = 2
@@ -414,7 +412,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/MouseCameraSensitivity/HBoxContainer/MarginContainer" unique_id=2079047567]
 layout_mode = 2
-text = "Mouse Camera Sensitivity"
+text = "CAMERA_SENSITIVITY"
 
 [node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/MouseCameraSensitivity/HBoxContainer" unique_id=1809826082]
 layout_mode = 2
@@ -467,7 +465,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer/MarginContainer" unique_id=1318527527]
 layout_mode = 2
-text = "Invert Y-Axis"
+text = "INVERT_Y_AXIS"
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertYAxis/HBoxContainer" unique_id=825093094]
 custom_minimum_size = Vector2(132, 0)
@@ -512,7 +510,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer/MarginContainer" unique_id=762582652]
 layout_mode = 2
-text = "Invert X-Axis"
+text = "INVERT_X_AXIS"
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/GameplayContainer/PanelContainer/MarginContainer/VBoxContainer/InvertXAxis/HBoxContainer" unique_id=1766328781]
 custom_minimum_size = Vector2(132, 0)
@@ -539,7 +537,6 @@ theme_override_styles/normal = ExtResource("9_qfnje")
 text = "ON"
 
 [node name="ControlsContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1696195222]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 6.5
@@ -585,7 +582,7 @@ layout_mode = 2
 
 [node name="ResetBtn" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/ControlsContainer/PanelContainer/MarginContainer/ActionList/ResetPanel/MarginContainer" unique_id=1325871632]
 layout_mode = 2
-text = "RESET TO DEFAULT"
+text = "RESET_TO_DEFAULT"
 
 [node name="AudioContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=625036600]
 layout_mode = 2
@@ -627,7 +624,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="VolumeLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/MasterVolume/HBoxContainer/MarginContainer" unique_id=1095931561]
 layout_mode = 2
-text = "Master Volumn"
+text = "MASTER_VOLUME"
 
 [node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/MasterVolume/HBoxContainer" unique_id=2018537791]
 layout_mode = 2
@@ -675,7 +672,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="MusicLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/Music/HBoxContainer/MarginContainer" unique_id=1079576703]
 layout_mode = 2
-text = "Music"
+text = "MUSIC"
 
 [node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/Music/HBoxContainer" unique_id=1531792853]
 layout_mode = 2
@@ -771,7 +768,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="DialogueLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/Dialogue/HBoxContainer/MarginContainer" unique_id=675335800]
 layout_mode = 2
-text = "Dialogue"
+text = "DIALOGUE"
 
 [node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/HBoxContainer/AudioContainer/PanelContainer/MarginContainer/VBoxContainer/Dialogue/HBoxContainer" unique_id=161740773]
 layout_mode = 2

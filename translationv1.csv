@@ -1,0 +1,333 @@
+key,english,thai
+
+# --- OPTION TAB ---
+VIDEO,VIDEO,วิดีโอ
+GAMEPLAY,GAMEPLAY,รูปแบบการเล่น
+CONTROLS,CONTROLS,การควบคุม
+AUDIO,AUDIO,เสียง
+
+# --- OPTION SETTINGS ---
+WINDOW_MODE,Window Mode,โหมดหน้าจอ
+FULL_SCREEN,FULL SCREEN,เต็มหน้าจอ
+WINDOWED,WINDOWED,หน้าต่าง
+GAMMA,Gamma,ความสว่าง
+LANGUAGE,Language,ภาษา
+CAMERA_SENSITIVITY,Mouse Camera Sensitivity,ความไวของกล้อง
+INVERT_Y_AXIS,Invert Y-Axis,สลับการเคลื่อนไหวของเมาส์แกน Y
+INVERT_X_AXIS,Invert X-Axis,สลับการเคลื่อนไหวของเมาส์แกน X
+OFF,OFF,ปิด
+ON,ON,เปิด
+RESET_TO_DEFAULT,RESET TO DEFAULT,รีเซ็ตค่าเริ่มต้น
+MASTER_VOLUME,Master Volume,เสียงหลัก
+MUSIC,Music,ดนตรี
+SFX,SFX,เอฟเฟกต์เสียง
+DIALOGUE,Dialogue,เสียงบทสนทนา
+
+# --- DESCRIPTIONS ---
+DESC_WINDOW_MODE,"Choose how the game is displayed on your screen (Windowed, or Fullscreen)",เลือกวิธีการแสดงผลของเกมบนหน้าจอ (แบบหน้าต่าง หรือ เต็มหน้าจอ)
+DESC_GAMMA,Adjust the overall brightness of the game. Increase if the screen appears too dark,ปรับความสว่างโดยรวมของเกม หากหน้าจอมืดเกินไปให้เพิ่มค่า
+DESC_LANGUAGE,Select the language used for menus and in-game text,เลือกภาษาที่ใช้ในเมนูและข้อความภายในเกม
+DESC_CAMERA_SENSITIVITY,Control how fast the camera moves when you move the mouse,ควบคุมความเร็วของกล้องเมื่อคุณขยับเมาส์
+DESC_INVERT_Y_AXIS,Invert vertical camera movement. Moving the mouse up will look down,สลับการเคลื่อนที่แนวตั้งของกล้อง การขยับเมาส์ขึ้นจะทำให้มองลง
+DESC_INVERT_X_AXIS,Invert horizontal camera movement. Moving the mouse left will look right,สลับการเคลื่อนที่แนวนอนของกล้อง การขยับเมาส์ไปซ้ายจะทำให้มองขวา
+DESC_MASTER_VOLUME,Adjust the overall volume of all sounds in the game,ปรับระดับเสียงทั้งหมดของเกม
+DESC_MUSIC,"Affects ambient tracks, themes, and audio during gameplay",มีผลต่อเพลงบรรยากาศ ธีม และเสียงระหว่างการเล่นเกม
+DESC_SFX,"Includes footsteps, doors, interactions, UI clicks, and environmental sounds",รวมถึงเสียงฝีเท้า ประตู การโต้ตอบ เสียง UI และเสียงสภาพแวดล้อม
+DESC_DIALOGUE,Affects the text blip audio (“tud-tud”) when dialogue appears,มีผลต่อเสียงประกอบข้อความ (“ตู๊ด-ตู๊ด”) เมื่อมีบทสนทนา
+DESC_MOVE_FORWARD,"Move the character forward","ทำให้ตัวละครเดินไปข้างหน้า"
+DESC_MOVE_BACKWARD,"Move the character backward","ทำให้ตัวละครเดินถอยหลัง"
+DESC_MOVE_LEFT,"Move the character to the left","ทำให้ตัวละครเคลื่อนที่ไปทางซ้าย"
+DESC_MOVE_RIGHT,"Move the character to the right","ทำให้ตัวละครเคลื่อนที่ไปทางขวา"
+DESC_CROUCH,"Make the character crouch","ทำให้ตัวละครย่อตัว"
+DESC_INTERACT,"Interact with objects in the world","โต้ตอบกับวัตถุภายในเกม"
+DESC_INVENTORY,"Open the inventory menu","เปิดเมนูช่องเก็บของ"
+
+# --- MAIN MENU ---
+RESUME,Resume,เล่นต่อ
+OPTIONS,Options,ตั้งค่า
+QUIT_TO_MAIN_MENU,Quit To Main Menu,กลับไปเมนูหลัก
+QUIT,Quit,ออกจากเกม
+PRESS_ANY_KEY,P R E S S   A N Y   K E Y, กดปุ่มเพื่อเริ่ม
+
+# --- CONTROLS ---
+MOVE_FORWARD,Move forward,เดินไปข้างหน้า
+MOVE_BACKWARD,Move backward,เดินถอยหลัง
+MOVE_LEFT,Move left,เดินไปทางซ้าย
+MOVE_RIGHT,Move right,เดินไปทางขวา
+CROUCH,Crouch,ย่อตัว
+INTERACT,Interact,กดโต้ตอบ
+INVENTORY,Inventory,เปิด-ปิดช่องเก็บของ
+
+# --- scene1.json DIALOGUE ---
+CSA01_001,"It was a calm night.","มันเป็นคืนที่เงียบสงบ"
+CSA01_002,"I was driving back home for holiday vacation.","ฉันกำลังขับรถกลับบ้านในช่วงวันหยุด"
+CSA01_003,"Sadly, my GPS guided me through what it called a [i]shortcut[/i]","น่าเสียดายที่ GPS พาฉันไปทางที่มันเรียกว่า [i]ทางลัด[/i]"
+
+CSA02_001,"""I shouldn't be driving long distance at night.""","""ฉันไม่ควรขับรถไกลตอนกลางคืนเลย"""
+CSA02_002,"""But well, here I am.""","""แต่ก็เอาเถอะ ตอนนี้ฉันก็อยู่ตรงนี้แล้ว"""
+CSA02_003,"""[i]Sigh[/i] how far am I from a nearest gas station?""","""[i]เฮ้อ[/i] ปั๊มน้ำมันที่ใกล้ที่สุดอยู่ไกลแค่ไหนนะ"""
+
+CSA03_001,"""I've been driving for so long, I start to feel like...""","""ฉันขับรถมานานมาก จนเริ่มรู้สึกว่า..."""
+CSA03_002,"""Shit!!""","""บ้าเอ๊ย!!"""
+
+# --- scene2.json DIALOGUE ---
+CS01_001,"[color=#967318]""Ah.. so you're finally awake.""[/color]","[color=#967318]""อ่า.. ในที่สุดคุณก็ฟื้นแล้ว""[/color]"
+CS01_002,"[color=#967318]""Our hospital has been taking care of you.""[/color]","[color=#967318]""โรงพยาบาลของเราได้ดูแลคุณอยู่""[/color]"
+CS01_003,"[color=#967318]""You're lucky to suffer only minor injuries and a broken leg.""[/color]","[color=#967318]""คุณโชคดีที่บาดเจ็บเพียงเล็กน้อยและขาหัก""[/color]"
+CS01_004,"[color=#967318]""Please don't move around too much for now.""[/color]","[color=#967318]""ตอนนี้อย่าเพิ่งขยับตัวมากนะ""[/color]"
+CS01_005,"[color=#967318]""Your personal belongings are on that drawer over there.""[/color]","[color=#967318]""ของใช้ส่วนตัวของคุณอยู่ในลิ้นชักตรงนั้น""[/color]"
+CS01_006,"[color=#967318]""Our staff will bring you something to eat.""[/color]","[color=#967318]""เจ้าหน้าที่จะนำอาหารมาให้คุณ""[/color]"
+CS01_007,"I better get my phone and check if I have any messages.","ฉันควรหยิบโทรศัพท์มาเช็คว่ามีข้อความไหม"
+
+CS02_001,"Shit, I dropped my phone!","บ้าเอ๊ย ฉันทำโทรศัพท์ตก!"
+CS02_002,"It got into the other patient's bed.","มันไปอยู่บนเตียงของคนไข้คนอื่น"
+CS02_003,"...","..."
+CS02_004,"I cannot move...","ฉันขยับไม่ได้..."
+CS02_005,"[color=#106b3f]""Hello sir, you seem to have dropped this.""[/color]","[color=#106b3f]""สวัสดีค่ะ ดูเหมือนคุณจะทำของตกนะคะ""[/color]"
+CS02_006,"[color=#106b3f]""Here you go, sir.""[/color]","[color=#106b3f]""นี่ค่ะ""[/color]"
+CS02_007,"""Thank you, Mr...?""","""ขอบคุณนะครับ คุณ...?"""
+CS02_008,"[color=#106b3f]""You can call me Kla, Mr. Sunny""[/color]","[color=#106b3f]""เรียกฉันว่า Kla ก็ได้ค่ะ คุณ Sunny""[/color]"
+CS02_009,"I cannot help but notice that old man on the bed next to him...","ฉันอดสังเกตชายแก่บนเตียงข้าง ๆ ไม่ได้..."
+CS02_010,"he seems to be in a lot of pain.","เขาดูเหมือนจะเจ็บปวดมาก"
+CS02_011,"""Is he going to be okay?""","""เขาจะไม่เป็นอะไรใช่ไหม?"""
+CS02_012,"[color=#106b3f]""Yes, he has been worse.""[/color]","[color=#106b3f]""ค่ะ เขาเคยแย่กว่านี้""[/color]"
+CS02_013,"[color=#106b3f]""He's very old and surrounded by diseases.""[/color]","[color=#106b3f]""เขาอายุมากและมีโรครุมเร้า""[/color]"
+CS02_014,"[color=#106b3f]""Body corroded as time passed.""[/color]","[color=#106b3f]""ร่างกายเสื่อมโทรมไปตามกาลเวลา""[/color]"
+CS02_015,"[color=#106b3f]""I am here to treat him until he got into a better place.""[/color]","[color=#106b3f]""ฉันอยู่ที่นี่เพื่อดูแลเขาจนกว่าเขาจะไปสู่ที่ที่ดีกว่า""[/color]"
+CS02_016,"That's... hopeful... probably","มันก็... ฟังดูมีความหวังนะ...มั้ง"
+CS02_017,"[color=#967318]""Your food is here.""[/color]","[color=#967318]""อาหารมาแล้วค่ะ""[/color]"
+CS02_018,"""Oh, thank you.. I didn't see you coming""","""โอ้ ขอบคุณครับ... ผมไม่ทันเห็นคุณเลย"""
+CS02_019,"[color=#106b3f]""Until next time, Mr. Sunny""[/color]","[color=#106b3f]""ไว้พบกันใหม่นะคะ คุณ Sunny""[/color]"
+CS02_020,"...","..."
+CS02_021,"And she's gone...","แล้วเธอก็หายไป..."
+CS02_022,"I suppose I should eat this.","ฉันควรกินนี่สินะ"
+
+CS03_001,"Why do I suddenly feels... so sleepy...","ทำไมฉันถึงรู้สึก... ง่วงขึ้นมาทันที..."
+
+
+# --- dream_start.json DIALOGUE ---
+CSB01_001,"Huh? Where am I?","หืม? ฉันอยู่ที่ไหน?"
+CSB01_002,"...","..."
+CSB01_003,"Seems like the hospital hallway.","ดูเหมือนจะเป็นโถงทางเดินของโรงพยาบาล"
+CSB01_004,"Wait a minute.. I can stand up now?","เดี๋ยวก่อนนะ.. ฉันยืนได้แล้วเหรอ?"
+CSB01_005,"I should look around for clues","ฉันควรสำรวจหาหลักฐานดู"
+
+# --- OTHERS ---
+TOILET_001,"Some people are the worse...","บางคนนี่แย่จริง ๆ..."
+TOILET_002,"It's broken...","มันพังแล้ว..."
+GAME_OVER,"GAME OVER","คุณตายแล้ว"
+
+# --- NOTE ---
+NOTE,"Note","บันทึก"
+NOTE_000_DESC,"[b]Patient's Record #5[/b]
+Date: 24/12/[color=red]2025[/color]
+
+Patient's Name: Tawan Sukhumvitayaporn
+Gender: Male
+Age: 25
+Blood Type: A
+
+Description:
+Suffered minor injuries and broken left ankle from car accident. Luckily, there is a good citizen brought him to the hospital.
+Name of that person is Kmsodfmsamlfd,sadfie----
+
+Assigned to Bed #0340","[b]บันทึกผู้ป่วย #5[/b]
+วันที่: 24/12/[color=red]2025[/color]
+
+ชื่อผู้ป่วย: ตะวัน สุขุมวิททยาพร
+เพศ: ชาย
+อายุ: 25
+กรุ๊ปเลือด: A
+
+รายละเอียด:
+ได้รับบาดเจ็บเล็กน้อยและข้อเท้าซ้ายหักจากอุบัติเหตุทางรถยนต์ โชคดีที่มีพลเมืองดีพามาส่งโรงพยาบาล
+ชื่อของบุคคลนั้นคือ Kmsodfmsamlfd,sadfie----
+
+เตียงหมายเลข #0340"
+NOTE_011_DESC,"[b]Map Locations[/b]
+- [color=green]Green[/color]: Examination Room
+- [color=#eb0cd4]Pink[/color]: Mini-Ward
+- [color=#ebba34]Yellow[/color]: Maintenance
+- [color=blue]Blue[/color]: Equipment Room
+- [color=red]Red: This room has been closed for 8 years now.[/color]","[b]ตำแหน่งแผนที่[/b]
+- [color=green]เขียว[/color]: ห้องตรวจ
+- [color=#eb0cd4]ชมพู[/color]: มินิวอร์ด
+- [color=#ebba34]เหลือง[/color]: ซ่อมบำรุง
+- [color=blue]น้ำเงิน[/color]: ห้องอุปกรณ์
+- [color=red]แดง: ห้องนี้ถูกปิดมาแล้ว 8 ปี[/color]"
+
+NOTE_002_DESC,"Pain has an element of blank;
+It cannot recollect
+When it began, or if there were
+A day when it was not.
+
+It has no future but itself,
+Its infinite realms contain
+Its past, enlightened to perceive
+New periods of pain.","ความเจ็บปวดมีช่องว่างบางอย่าง;
+มันไม่อาจจดจำได้
+ว่ามันเริ่มเมื่อใด หรือเคยมี
+วันที่มันไม่อยู่หรือไม่
+
+มันไม่มีอนาคตนอกจากตัวมันเอง
+อาณาเขตอันไร้ที่สิ้นสุดของมัน
+บรรจุอดีตเอาไว้ ให้รับรู้
+ช่วงเวลาใหม่ของความเจ็บปวด"
+
+NOTE_003_DESC,"Notice:
+- Please refrain from running in hallway.
+- No smoking within the facility.
+
+Allowed Visit Time:
+8.00 AM - 17.00 PM
+
+Thank you for your cooperation","ประกาศ:
+- กรุณางดวิ่งในโถงทางเดิน
+- ห้ามสูบบุหรี่ภายในสถานที่
+
+เวลาเยี่ยม:
+8.00 - 17.00 น.
+
+ขอบคุณสำหรับความร่วมมือ"
+
+NOTE_DEADEND_DESC,"[color=red]DEAD END[/color]","[color=red]ทางตัน[/color]"
+
+NOTE_004_DESC,"[b]Patient's Record #2[/b]
+Date: 01/08/[color=red]2023[/color]
+
+Patient's Name: Joe Tanasin
+Gender: Male
+Age: 55
+Blood Type: O
+
+Description:
+Non-responsive to final round of chemotherapy. Patient is bed-bound and requires 24/7 morphine drip for pain regulation. Expected prognosis: Weeks/Days
+
+Assigned to Bed #1431","[b]บันทึกผู้ป่วย #2[/b]
+วันที่: 01/08/[color=red]2023[/color]
+
+ชื่อผู้ป่วย: Joe Tanasin
+เพศ: ชาย
+อายุ: 55
+กรุ๊ปเลือด: O
+
+รายละเอียด:
+ไม่ตอบสนองต่อการทำเคมีบำบัดรอบสุดท้าย ผู้ป่วยนอนติดเตียงและต้องใช้มอร์ฟีนตลอด 24 ชั่วโมงเพื่อควบคุมความเจ็บปวด คาดการณ์อาการ: สัปดาห์/วัน
+
+เตียงหมายเลข #1431"
+
+NOTE_005_DESC,"I think I found [b]him.[/b]
+
+A perfect vessel.
+
+Someone without any attachment.
+
+Lucky.
+
+I shall proceed with the plan and get him here.
+
+It won't be long now, father.
+
+You'll be able to live a normal live once again.","ฉันคิดว่าฉันเจอ [b]เขาแล้ว[/b]
+
+ภาชนะที่สมบูรณ์แบบ
+
+คนที่ไม่มีพันธะใด ๆ
+
+โชคดีจริง ๆ
+
+ฉันจะดำเนินแผนต่อและพาเขามาที่นี่
+
+อีกไม่นานแล้ว พ่อ
+
+พ่อจะสามารถกลับมาใช้ชีวิตปกติได้อีกครั้ง"
+
+NOTE_006_DESC,"[color=red]The heavy seal is broken; the silence of eight winters has ended.[/color]
+
+[color=red]A lonely chair stands steady, though its owner is gone.[/color]
+
+[color=red]The interval of agony: from the first breath of the end to the crash of the present.[/color]
+
+[color=red]The singular path remains before the darkness is absolute.[/color]","[color=red]ผนึกอันหนักหน่วงถูกทำลาย ความเงียบงันแปดปีสิ้นสุดลง[/color]
+
+[color=red]เก้าอี้ตัวเดียวยังคงตั้งมั่น แม้เจ้าของจะจากไป[/color]
+
+[color=red]ช่วงเวลาแห่งความทรมาน: จากลมหายใจแรกของจุดจบ สู่การปะทะของปัจจุบัน[/color]
+
+[color=red]เส้นทางเดียวที่เหลืออยู่ ก่อนความมืดจะกลืนทุกสิ่ง[/color]"
+
+NOTE_007_DESC,"I don't really get why they changed the policy to make lost and found box into lost and found safe.
+
+They all forgot to tell me the password too. I am the one who do everything around here. Unacceptable.","ฉันไม่เข้าใจเลยว่าทำไมพวกเขาถึงเปลี่ยนนโยบาย จากกล่องของหายเป็นตู้เซฟของหาย
+
+พวกเขายังลืมบอกรหัสฉันอีก ฉันเป็นคนที่ทำงานทุกอย่างที่นี่แท้ ๆ รับไม่ได้จริง ๆ"
+
+NOTE_009_DESC,"[b]Recent changes about Lost and Found[/b]
+
+Due to recent feedback regarding the security of items within our Lost and Found, we are implementing a new protocol to ensure the safety of recovered property. Effective immediately, all high-value or sensitive items will be secured in a dedicated onsite safe rather than being kept in open storage.
+
+[b]Security Access[/b]
+To access the safe, authorized personnel must enter a 4-digit security code. If you have forgotten the combination, please solve the following riddle:
+
+[b]The Code of Four[/b]
+
+[i][color=red]I am the number of legs on a lonely chair,
+Add the wheels on a unicycle found at the fair.
+Next, find the sides of a triangle's face,
+And end with the legs of a spider’s embrace.[/color][/i]","[b]การเปลี่ยนแปลงล่าสุดเกี่ยวกับของหาย[/b]
+
+จากความคิดเห็นล่าสุดเกี่ยวกับความปลอดภัยของสิ่งของในระบบของหาย เราจึงได้ปรับใช้นโยบายใหม่เพื่อเพิ่มความปลอดภัยของทรัพย์สินที่พบ โดยมีผลทันที สิ่งของที่มีมูลค่าสูงหรือมีความสำคัญจะถูกเก็บไว้ในตู้เซฟเฉพาะ แทนการเก็บในที่เปิด
+
+[b]การเข้าถึง[/b]
+ในการเปิดตู้เซฟ เจ้าหน้าที่ที่ได้รับอนุญาตต้องใส่รหัส 4 หลัก หากคุณลืมรหัส กรุณาแก้ปริศนาต่อไปนี้:
+
+[b]รหัสแห่งสี่[/b]
+
+[i][color=red]ฉันคือจำนวนขาของเก้าอี้เดียวดาย,
+บวกกับล้อของจักรยานล้อเดียวในงานรื่นเริง
+จากนั้นหาจำนวนด้านของรูปสามเหลี่ยม
+และปิดท้ายด้วยจำนวนขาของแมงมุม[/color][/i]"
+
+NOTE_010_DESC,"Weekly Complains:
+- Someone forget to clean up after themselves after taking a dump in the toilet plus that toilet is broken right now
+
+- Janitor lost his key to the equipment room
+
+-When will there be free WiFi
+
+- WHAT DO YOU MEAN I HAVE TO SOLVE RIDDLES FOR PASSWORD!","ข้อร้องเรียนประจำสัปดาห์:
+- มีคนไม่ยอมทำความสะอาดหลังใช้ห้องน้ำ แถมห้องน้ำก็พังอยู่ตอนนี้
+
+- ภารโรงทำกุญแจห้องอุปกรณ์หาย
+
+- เมื่อไหร่จะมี WiFi ฟรี
+
+- อะไรนะ ต้องแก้ปริศนาเพื่อเอารหัสเนี่ยนะ!"
+
+NOTE_008_DESC,"""Don't worry Mr. Joe, I will not left you alone like the others.""
+
+""You have taught me many things.""
+
+""I will find a way to help you no matter what.""
+
+""Even if I have to do  [b]that ritual...[/b]""","""ไม่ต้องห่วงนะคุณ Joe ฉันจะไม่ทิ้งคุณเหมือนคนอื่น""
+
+""คุณสอนฉันหลายอย่างมาก""
+
+""ฉันจะหาวิธีช่วยคุณให้ได้ ไม่ว่าจะยังไง""
+
+""แม้ว่าฉันจะต้องทำ [b]พิธีนั้น...[/b]"""
+
+NOTE_012_DESC,"""Don't worry Mr. Joe, I will not left you alone like the others.""
+
+""You have taught me many things.""
+
+""I will find a way to help you no matter what.""
+
+""Even if I have to do  [b]that ritual...[/b]""","""ไม่ต้องห่วงนะคุณ Joe ฉันจะไม่ทิ้งคุณเหมือนคนอื่น""
+
+""คุณสอนฉันหลายอย่างมาก""
+
+""ฉันจะหาวิธีช่วยคุณให้ได้ ไม่ว่าจะยังไง""
+
+""แม้ว่าฉันจะต้องทำ [b]พิธีนั้น...[/b]"""

@@ -9,7 +9,7 @@ var has_key: bool = false
 func interact():
 	has_key = GameController.got_plunger
 	if not has_key:
-		GameController.text_writer.play_text("Some people are the worse...")
+		GameController.text_writer.play_text("TOILET_001")
 	else:
 		GameController.got_plunger = false
 		var rk: Interactable = red_key.instantiate()

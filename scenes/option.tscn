@@ -60,7 +60,7 @@ layout_mode = 2
 mouse_filter = 1
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("3_0chu7")
-text = "Resume"
+text = "RESUME"
 
 [node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=2112962758]
 layout_mode = 2
@@ -70,7 +70,7 @@ script = ExtResource("2_4u85i")
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("3_0chu7")
-text = "Options"
+text = "OPTIONS"
 
 [node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=1785606186]
 layout_mode = 2
@@ -80,7 +80,7 @@ script = ExtResource("2_4u85i")
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("3_0chu7")
-text = "Quit To Main Menu"
+text = "QUIT_TO_MAIN_MENU"
 
 [node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/VBoxContainer" unique_id=1301982500]
 layout_mode = 2
@@ -90,7 +90,7 @@ script = ExtResource("2_4u85i")
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = ExtResource("3_0chu7")
-text = "Quit"
+text = "QUIT"
 
 [node name="Control3" type="Control" parent="PanelContainer/VBoxContainer" unique_id=1439882443]
 layout_mode = 2

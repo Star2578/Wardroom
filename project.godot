@@ -115,6 +115,10 @@ toggle_phone={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://translationv1.english.translation", "res://translationv1.thai.translation")
+
 [physics]
 
 3d/physics_engine="GodotPhysics3D"

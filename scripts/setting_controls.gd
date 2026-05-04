@@ -8,14 +8,36 @@ var action_to_remap = null
 var remapping_button = null
 
 var input_actions = {
-	"move_forward": "Move forward",
-	"move_backward": "Move backward",
-	"move_left": "Move left",
-	"move_right": "Move right",
-	"crouch": "Crouch",
-	"interact": "Interact",
-	"inventory": "Inventory"
+	"move_forward": {
+		"name": "MOVE_FORWARD",
+		"description": "DESC_MOVE_FORWARD"
+	},
+	"move_backward": {
+		"name": "MOVE_BACKWARD",
+		"description": "DESC_MOVE_BACKWARD"
+	},
+	"move_left": {
+		"name": "MOVE_LEFT",
+		"description": "DESC_MOVE_LEFT"
+	},
+	"move_right": {
+		"name": "MOVE_RIGHT",
+		"description": "DESC_MOVE_RIGHT"
+	},
+	"crouch": {
+		"name": "CROUCH",
+		"description": "DESC_CROUCH"
+	},
+	"interact": {
+		"name": "INTERACT",
+		"description": "DESC_INTERACT"
+	},
+	"inventory": {
+		"name": "INVENTORY",
+		"description": "DESC_INVENTORY"
+	}
 }
+
 func _ready():
 	_create_action_list()
 	
@@ -35,7 +57,9 @@ func _create_action_list():
 		var action_label = button.find_child("LabelAction")
 		var input_label = button.find_child("LabelInput")
 		
-		action_label.text = input_actions[action]
+		var data = input_actions[action]
+		action_label.text = data["name"]
+		
 		
 		var events = InputMap.action_get_events(action)
 		if events.size() > 0:

@@ -98,165 +98,74 @@ albedo_color = Color(0.6901937, 0, 0.089548014, 1)
 
 [sub_resource type="Resource" id="Resource_lleqh"]
 script = ExtResource("8_ova88")
-name = "Note"
-description = "[b]Patient's Record #5[/b]
-Date: 24/12/[color=red]2025[/color]
-
-Patient's Name: Tawan Sukhumvitayaporn
-Gender: Male
-Age: 25
-Blood Type: A
-
-Description:
-Suffered minor injuries and broken left ankle from car accident. Luckily, there is a good citizen brought him to the hospital.
-Name of that person is Kmsodfmsamlfd,sadfie----
-
-Assigned to Bed #0340"
+name = "NOTE"
+description = "NOTE_000_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_xrbrr"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "[b]Map Locations[/b]
-- [color=green]Green[/color]: Examination Room
-- [color=#eb0cd4]Pink[/color]: Mini-Ward
-- [color=#ebba34]Yellow[/color]: Maintenance
-- [color=blue]Blue[/color]: Equipment Room
-- [color=red]Red: This room has been closed for 8 years now.[/color]
-"
+description = "NOTE_011_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_corsv"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "Pain has an element of blank;
-It cannot recollect
-When it began, or if there were
-A day when it was not.
-
-It has no future but itself,
-Its infinite realms contain
-Its past, enlightened to perceive
-New periods of pain.
-"
+description = "NOTE_002_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_oownl"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "Notice:
-- Please refrain from running in hallway.
-- No smoking within the facility.
-
-Allowed Visit Time:
-8.00 AM - 17.00 PM
-
-Thank you for your cooperation
-"
+description = "NOTE_003_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_gkmjm"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "[color=red]DEAD END[/color]"
+description = "NOTE_DEADEND_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_ckc4g"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "[b]Patient's Record #2[/b]
-Date: 01/08/[color=red]2023[/color]
-
-Patient's Name: Joe Tanasin
-Gender: Male
-Age: 55
-Blood Type: O
-
-Description:
-Non-responsive to final round of chemotherapy. Patient is bed-bound and requires 24/7 morphine drip for pain regulation. Expected prognosis: Weeks/Days
-
-Assigned to Bed #1431"
+description = "NOTE_004_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_bkbm0"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "I think I found [b]him.[/b]
-
-A perfect vessel.
-
-Someone without any attachment.
-
-Lucky.
-
-I shall proceed with the plan and get him here.
-
-It won't be long now, father.
-
-You'll be able to live a normal live once again."
+description = "NOTE_005_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_vtruy"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "[color=red]The heavy seal is broken; the silence of eight winters has ended.[/color]
-
-[color=red]A lonely chair stands steady, though its owner is gone.[/color]
-
-[color=red]The interval of agony: from the first breath of the end to the crash of the present.[/color]
-
-[color=red]The singular path remains before the darkness is absolute.[/color]"
+description = "NOTE_006_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_k16l5"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "I don't really get why they changed the policy to make lost and found box into lost and found safe.
-
-They all forgot to tell me the password too. I am the one who do everything around here. Unacceptable."
+description = "NOTE_007_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_c2b25"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "[b]Recent changes about Lost and Found[/b]
-
-Due to recent feedback regarding the security of items within our Lost and Found, we are implementing a new protocol to ensure the safety of recovered property. Effective immediately, all high-value or sensitive items will be secured in a dedicated onsite safe rather than being kept in open storage.
-
-[b]Security Access[/b]
-To access the safe, authorized personnel must enter a 4-digit security code. If you have forgotten the combination, please solve the following riddle:
-
-[b]The Code of Four[/b]
-
-[i][color=red]I am the number of legs on a lonely chair,[/color]
-Add the wheels on a unicycle found at the fair.
-Next, find the sides of a triangle's face,
-And end with the legs of a spider’s embrace.[/i]"
+description = "NOTE_009_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_4wqlp"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "Weekly Complains:
-- Someone forget to clean up after themselves after taking a dump in the toilet plus that toilet is broken right now
-
-- Janitor lost his key to the equipment room
-
--When will there be free WiFi
-
-- WHAT DO YOU MEAN I HAVE TO SOLVE RIDDLES FOR PASSWORD!"
+description = "NOTE_010_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="Resource" id="Resource_bau3d"]
 script = ExtResource("8_ova88")
 name = "Note"
-description = "\"Don't worry Mr. Joe, I will not left you alone like the others.\"
-
-\"You have taught me many things.\"
-
-\"I will find a way to help you no matter what.\"
-
-\"Even if I have to do  [b]that ritual...[/b]\""
+description = "NOTE_012_DESC"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_7efej"]

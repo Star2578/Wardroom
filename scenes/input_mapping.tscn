@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://b842uo5grrmrc"]
 
+[ext_resource type="Script" uid="uid://2esla372hvb7" path="res://scripts/setting_item.gd" id="1_5kfo0"]
 [ext_resource type="StyleBox" uid="uid://b8v701nkh12vl" path="res://Slider_Number_style_box_flat.tres" id="1_6buon"]
+[ext_resource type="Script" uid="uid://d353rh4qt4rt" path="res://scripts/ui_data.gd" id="2_r41u8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cluo"]
 bg_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
@@ -10,6 +12,10 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.6666667, 0.6666667, 0.6666667, 1)
 border_blend = true
+
+[sub_resource type="Resource" id="Resource_nuomn"]
+script = ExtResource("2_r41u8")
+metadata/_custom_type_script = "uid://d353rh4qt4rt"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cwi08"]
 
@@ -21,6 +27,8 @@ anchor_right = 1.0
 offset_bottom = 34.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8cluo")
+script = ExtResource("1_5kfo0")
+ui_data = SubResource("Resource_nuomn")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=16215858]
 layout_mode = 2

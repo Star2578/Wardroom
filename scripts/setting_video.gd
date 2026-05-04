@@ -5,7 +5,7 @@ extends VBoxContainer
 @onready var gamma_number_label = $PanelContainer/MarginContainer/VBoxContainer/Gamma/HBoxContainer/PanelContainer/GammaNumberLabel
 @onready var gamma_slider = $PanelContainer/MarginContainer/VBoxContainer/Gamma/HBoxContainer/PanelContainer2/GammaSlider
 
-var options = ["FULL SCREEN", "WINDOWED"]
+var options = ["FULL_SCREEN", "WINDOWED"]
 var index := 0
 
 # Called when the node enters the scene tree for the first time.
@@ -19,7 +19,7 @@ func apply_mode():
 	match options[index]:
 		"WINDOWED":
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
-		"FULL SCREEN":
+		"FULL_SCREEN":
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 
 func _on_gamma_slider_value_changed(value: float) -> void:

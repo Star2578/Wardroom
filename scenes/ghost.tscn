@@ -1081,7 +1081,7 @@ offset_right = 832.0
 offset_bottom = 384.0
 theme_override_colors/font_color = Color(0.91330606, 0, 0.086104214, 1)
 theme_override_font_sizes/font_size = 60
-text = "GAME OVER"
+text = "GAME_OVER"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -8,5 +8,5 @@ func interact():
 		flush_sfx.play()
 	
 	if not flushable:
-		GameController.text_writer.play_text("It's broken...")
+		GameController.text_writer.play_text("TOILET_002")
 		

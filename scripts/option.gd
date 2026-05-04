@@ -25,10 +25,6 @@ func _on_quit_pressed() -> void:
 
 func _on_menu_pressed() -> void:
 	var current_scene := get_tree().current_scene
-
-	if current_scene and current_scene.scene_file_path == "res://scenes/main_menu.tscn":
-		_on_back_pressed()
-		return
 	
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 	GameController.toggle_options_menu()

@@ -1,9 +1,9 @@
 {
-    "cs_01": [
-        "Huh? Where am I?",
-        "...",
-        "Seems like the hospital hallway.",
-        "Wait a minute.. I can stand up now?",
-        "I should look around for clues"
-    ]
+	"cs_01": [
+		"CSB01_001",
+		"CSB01_002",
+		"CSB01_003",
+		"CSB01_004",
+		"CSB01_005"
+	]
 }
