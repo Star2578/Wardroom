@@ -1,98 +1,51 @@
 {
 	"start": {
 		"sequence": [
-			{
-				"sender": "g",
-				"text": "Yo bro"
-			},
-			{
-				"sender": "g",
-				"text": "Where are you?"
-			},
-			{
-				"sender": "g",
-				"text": "been waiting for ages!"
-			},
-			{
-				"sender": "s",
-				"text": "got into an accident"
-			},
-			{
-				"sender": "s",
-				"text": "I'm in a hospital"
-			},
-			{
-				"sender": "g",
-				"text": "WHAT!?!?!"
-			},
-			{
-				"sender": "g",
-				"text": "ARE YOU ALRIGHT?!"
-			}
+			{ "sender": "g", "text": "CHAT_START_001" },
+			{ "sender": "g", "text": "CHAT_START_002" },
+			{ "sender": "g", "text": "CHAT_START_003" },
+			{ "sender": "s", "text": "CHAT_START_004" },
+			{ "sender": "s", "text": "CHAT_START_005" },
+			{ "sender": "g", "text": "CHAT_START_006" },
+			{ "sender": "g", "text": "CHAT_START_007" }
 		],
 		"choices": [
 			{
-				"text": "I'm fine",
+				"text": "CHAT_CHOICE_001",
 				"next": "branch1"
 			},
 			{
-				"text": "I'M ON MY DEADBED!",
+				"text": "CHAT_CHOICE_002",
 				"next": "branch2"
 			}
 		]
 	},
+
 	"branch1": {
 		"sequence": [
-			{
-				"sender": "s",
-				"text": "I'm fine overall, except for my left leg"
-			},
-			{
-				"sender": "s",
-				"text": "need to stay at the hospital for a while"
-			},
-			{
-				"sender": "g",
-				"text": "damn that's rough"
-			},
-			{
-				"sender": "g",
-				"text": "at least you're okay"
-			}
+			{ "sender": "s", "text": "CHAT_B1_001" },
+			{ "sender": "s", "text": "CHAT_B1_002" },
+			{ "sender": "g", "text": "CHAT_B1_003" },
+			{ "sender": "g", "text": "CHAT_B1_004" }
 		]
 	},
+
 	"branch2": {
 		"sequence": [
-			{
-				"sender": "s",
-				"text": "I'M ON MY DEADBED!"
-			},
-			{
-				"sender": "s",
-				"text": "I CAN'T BELIEVE THIS HAPPENED TO ME!"
-			},
-			{
-				"sender": "g",
-				"text": "YOO! CALM DOWN MY MAN!"
-			},
-			{
-				"sender": "g",
-				"text": "SEND ME YOUR LOCATION!"
-			},
-			{
-				"sender": "g",
-				"text": "I'LL VISIT YOU ASAP!"
-			}
+			{ "sender": "s", "text": "CHAT_B2_001" },
+			{ "sender": "s", "text": "CHAT_B2_002" },
+			{ "sender": "g", "text": "CHAT_B2_003" },
+			{ "sender": "g", "text": "CHAT_B2_004" },
+			{ "sender": "g", "text": "CHAT_B2_005" }
 		]
 	},
+
 	"continuation": {
 		"sequence": [
-			{
-				"sender": "s",
-				"text": "📍 Shared Location"
-			}
+			{ "sender": "s", "text": "CHAT_CONT_001" }
 		]
 	},
+
 	"end": {
 		"trigger": "cs"
 	}

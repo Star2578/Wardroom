@@ -80,30 +80,53 @@ CS01_006,"[color=#967318]""Our staff will bring you something to eat.""[/color]"
 CS01_007,"I better get my phone and check if I have any messages.","ฉันควรหยิบโทรศัพท์มาเช็คว่ามีข้อความไหม"
 
 CS02_001,"Shit, I dropped my phone!","บ้าเอ๊ย ฉันทำโทรศัพท์ตก!"
-CS02_002,"It got into the other patient's bed.","มันไปอยู่บนเตียงของคนไข้คนอื่น"
+CS02_002,"It got into the other patient's bed.","มันไปอยู่ข้างเตียงของคนไข้คนอื่น"
 CS02_003,"...","..."
 CS02_004,"I cannot move...","ฉันขยับไม่ได้..."
-CS02_005,"[color=#106b3f]""Hello sir, you seem to have dropped this.""[/color]","[color=#106b3f]""สวัสดีค่ะ ดูเหมือนคุณจะทำของตกนะคะ""[/color]"
-CS02_006,"[color=#106b3f]""Here you go, sir.""[/color]","[color=#106b3f]""นี่ค่ะ""[/color]"
-CS02_007,"""Thank you, Mr...?""","""ขอบคุณนะครับ คุณ...?"""
-CS02_008,"[color=#106b3f]""You can call me Kla, Mr. Sunny""[/color]","[color=#106b3f]""เรียกฉันว่า Kla ก็ได้ค่ะ คุณ Sunny""[/color]"
+CS02_005,"[color=#106b3f]""Hello sir, you seem to have dropped this.""[/color]","[color=#106b3f]""สวัสดีครับ ดูเหมือนคุณจะทำของตกนะครับ""[/color]"
+CS02_006,"[color=#106b3f]""Here you go, sir.""[/color]","[color=#106b3f]""นี่ครับ""[/color]"CS02_007,"""Thank you, Mr...?""","""ขอบคุณนะครับ คุณ...?"""
+CS02_008,"[color=#106b3f]""You can call me Kla, Mr. Sunny""[/color]","[color=#106b3f]""เรียกผมว่า กล้า ก็ได้ครับ คุณ ซันนี่""[/color]"
 CS02_009,"I cannot help but notice that old man on the bed next to him...","ฉันอดสังเกตชายแก่บนเตียงข้าง ๆ ไม่ได้..."
 CS02_010,"he seems to be in a lot of pain.","เขาดูเหมือนจะเจ็บปวดมาก"
 CS02_011,"""Is he going to be okay?""","""เขาจะไม่เป็นอะไรใช่ไหม?"""
-CS02_012,"[color=#106b3f]""Yes, he has been worse.""[/color]","[color=#106b3f]""ค่ะ เขาเคยแย่กว่านี้""[/color]"
+CS02_012,"[color=#106b3f]""Yes, he has been worse.""[/color]","[color=#106b3f]""ครับ เขาเคยแย่กว่านี้""[/color]"
 CS02_013,"[color=#106b3f]""He's very old and surrounded by diseases.""[/color]","[color=#106b3f]""เขาอายุมากและมีโรครุมเร้า""[/color]"
 CS02_014,"[color=#106b3f]""Body corroded as time passed.""[/color]","[color=#106b3f]""ร่างกายเสื่อมโทรมไปตามกาลเวลา""[/color]"
-CS02_015,"[color=#106b3f]""I am here to treat him until he got into a better place.""[/color]","[color=#106b3f]""ฉันอยู่ที่นี่เพื่อดูแลเขาจนกว่าเขาจะไปสู่ที่ที่ดีกว่า""[/color]"
+CS02_015,"[color=#106b3f]""I am here to treat him until he got into a better place.""[/color]","[color=#106b3f]""ผมอยู่ที่นี่เพื่อดูแลเขาจนกว่าเขาจะไปสู่ที่ที่ดีกว่า""[/color]"
 CS02_016,"That's... hopeful... probably","มันก็... ฟังดูมีความหวังนะ...มั้ง"
 CS02_017,"[color=#967318]""Your food is here.""[/color]","[color=#967318]""อาหารมาแล้วค่ะ""[/color]"
 CS02_018,"""Oh, thank you.. I didn't see you coming""","""โอ้ ขอบคุณครับ... ผมไม่ทันเห็นคุณเลย"""
-CS02_019,"[color=#106b3f]""Until next time, Mr. Sunny""[/color]","[color=#106b3f]""ไว้พบกันใหม่นะคะ คุณ Sunny""[/color]"
+CS02_019,"[color=#106b3f]""Until next time, Mr. Sunny""[/color]","[color=#106b3f]""ไว้พบกันใหม่นะครับ คุณ ซันนี่""[/color]"
 CS02_020,"...","..."
-CS02_021,"And she's gone...","แล้วเธอก็หายไป..."
+CS02_021,"And he's gone...","แล้วเธอก็หายไป..."
 CS02_022,"I suppose I should eat this.","ฉันควรกินนี่สินะ"
 
 CS03_001,"Why do I suddenly feels... so sleepy...","ทำไมฉันถึงรู้สึก... ง่วงขึ้นมาทันที..."
 
+# --- msg_golf ---
+CHAT_START_001,"Yo bro","เฮ้เพื่อน"
+CHAT_START_002,"Where are you?","นายอยู่ไหน?"
+CHAT_START_003,"been waiting for ages!","รอมานานแล้วนะ!"
+CHAT_START_004,"got into an accident","ฉันประสบอุบัติเหตุ"
+CHAT_START_005,"I'm in a hospital","ฉันอยู่โรงพยาบาล"
+CHAT_START_006,"WHAT!?!?!","อะไรนะ!?!?!"
+CHAT_START_007,"ARE YOU ALRIGHT?!","นายโอเคไหม?!"
+
+CHAT_CHOICE_001,"I'm fine","ฉันโอเค"
+CHAT_CHOICE_002,"I'M ON MY DEADBED!","ฉันใกล้ตายแล้ว!"
+
+CHAT_B1_001,"I'm fine overall, except for my left leg","โดยรวมโอเค ยกเว้นขาซ้าย"
+CHAT_B1_002,"need to stay at the hospital for a while","ต้องอยู่โรงพยาบาลสักพัก"
+CHAT_B1_003,"damn that's rough","โห หนักเลยว่ะ"
+CHAT_B1_004,"at least you're okay","อย่างน้อยนายก็ยังโอเค"
+
+CHAT_B2_001,"I'M ON MY DEADBED!","ฉันใกล้ตายแล้ว!"
+CHAT_B2_002,"I CAN'T BELIEVE THIS HAPPENED TO ME!","ไม่อยากเชื่อว่าจะเกิดเรื่องแบบนี้กับฉัน!"
+CHAT_B2_003,"YOO! CALM DOWN MY MAN!","เฮ้! ใจเย็นก่อนเพื่อน!"
+CHAT_B2_004,"SEND ME YOUR LOCATION!","ส่งโลเคชั่นมา!"
+CHAT_B2_005,"I'LL VISIT YOU ASAP!","ฉันจะไปหานายเดี๋ยวนี้!"
+
+CHAT_CONT_001,"📍 Shared Location","📍 แชร์ตำแหน่งแล้ว"
 
 # --- dream_start.json DIALOGUE ---
 CSB01_001,"Huh? Where am I?","หืม? ฉันอยู่ที่ไหน?"
@@ -111,6 +134,15 @@ CSB01_002,"...","..."
 CSB01_003,"Seems like the hospital hallway.","ดูเหมือนจะเป็นโถงทางเดินของโรงพยาบาล"
 CSB01_004,"Wait a minute.. I can stand up now?","เดี๋ยวก่อนนะ.. ฉันยืนได้แล้วเหรอ?"
 CSB01_005,"I should look around for clues","ฉันควรสำรวจหาหลักฐานดู"
+
+# --- OBJECT & PROMPT ---
+OMELETTE,Omelette,ข้าวไข่เจียว
+PROMPT_CONSUME,"Press E to Consume","กด E เพื่อใช้"
+PHONE,"Phone","มือถือเครื่องหนึ่ง"
+PHONE_DESC,"[p]My old model phone. It's still working.[/p][p]Press B to use[/p]","มือถือเครื่องเก่าของผม ถึงจะเก่าแต่ยังใช้ได้อยู่"
+CITIZEN_CARD,"Citizen Card","บัตรประจำตัวประชาชน"
+CITIZEN_CARD_DESC,"My citizen card with my picture on it. Way to go Sunny.","บัตรประชาชนของผมเอง สูู้ต่อไปนะซันนี่"
+PROMPT_PICK_UP,"Press E to pick up","กด E เพื่อหยิบ"
 
 # --- OTHERS ---
 TOILET_001,"Some people are the worse...","บางคนนี่แย่จริง ๆ..."

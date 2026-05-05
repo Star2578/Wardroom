@@ -6,8 +6,8 @@
 
 [resource]
 script = ExtResource("3_6pavf")
-name = "Phone"
-description = "[p]My old model phone. It's still working.[/p][p]Press B to use[/p]"
+name = "PHONE"
+description = "PHONE_DESC"
 icon = ExtResource("1_dipv1")
 mesh = ExtResource("2_0dowi")
 mesh_scale = Vector3(0.3, 0.3, 0.3)

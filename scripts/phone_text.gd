@@ -73,7 +73,7 @@ func next_message():
 
 func _spawn_chat_bubble(text, sender):
 	var chat_bubble = chat_bubble_scene.instantiate()
-	chat_bubble.set_text(text)
+	chat_bubble.set_text(tr(text))
 	# Logic to change side/color based on "g" or "s"
 	var color = 0 if sender == "g" else 1 
 	chat_bubble.set_color(color)
@@ -86,10 +86,10 @@ func _spawn_chat_bubble(text, sender):
 
 func _show_choice_buttons(choices):
 	wait.hide()
-	choice1_text.text = "[1] " + choices[0]["text"]
+	choice1_text.text = "[1] " + tr(choices[0]["text"])
 	choice1.show()
 	if choices.size() > 1:
-		choice2_text.text = "[2] " + choices[1]["text"]
+		choice2_text.text = "[2] " + tr(choices[1]["text"])
 		choice2.show()
 
 # Call this when a player clicks a choice button

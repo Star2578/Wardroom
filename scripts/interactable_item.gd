@@ -5,13 +5,13 @@ extends Interactable
 func get_interaction_data() -> Dictionary:
 	return {
 		"name": object_data.name,
-		"prompt": "Press E to pick up"
+		"prompt": "PROMPT_PICK_UP"
 	}
 
 func interact():
 	InventoryManager.add_item(object_data)	
 
-	if object_data.name == "Phone":
+	if object_data.name == "PHONE":
 		GameController.got_phone = true
 	if object_data.name == "Plunger":
 		GameController.got_plunger = true

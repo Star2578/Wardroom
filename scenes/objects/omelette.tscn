@@ -87,17 +87,17 @@ shadow_mesh = SubResource("ArrayMesh_rkpg5")
 
 [sub_resource type="Resource" id="Resource_xlf5y"]
 script = ExtResource("3_leo1i")
-name = "Omelette"
+name = "OMELETTE"
 metadata/_custom_type_script = "uid://duu02ylefpfev"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_n1f0h"]
 
 [node name="omelette" unique_id=1264602025 instance=ExtResource("1_n1f0h")]
 
-[node name="glass" parent="." index="5" unique_id=1633492075]
+[node name="glass" parent="." index="5" unique_id=4980976]
 mesh = SubResource("ArrayMesh_ai2tq")
 
-[node name="water" parent="." index="6" unique_id=1059768768]
+[node name="water" parent="." index="6" unique_id=1569709407]
 mesh = SubResource("ArrayMesh_leo1i")
 
 [node name="Area3D" type="Area3D" parent="." index="7" unique_id=1149624056]

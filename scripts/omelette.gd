@@ -8,7 +8,7 @@ var is_interacted = false
 func get_interaction_data() -> Dictionary:
 	return {
 		"name": object_data.name,
-		"prompt": "Press E to Consume"
+		"prompt": "PROMPT_CONSUME"
 	}
 
 func interact():
